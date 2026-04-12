@@ -1,0 +1,1115 @@
+{
+    "units": {
+        "h1-4-u3": {
+            "title": "Unit 3",
+            "vocab": [
+                {
+                    "id": "h1-4-u3-v001",
+                    "word": "reality",
+                    "part_of_speech": "n. [C][U]",
+                    "chinese": "現實",
+                    "sentence": "Rachel is hoping that time travel will become a reality.",
+                    "sentence_chinese": "Rachel 希望時光旅行能成為現實。"
+                },
+                {
+                    "id": "h1-4-u3-v002",
+                    "word": "add",
+                    "part_of_speech": "vt.",
+                    "chinese": "加",
+                    "sentence": "Melody added a sticker to her message to show her feelings.",
+                    "sentence_chinese": "Melody 在她的訊息中加了一張貼紙來表達她的感受。"
+                },
+                {
+                    "id": "h1-4-u3-v003",
+                    "word": "effects",
+                    "part_of_speech": "n. [pl.]",
+                    "chinese": "特效，效果",
+                    "sentence": "I liked the performance because it had great sound effects.",
+                    "sentence_chinese": "我喜歡這場表演，因為它有很棒的音效。"
+                },
+                {
+                    "id": "h1-4-u3-v004",
+                    "word": "appearance",
+                    "part_of_speech": "n. [C][U]",
+                    "chinese": "外表",
+                    "sentence": "Young people often care a lot about their appearance.",
+                    "sentence_chinese": "年輕人通常很在乎他們的外表。"
+                },
+                {
+                    "id": "h1-4-u3-v005",
+                    "word": "involved",
+                    "part_of_speech": "adj.",
+                    "chinese": "參與的，有關的",
+                    "sentence": "This music event is huge. More than 20 bands are involved in it.",
+                    "sentence_chinese": "這場音樂盛會規模龐大。超過 20 個樂團參與其中。"
+                },
+                {
+                    "id": "h1-4-u3-v006",
+                    "word": "scary",
+                    "part_of_speech": "adj.",
+                    "chinese": "可怕的",
+                    "sentence": "The old house looked scary in the dark.",
+                    "sentence_chinese": "這棟老房子在黑暗中看起來很可怕。"
+                },
+                {
+                    "id": "h1-4-u3-v007",
+                    "word": "wild",
+                    "part_of_speech": "n. [sing.]",
+                    "chinese": "荒野，野生環境",
+                    "sentence": "In the game, the players are left in the wild and must find food to live.",
+                    "sentence_chinese": "在遊戲中，玩家被留在荒野，必須尋找食物才能生存。"
+                },
+                {
+                    "id": "h1-4-u3-v008",
+                    "word": "information",
+                    "part_of_speech": "n. [U]",
+                    "chinese": "資訊，消息",
+                    "sentence": "On the Internet, we can find information about almost everything.",
+                    "sentence_chinese": "在網路上，我們幾乎可以找到關於任何事情的資訊。"
+                },
+                {
+                    "id": "h1-4-u3-v009",
+                    "word": "scene",
+                    "part_of_speech": "n. [C]",
+                    "chinese": "場景",
+                    "sentence": "To our surprise, there are many love scenes in this scary movie.",
+                    "sentence_chinese": "令我們驚訝的是，這部恐怖片裡有很多愛情場景。"
+                },
+                {
+                    "id": "h1-4-u3-v010",
+                    "word": "image",
+                    "part_of_speech": "n. [C]",
+                    "chinese": "影像，圖像",
+                    "sentence": "In the past, images on TV were only black and white.",
+                    "sentence_chinese": "過去，電視上的影像只有黑白的。"
+                },
+                {
+                    "id": "h1-4-u3-v011",
+                    "word": "extra",
+                    "part_of_speech": "adj.",
+                    "chinese": "額外的，另外的",
+                    "sentence": "Customers need to pay more if they want extra cheese on their pizzas.",
+                    "sentence_chinese": "如果顧客想要在披薩上加額外的起司，他們需要付更多錢。"
+                },
+                {
+                    "id": "h1-4-u3-v012",
+                    "word": "curious",
+                    "part_of_speech": "adj.",
+                    "chinese": "好奇的",
+                    "sentence": "Tim is very curious about what his online friend looks like.",
+                    "sentence_chinese": "Tim 對他的網友長什麼樣子感到很好奇。"
+                },
+                {
+                    "id": "h1-4-u3-v013",
+                    "word": "explore",
+                    "part_of_speech": "vt.; vi.",
+                    "chinese": "探索",
+                    "sentence": "Many tourists like to take a glass-bottom boat to explore the ocean.",
+                    "sentence_chinese": "許多遊客喜歡搭乘玻璃底船來探索海洋。"
+                },
+                {
+                    "id": "h1-4-u3-v014",
+                    "word": "develop",
+                    "part_of_speech": "vi.; vt.",
+                    "chinese": "發展，成長",
+                    "sentence": "With the help of artists, the old station developed into a new attraction.",
+                    "sentence_chinese": "在藝術家的幫助下，這座舊車站發展成了一個新景點。"
+                }
+            ],
+            "phrases": [
+                {
+                    "id": "h1-4-u3-p001",
+                    "phrase": "on the other hand",
+                    "chinese": "另一方面",
+                    "sentence": "I would really like to enjoy some late-night snacks. On the other hand, I don't want to put on weight.",
+                    "sentence_chinese": "我真的很想享受一些宵夜。另一方面，我不想變胖。"
+                },
+                {
+                    "id": "h1-4-u3-p002",
+                    "phrase": "as for",
+                    "chinese": "至於",
+                    "sentence": "Selina will come to our barbecue party. As for Hebe, she is still thinking about that.",
+                    "sentence_chinese": "Selina 會來我們的烤肉派對。至於 Hebe，她還在考慮。"
+                },
+                {
+                    "id": "h1-4-u3-p003",
+                    "phrase": "try on",
+                    "chinese": "試穿",
+                    "sentence": "David never buys shoes online because he cannot try them on.",
+                    "sentence_chinese": "David 從不在網路上買鞋，因為他無法試穿。"
+                },
+                {
+                    "id": "h1-4-u3-p004",
+                    "phrase": "for instance",
+                    "chinese": "例如",
+                    "sentence": "I downloaded several kinds of apps. For instance, there were camera apps and game apps.",
+                    "sentence_chinese": "我下載了幾種應用程式。例如，有相機應用程式和遊戲應用程式。"
+                },
+                {
+                    "id": "h1-4-u3-p005",
+                    "phrase": "give...a try",
+                    "chinese": "試試看……",
+                    "sentence": "Although \"pudding ramen\" sounds strange, I would love to give it a try.",
+                    "sentence_chinese": "雖然「布丁拉麵」聽起來很奇怪，但我想試試看。"
+                }
+            ],
+            "grammar": {
+                "tips": [
+                    {
+                        "label": "使役動詞",
+                        "text": "make / let / have + O (受詞) + V (原形動詞)"
+                    },
+                    {
+                        "label": "if 條件子句",
+                        "text": "If + S + V (現在簡單式), S + Aux (助動詞) + V (原形動詞)"
+                    }
+                ],
+                "notes": [
+                    {
+                        "title": "使役動詞 (Causative Verbs)",
+                        "rule": "這三個使役動詞都有「使、讓」的意思，表示「主動」促使受詞做某事，後面的動詞一律使用「原形動詞」。",
+                        "description": "make (強迫、要求，語氣最強)；have (交付、吩咐，通常指透過指示讓某人做某事)；let (允許、同意，語氣最弱)。",
+                        "examples": [
+                            "The scary movie scene made me cry. (那可怕的電影場景讓我哭了。)",
+                            "The teacher had the students explore the wild. (老師讓學生們去探索荒野。)",
+                            "My mom let me add extra cheese to the pizza. (我媽媽讓我給披薩加額外的起司。)"
+                        ]
+                    },
+                    {
+                        "title": "if 條件子句 (Conditional Clauses)",
+                        "rule": "以現在簡單式代替未來式",
+                        "description": "當 if 帶出的子句用來表達「未來可能發生」的真實條件時，if 所在的條件子句要用「現在簡單式」，而主要子句則維持表示未來的「助動詞 + 原形動詞」。",
+                        "examples": [
+                            "If Roy finds any wild animals, he will inform the center. (如果 Roy 發現任何野生動物，他會通知中心。)",
+                            "If you care about your appearance, you can try on these clothes. (如果你在乎你的外表，你可以試穿這些衣服。)"
+                        ]
+                    }
+                ],
+                "quiz": [
+                    {
+                        "id": "h1-4-u3-q001",
+                        "question": "The strict teacher made his students ________ the vocabulary ten times.",
+                        "options": [
+                            "copying",
+                            "copied",
+                            "copy",
+                            "to copy"
+                        ],
+                        "answer": "copy",
+                        "answer_index": 2,
+                        "hint": "make 為使役動詞，表示「強迫、要求」，後面受詞主動做某事時需接「原形動詞」。"
+                    },
+                    {
+                        "id": "h1-4-u3-q002",
+                        "question": "If it ________ heavily tomorrow, the baseball game will be canceled.",
+                        "options": [
+                            "rains",
+                            "will rain",
+                            "rained",
+                            "is raining"
+                        ],
+                        "answer": "rains",
+                        "answer_index": 0,
+                        "hint": "if 引導的條件子句表示未來可能發生的情況時，需「以現在簡單式代替未來式」。主詞 it 為第三人稱單數，動詞 rain 需加 -s。"
+                    },
+                    {
+                        "id": "h1-4-u3-q003",
+                        "question": "The special visual ________ in this science fiction movie are amazing.",
+                        "options": [
+                            "scenes",
+                            "effects",
+                            "realities",
+                            "appearances"
+                        ],
+                        "answer": "effects",
+                        "answer_index": 1,
+                        "hint": "visual effects 為固定用法，意指「視覺特效」。"
+                    },
+                    {
+                        "id": "h1-4-u3-q004",
+                        "question": "Please let me ________ the new pair of jeans before buying them.",
+                        "options": [
+                            "trying on",
+                            "try on",
+                            "to try on",
+                            "tried on"
+                        ],
+                        "answer": "try on",
+                        "answer_index": 1,
+                        "hint": "let 為使役動詞，表示「允許」，後接原形動詞。結合課本片語 try on。"
+                    },
+                    {
+                        "id": "h1-4-u3-q005",
+                        "question": "If Roy is ________ about the old house, he can go inside and take a look.",
+                        "options": [
+                            "curious",
+                            "wild",
+                            "extra",
+                            "effective"
+                        ],
+                        "answer": "curious",
+                        "answer_index": 0,
+                        "hint": "be curious about 為固定用法，意指對...感到好奇。"
+                    },
+                    {
+                        "id": "h1-4-u3-q006",
+                        "question": "The team of scientists went into the jungle to ________ the wild.",
+                        "options": [
+                            "develop",
+                            "explore",
+                            "involve",
+                            "inform"
+                        ],
+                        "answer": "explore",
+                        "answer_index": 1,
+                        "hint": "explore 意為「探索」。"
+                    },
+                    {
+                        "id": "h1-4-u3-q007",
+                        "question": "The manager had his secretary ________ all the clients about the new policy.",
+                        "options": [
+                            "informed",
+                            "informing",
+                            "inform",
+                            "to inform"
+                        ],
+                        "answer": "inform",
+                        "answer_index": 2,
+                        "hint": "have 此處為使役動詞，後接受詞主動做某事，需接原形動詞。"
+                    },
+                    {
+                        "id": "h1-4-u3-q008",
+                        "question": "If Joy ________ the hidden box, she will get an extra prize.",
+                        "options": [
+                            "find",
+                            "finding",
+                            "will find",
+                            "finds"
+                        ],
+                        "answer": "finds",
+                        "answer_index": 3,
+                        "hint": "if 條件子句用現在簡單式。主詞 Joy 為單數，動詞需加 -s。"
+                    },
+                    {
+                        "id": "h1-4-u3-q009",
+                        "question": "There are many apps on my phone. ________, there are camera apps and game apps.",
+                        "options": [
+                            "On the other hand",
+                            "As for",
+                            "For instance",
+                            "Give it a try"
+                        ],
+                        "answer": "For instance",
+                        "answer_index": 2,
+                        "hint": "for instance 意為「例如」，用來舉例。"
+                    },
+                    {
+                        "id": "h1-4-u3-q010",
+                        "question": "You shouldn't judge a person only by their ________. Inner beauty is more important.",
+                        "options": [
+                            "appearance",
+                            "information",
+                            "development",
+                            "reality"
+                        ],
+                        "answer": "appearance",
+                        "answer_index": 0,
+                        "hint": "appearance 意為「外表」。"
+                    },
+                    {
+                        "id": "h1-4-u3-q011",
+                        "question": "The scary scene in the dark forest made the little boy ________.",
+                        "options": [
+                            "cried",
+                            "to cry",
+                            "cry",
+                            "crying"
+                        ],
+                        "answer": "cry",
+                        "answer_index": 2,
+                        "hint": "make 為使役動詞，後接原形動詞 cry。"
+                    },
+                    {
+                        "id": "h1-4-u3-q012",
+                        "question": "If you ________ hurry up, you will miss the train.",
+                        "options": [
+                            "don't",
+                            "won't",
+                            "aren't",
+                            "didn't"
+                        ],
+                        "answer": "don't",
+                        "answer_index": 0,
+                        "hint": "if 條件子句需使用現在簡單式。you 的否定助動詞為 don't。"
+                    },
+                    {
+                        "id": "h1-4-u3-q013",
+                        "question": "The \"pudding ramen\" sounds strange, but I am hungry enough to ________.",
+                        "options": [
+                            "try on it",
+                            "give it a try",
+                            "inform it",
+                            "explore it"
+                        ],
+                        "answer": "give it a try",
+                        "answer_index": 1,
+                        "hint": "give it a try 意為「試試看」。"
+                    },
+                    {
+                        "id": "h1-4-u3-q014",
+                        "question": "The new traffic law will have a big ________ on everyone in the city.",
+                        "options": [
+                            "effect",
+                            "image",
+                            "scene",
+                            "extra"
+                        ],
+                        "answer": "effect",
+                        "answer_index": 0,
+                        "hint": "have an effect on... 為固定用法，意指「對...產生影響」。"
+                    },
+                    {
+                        "id": "h1-4-u3-q015",
+                        "question": "My mother doesn't let my little brother ________ out alone at night.",
+                        "options": [
+                            "going",
+                            "go",
+                            "gone",
+                            "to go"
+                        ],
+                        "answer": "go",
+                        "answer_index": 1,
+                        "hint": "let 為使役動詞，後接原形動詞 go。"
+                    },
+                    {
+                        "id": "h1-4-u3-q016",
+                        "question": "If he finishes his homework early, he ________ go to the movies with us.",
+                        "options": [
+                            "had",
+                            "does",
+                            "might",
+                            "makes"
+                        ],
+                        "answer": "might",
+                        "answer_index": 2,
+                        "hint": "if 條件子句用現在簡單式，主要子句需用助動詞 (will/can/might 等) 表示未來或可能性。"
+                    },
+                    {
+                        "id": "h1-4-u3-q017",
+                        "question": "The photographer waited quietly for hours to take pictures of the ________ animals.",
+                        "options": [
+                            "extra",
+                            "involved",
+                            "scary",
+                            "wild"
+                        ],
+                        "answer": "wild",
+                        "answer_index": 3,
+                        "hint": "wild animals 意指「野生動物」。"
+                    },
+                    {
+                        "id": "h1-4-u3-q018",
+                        "question": "With the help of technology, virtual ________ is no longer just a dream.",
+                        "options": [
+                            "development",
+                            "reality",
+                            "curiosity",
+                            "appearance"
+                        ],
+                        "answer": "reality",
+                        "answer_index": 1,
+                        "hint": "virtual reality 意指「虛擬實境」(VR)。"
+                    },
+                    {
+                        "id": "h1-4-u3-q019",
+                        "question": "The doctor had the sick man ________ the medicine three times a day.",
+                        "options": [
+                            "took",
+                            "to take",
+                            "take",
+                            "taking"
+                        ],
+                        "answer": "take",
+                        "answer_index": 2,
+                        "hint": "have 為使役動詞，後接原形動詞 take。"
+                    },
+                    {
+                        "id": "h1-4-u3-q020",
+                        "question": "If your computer ________, I will help you fix it.",
+                        "options": [
+                            "breaks",
+                            "will break",
+                            "broke",
+                            "is breaking"
+                        ],
+                        "answer": "breaks",
+                        "answer_index": 0,
+                        "hint": "if 條件子句以現在簡單式代替未來式。主詞為單數，動詞加 -s。"
+                    },
+                    {
+                        "id": "h1-4-u3-q021",
+                        "question": "The school will ________ the parents of the students' test results next week.",
+                        "options": [
+                            "involve",
+                            "develop",
+                            "inform",
+                            "explore"
+                        ],
+                        "answer": "inform",
+                        "answer_index": 2,
+                        "hint": "inform A of B 意指「通知 A 關於 B 的事」。"
+                    },
+                    {
+                        "id": "h1-4-u3-q022",
+                        "question": "How many bands are ________ in this huge music festival?",
+                        "options": [
+                            "extra",
+                            "involved",
+                            "wild",
+                            "effective"
+                        ],
+                        "answer": "involved",
+                        "answer_index": 1,
+                        "hint": "be involved in... 意指「參與...；與...有關」。"
+                    },
+                    {
+                        "id": "h1-4-u3-q023",
+                        "question": "I love playing basketball. ________, my sister prefers staying at home and reading.",
+                        "options": [
+                            "For instance",
+                            "Give a try",
+                            "On the other hand",
+                            "Try on"
+                        ],
+                        "answer": "On the other hand",
+                        "answer_index": 2,
+                        "hint": "On the other hand 意為「另一方面」，用來表達不同的意見或事實。"
+                    },
+                    {
+                        "id": "h1-4-u3-q024",
+                        "question": "The opening ________ of the movie is so scary that I closed my eyes.",
+                        "options": [
+                            "image",
+                            "effect",
+                            "reality",
+                            "scene"
+                        ],
+                        "answer": "scene",
+                        "answer_index": 3,
+                        "hint": "opening scene 意指電影的「開場場景」。"
+                    },
+                    {
+                        "id": "h1-4-u3-q025",
+                        "question": "The sad story on the news made everyone in the room ________ sad.",
+                        "options": [
+                            "feeling",
+                            "to feel",
+                            "feel",
+                            "felt"
+                        ],
+                        "answer": "feel",
+                        "answer_index": 2,
+                        "hint": "make 作為使役動詞，後接原形動詞 feel。"
+                    },
+                    {
+                        "id": "h1-4-u3-q026",
+                        "question": "If the movie is too ________, we can watch a comedy instead.",
+                        "options": [
+                            "wild",
+                            "scary",
+                            "extra",
+                            "curious"
+                        ],
+                        "answer": "scary",
+                        "answer_index": 1,
+                        "hint": "scary 意為「可怕的」。"
+                    },
+                    {
+                        "id": "h1-4-u3-q027",
+                        "question": "If Jane ________ to the party tonight, we will play board games together.",
+                        "options": [
+                            "comes",
+                            "came",
+                            "will come",
+                            "coming"
+                        ],
+                        "answer": "comes",
+                        "answer_index": 0,
+                        "hint": "if 條件子句表未來可能發生的事，需用現在簡單式。動詞需加 -s。"
+                    },
+                    {
+                        "id": "h1-4-u3-q028",
+                        "question": "To make the soup taste better, you can ________ some salt to it.",
+                        "options": [
+                            "inform",
+                            "explore",
+                            "involve",
+                            "add"
+                        ],
+                        "answer": "add",
+                        "answer_index": 3,
+                        "hint": "add A to B 意指「把 A 加進 B 裡」。"
+                    },
+                    {
+                        "id": "h1-4-u3-q029",
+                        "question": "My boss had me ________ the document to all our clients this morning.",
+                        "options": [
+                            "sent",
+                            "to send",
+                            "send",
+                            "sending"
+                        ],
+                        "answer": "send",
+                        "answer_index": 2,
+                        "hint": "have 為使役動詞，後接受詞主動做動作，接原形動詞 send。"
+                    },
+                    {
+                        "id": "h1-4-u3-q030",
+                        "question": "Selina loves reading novels. ________ her sister, she enjoys outdoor activities.",
+                        "options": [
+                            "As for",
+                            "Try on",
+                            "Give a try",
+                            "For instance"
+                        ],
+                        "answer": "As for",
+                        "answer_index": 0,
+                        "hint": "As for 意為「至於」，用來帶入另一個相關的主題或人物。"
+                    },
+                    {
+                        "id": "h1-4-u3-q031",
+                        "question": "The little boy is very ________ about the animals living in the wild.",
+                        "options": [
+                            "effective",
+                            "involved",
+                            "curious",
+                            "wild"
+                        ],
+                        "answer": "curious",
+                        "answer_index": 2,
+                        "hint": "be curious about 意指「對...感到好奇」。"
+                    },
+                    {
+                        "id": "h1-4-u3-q032",
+                        "question": "If he ________ study hard, he will definitely fail the upcoming test.",
+                        "options": [
+                            "didn't",
+                            "isn't",
+                            "doesn't",
+                            "won't"
+                        ],
+                        "answer": "doesn't",
+                        "answer_index": 2,
+                        "hint": "if 條件子句用現在簡單式。主詞 he 的否定助動詞用 doesn't。"
+                    },
+                    {
+                        "id": "h1-4-u3-q033",
+                        "question": "Over the years, the small fishing village has ________ into a popular tourist attraction.",
+                        "options": [
+                            "explored",
+                            "informed",
+                            "added",
+                            "developed"
+                        ],
+                        "answer": "developed",
+                        "answer_index": 3,
+                        "hint": "develop into 意為「發展成...」。"
+                    },
+                    {
+                        "id": "h1-4-u3-q034",
+                        "question": "If you want to know whether the dress fits you, you should ________.",
+                        "options": [
+                            "try it on",
+                            "give it a try",
+                            "inform it",
+                            "add it"
+                        ],
+                        "answer": "try it on",
+                        "answer_index": 0,
+                        "hint": "try on 意為「試穿」，代名詞 it 必須放在中間。"
+                    },
+                    {
+                        "id": "h1-4-u3-q035",
+                        "question": "The strict parents don't let their children ________ video games on weekdays.",
+                        "options": [
+                            "play",
+                            "playing",
+                            "to play",
+                            "played"
+                        ],
+                        "answer": "play",
+                        "answer_index": 0,
+                        "hint": "let 為使役動詞，後接原形動詞 play。"
+                    },
+                    {
+                        "id": "h1-4-u3-q036",
+                        "question": "The medicine is highly ________. My headache was gone in 10 minutes.",
+                        "options": [
+                            "curious",
+                            "extra",
+                            "effective",
+                            "scary"
+                        ],
+                        "answer": "effective",
+                        "answer_index": 2,
+                        "hint": "effective 意為「有效的」。"
+                    },
+                    {
+                        "id": "h1-4-u3-q037",
+                        "question": "If the weather is nice, my mom will let me ________ outside with my friends.",
+                        "options": [
+                            "playing",
+                            "played",
+                            "play",
+                            "to play"
+                        ],
+                        "answer": "play",
+                        "answer_index": 2,
+                        "hint": "let 為使役動詞，後接原形動詞 play。"
+                    },
+                    {
+                        "id": "h1-4-u3-q038",
+                        "question": "Out of ________, the cat opened the box to see what was inside.",
+                        "options": [
+                            "reality",
+                            "appearance",
+                            "development",
+                            "curiosity"
+                        ],
+                        "answer": "curiosity",
+                        "answer_index": 3,
+                        "hint": "out of curiosity 為固定用法，意指「出於好奇心」。"
+                    },
+                    {
+                        "id": "h1-4-u3-q039",
+                        "question": "More than 50 volunteers are ________ in the beach cleanup event.",
+                        "options": [
+                            "added",
+                            "explored",
+                            "involved",
+                            "informed"
+                        ],
+                        "answer": "involved",
+                        "answer_index": 2,
+                        "hint": "be involved in 意為「參與...」。"
+                    },
+                    {
+                        "id": "h1-4-u3-q040",
+                        "question": "The hotel staff will ________ you of the breakfast time when you check in.",
+                        "options": [
+                            "explore",
+                            "inform",
+                            "develop",
+                            "try"
+                        ],
+                        "answer": "inform",
+                        "answer_index": 1,
+                        "hint": "inform A of B 意為「通知 A 關於 B 的事」。"
+                    },
+                    {
+                        "id": "h1-4-u3-q041",
+                        "question": "They enjoy taking pictures of nature. ________, they photograph birds and trees.",
+                        "options": [
+                            "On the other hand",
+                            "As for",
+                            "For instance",
+                            "Give a try"
+                        ],
+                        "answer": "For instance",
+                        "answer_index": 2,
+                        "hint": "for instance 意為「例如」。"
+                    },
+                    {
+                        "id": "h1-4-u3-q042",
+                        "question": "If you pay a little more money, you can get an ________ piece of cake.",
+                        "options": [
+                            "extra",
+                            "effective",
+                            "wild",
+                            "scary"
+                        ],
+                        "answer": "extra",
+                        "answer_index": 0,
+                        "hint": "extra 意為「額外的」。"
+                    },
+                    {
+                        "id": "h1-4-u3-q043",
+                        "question": "Some people believe that traveling to Mars will become a ________ in the future.",
+                        "options": [
+                            "reality",
+                            "image",
+                            "scene",
+                            "curiosity"
+                        ],
+                        "answer": "reality",
+                        "answer_index": 0,
+                        "hint": "become a reality 意為「成為現實」。"
+                    },
+                    {
+                        "id": "h1-4-u3-q044",
+                        "question": "The funny clown made all the kids in the hospital ________ happily.",
+                        "options": [
+                            "to laugh",
+                            "laugh",
+                            "laughing",
+                            "laughed"
+                        ],
+                        "answer": "laugh",
+                        "answer_index": 1,
+                        "hint": "make 為使役動詞，後接原形動詞 laugh。"
+                    },
+                    {
+                        "id": "h1-4-u3-q045",
+                        "question": "He has a cool ________, but he is actually a very shy and warm person.",
+                        "options": [
+                            "effect",
+                            "information",
+                            "development",
+                            "appearance"
+                        ],
+                        "answer": "appearance",
+                        "answer_index": 3,
+                        "hint": "appearance 意為「外表」。"
+                    },
+                    {
+                        "id": "h1-4-u3-q046",
+                        "question": "If you don't know how to play the game, I can let you ________.",
+                        "options": [
+                            "try on it",
+                            "give it a try",
+                            "inform it",
+                            "explore it"
+                        ],
+                        "answer": "give it a try",
+                        "answer_index": 1,
+                        "hint": "give it a try 意為「試試看」。"
+                    },
+                    {
+                        "id": "h1-4-u3-q047",
+                        "question": "The rapid ________ of technology has completely changed our lives.",
+                        "options": [
+                            "development",
+                            "reality",
+                            "image",
+                            "appearance"
+                        ],
+                        "answer": "development",
+                        "answer_index": 0,
+                        "hint": "development 意為「發展」。"
+                    },
+                    {
+                        "id": "h1-4-u3-q048",
+                        "question": "In the past, TV ________ were only black and white, but now they are colorful.",
+                        "options": [
+                            "realities",
+                            "scenes",
+                            "images",
+                            "effects"
+                        ],
+                        "answer": "images",
+                        "answer_index": 2,
+                        "hint": "image 意為「影像」。"
+                    },
+                    {
+                        "id": "h1-4-u3-q049",
+                        "question": "We had the mechanic ________ our broken car yesterday afternoon.",
+                        "options": [
+                            "fixed",
+                            "fixing",
+                            "to fix",
+                            "fix"
+                        ],
+                        "answer": "fix",
+                        "answer_index": 3,
+                        "hint": "have 作為使役動詞，受詞主動動作接原形動詞 fix。"
+                    },
+                    {
+                        "id": "h1-4-u3-q050",
+                        "question": "I really want to go to the beach. ________, I have a lot of homework to do.",
+                        "options": [
+                            "As for",
+                            "For instance",
+                            "On the other hand",
+                            "Give a try"
+                        ],
+                        "answer": "On the other hand",
+                        "answer_index": 2,
+                        "hint": "on the other hand 意為「另一方面」，用來表達轉折。"
+                    }
+                ]
+            },
+            "scrambles": {
+                "vocab": [
+                    {
+                        "id": "h1-4-u3-sv001",
+                        "vocab_id": "h1-4-u3-v001",
+                        "sentence": "Rachel is hoping that time travel will become a reality.",
+                        "sentence_chinese": "Rachel 希望時光旅行能成為現實。"
+                    },
+                    {
+                        "id": "h1-4-u3-sv002",
+                        "vocab_id": "h1-4-u3-v002",
+                        "sentence": "Melody added a sticker to her message to show her feelings.",
+                        "sentence_chinese": "Melody 在她的訊息中加了一張貼紙來表達她的感受。"
+                    },
+                    {
+                        "id": "h1-4-u3-sv003",
+                        "vocab_id": "h1-4-u3-v003",
+                        "sentence": "I liked the performance because it had great sound effects.",
+                        "sentence_chinese": "我喜歡這場表演，因為它有很棒的音效。"
+                    },
+                    {
+                        "id": "h1-4-u3-sv004",
+                        "vocab_id": "h1-4-u3-v004",
+                        "sentence": "Young people often care a lot about their appearance.",
+                        "sentence_chinese": "年輕人通常很在乎他們的外表。"
+                    },
+                    {
+                        "id": "h1-4-u3-sv005",
+                        "vocab_id": "h1-4-u3-v005",
+                        "sentence": "This music event is huge. More than 20 bands are involved in it.",
+                        "sentence_chinese": "這場音樂盛會規模龐大。超過 20 個樂團參與其中。"
+                    },
+                    {
+                        "id": "h1-4-u3-sv006",
+                        "vocab_id": "h1-4-u3-v006",
+                        "sentence": "The old house looked scary in the dark.",
+                        "sentence_chinese": "這棟老房子在黑暗中看起來很可怕。"
+                    },
+                    {
+                        "id": "h1-4-u3-sv007",
+                        "vocab_id": "h1-4-u3-v007",
+                        "sentence": "In the game, the players are left in the wild and must find food to live.",
+                        "sentence_chinese": "在遊戲中，玩家被留在荒野，必須尋找食物才能生存。"
+                    },
+                    {
+                        "id": "h1-4-u3-sv008",
+                        "vocab_id": "h1-4-u3-v008",
+                        "sentence": "On the Internet, we can find information about almost everything.",
+                        "sentence_chinese": "在網路上，我們幾乎可以找到關於任何事情的資訊。"
+                    },
+                    {
+                        "id": "h1-4-u3-sv009",
+                        "vocab_id": "h1-4-u3-v009",
+                        "sentence": "To our surprise, there are many love scenes in this scary movie.",
+                        "sentence_chinese": "令我們驚訝的是，這部恐怖片裡有很多愛情場景。"
+                    },
+                    {
+                        "id": "h1-4-u3-sv010",
+                        "vocab_id": "h1-4-u3-v010",
+                        "sentence": "In the past, images on TV were only black and white.",
+                        "sentence_chinese": "過去，電視上的影像只有黑白的。"
+                    },
+                    {
+                        "id": "h1-4-u3-sv011",
+                        "vocab_id": "h1-4-u3-v011",
+                        "sentence": "Customers need to pay more if they want extra cheese on their pizzas.",
+                        "sentence_chinese": "如果顧客想要在披薩上加額外的起司，他們需要付更多錢。"
+                    },
+                    {
+                        "id": "h1-4-u3-sv012",
+                        "vocab_id": "h1-4-u3-v012",
+                        "sentence": "Tim is very curious about what his online friend looks like.",
+                        "sentence_chinese": "Tim 對他的網友長什麼樣子感到很好奇。"
+                    },
+                    {
+                        "id": "h1-4-u3-sv013",
+                        "vocab_id": "h1-4-u3-v013",
+                        "sentence": "Many tourists like to take a glass-bottom boat to explore the ocean.",
+                        "sentence_chinese": "許多遊客喜歡搭乘玻璃底船來探索海洋。"
+                    },
+                    {
+                        "id": "h1-4-u3-sv014",
+                        "vocab_id": "h1-4-u3-v014",
+                        "sentence": "With the help of artists, the old station developed into a new attraction.",
+                        "sentence_chinese": "在藝術家的幫助下，這座舊車站發展成了一個新景點。"
+                    }
+                ],
+                "phrases": [
+                    {
+                        "id": "h1-4-u3-sp001",
+                        "phrase_id": "h1-4-u3-p001",
+                        "sentence": "I would really like to enjoy some late-night snacks. On the other hand, I don't want to put on weight.",
+                        "sentence_chinese": "我真的很想享受一些宵夜。另一方面，我不想變胖。"
+                    },
+                    {
+                        "id": "h1-4-u3-sp002",
+                        "phrase_id": "h1-4-u3-p002",
+                        "sentence": "Selina will come to our barbecue party. As for Hebe, she is still thinking about that.",
+                        "sentence_chinese": "Selina 會來我們的烤肉派對。至於 Hebe，她還在考慮。"
+                    },
+                    {
+                        "id": "h1-4-u3-sp003",
+                        "phrase_id": "h1-4-u3-p003",
+                        "sentence": "David never buys shoes online because he cannot try them on.",
+                        "sentence_chinese": "David 從不在網路上買鞋，因為他無法試穿。"
+                    },
+                    {
+                        "id": "h1-4-u3-sp004",
+                        "phrase_id": "h1-4-u3-p004",
+                        "sentence": "I downloaded several kinds of apps. For instance, there were camera apps and game apps.",
+                        "sentence_chinese": "我下載了幾種應用程式。例如，有相機應用程式和遊戲應用程式。"
+                    },
+                    {
+                        "id": "h1-4-u3-sp005",
+                        "phrase_id": "h1-4-u3-p005",
+                        "sentence": "Although \"pudding ramen\" sounds strange, I would love to give it a try.",
+                        "sentence_chinese": "雖然「布丁拉麵」聽起來很奇怪，但我想試試看。"
+                    }
+                ],
+                "grammar": [
+                    {
+                        "id": "h1-4-u3-sg001",
+                        "sentence": "The scary movie made the girl cry.",
+                        "sentence_chinese": "這部可怕的電影讓那個女孩哭了。"
+                    },
+                    {
+                        "id": "h1-4-u3-sg002",
+                        "sentence": "The teacher had the students clean the classroom.",
+                        "sentence_chinese": "老師讓學生們打掃教室。"
+                    },
+                    {
+                        "id": "h1-4-u3-sg003",
+                        "sentence": "My mother let me watch TV after dinner.",
+                        "sentence_chinese": "我媽媽讓我晚飯後看電視。"
+                    },
+                    {
+                        "id": "h1-4-u3-sg004",
+                        "sentence": "The bad weather made us stay at home.",
+                        "sentence_chinese": "壞天氣使我們待在家裡。"
+                    },
+                    {
+                        "id": "h1-4-u3-sg005",
+                        "sentence": "The manager had his secretary send the email.",
+                        "sentence_chinese": "經理讓他的秘書發送電子郵件。"
+                    },
+                    {
+                        "id": "h1-4-u3-sg006",
+                        "sentence": "Her parents won't let her go to the wild alone.",
+                        "sentence_chinese": "她的父母不讓她獨自去荒野。"
+                    },
+                    {
+                        "id": "h1-4-u3-sg007",
+                        "sentence": "The sad story made everyone feel down.",
+                        "sentence_chinese": "這個悲傷的故事讓每個人都感到沮喪。"
+                    },
+                    {
+                        "id": "h1-4-u3-sg008",
+                        "sentence": "The doctor had the patient take a rest.",
+                        "sentence_chinese": "醫生讓病人休息一下。"
+                    },
+                    {
+                        "id": "h1-4-u3-sg009",
+                        "sentence": "Please let me try on this jacket.",
+                        "sentence_chinese": "請讓我試穿這件夾克。"
+                    },
+                    {
+                        "id": "h1-4-u3-sg010",
+                        "sentence": "The funny joke made the whole class laugh.",
+                        "sentence_chinese": "這個好笑的笑話讓全班都笑了。"
+                    },
+                    {
+                        "id": "h1-4-u3-sg011",
+                        "sentence": "The coach had the team run five miles.",
+                        "sentence_chinese": "教練讓球隊跑了五英里。"
+                    },
+                    {
+                        "id": "h1-4-u3-sg012",
+                        "sentence": "My dad let me explore the new city.",
+                        "sentence_chinese": "我爸爸讓我探索這座新城市。"
+                    },
+                    {
+                        "id": "h1-4-u3-sg013",
+                        "sentence": "The loud noise made the baby wake up.",
+                        "sentence_chinese": "巨大的噪音把嬰兒吵醒了。"
+                    },
+                    {
+                        "id": "h1-4-u3-sg014",
+                        "sentence": "I had my brother carry the heavy bags.",
+                        "sentence_chinese": "我讓我弟弟拿那些重袋子。"
+                    },
+                    {
+                        "id": "h1-4-u3-sg015",
+                        "sentence": "They let the animals live in the wild freely.",
+                        "sentence_chinese": "他們讓動物們在野外自由生活。"
+                    },
+                    {
+                        "id": "h1-4-u3-sg016",
+                        "sentence": "If it rains tomorrow, we will stay at home.",
+                        "sentence_chinese": "如果明天下雨，我們就待在家裡。"
+                    },
+                    {
+                        "id": "h1-4-u3-sg017",
+                        "sentence": "If you study hard, you will pass the exam.",
+                        "sentence_chinese": "如果你努力學習，你就會通過考試。"
+                    },
+                    {
+                        "id": "h1-4-u3-sg018",
+                        "sentence": "If she visits the website, she can find the information.",
+                        "sentence_chinese": "如果她造訪這個網站，她就能找到資訊。"
+                    },
+                    {
+                        "id": "h1-4-u3-sg019",
+                        "sentence": "If you add extra sugar, the tea will taste better.",
+                        "sentence_chinese": "如果你多加點糖，茶會更好喝。"
+                    },
+                    {
+                        "id": "h1-4-u3-sg020",
+                        "sentence": "If the weather is good, we may go hiking.",
+                        "sentence_chinese": "如果天氣好，我們可能會去健行。"
+                    },
+                    {
+                        "id": "h1-4-u3-sg021",
+                        "sentence": "If he finds the missing dog, he will inform you.",
+                        "sentence_chinese": "如果他找到那隻走失的狗，他會通知你。"
+                    },
+                    {
+                        "id": "h1-4-u3-sg022",
+                        "sentence": "If you are curious, you can give it a try.",
+                        "sentence_chinese": "如果你很好奇，你可以試試看。"
+                    },
+                    {
+                        "id": "h1-4-u3-sg023",
+                        "sentence": "If they wake up early, they can catch the train.",
+                        "sentence_chinese": "如果他們早起，他們就能趕上火車。"
+                    },
+                    {
+                        "id": "h1-4-u3-sg024",
+                        "sentence": "If I have enough money, I will buy a new phone.",
+                        "sentence_chinese": "如果我有足夠的錢，我就會買一支新手機。"
+                    },
+                    {
+                        "id": "h1-4-u3-sg025",
+                        "sentence": "If the player finds the box, he will get a prize.",
+                        "sentence_chinese": "如果玩家找到箱子，他就會得到獎品。"
+                    },
+                    {
+                        "id": "h1-4-u3-sg026",
+                        "sentence": "If she feels sick, she should see a doctor.",
+                        "sentence_chinese": "如果她覺得不舒服，她應該去看醫生。"
+                    },
+                    {
+                        "id": "h1-4-u3-sg027",
+                        "sentence": "If you care about your appearance, you can try this.",
+                        "sentence_chinese": "如果你在乎你的外表，你可以試試這個。"
+                    },
+                    {
+                        "id": "h1-4-u3-sg028",
+                        "sentence": "If we leave now, we will arrive on time.",
+                        "sentence_chinese": "如果我們現在出發，我們就會準時到達。"
+                    },
+                    {
+                        "id": "h1-4-u3-sg029",
+                        "sentence": "If he tells the truth, I will forgive him.",
+                        "sentence_chinese": "如果他說實話，我就會原諒他。"
+                    },
+                    {
+                        "id": "h1-4-u3-sg030",
+                        "sentence": "If you want more details, I can show you the images.",
+                        "sentence_chinese": "如果你想要更多細節，我可以給你看圖片。"
+                    }
+                ]
+            }
+        }
+    }
+}

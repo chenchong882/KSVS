@@ -1,0 +1,1200 @@
+{
+    "units": {
+        "h1-4-u4": {
+            "title": "Unit 4",
+            "vocab": [
+                {
+                    "id": "h1-4-u4-v001",
+                    "word": "consider",
+                    "part_of_speech": "vt.; vi.",
+                    "chinese": "考慮",
+                    "sentence": "Patrick is considering buying a Happy Meal to get the free toy.",
+                    "sentence_chinese": "派翠克正在考慮買快樂兒童餐來獲得免費玩具。"
+                },
+                {
+                    "id": "h1-4-u4-v002",
+                    "word": "consideration",
+                    "part_of_speech": "n. [U]",
+                    "chinese": "考慮",
+                    "sentence": "Alisa usually takes breakfast into consideration when she chooses a hotel.",
+                    "sentence_chinese": "艾莉莎選擇飯店時通常會將早餐納入考慮。"
+                },
+                {
+                    "id": "h1-4-u4-v003",
+                    "word": "situation",
+                    "part_of_speech": "n. [C]",
+                    "chinese": "情況",
+                    "sentence": "The red button in the public toilet is for dangerous situations only.",
+                    "sentence_chinese": "公廁裡的紅色按鈕僅供危險情況使用。"
+                },
+                {
+                    "id": "h1-4-u4-v004",
+                    "word": "tend",
+                    "part_of_speech": "vi.",
+                    "chinese": "傾向，往往",
+                    "sentence": "Irene tends to choose a window seat when she takes a plane.",
+                    "sentence_chinese": "艾琳搭飛機時往往會選擇靠窗的座位。"
+                },
+                {
+                    "id": "h1-4-u4-v005",
+                    "word": "crowd",
+                    "part_of_speech": "n. [C]",
+                    "chinese": "群眾",
+                    "sentence": "The Christmas event was fun, so it attracted large crowds of people.",
+                    "sentence_chinese": "這場聖誕活動很有趣，所以吸引了大批群眾。"
+                },
+                {
+                    "id": "h1-4-u4-v006",
+                    "word": "daily",
+                    "part_of_speech": "adj.",
+                    "chinese": "日常的，每天的",
+                    "sentence": "The daily job of some social workers is to check on how poor families are doing.",
+                    "sentence_chinese": "一些社會工作者的日常工作是查看貧困家庭的狀況。"
+                },
+                {
+                    "id": "h1-4-u4-v007",
+                    "word": "suddenly",
+                    "part_of_speech": "adv.",
+                    "chinese": "突然",
+                    "sentence": "The earthquake occurred suddenly and scared my parents.",
+                    "sentence_chinese": "地震突然發生，嚇到了我父母。"
+                },
+                {
+                    "id": "h1-4-u4-v008",
+                    "word": "include",
+                    "part_of_speech": "vt.",
+                    "chinese": "包括",
+                    "sentence": "This set lunch includes a main dish and a drink.",
+                    "sentence_chinese": "這份套餐包括一份主菜和一杯飲料。"
+                },
+                {
+                    "id": "h1-4-u4-v009",
+                    "word": "including",
+                    "part_of_speech": "prep.",
+                    "chinese": "包含",
+                    "sentence": "Certain behavior is not allowed in the race, including hitting others.",
+                    "sentence_chinese": "比賽中不允許某些行為，包含打別人。"
+                },
+                {
+                    "id": "h1-4-u4-v010",
+                    "word": "gesture",
+                    "part_of_speech": "n. [C][U]",
+                    "chinese": "手勢",
+                    "sentence": "Michael made a gesture to tell his team member to shoot the ball.",
+                    "sentence_chinese": "麥可做了一個手勢告訴他的隊員投籃。"
+                },
+                {
+                    "id": "h1-4-u4-v011",
+                    "word": "rapidly",
+                    "part_of_speech": "adv.",
+                    "chinese": "迅速地",
+                    "sentence": "If a popular YouTuber promotes our product, our sales increase rapidly.",
+                    "sentence_chinese": "如果受歡迎的 YouTuber 推廣我們的產品，我們的銷售量會迅速增加。"
+                },
+                {
+                    "id": "h1-4-u4-v012",
+                    "word": "rapid",
+                    "part_of_speech": "adj.",
+                    "chinese": "迅速的",
+                    "sentence": "The rapid change in the weather made me catch a cold.",
+                    "sentence_chinese": "天氣的迅速變化讓我感冒了。"
+                },
+                {
+                    "id": "h1-4-u4-v013",
+                    "word": "besides",
+                    "part_of_speech": "adv.",
+                    "chinese": "此外",
+                    "sentence": "I don't feel like eating out tonight. Besides, I spent too much money this month.",
+                    "sentence_chinese": "我今晚不想在外面吃。此外，我這個月花太多錢了。"
+                },
+                {
+                    "id": "h1-4-u4-v014",
+                    "word": "drama",
+                    "part_of_speech": "n. [C]",
+                    "chinese": "戲劇",
+                    "sentence": "It is surprising that the singer plays the role of a clown in the new TV drama.",
+                    "sentence_chinese": "令人驚訝的是，這位歌手在新電視劇中扮演小丑的角色。"
+                },
+                {
+                    "id": "h1-4-u4-v015",
+                    "word": "unfortunately",
+                    "part_of_speech": "adv.",
+                    "chinese": "不幸地",
+                    "sentence": "Sherry came for her favorite dessert at the café. Unfortunately, it was not open.",
+                    "sentence_chinese": "雪莉來這家咖啡館吃她最喜歡的甜點。不幸地是，它沒開。"
+                },
+                {
+                    "id": "h1-4-u4-v016",
+                    "word": "fortunate",
+                    "part_of_speech": "adj.",
+                    "chinese": "幸運的",
+                    "sentence": "Daniel was fortunate to earn a free set of LINE stickers.",
+                    "sentence_chinese": "丹尼爾很幸運地獲得了一組免費的 LINE 貼圖。"
+                },
+                {
+                    "id": "h1-4-u4-v017",
+                    "word": "harmful",
+                    "part_of_speech": "adj.",
+                    "chinese": "有害的",
+                    "sentence": "Eating too many instant noodles can be harmful to health.",
+                    "sentence_chinese": "吃太多泡麵可能對健康有害。"
+                },
+                {
+                    "id": "h1-4-u4-v018",
+                    "word": "harm",
+                    "part_of_speech": "n. [U]",
+                    "chinese": "傷害",
+                    "sentence": "The hurtful comments on Rita's blog did harm to her feelings.",
+                    "sentence_chinese": "麗塔部落格上的傷人評論對她的感情造成了傷害。"
+                },
+                {
+                    "id": "h1-4-u4-v019",
+                    "word": "pressure",
+                    "part_of_speech": "n. [U][C]",
+                    "chinese": "壓力",
+                    "sentence": "The young singer is under a lot of pressure to perform in the big show.",
+                    "sentence_chinese": "這位年輕歌手在大型演出中承受著很大的壓力。"
+                },
+                {
+                    "id": "h1-4-u4-v020",
+                    "word": "isolate",
+                    "part_of_speech": "vt.",
+                    "chinese": "孤立",
+                    "sentence": "The island is isolated by oceans, so we need to go there by boat.",
+                    "sentence_chinese": "這座島嶼被海洋孤立，所以我們需要搭船去那裡。"
+                }
+            ],
+            "phrases": [
+                {
+                    "id": "h1-4-u4-p001",
+                    "phrase": "in contrast",
+                    "chinese": "相比之下",
+                    "sentence": "Ted loves to read books for fun. In contrast, I play video games.",
+                    "sentence_chinese": "泰德喜歡看書當作消遣。相比之下，我打電動。"
+                },
+                {
+                    "id": "h1-4-u4-p002",
+                    "phrase": "rather than",
+                    "chinese": "而不是",
+                    "sentence": "Ian chose the cool shoes rather than the comfortable ones.",
+                    "sentence_chinese": "伊恩選擇了酷炫的鞋子而不是舒適的鞋子。"
+                },
+                {
+                    "id": "h1-4-u4-p003",
+                    "phrase": "(all) on one's own",
+                    "chinese": "獨立，獨自",
+                    "sentence": "Winnie is very nervous because she is going to travel on her own.",
+                    "sentence_chinese": "溫妮非常緊張，因為她要獨自旅行。"
+                },
+                {
+                    "id": "h1-4-u4-p004",
+                    "phrase": "be known as",
+                    "chinese": "被稱為...",
+                    "sentence": "New York City is commonly known as the Big Apple.",
+                    "sentence_chinese": "紐約市通常被稱為大蘋果。"
+                },
+                {
+                    "id": "h1-4-u4-p005",
+                    "phrase": "stick to",
+                    "chinese": "堅持，衷於",
+                    "sentence": "Kelly sticks to her habit of getting up early every day, even on weekends.",
+                    "sentence_chinese": "凱莉堅持她每天早起的習慣，即使在週末也是如此。"
+                }
+            ],
+            "grammar": {
+                "tips": [
+                    {
+                        "label": "基本句型 1",
+                        "text": "S + V + so + Adj / Adv + that + S + V"
+                    },
+                    {
+                        "label": "基本句型 2",
+                        "text": "N (先行詞) + who / which / that + V ..."
+                    }
+                ],
+                "notes": [
+                    {
+                        "title": "so + Adj / Adv + that ... (如此...以至於...)",
+                        "rule": "so 是副詞，後面必須緊接形容詞 (Adj) 或副詞 (Adv)，用來強調程度。that 所引導的子句用來表達因為前面的程度而造成的「結果」。",
+                        "description": "用來表達某事物程度極高，進而產生了某種結果。",
+                        "examples": [
+                            "The weather changed so rapidly that we had to cancel our picnic.",
+                            "The rain was so heavy that we all got wet.",
+                            "The dog appeared so suddenly that I was scared to death."
+                        ]
+                    },
+                    {
+                        "title": "關係子句 (主格關係代名詞 who / which / that)",
+                        "rule": "當先行詞是「人」時，關係代名詞用 who 或 that；當先行詞是「物」或「動物」時，關係代名詞用 which 或 that。在子句中作主詞時，動詞單複數必須與先行詞一致。",
+                        "description": "關係代名詞用來代替前面的名詞（先行詞），並引導出一個形容詞子句來修飾該名詞。",
+                        "examples": [
+                            "I prefer to watch dramas that / which have happy endings.",
+                            "Andrew lost the hat which was given by Sharon.",
+                            "A crowd of people who gathered in the square were there for the event."
+                        ]
+                    }
+                ],
+                "quiz": [
+                    {
+                        "id": "h1-4-u4-q001",
+                        "question": "Patrick is ____ buying a new car because his old one breaks down often.",
+                        "options": [
+                            "considering",
+                            "isolating",
+                            "including",
+                            "tending"
+                        ],
+                        "answer": "considering",
+                        "answer_index": 0,
+                        "hint": "空格後接 V-ing (buying)，且句意為「考慮買新車」。"
+                    },
+                    {
+                        "id": "h1-4-u4-q002",
+                        "question": "You should take the weather into ____ before you plan a beach trip.",
+                        "options": [
+                            "pressure",
+                            "consideration",
+                            "gesture",
+                            "crowd"
+                        ],
+                        "answer": "consideration",
+                        "answer_index": 1,
+                        "hint": "take... into consideration 為固定用法，意為「將...納入考慮」。"
+                    },
+                    {
+                        "id": "h1-4-u4-q003",
+                        "question": "In an emergency ____, you should stay calm and call 119.",
+                        "options": [
+                            "drama",
+                            "consideration",
+                            "situation",
+                            "gesture"
+                        ],
+                        "answer": "situation",
+                        "answer_index": 2,
+                        "hint": "emergency situation 意為「緊急情況」。"
+                    },
+                    {
+                        "id": "h1-4-u4-q004",
+                        "question": "My brother ____ to sleep late on weekends because he doesn't have to go to school.",
+                        "options": [
+                            "includes",
+                            "isolates",
+                            "tends",
+                            "considers"
+                        ],
+                        "answer": "tends",
+                        "answer_index": 2,
+                        "hint": "tend to + V 意為「傾向於...、往往會...」。"
+                    },
+                    {
+                        "id": "h1-4-u4-q005",
+                        "question": "A huge ____ gathered in front of the department store to buy the limited edition shoes.",
+                        "options": [
+                            "crowd",
+                            "drama",
+                            "harm",
+                            "pressure"
+                        ],
+                        "answer": "crowd",
+                        "answer_index": 0,
+                        "hint": "a huge crowd 意為「一大群人/群眾」。"
+                    },
+                    {
+                        "id": "h1-4-u4-q006",
+                        "question": "Brushing teeth and washing face are part of my ____ routine.",
+                        "options": [
+                            "harmful",
+                            "rapid",
+                            "fortunate",
+                            "daily"
+                        ],
+                        "answer": "daily",
+                        "answer_index": 3,
+                        "hint": "daily routine 意為「日常作息」。"
+                    },
+                    {
+                        "id": "h1-4-u4-q007",
+                        "question": "The peaceful afternoon was ____ broken by a loud scream from the street.",
+                        "options": [
+                            "suddenly",
+                            "rapidly",
+                            "unfortunately",
+                            "besides"
+                        ],
+                        "answer": "suddenly",
+                        "answer_index": 0,
+                        "hint": "符合「平靜的下午突然被打破」的語境。"
+                    },
+                    {
+                        "id": "h1-4-u4-q008",
+                        "question": "The price of the hotel room ____ free breakfast for two people.",
+                        "options": [
+                            "tends",
+                            "considers",
+                            "includes",
+                            "isolates"
+                        ],
+                        "answer": "includes",
+                        "answer_index": 2,
+                        "hint": "意為「包含」，房價「包含」免費早餐。"
+                    },
+                    {
+                        "id": "h1-4-u4-q009",
+                        "question": "Everyone in the class passed the math test, ____ John.",
+                        "options": [
+                            "including",
+                            "considered",
+                            "tended",
+                            "isolated"
+                        ],
+                        "answer": "including",
+                        "answer_index": 0,
+                        "hint": "為介系詞，意為「包含」，後接名詞 John。"
+                    },
+                    {
+                        "id": "h1-4-u4-q010",
+                        "question": "The police officer made a ____ to tell the driver to stop the car.",
+                        "options": [
+                            "crowd",
+                            "gesture",
+                            "situation",
+                            "drama"
+                        ],
+                        "answer": "gesture",
+                        "answer_index": 1,
+                        "hint": "make a gesture 意為「做手勢」。"
+                    },
+                    {
+                        "id": "h1-4-u4-q011",
+                        "question": "Technology is developing so ____ that we must keep learning new things.",
+                        "options": [
+                            "rapidly",
+                            "suddenly",
+                            "fortunately",
+                            "besides"
+                        ],
+                        "answer": "rapidly",
+                        "answer_index": 0,
+                        "hint": "意為「迅速地」，科技發展得很「迅速」。"
+                    },
+                    {
+                        "id": "h1-4-u4-q012",
+                        "question": "There has been a ____ change in his attitude since he joined the team.",
+                        "options": [
+                            "daily",
+                            "harmful",
+                            "rapid",
+                            "fortunate"
+                        ],
+                        "answer": "rapid",
+                        "answer_index": 2,
+                        "hint": "rapid change 意為「迅速的改變」。"
+                    },
+                    {
+                        "id": "h1-4-u4-q013",
+                        "question": "I don't want to go to the movies. ____, I have to finish my homework.",
+                        "options": [
+                            "Besides",
+                            "Suddenly",
+                            "Rapidly",
+                            "Unfortunately"
+                        ],
+                        "answer": "Besides",
+                        "answer_index": 0,
+                        "hint": "意為「此外」，用來補充說明不想去電影院的另一個原因。"
+                    },
+                    {
+                        "id": "h1-4-u4-q014",
+                        "question": "My sister loves watching Korean ____ on weekends.",
+                        "options": [
+                            "crowds",
+                            "gestures",
+                            "situations",
+                            "dramas"
+                        ],
+                        "answer": "dramas",
+                        "answer_index": 3,
+                        "hint": "Korean dramas 意為「韓劇」。"
+                    },
+                    {
+                        "id": "h1-4-u4-q015",
+                        "question": "We wanted to have a picnic in the park. ____, it rained all day.",
+                        "options": [
+                            "Suddenly",
+                            "Unfortunately",
+                            "Rapidly",
+                            "Besides"
+                        ],
+                        "answer": "Unfortunately",
+                        "answer_index": 1,
+                        "hint": "意為「不幸地」，帶出與期望相反的結果。"
+                    },
+                    {
+                        "id": "h1-4-u4-q016",
+                        "question": "I am very ____ to have such supportive friends and family.",
+                        "options": [
+                            "fortunate",
+                            "rapid",
+                            "daily",
+                            "harmful"
+                        ],
+                        "answer": "fortunate",
+                        "answer_index": 0,
+                        "hint": "意為「幸運的」。"
+                    },
+                    {
+                        "id": "h1-4-u4-q017",
+                        "question": "Smoking is highly ____ to your health and can cause serious diseases.",
+                        "options": [
+                            "fortunate",
+                            "daily",
+                            "rapid",
+                            "harmful"
+                        ],
+                        "answer": "harmful",
+                        "answer_index": 3,
+                        "hint": "be harmful to 意為「對...有害」。"
+                    },
+                    {
+                        "id": "h1-4-u4-q018",
+                        "question": "You shouldn't say mean words online because it can do ____ to others.",
+                        "options": [
+                            "harm",
+                            "drama",
+                            "gesture",
+                            "pressure"
+                        ],
+                        "answer": "harm",
+                        "answer_index": 0,
+                        "hint": "do harm to 意為「對...造成傷害」。"
+                    },
+                    {
+                        "id": "h1-4-u4-q019",
+                        "question": "Students often feel a lot of ____ before major exams.",
+                        "options": [
+                            "crowd",
+                            "gesture",
+                            "pressure",
+                            "drama"
+                        ],
+                        "answer": "pressure",
+                        "answer_index": 2,
+                        "hint": "feel pressure 意為「感到壓力」。"
+                    },
+                    {
+                        "id": "h1-4-u4-q020",
+                        "question": "The sick patient was ____ in a special room to prevent the virus from spreading.",
+                        "options": [
+                            "isolated",
+                            "included",
+                            "considered",
+                            "tended"
+                        ],
+                        "answer": "isolated",
+                        "answer_index": 0,
+                        "hint": "be isolated 意為「被孤立、被隔離」。"
+                    },
+                    {
+                        "id": "h1-4-u4-q021",
+                        "question": "My brother enjoys playing basketball. ____, I prefer staying indoors and reading.",
+                        "options": [
+                            "Besides",
+                            "Suddenly",
+                            "Unfortunately",
+                            "In contrast"
+                        ],
+                        "answer": "In contrast",
+                        "answer_index": 3,
+                        "hint": "意為「相比之下」，用來對比哥哥和「我」的不同喜好。"
+                    },
+                    {
+                        "id": "h1-4-u4-q022",
+                        "question": "I would like to have tea ____ coffee, please.",
+                        "options": [
+                            "in contrast",
+                            "rather than",
+                            "known as",
+                            "stuck to"
+                        ],
+                        "answer": "rather than",
+                        "answer_index": 1,
+                        "hint": "意為「而不是」，表示選擇茶「而不是」咖啡。"
+                    },
+                    {
+                        "id": "h1-4-u4-q023",
+                        "question": "She is a very independent girl who likes to do things ____.",
+                        "options": [
+                            "in contrast",
+                            "rather than",
+                            "on her own",
+                            "known as"
+                        ],
+                        "answer": "on her own",
+                        "answer_index": 2,
+                        "hint": "on one's own 意為「獨自、獨立」。"
+                    },
+                    {
+                        "id": "h1-4-u4-q024",
+                        "question": "The singer is widely ____ the King of Pop.",
+                        "options": [
+                            "isolated by",
+                            "included in",
+                            "considered to",
+                            "known as"
+                        ],
+                        "answer": "known as",
+                        "answer_index": 3,
+                        "hint": "be known as 意為「被稱為...」。"
+                    },
+                    {
+                        "id": "h1-4-u4-q025",
+                        "question": "If you want to lose weight, you must ____ your diet plan.",
+                        "options": [
+                            "stick to",
+                            "in contrast",
+                            "rather than",
+                            "know as"
+                        ],
+                        "answer": "stick to",
+                        "answer_index": 0,
+                        "hint": "stick to 意為「堅持」，堅持減肥計畫。"
+                    },
+                    {
+                        "id": "h1-4-u4-q026",
+                        "question": "The coffee was ____ hot that I burned my tongue.",
+                        "options": [
+                            "so",
+                            "very",
+                            "too",
+                            "such"
+                        ],
+                        "answer": "so",
+                        "answer_index": 0,
+                        "hint": "後面接 that 引導結果子句，搭配形容詞 hot，需使用 so...that 句型。"
+                    },
+                    {
+                        "id": "h1-4-u4-q027",
+                        "question": "The teacher ____ teaches us English is very nice and patient.",
+                        "options": [
+                            "which",
+                            "who",
+                            "whom",
+                            "what"
+                        ],
+                        "answer": "who",
+                        "answer_index": 1,
+                        "hint": "先行詞 The teacher 為「人」，在關係子句中作主詞，故選 who。"
+                    },
+                    {
+                        "id": "h1-4-u4-q028",
+                        "question": "I bought a new phone ____ has a great camera.",
+                        "options": [
+                            "who",
+                            "whose",
+                            "which",
+                            "whom"
+                        ],
+                        "answer": "which",
+                        "answer_index": 2,
+                        "hint": "先行詞 a new phone 為「物」，在關係子句中作主詞，故選 which。"
+                    },
+                    {
+                        "id": "h1-4-u4-q029",
+                        "question": "Please ____ my offer before you make a final decision.",
+                        "options": [
+                            "isolate",
+                            "consider",
+                            "gesture",
+                            "tend"
+                        ],
+                        "answer": "consider",
+                        "answer_index": 1,
+                        "hint": "consider my offer 意為「考慮我的提議」。"
+                    },
+                    {
+                        "id": "h1-4-u4-q030",
+                        "question": "The safety of the students is our primary ____.",
+                        "options": [
+                            "situation",
+                            "crowd",
+                            "consideration",
+                            "drama"
+                        ],
+                        "answer": "consideration",
+                        "answer_index": 2,
+                        "hint": "primary consideration 意為「首要考量」。"
+                    },
+                    {
+                        "id": "h1-4-u4-q031",
+                        "question": "It is difficult to know what to do in this awkward ____.",
+                        "options": [
+                            "situation",
+                            "gesture",
+                            "pressure",
+                            "drama"
+                        ],
+                        "answer": "situation",
+                        "answer_index": 0,
+                        "hint": "awkward situation 意為「尷尬的情況」。"
+                    },
+                    {
+                        "id": "h1-4-u4-q032",
+                        "question": "Prices ____ to rise during the holiday season because of high demand.",
+                        "options": [
+                            "include",
+                            "tend",
+                            "isolate",
+                            "stick"
+                        ],
+                        "answer": "tend",
+                        "answer_index": 1,
+                        "hint": "tend to + V 意為「往往會...」，指價格往往會上漲。"
+                    },
+                    {
+                        "id": "h1-4-u4-q033",
+                        "question": "He lost his child in the ____ at the crowded night market.",
+                        "options": [
+                            "crowd",
+                            "harm",
+                            "gesture",
+                            "pressure"
+                        ],
+                        "answer": "crowd",
+                        "answer_index": 0,
+                        "hint": "in the crowd 意為「在人群/群眾中」。"
+                    },
+                    {
+                        "id": "h1-4-u4-q034",
+                        "question": "Drinking enough water every day is a good ____ habit.",
+                        "options": [
+                            "harmful",
+                            "rapid",
+                            "daily",
+                            "sudden"
+                        ],
+                        "answer": "daily",
+                        "answer_index": 2,
+                        "hint": "daily habit 意為「日常習慣」。"
+                    },
+                    {
+                        "id": "h1-4-u4-q035",
+                        "question": "The dog barked ____ and scared the little girl.",
+                        "options": [
+                            "fortunately",
+                            "suddenly",
+                            "rapidly",
+                            "daily"
+                        ],
+                        "answer": "suddenly",
+                        "answer_index": 1,
+                        "hint": "suddenly 意為「突然地」，符合情境。"
+                    },
+                    {
+                        "id": "h1-4-u4-q036",
+                        "question": "The package tour ____ flight tickets and a hotel room.",
+                        "options": [
+                            "includes",
+                            "isolates",
+                            "tends",
+                            "considers"
+                        ],
+                        "answer": "includes",
+                        "answer_index": 0,
+                        "hint": "include 意為「包含」，指套裝行程包含機票與住宿。"
+                    },
+                    {
+                        "id": "h1-4-u4-q037",
+                        "question": "Everyone enjoyed the party, ____ the children.",
+                        "options": [
+                            "considering",
+                            "including",
+                            "isolating",
+                            "tending"
+                        ],
+                        "answer": "including",
+                        "answer_index": 1,
+                        "hint": "including 為介系詞，意為「包含」，後接名詞。"
+                    },
+                    {
+                        "id": "h1-4-u4-q038",
+                        "question": "He nodded his head as a ____ of agreement.",
+                        "options": [
+                            "crowd",
+                            "drama",
+                            "gesture",
+                            "situation"
+                        ],
+                        "answer": "gesture",
+                        "answer_index": 2,
+                        "hint": "gesture of agreement 意為「同意的手勢/表示」。"
+                    },
+                    {
+                        "id": "h1-4-u4-q039",
+                        "question": "The population of the city has grown ____ in the last decade.",
+                        "options": [
+                            "fortunately",
+                            "suddenly",
+                            "rapidly",
+                            "harmfully"
+                        ],
+                        "answer": "rapidly",
+                        "answer_index": 2,
+                        "hint": "grown rapidly 意為「迅速成長」。"
+                    },
+                    {
+                        "id": "h1-4-u4-q040",
+                        "question": "I have no other friends in this city ____ you.",
+                        "options": [
+                            "besides",
+                            "suddenly",
+                            "rapidly",
+                            "unfortunately"
+                        ],
+                        "answer": "besides",
+                        "answer_index": 0,
+                        "hint": "besides 在此意指「除了...之外（還有）」。"
+                    },
+                    {
+                        "id": "h1-4-u4-q041",
+                        "question": "Have you watched the new TV ____ starring your favorite actor?",
+                        "options": [
+                            "gesture",
+                            "drama",
+                            "crowd",
+                            "pressure"
+                        ],
+                        "answer": "drama",
+                        "answer_index": 1,
+                        "hint": "TV drama 意為「電視劇」。"
+                    },
+                    {
+                        "id": "h1-4-u4-q042",
+                        "question": "We wanted to go to the beach. ____, it started to rain heavily.",
+                        "options": [
+                            "Fortunately",
+                            "Rapidly",
+                            "Unfortunately",
+                            "Suddenly"
+                        ],
+                        "answer": "Unfortunately",
+                        "answer_index": 2,
+                        "hint": "unfortunately 意為「不幸地」，轉折語氣。"
+                    },
+                    {
+                        "id": "h1-4-u4-q043",
+                        "question": "She is ____ enough to have a job she truly loves.",
+                        "options": [
+                            "harmful",
+                            "rapid",
+                            "fortunate",
+                            "daily"
+                        ],
+                        "answer": "fortunate",
+                        "answer_index": 2,
+                        "hint": "fortunate 意為「幸運的」。"
+                    },
+                    {
+                        "id": "h1-4-u4-q044",
+                        "question": "Eating too much sugar is ____ to your teeth.",
+                        "options": [
+                            "fortunate",
+                            "rapid",
+                            "harmful",
+                            "daily"
+                        ],
+                        "answer": "harmful",
+                        "answer_index": 2,
+                        "hint": "be harmful to 意為「對...有害」。"
+                    },
+                    {
+                        "id": "h1-4-u4-q045",
+                        "question": "The doctor advised him to reduce his work ____.",
+                        "options": [
+                            "pressure",
+                            "gesture",
+                            "crowd",
+                            "drama"
+                        ],
+                        "answer": "pressure",
+                        "answer_index": 0,
+                        "hint": "work pressure 意為「工作壓力」。"
+                    },
+                    {
+                        "id": "h1-4-u4-q046",
+                        "question": "The patient with a highly infectious disease was ____ immediately.",
+                        "options": [
+                            "included",
+                            "isolated",
+                            "considered",
+                            "tended"
+                        ],
+                        "answer": "isolated",
+                        "answer_index": 1,
+                        "hint": "be isolated 意為「被隔離/孤立」。"
+                    },
+                    {
+                        "id": "h1-4-u4-q047",
+                        "question": "She is very outgoing. ____, her sister is very shy.",
+                        "options": [
+                            "In contrast",
+                            "Rather than",
+                            "On her own",
+                            "Stick to"
+                        ],
+                        "answer": "In contrast",
+                        "answer_index": 0,
+                        "hint": "in contrast 意為「相比之下」，用於對比兩人個性。"
+                    },
+                    {
+                        "id": "h1-4-u4-q048",
+                        "question": "I prefer to walk to work ____ take the bus.",
+                        "options": [
+                            "in contrast",
+                            "known as",
+                            "rather than",
+                            "stick to"
+                        ],
+                        "answer": "rather than",
+                        "answer_index": 2,
+                        "hint": "rather than 意為「而不是」。"
+                    },
+                    {
+                        "id": "h1-4-u4-q049",
+                        "question": "Since his parents passed away, he has been living ____.",
+                        "options": [
+                            "in contrast",
+                            "on his own",
+                            "rather than",
+                            "known as"
+                        ],
+                        "answer": "on his own",
+                        "answer_index": 1,
+                        "hint": "living on his own 意為「獨自生活」。"
+                    },
+                    {
+                        "id": "h1-4-u4-q050",
+                        "question": "Taiwan is widely ____ a beautiful island with delicious food.",
+                        "options": [
+                            "stuck to",
+                            "in contrast",
+                            "rather than",
+                            "known as"
+                        ],
+                        "answer": "known as",
+                        "answer_index": 3,
+                        "hint": "be known as 意為「被稱為...」。"
+                    }
+                ]
+            },
+            "scrambles": {
+                "vocab": [
+                    {
+                        "id": "h1-4-u4-sv001",
+                        "vocab_id": "h1-4-u4-v001",
+                        "sentence": "Patrick is considering buying a Happy Meal to get the free toy.",
+                        "sentence_chinese": "派翠克正在考慮買快樂兒童餐來獲得免費玩具。"
+                    },
+                    {
+                        "id": "h1-4-u4-sv002",
+                        "vocab_id": "h1-4-u4-v002",
+                        "sentence": "Alisa usually takes breakfast into consideration when she chooses a hotel.",
+                        "sentence_chinese": "艾莉莎選擇飯店時通常會將早餐納入考慮。"
+                    },
+                    {
+                        "id": "h1-4-u4-sv003",
+                        "vocab_id": "h1-4-u4-v003",
+                        "sentence": "The red button in the public toilet is for dangerous situations only.",
+                        "sentence_chinese": "公廁裡的紅色按鈕僅供危險情況使用。"
+                    },
+                    {
+                        "id": "h1-4-u4-sv004",
+                        "vocab_id": "h1-4-u4-v004",
+                        "sentence": "Irene tends to choose a window seat when she takes a plane.",
+                        "sentence_chinese": "艾琳搭飛機時往往會選擇靠窗的座位。"
+                    },
+                    {
+                        "id": "h1-4-u4-sv005",
+                        "vocab_id": "h1-4-u4-v005",
+                        "sentence": "The Christmas event was fun, so it attracted large crowds of people.",
+                        "sentence_chinese": "這場聖誕活動很有趣，所以吸引了大批群眾。"
+                    },
+                    {
+                        "id": "h1-4-u4-sv006",
+                        "vocab_id": "h1-4-u4-v006",
+                        "sentence": "The daily job of some social workers is to check on how poor families are doing.",
+                        "sentence_chinese": "一些社會工作者的日常工作是查看貧困家庭的狀況。"
+                    },
+                    {
+                        "id": "h1-4-u4-sv007",
+                        "vocab_id": "h1-4-u4-v007",
+                        "sentence": "The earthquake occurred suddenly and scared my parents.",
+                        "sentence_chinese": "地震突然發生，嚇到了我父母。"
+                    },
+                    {
+                        "id": "h1-4-u4-sv008",
+                        "vocab_id": "h1-4-u4-v008",
+                        "sentence": "This set lunch includes a main dish and a drink.",
+                        "sentence_chinese": "這份套餐包括一份主菜和一杯飲料。"
+                    },
+                    {
+                        "id": "h1-4-u4-sv009",
+                        "vocab_id": "h1-4-u4-v009",
+                        "sentence": "Certain behavior is not allowed in the race, including hitting others.",
+                        "sentence_chinese": "比賽中不允許某些行為，包含打別人。"
+                    },
+                    {
+                        "id": "h1-4-u4-sv010",
+                        "vocab_id": "h1-4-u4-v010",
+                        "sentence": "Michael made a gesture to tell his team member to shoot the ball.",
+                        "sentence_chinese": "麥可做了一個手勢告訴他的隊員投籃。"
+                    },
+                    {
+                        "id": "h1-4-u4-sv011",
+                        "vocab_id": "h1-4-u4-v011",
+                        "sentence": "If a popular YouTuber promotes our product, our sales increase rapidly.",
+                        "sentence_chinese": "如果受歡迎的 YouTuber 推廣我們的產品，我們的銷售量會迅速增加。"
+                    },
+                    {
+                        "id": "h1-4-u4-sv012",
+                        "vocab_id": "h1-4-u4-v012",
+                        "sentence": "The rapid change in the weather made me catch a cold.",
+                        "sentence_chinese": "天氣的迅速變化讓我感冒了。"
+                    },
+                    {
+                        "id": "h1-4-u4-sv013",
+                        "vocab_id": "h1-4-u4-v013",
+                        "sentence": "I don't feel like eating out tonight. Besides, I spent too much money this month.",
+                        "sentence_chinese": "我今晚不想在外面吃。此外，我這個月花太多錢了。"
+                    },
+                    {
+                        "id": "h1-4-u4-sv014",
+                        "vocab_id": "h1-4-u4-v014",
+                        "sentence": "It is surprising that the singer plays the role of a clown in the new TV drama.",
+                        "sentence_chinese": "令人驚訝的是，這位歌手在新電視劇中扮演小丑的角色。"
+                    },
+                    {
+                        "id": "h1-4-u4-sv015",
+                        "vocab_id": "h1-4-u4-v015",
+                        "sentence": "Sherry came for her favorite dessert at the café. Unfortunately, it was not open.",
+                        "sentence_chinese": "雪莉來這家咖啡館吃她最喜歡的甜點。不幸地是，它沒開。"
+                    },
+                    {
+                        "id": "h1-4-u4-sv016",
+                        "vocab_id": "h1-4-u4-v016",
+                        "sentence": "Daniel was fortunate to earn a free set of LINE stickers.",
+                        "sentence_chinese": "丹尼爾很幸運地獲得了一組免費的 LINE 貼圖。"
+                    },
+                    {
+                        "id": "h1-4-u4-sv017",
+                        "vocab_id": "h1-4-u4-v017",
+                        "sentence": "Eating too many instant noodles can be harmful to health.",
+                        "sentence_chinese": "吃太多泡麵可能對健康有害。"
+                    },
+                    {
+                        "id": "h1-4-u4-sv018",
+                        "vocab_id": "h1-4-u4-v018",
+                        "sentence": "The hurtful comments on Rita's blog did harm to her feelings.",
+                        "sentence_chinese": "麗塔部落格上的傷人評論對她的感情造成了傷害。"
+                    },
+                    {
+                        "id": "h1-4-u4-sv019",
+                        "vocab_id": "h1-4-u4-v019",
+                        "sentence": "The young singer is under a lot of pressure to perform in the big show.",
+                        "sentence_chinese": "這位年輕歌手在大型演出中承受著很大的壓力。"
+                    },
+                    {
+                        "id": "h1-4-u4-sv020",
+                        "vocab_id": "h1-4-u4-v020",
+                        "sentence": "The island is isolated by oceans, so we need to go there by boat.",
+                        "sentence_chinese": "這座島嶼被海洋孤立，所以我們需要搭船去那裡。"
+                    }
+                ],
+                "phrases": [
+                    {
+                        "id": "h1-4-u4-sp001",
+                        "phrase_id": "h1-4-u4-p001",
+                        "sentence": "Ted loves to read books for fun. In contrast, I play video games.",
+                        "sentence_chinese": "泰德喜歡看書當作消遣。相比之下，我打電動。"
+                    },
+                    {
+                        "id": "h1-4-u4-sp002",
+                        "phrase_id": "h1-4-u4-p002",
+                        "sentence": "Ian chose the cool shoes rather than the comfortable ones.",
+                        "sentence_chinese": "伊恩選擇了酷炫的鞋子而不是舒適的鞋子。"
+                    },
+                    {
+                        "id": "h1-4-u4-sp003",
+                        "phrase_id": "h1-4-u4-p003",
+                        "sentence": "Winnie is very nervous because she is going to travel on her own.",
+                        "sentence_chinese": "溫妮非常緊張，因為她要獨自旅行。"
+                    },
+                    {
+                        "id": "h1-4-u4-sp004",
+                        "phrase_id": "h1-4-u4-p004",
+                        "sentence": "New York City is commonly known as the Big Apple.",
+                        "sentence_chinese": "紐約市通常被稱為大蘋果。"
+                    },
+                    {
+                        "id": "h1-4-u4-sp005",
+                        "phrase_id": "h1-4-u4-p005",
+                        "sentence": "Kelly sticks to her habit of getting up early every day, even on weekends.",
+                        "sentence_chinese": "凱莉堅持她每天早起的習慣，即使在週末也是如此。"
+                    }
+                ],
+                "grammar": [
+                    {
+                        "id": "h1-4-u4-sg001",
+                        "sentence": "The movie was so boring that I fell asleep.",
+                        "sentence_chinese": "這部電影太無聊了，以至於我睡著了。"
+                    },
+                    {
+                        "id": "h1-4-u4-sg002",
+                        "sentence": "He ran so fast that nobody could catch him.",
+                        "sentence_chinese": "他跑得如此快，以至於沒人能抓到他。"
+                    },
+                    {
+                        "id": "h1-4-u4-sg003",
+                        "sentence": "The soup is so hot that I can't drink it now.",
+                        "sentence_chinese": "這湯太燙了，以至於我現在無法喝。"
+                    },
+                    {
+                        "id": "h1-4-u4-sg004",
+                        "sentence": "The box was so heavy that she couldn't lift it.",
+                        "sentence_chinese": "這個箱子太重了，以至於她搬不動。"
+                    },
+                    {
+                        "id": "h1-4-u4-sg005",
+                        "sentence": "The weather is so cold that we have to stay indoors.",
+                        "sentence_chinese": "天氣太冷了，以至於我們必須待在室內。"
+                    },
+                    {
+                        "id": "h1-4-u4-sg006",
+                        "sentence": "The test was so easy that everyone got a high score.",
+                        "sentence_chinese": "考試太簡單了，以至於每個人都拿了高分。"
+                    },
+                    {
+                        "id": "h1-4-u4-sg007",
+                        "sentence": "She sings so well that people think she is a star.",
+                        "sentence_chinese": "她唱得如此好，以至於人們以為她是明星。"
+                    },
+                    {
+                        "id": "h1-4-u4-sg008",
+                        "sentence": "The noise was so loud that I couldn't hear the teacher.",
+                        "sentence_chinese": "噪音太大了，以至於我聽不到老師的聲音。"
+                    },
+                    {
+                        "id": "h1-4-u4-sg009",
+                        "sentence": "The boy was so tired that he went to bed early.",
+                        "sentence_chinese": "男孩太累了，以至於他很早就上床睡覺了。"
+                    },
+                    {
+                        "id": "h1-4-u4-sg010",
+                        "sentence": "The food was so delicious that I ate three bowls of rice.",
+                        "sentence_chinese": "食物太美味了，以至於我吃了三碗飯。"
+                    },
+                    {
+                        "id": "h1-4-u4-sg011",
+                        "sentence": "He was so angry that he left without saying a word.",
+                        "sentence_chinese": "他太生氣了，以至於一句話也沒說就離開了。"
+                    },
+                    {
+                        "id": "h1-4-u4-sg012",
+                        "sentence": "The room was so dark that I couldn't see anything.",
+                        "sentence_chinese": "房間太暗了，以至於我什麼都看不見。"
+                    },
+                    {
+                        "id": "h1-4-u4-sg013",
+                        "sentence": "The story was so sad that it made everyone cry.",
+                        "sentence_chinese": "這個故事太悲傷了，以至於讓大家都哭了。"
+                    },
+                    {
+                        "id": "h1-4-u4-sg014",
+                        "sentence": "The math problem was so hard that many students failed.",
+                        "sentence_chinese": "這道數學題太難了，以至於很多學生都不及格。"
+                    },
+                    {
+                        "id": "h1-4-u4-sg015",
+                        "sentence": "The music is so loud that it hurts my ears.",
+                        "sentence_chinese": "音樂太吵了，以至於讓我的耳朵很痛。"
+                    },
+                    {
+                        "id": "h1-4-u4-sg016",
+                        "sentence": "The girl who is dancing in the center is my sister.",
+                        "sentence_chinese": "在中間跳舞的那個女孩是我妹妹。"
+                    },
+                    {
+                        "id": "h1-4-u4-sg017",
+                        "sentence": "The book which is on the desk belongs to Mary.",
+                        "sentence_chinese": "在書桌上的那本書是瑪麗的。"
+                    },
+                    {
+                        "id": "h1-4-u4-sg018",
+                        "sentence": "The man who called you yesterday is my uncle.",
+                        "sentence_chinese": "昨天打電話給你的那個男人是我叔叔。"
+                    },
+                    {
+                        "id": "h1-4-u4-sg019",
+                        "sentence": "The dog that bit me last week is very dangerous.",
+                        "sentence_chinese": "上週咬我的那隻狗非常危險。"
+                    },
+                    {
+                        "id": "h1-4-u4-sg020",
+                        "sentence": "The car which hit the tree was completely destroyed.",
+                        "sentence_chinese": "撞到樹的那輛車全毀了。"
+                    },
+                    {
+                        "id": "h1-4-u4-sg021",
+                        "sentence": "The teacher who teaches us history is very strict.",
+                        "sentence_chinese": "教我們歷史的老師非常嚴格。"
+                    },
+                    {
+                        "id": "h1-4-u4-sg022",
+                        "sentence": "The house that stands on the hill is very old.",
+                        "sentence_chinese": "矗立在山丘上的那棟房子非常古老。"
+                    },
+                    {
+                        "id": "h1-4-u4-sg023",
+                        "sentence": "The students who study hard will pass the exam.",
+                        "sentence_chinese": "努力讀書的學生會通過考試。"
+                    },
+                    {
+                        "id": "h1-4-u4-sg024",
+                        "sentence": "The train which goes to Taipei leaves at eight.",
+                        "sentence_chinese": "開往台北的火車八點出發。"
+                    },
+                    {
+                        "id": "h1-4-u4-sg025",
+                        "sentence": "The woman who wears a red dress is a famous writer.",
+                        "sentence_chinese": "穿著紅色洋裝的女人是一位著名的作家。"
+                    },
+                    {
+                        "id": "h1-4-u4-sg026",
+                        "sentence": "The watch that was stolen yesterday was very expensive.",
+                        "sentence_chinese": "昨天被偷的手錶非常昂貴。"
+                    },
+                    {
+                        "id": "h1-4-u4-sg027",
+                        "sentence": "The boy who broke the window ran away quickly.",
+                        "sentence_chinese": "打破窗戶的男孩很快地跑走了。"
+                    },
+                    {
+                        "id": "h1-4-u4-sg028",
+                        "sentence": "The bus which goes to the train station is coming.",
+                        "sentence_chinese": "開往火車站的公車來了。"
+                    },
+                    {
+                        "id": "h1-4-u4-sg029",
+                        "sentence": "The people who live in this small town are very friendly.",
+                        "sentence_chinese": "住在這個小鎮的人非常友善。"
+                    },
+                    {
+                        "id": "h1-4-u4-sg030",
+                        "sentence": "The birds that sing in the morning wake me up every day.",
+                        "sentence_chinese": "每天早上唱歌的鳥兒會把我叫醒。"
+                    }
+                ]
+            }
+        }
+    }
+}
