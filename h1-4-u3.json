@@ -188,20 +188,150 @@
                 "quiz": [
                     {
                         "id": "h1-4-u3-q001",
-                        "question": "The strict teacher made his students ________ the vocabulary ten times.",
+                        "question": "The director made the actors ________ the scary scene again and again.",
                         "options": [
-                            "copying",
-                            "copied",
-                            "copy",
-                            "to copy"
+                            "practice",
+                            "practicing",
+                            "to practice",
+                            "practiced"
                         ],
-                        "answer": "copy",
-                        "answer_index": 2,
+                        "answer": "practice",
+                        "answer_index": 0,
                         "hint": "make 為使役動詞，表示「強迫、要求」，後面受詞主動做某事時需接「原形動詞」。"
                     },
                     {
                         "id": "h1-4-u3-q002",
-                        "question": "If it ________ heavily tomorrow, the baseball game will be canceled.",
+                        "question": "If time travel ________ a reality one day, I will visit the future.",
+                        "options": [
+                            "became",
+                            "will become",
+                            "becomes",
+                            "becoming"
+                        ],
+                        "answer": "becomes",
+                        "answer_index": 2,
+                        "hint": "if 引導的條件子句表示未來可能發生的情況時，需「以現在簡單式代替未來式」。主詞為單數，動詞加 -s。"
+                    },
+                    {
+                        "id": "h1-4-u3-q003",
+                        "question": "My mom usually lets me ________ extra cheese to my pizza.",
+                        "options": [
+                            "added",
+                            "to add",
+                            "adding",
+                            "add"
+                        ],
+                        "answer": "add",
+                        "answer_index": 3,
+                        "hint": "let 為使役動詞，表示「允許」，後面受詞主動做某事時需接「原形動詞」。"
+                    },
+                    {
+                        "id": "h1-4-u3-q004",
+                        "question": "The teacher had the students ________ information about wild animals online.",
+                        "options": [
+                            "explore",
+                            "exploring",
+                            "explored",
+                            "to explore"
+                        ],
+                        "answer": "explore",
+                        "answer_index": 0,
+                        "hint": "have 為使役動詞，表示「交付、吩咐」，後面受詞主動做某事時需接「原形動詞」。"
+                    },
+                    {
+                        "id": "h1-4-u3-q005",
+                        "question": "If the game ________ too scary, we can stop playing it.",
+                        "options": [
+                            "was",
+                            "is",
+                            "will be",
+                            "be"
+                        ],
+                        "answer": "is",
+                        "answer_index": 1,
+                        "hint": "if 條件子句以現在簡單式代替未來式，主詞 the game 為第三人稱單數，用 is。"
+                    },
+                    {
+                        "id": "h1-4-u3-q006",
+                        "question": "The amazing sound effects made the audience ________ they were in a real war.",
+                        "options": [
+                            "believed",
+                            "to believe",
+                            "believe",
+                            "believing"
+                        ],
+                        "answer": "believe",
+                        "answer_index": 2,
+                        "hint": "make 為使役動詞，後面受詞主動做某事時需接「原形動詞」。"
+                    },
+                    {
+                        "id": "h1-4-u3-q007",
+                        "question": "If you ________ curious about the old house, you can explore it yourself.",
+                        "options": [
+                            "are",
+                            "will be",
+                            "were",
+                            "be"
+                        ],
+                        "answer": "are",
+                        "answer_index": 0,
+                        "hint": "if 條件子句以現在簡單式代替未來式，主詞 you 搭配 be 動詞 are。"
+                    },
+                    {
+                        "id": "h1-4-u3-q008",
+                        "question": "The tour guide won't let the tourists ________ the wild alone.",
+                        "options": [
+                            "entering",
+                            "enter",
+                            "entered",
+                            "to enter"
+                        ],
+                        "answer": "enter",
+                        "answer_index": 1,
+                        "hint": "let 為使役動詞，無論時態為何，後面的受詞補語一律接「原形動詞」。"
+                    },
+                    {
+                        "id": "h1-4-u3-q009",
+                        "question": "The designer had his assistant ________ the appearance of the website.",
+                        "options": [
+                            "change",
+                            "changed",
+                            "to change",
+                            "changing"
+                        ],
+                        "answer": "change",
+                        "answer_index": 0,
+                        "hint": "have 作為使役動詞，後接受詞主動做某事，需接「原形動詞」。"
+                    },
+                    {
+                        "id": "h1-4-u3-q010",
+                        "question": "If she ________ more time, she will give this new app a try.",
+                        "options": [
+                            "will have",
+                            "having",
+                            "has",
+                            "had"
+                        ],
+                        "answer": "has",
+                        "answer_index": 2,
+                        "hint": "if 條件子句用現在簡單式。主詞 she 為第三人稱單數，動詞用 has。"
+                    },
+                    {
+                        "id": "h1-4-u3-q011",
+                        "question": "The sad news made everyone involved in the project ________ bad.",
+                        "options": [
+                            "felt",
+                            "feeling",
+                            "to feel",
+                            "feel"
+                        ],
+                        "answer": "feel",
+                        "answer_index": 3,
+                        "hint": "make 作為使役動詞，後接原形動詞 feel。"
+                    },
+                    {
+                        "id": "h1-4-u3-q012",
+                        "question": "If it ________ heavily tomorrow, the outdoor concert will be canceled.",
                         "options": [
                             "rains",
                             "will rain",
@@ -210,631 +340,501 @@
                         ],
                         "answer": "rains",
                         "answer_index": 0,
-                        "hint": "if 引導的條件子句表示未來可能發生的情況時，需「以現在簡單式代替未來式」。主詞 it 為第三人稱單數，動詞 rain 需加 -s。"
-                    },
-                    {
-                        "id": "h1-4-u3-q003",
-                        "question": "The special visual ________ in this science fiction movie are amazing.",
-                        "options": [
-                            "scenes",
-                            "effects",
-                            "realities",
-                            "appearances"
-                        ],
-                        "answer": "effects",
-                        "answer_index": 1,
-                        "hint": "visual effects 為固定用法，意指「視覺特效」。"
-                    },
-                    {
-                        "id": "h1-4-u3-q004",
-                        "question": "Please let me ________ the new pair of jeans before buying them.",
-                        "options": [
-                            "trying on",
-                            "try on",
-                            "to try on",
-                            "tried on"
-                        ],
-                        "answer": "try on",
-                        "answer_index": 1,
-                        "hint": "let 為使役動詞，表示「允許」，後接原形動詞。結合課本片語 try on。"
-                    },
-                    {
-                        "id": "h1-4-u3-q005",
-                        "question": "If Roy is ________ about the old house, he can go inside and take a look.",
-                        "options": [
-                            "curious",
-                            "wild",
-                            "extra",
-                            "effective"
-                        ],
-                        "answer": "curious",
-                        "answer_index": 0,
-                        "hint": "be curious about 為固定用法，意指對...感到好奇。"
-                    },
-                    {
-                        "id": "h1-4-u3-q006",
-                        "question": "The team of scientists went into the jungle to ________ the wild.",
-                        "options": [
-                            "develop",
-                            "explore",
-                            "involve",
-                            "inform"
-                        ],
-                        "answer": "explore",
-                        "answer_index": 1,
-                        "hint": "explore 意為「探索」。"
-                    },
-                    {
-                        "id": "h1-4-u3-q007",
-                        "question": "The manager had his secretary ________ all the clients about the new policy.",
-                        "options": [
-                            "informed",
-                            "informing",
-                            "inform",
-                            "to inform"
-                        ],
-                        "answer": "inform",
-                        "answer_index": 2,
-                        "hint": "have 此處為使役動詞，後接受詞主動做某事，需接原形動詞。"
-                    },
-                    {
-                        "id": "h1-4-u3-q008",
-                        "question": "If Joy ________ the hidden box, she will get an extra prize.",
-                        "options": [
-                            "find",
-                            "finding",
-                            "will find",
-                            "finds"
-                        ],
-                        "answer": "finds",
-                        "answer_index": 3,
-                        "hint": "if 條件子句用現在簡單式。主詞 Joy 為單數，動詞需加 -s。"
-                    },
-                    {
-                        "id": "h1-4-u3-q009",
-                        "question": "There are many apps on my phone. ________, there are camera apps and game apps.",
-                        "options": [
-                            "On the other hand",
-                            "As for",
-                            "For instance",
-                            "Give it a try"
-                        ],
-                        "answer": "For instance",
-                        "answer_index": 2,
-                        "hint": "for instance 意為「例如」，用來舉例。"
-                    },
-                    {
-                        "id": "h1-4-u3-q010",
-                        "question": "You shouldn't judge a person only by their ________. Inner beauty is more important.",
-                        "options": [
-                            "appearance",
-                            "information",
-                            "development",
-                            "reality"
-                        ],
-                        "answer": "appearance",
-                        "answer_index": 0,
-                        "hint": "appearance 意為「外表」。"
-                    },
-                    {
-                        "id": "h1-4-u3-q011",
-                        "question": "The scary scene in the dark forest made the little boy ________.",
-                        "options": [
-                            "cried",
-                            "to cry",
-                            "cry",
-                            "crying"
-                        ],
-                        "answer": "cry",
-                        "answer_index": 2,
-                        "hint": "make 為使役動詞，後接原形動詞 cry。"
-                    },
-                    {
-                        "id": "h1-4-u3-q012",
-                        "question": "If you ________ hurry up, you will miss the train.",
-                        "options": [
-                            "don't",
-                            "won't",
-                            "aren't",
-                            "didn't"
-                        ],
-                        "answer": "don't",
-                        "answer_index": 0,
-                        "hint": "if 條件子句需使用現在簡單式。you 的否定助動詞為 don't。"
+                        "hint": "if 引導的條件子句表示未來可能發生的情況時，需「以現在簡單式代替未來式」。"
                     },
                     {
                         "id": "h1-4-u3-q013",
-                        "question": "The \"pudding ramen\" sounds strange, but I am hungry enough to ________.",
+                        "question": "Please let me ________ on this beautiful dress before buying it.",
                         "options": [
-                            "try on it",
-                            "give it a try",
-                            "inform it",
-                            "explore it"
+                            "tried",
+                            "trying",
+                            "try",
+                            "to try"
                         ],
-                        "answer": "give it a try",
-                        "answer_index": 1,
-                        "hint": "give it a try 意為「試試看」。"
+                        "answer": "try",
+                        "answer_index": 2,
+                        "hint": "let 為使役動詞，表示允許，後接原形動詞 try。"
                     },
                     {
                         "id": "h1-4-u3-q014",
-                        "question": "The new traffic law will have a big ________ on everyone in the city.",
+                        "question": "The manager had the IT team ________ the new software.",
                         "options": [
-                            "effect",
-                            "image",
-                            "scene",
-                            "extra"
+                            "to develop",
+                            "develop",
+                            "developed",
+                            "developing"
                         ],
-                        "answer": "effect",
-                        "answer_index": 0,
-                        "hint": "have an effect on... 為固定用法，意指「對...產生影響」。"
+                        "answer": "develop",
+                        "answer_index": 1,
+                        "hint": "have 為使役動詞，後接受詞主動做某事，需接原形動詞。"
                     },
                     {
                         "id": "h1-4-u3-q015",
-                        "question": "My mother doesn't let my little brother ________ out alone at night.",
+                        "question": "If Jason ________ the rules, he won't be allowed to join the game.",
                         "options": [
-                            "going",
-                            "go",
-                            "gone",
-                            "to go"
+                            "doesn't follow",
+                            "won't follow",
+                            "didn't follow",
+                            "isn't following"
                         ],
-                        "answer": "go",
-                        "answer_index": 1,
-                        "hint": "let 為使役動詞，後接原形動詞 go。"
+                        "answer": "doesn't follow",
+                        "answer_index": 0,
+                        "hint": "if 條件子句用現在簡單式。主詞 Jason 的否定助動詞用 doesn't。"
                     },
                     {
                         "id": "h1-4-u3-q016",
-                        "question": "If he finishes his homework early, he ________ go to the movies with us.",
+                        "question": "The strict coach made the players ________ for three extra hours.",
                         "options": [
-                            "had",
-                            "does",
-                            "might",
-                            "makes"
+                            "running",
+                            "ran",
+                            "to run",
+                            "run"
                         ],
-                        "answer": "might",
-                        "answer_index": 2,
-                        "hint": "if 條件子句用現在簡單式，主要子句需用助動詞 (will/can/might 等) 表示未來或可能性。"
+                        "answer": "run",
+                        "answer_index": 3,
+                        "hint": "make 為使役動詞，後接原形動詞 run。"
                     },
                     {
                         "id": "h1-4-u3-q017",
-                        "question": "The photographer waited quietly for hours to take pictures of the ________ animals.",
+                        "question": "If the images ________ blurry, we will ask the photographer to take them again.",
                         "options": [
-                            "extra",
-                            "involved",
-                            "scary",
-                            "wild"
+                            "was",
+                            "are",
+                            "will be",
+                            "be"
                         ],
-                        "answer": "wild",
-                        "answer_index": 3,
-                        "hint": "wild animals 意指「野生動物」。"
+                        "answer": "are",
+                        "answer_index": 1,
+                        "hint": "if 條件子句以現在簡單式代替未來式。主詞 images 為複數，用 are。"
                     },
                     {
                         "id": "h1-4-u3-q018",
-                        "question": "With the help of technology, virtual ________ is no longer just a dream.",
+                        "question": "Her parents finally let her ________ the music festival.",
                         "options": [
-                            "development",
-                            "reality",
-                            "curiosity",
-                            "appearance"
+                            "attend",
+                            "attended",
+                            "to attend",
+                            "attending"
                         ],
-                        "answer": "reality",
-                        "answer_index": 1,
-                        "hint": "virtual reality 意指「虛擬實境」(VR)。"
+                        "answer": "attend",
+                        "answer_index": 0,
+                        "hint": "let 為使役動詞，後接原形動詞 attend。"
                     },
                     {
                         "id": "h1-4-u3-q019",
-                        "question": "The doctor had the sick man ________ the medicine three times a day.",
+                        "question": "I will have my brother ________ the extra boxes to your room.",
                         "options": [
-                            "took",
-                            "to take",
-                            "take",
-                            "taking"
+                            "carrying",
+                            "carried",
+                            "carry",
+                            "to carry"
                         ],
-                        "answer": "take",
+                        "answer": "carry",
                         "answer_index": 2,
-                        "hint": "have 為使役動詞，後接原形動詞 take。"
+                        "hint": "have 為使役動詞，受詞 my brother 主動做動作，接原形動詞 carry。"
                     },
                     {
                         "id": "h1-4-u3-q020",
-                        "question": "If your computer ________, I will help you fix it.",
+                        "question": "If you ________ to know more details, you can visit our website.",
                         "options": [
-                            "breaks",
-                            "will break",
-                            "broke",
-                            "is breaking"
+                            "wants",
+                            "will want",
+                            "wanted",
+                            "want"
                         ],
-                        "answer": "breaks",
-                        "answer_index": 0,
-                        "hint": "if 條件子句以現在簡單式代替未來式。主詞為單數，動詞加 -s。"
+                        "answer": "want",
+                        "answer_index": 3,
+                        "hint": "if 條件子句用現在簡單式。主詞 you 後面的動詞不加 -s。"
                     },
                     {
                         "id": "h1-4-u3-q021",
-                        "question": "The school will ________ the parents of the students' test results next week.",
+                        "question": "The scary story made the little boy ________ to sleep alone.",
                         "options": [
-                            "involve",
-                            "develop",
-                            "inform",
-                            "explore"
+                            "refuse",
+                            "refused",
+                            "refusing",
+                            "to refuse"
                         ],
-                        "answer": "inform",
-                        "answer_index": 2,
-                        "hint": "inform A of B 意指「通知 A 關於 B 的事」。"
+                        "answer": "refuse",
+                        "answer_index": 0,
+                        "hint": "make 作為使役動詞，後接原形動詞 refuse。"
                     },
                     {
                         "id": "h1-4-u3-q022",
-                        "question": "How many bands are ________ in this huge music festival?",
+                        "question": "If the weather ________ nice this weekend, we might go hiking in the wild.",
                         "options": [
-                            "extra",
-                            "involved",
-                            "wild",
-                            "effective"
+                            "is",
+                            "will be",
+                            "was",
+                            "are"
                         ],
-                        "answer": "involved",
-                        "answer_index": 1,
-                        "hint": "be involved in... 意指「參與...；與...有關」。"
+                        "answer": "is",
+                        "answer_index": 0,
+                        "hint": "if 條件子句表未來可能發生的事，需用現在簡單式。"
                     },
                     {
                         "id": "h1-4-u3-q023",
-                        "question": "I love playing basketball. ________, my sister prefers staying at home and reading.",
+                        "question": "Please don't let anyone ________ this confidential information.",
                         "options": [
-                            "For instance",
-                            "Give a try",
-                            "On the other hand",
-                            "Try on"
+                            "seeing",
+                            "to see",
+                            "see",
+                            "saw"
                         ],
-                        "answer": "On the other hand",
+                        "answer": "see",
                         "answer_index": 2,
-                        "hint": "On the other hand 意為「另一方面」，用來表達不同的意見或事實。"
+                        "hint": "let 為使役動詞，後接原形動詞 see。"
                     },
                     {
                         "id": "h1-4-u3-q024",
-                        "question": "The opening ________ of the movie is so scary that I closed my eyes.",
+                        "question": "The teacher had the students ________ their homework before Friday.",
                         "options": [
-                            "image",
-                            "effect",
-                            "reality",
-                            "scene"
+                            "finishing",
+                            "finish",
+                            "finished",
+                            "to finish"
                         ],
-                        "answer": "scene",
-                        "answer_index": 3,
-                        "hint": "opening scene 意指電影的「開場場景」。"
+                        "answer": "finish",
+                        "answer_index": 1,
+                        "hint": "have 作為使役動詞，受詞主動動作接原形動詞 finish。"
                     },
                     {
                         "id": "h1-4-u3-q025",
-                        "question": "The sad story on the news made everyone in the room ________ sad.",
+                        "question": "If you ________ carefully, you won't make the same mistake again.",
                         "options": [
-                            "feeling",
-                            "to feel",
-                            "feel",
-                            "felt"
+                            "listened",
+                            "listen",
+                            "will listen",
+                            "listening"
                         ],
-                        "answer": "feel",
-                        "answer_index": 2,
-                        "hint": "make 作為使役動詞，後接原形動詞 feel。"
+                        "answer": "listen",
+                        "answer_index": 1,
+                        "hint": "if 條件子句用現在簡單式代替未來式。"
                     },
                     {
                         "id": "h1-4-u3-q026",
-                        "question": "If the movie is too ________, we can watch a comedy instead.",
+                        "question": "The surprising ending of the movie made everyone ________ out loud.",
                         "options": [
-                            "wild",
-                            "scary",
-                            "extra",
-                            "curious"
+                            "to cry",
+                            "crying",
+                            "cried",
+                            "cry"
                         ],
-                        "answer": "scary",
-                        "answer_index": 1,
-                        "hint": "scary 意為「可怕的」。"
+                        "answer": "cry",
+                        "answer_index": 3,
+                        "hint": "make 為使役動詞，後接原形動詞 cry。"
                     },
                     {
                         "id": "h1-4-u3-q027",
-                        "question": "If Jane ________ to the party tonight, we will play board games together.",
+                        "question": "If he ________ not apologize, I will never speak to him again.",
                         "options": [
-                            "comes",
-                            "came",
-                            "will come",
-                            "coming"
+                            "do",
+                            "does",
+                            "will",
+                            "did"
                         ],
-                        "answer": "comes",
-                        "answer_index": 0,
-                        "hint": "if 條件子句表未來可能發生的事，需用現在簡單式。動詞需加 -s。"
+                        "answer": "does",
+                        "answer_index": 1,
+                        "hint": "if 條件子句用現在簡單式。主詞 he 的助動詞用 does。"
                     },
                     {
                         "id": "h1-4-u3-q028",
-                        "question": "To make the soup taste better, you can ________ some salt to it.",
+                        "question": "I will let you ________ my camera if you promise to be careful.",
                         "options": [
-                            "inform",
-                            "explore",
-                            "involve",
-                            "add"
+                            "use",
+                            "using",
+                            "to use",
+                            "used"
                         ],
-                        "answer": "add",
-                        "answer_index": 3,
-                        "hint": "add A to B 意指「把 A 加進 B 裡」。"
+                        "answer": "use",
+                        "answer_index": 0,
+                        "hint": "let 為使役動詞，後接原形動詞 use。"
                     },
                     {
                         "id": "h1-4-u3-q029",
-                        "question": "My boss had me ________ the document to all our clients this morning.",
+                        "question": "The mother had her son ________ up his room before going out.",
                         "options": [
-                            "sent",
-                            "to send",
-                            "send",
-                            "sending"
+                            "to clean",
+                            "cleaned",
+                            "clean",
+                            "cleaning"
                         ],
-                        "answer": "send",
+                        "answer": "clean",
                         "answer_index": 2,
-                        "hint": "have 為使役動詞，後接受詞主動做動作，接原形動詞 send。"
+                        "hint": "have 為使役動詞，受詞主動做動作，接原形動詞 clean。"
                     },
                     {
                         "id": "h1-4-u3-q030",
-                        "question": "Selina loves reading novels. ________ her sister, she enjoys outdoor activities.",
+                        "question": "If you ________ about your health, you should exercise more.",
                         "options": [
-                            "As for",
-                            "Try on",
-                            "Give a try",
-                            "For instance"
+                            "care",
+                            "will care",
+                            "cared",
+                            "caring"
                         ],
-                        "answer": "As for",
+                        "answer": "care",
                         "answer_index": 0,
-                        "hint": "As for 意為「至於」，用來帶入另一個相關的主題或人物。"
+                        "hint": "if 條件子句用現在簡單式代替未來式。"
                     },
                     {
                         "id": "h1-4-u3-q031",
-                        "question": "The little boy is very ________ about the animals living in the wild.",
+                        "question": "The heavy rain made us ________ our plans for the weekend.",
                         "options": [
-                            "effective",
-                            "involved",
-                            "curious",
-                            "wild"
+                            "canceled",
+                            "cancel",
+                            "canceling",
+                            "to cancel"
                         ],
-                        "answer": "curious",
-                        "answer_index": 2,
-                        "hint": "be curious about 意指「對...感到好奇」。"
+                        "answer": "cancel",
+                        "answer_index": 1,
+                        "hint": "make 作為使役動詞，後接原形動詞 cancel。"
                     },
                     {
                         "id": "h1-4-u3-q032",
-                        "question": "If he ________ study hard, he will definitely fail the upcoming test.",
+                        "question": "If the extra service ________ too much, we won't use it.",
                         "options": [
-                            "didn't",
-                            "isn't",
-                            "doesn't",
-                            "won't"
+                            "cost",
+                            "will cost",
+                            "costs",
+                            "costing"
                         ],
-                        "answer": "doesn't",
+                        "answer": "costs",
                         "answer_index": 2,
-                        "hint": "if 條件子句用現在簡單式。主詞 he 的否定助動詞用 doesn't。"
+                        "hint": "if 條件子句用現在簡單式。主詞 service 為單數，動詞需加 -s。"
                     },
                     {
                         "id": "h1-4-u3-q033",
-                        "question": "Over the years, the small fishing village has ________ into a popular tourist attraction.",
+                        "question": "The museum doesn't let visitors ________ photos inside.",
                         "options": [
-                            "explored",
-                            "informed",
-                            "added",
-                            "developed"
+                            "take",
+                            "taking",
+                            "took",
+                            "to take"
                         ],
-                        "answer": "developed",
-                        "answer_index": 3,
-                        "hint": "develop into 意為「發展成...」。"
+                        "answer": "take",
+                        "answer_index": 0,
+                        "hint": "let 為使役動詞，後接原形動詞 take。"
                     },
                     {
                         "id": "h1-4-u3-q034",
-                        "question": "If you want to know whether the dress fits you, you should ________.",
+                        "question": "We had the guide ________ us around the historical scenes.",
                         "options": [
-                            "try it on",
-                            "give it a try",
-                            "inform it",
-                            "add it"
+                            "showing",
+                            "to show",
+                            "show",
+                            "showed"
                         ],
-                        "answer": "try it on",
-                        "answer_index": 0,
-                        "hint": "try on 意為「試穿」，代名詞 it 必須放在中間。"
+                        "answer": "show",
+                        "answer_index": 2,
+                        "hint": "have 作為使役動詞，受詞主動做動作，接原形動詞 show。"
                     },
                     {
                         "id": "h1-4-u3-q035",
-                        "question": "The strict parents don't let their children ________ video games on weekdays.",
+                        "question": "If Jane ________ tomorrow, we will have the party without her.",
                         "options": [
-                            "play",
-                            "playing",
-                            "to play",
-                            "played"
+                            "didn't come",
+                            "doesn't come",
+                            "won't come",
+                            "isn't coming"
                         ],
-                        "answer": "play",
-                        "answer_index": 0,
-                        "hint": "let 為使役動詞，後接原形動詞 play。"
+                        "answer": "doesn't come",
+                        "answer_index": 1,
+                        "hint": "if 條件子句用現在簡單式代替未來式。否定助動詞用 doesn't。"
                     },
                     {
                         "id": "h1-4-u3-q036",
-                        "question": "The medicine is highly ________. My headache was gone in 10 minutes.",
+                        "question": "His poor appearance made people ________ he was a beggar.",
                         "options": [
-                            "curious",
-                            "extra",
-                            "effective",
-                            "scary"
+                            "thought",
+                            "to think",
+                            "thinking",
+                            "think"
                         ],
-                        "answer": "effective",
-                        "answer_index": 2,
-                        "hint": "effective 意為「有效的」。"
+                        "answer": "think",
+                        "answer_index": 3,
+                        "hint": "make 作為使役動詞，後接原形動詞 think。"
                     },
                     {
                         "id": "h1-4-u3-q037",
-                        "question": "If the weather is nice, my mom will let me ________ outside with my friends.",
+                        "question": "If they ________ early, they can catch the first train.",
                         "options": [
-                            "playing",
-                            "played",
-                            "play",
-                            "to play"
+                            "leave",
+                            "will leave",
+                            "left",
+                            "leaving"
                         ],
-                        "answer": "play",
-                        "answer_index": 2,
-                        "hint": "let 為使役動詞，後接原形動詞 play。"
+                        "answer": "leave",
+                        "answer_index": 0,
+                        "hint": "if 條件子句用現在簡單式代替未來式。"
                     },
                     {
                         "id": "h1-4-u3-q038",
-                        "question": "Out of ________, the cat opened the box to see what was inside.",
+                        "question": "The principal let the students ________ early because of the typhoon.",
                         "options": [
-                            "reality",
-                            "appearance",
-                            "development",
-                            "curiosity"
+                            "to go",
+                            "going",
+                            "go",
+                            "went"
                         ],
-                        "answer": "curiosity",
-                        "answer_index": 3,
-                        "hint": "out of curiosity 為固定用法，意指「出於好奇心」。"
+                        "answer": "go",
+                        "answer_index": 2,
+                        "hint": "let 為使役動詞，後接原形動詞 go。"
                     },
                     {
                         "id": "h1-4-u3-q039",
-                        "question": "More than 50 volunteers are ________ in the beach cleanup event.",
+                        "question": "I had my friend ________ me a message when he arrived safely.",
                         "options": [
-                            "added",
-                            "explored",
-                            "involved",
-                            "informed"
+                            "send",
+                            "sending",
+                            "sent",
+                            "to send"
                         ],
-                        "answer": "involved",
-                        "answer_index": 2,
-                        "hint": "be involved in 意為「參與...」。"
+                        "answer": "send",
+                        "answer_index": 0,
+                        "hint": "have 為使役動詞，受詞 my friend 主動做動作，接原形動詞 send。"
                     },
                     {
                         "id": "h1-4-u3-q040",
-                        "question": "The hotel staff will ________ you of the breakfast time when you check in.",
+                        "question": "If the information ________ true, we have a big problem.",
                         "options": [
-                            "explore",
-                            "inform",
-                            "develop",
-                            "try"
+                            "will be",
+                            "are",
+                            "is",
+                            "was"
                         ],
-                        "answer": "inform",
-                        "answer_index": 1,
-                        "hint": "inform A of B 意為「通知 A 關於 B 的事」。"
+                        "answer": "is",
+                        "answer_index": 2,
+                        "hint": "if 條件子句以現在簡單式代替未來式，information 為不可數名詞，搭配 is。"
                     },
                     {
                         "id": "h1-4-u3-q041",
-                        "question": "They enjoy taking pictures of nature. ________, they photograph birds and trees.",
+                        "question": "The boss made his employees ________ overtime to finish the project.",
                         "options": [
-                            "On the other hand",
-                            "As for",
-                            "For instance",
-                            "Give a try"
+                            "work",
+                            "worked",
+                            "working",
+                            "to work"
                         ],
-                        "answer": "For instance",
-                        "answer_index": 2,
-                        "hint": "for instance 意為「例如」。"
+                        "answer": "work",
+                        "answer_index": 0,
+                        "hint": "make 作為使役動詞，後接原形動詞 work。"
                     },
                     {
                         "id": "h1-4-u3-q042",
-                        "question": "If you pay a little more money, you can get an ________ piece of cake.",
+                        "question": "If you ________ more about the reality, you will be disappointed.",
                         "options": [
-                            "extra",
-                            "effective",
-                            "wild",
-                            "scary"
+                            "learned",
+                            "learning",
+                            "learn",
+                            "will learn"
                         ],
-                        "answer": "extra",
-                        "answer_index": 0,
-                        "hint": "extra 意為「額外的」。"
+                        "answer": "learn",
+                        "answer_index": 2,
+                        "hint": "if 條件子句用現在簡單式代替未來式。"
                     },
                     {
                         "id": "h1-4-u3-q043",
-                        "question": "Some people believe that traveling to Mars will become a ________ in the future.",
+                        "question": "Please let me ________ if you need any extra help.",
                         "options": [
-                            "reality",
-                            "image",
-                            "scene",
-                            "curiosity"
+                            "to know",
+                            "knew",
+                            "knowing",
+                            "know"
                         ],
-                        "answer": "reality",
-                        "answer_index": 0,
-                        "hint": "become a reality 意為「成為現實」。"
+                        "answer": "know",
+                        "answer_index": 3,
+                        "hint": "let 為使役動詞，後接原形動詞 know。"
                     },
                     {
                         "id": "h1-4-u3-q044",
-                        "question": "The funny clown made all the kids in the hospital ________ happily.",
+                        "question": "The doctor had the nurse ________ the patient's blood pressure.",
                         "options": [
-                            "to laugh",
-                            "laugh",
-                            "laughing",
-                            "laughed"
+                            "check",
+                            "checking",
+                            "checked",
+                            "to check"
                         ],
-                        "answer": "laugh",
-                        "answer_index": 1,
-                        "hint": "make 為使役動詞，後接原形動詞 laugh。"
+                        "answer": "check",
+                        "answer_index": 0,
+                        "hint": "have 為使役動詞，受詞主動做動作，接原形動詞 check。"
                     },
                     {
                         "id": "h1-4-u3-q045",
-                        "question": "He has a cool ________, but he is actually a very shy and warm person.",
+                        "question": "If he ________ the competition, he will be famous.",
                         "options": [
-                            "effect",
-                            "information",
-                            "development",
-                            "appearance"
+                            "will win",
+                            "wins",
+                            "won",
+                            "winning"
                         ],
-                        "answer": "appearance",
-                        "answer_index": 3,
-                        "hint": "appearance 意為「外表」。"
+                        "answer": "wins",
+                        "answer_index": 1,
+                        "hint": "if 條件子句用現在簡單式。主詞 he 為單數，動詞需加 -s。"
                     },
                     {
                         "id": "h1-4-u3-q046",
-                        "question": "If you don't know how to play the game, I can let you ________.",
+                        "question": "The exciting music made the party animals ________ all night.",
                         "options": [
-                            "try on it",
-                            "give it a try",
-                            "inform it",
-                            "explore it"
+                            "danced",
+                            "dancing",
+                            "to dance",
+                            "dance"
                         ],
-                        "answer": "give it a try",
-                        "answer_index": 1,
-                        "hint": "give it a try 意為「試試看」。"
+                        "answer": "dance",
+                        "answer_index": 3,
+                        "hint": "make 作為使役動詞，後接原形動詞 dance。"
                     },
                     {
                         "id": "h1-4-u3-q047",
-                        "question": "The rapid ________ of technology has completely changed our lives.",
+                        "question": "If you ________ tell me the truth, I won't be able to help you.",
                         "options": [
-                            "development",
-                            "reality",
-                            "image",
-                            "appearance"
+                            "don't",
+                            "didn't",
+                            "won't",
+                            "aren't"
                         ],
-                        "answer": "development",
+                        "answer": "don't",
                         "answer_index": 0,
-                        "hint": "development 意為「發展」。"
+                        "hint": "if 條件子句用現在簡單式。you 的否定助動詞用 don't。"
                     },
                     {
                         "id": "h1-4-u3-q048",
-                        "question": "In the past, TV ________ were only black and white, but now they are colorful.",
+                        "question": "My dad won't let me ________ his new car.",
                         "options": [
-                            "realities",
-                            "scenes",
-                            "images",
-                            "effects"
+                            "drive",
+                            "driving",
+                            "drove",
+                            "to drive"
                         ],
-                        "answer": "images",
-                        "answer_index": 2,
-                        "hint": "image 意為「影像」。"
+                        "answer": "drive",
+                        "answer_index": 0,
+                        "hint": "let 為使役動詞，後接原形動詞 drive。"
                     },
                     {
                         "id": "h1-4-u3-q049",
-                        "question": "We had the mechanic ________ our broken car yesterday afternoon.",
+                        "question": "The author had his publisher ________ the book cover.",
                         "options": [
-                            "fixed",
-                            "fixing",
-                            "to fix",
-                            "fix"
+                            "redesigning",
+                            "redesigned",
+                            "redesign",
+                            "to redesign"
                         ],
-                        "answer": "fix",
-                        "answer_index": 3,
-                        "hint": "have 作為使役動詞，受詞主動動作接原形動詞 fix。"
+                        "answer": "redesign",
+                        "answer_index": 2,
+                        "hint": "have 為使役動詞，受詞主動做動作，接原形動詞 redesign。"
                     },
                     {
                         "id": "h1-4-u3-q050",
-                        "question": "I really want to go to the beach. ________, I have a lot of homework to do.",
+                        "question": "If Mary ________ a lot of money, she will travel around the world.",
                         "options": [
-                            "As for",
-                            "For instance",
-                            "On the other hand",
-                            "Give a try"
+                            "will save",
+                            "saving",
+                            "saved",
+                            "saves"
                         ],
-                        "answer": "On the other hand",
-                        "answer_index": 2,
-                        "hint": "on the other hand 意為「另一方面」，用來表達轉折。"
+                        "answer": "saves",
+                        "answer_index": 3,
+                        "hint": "if 條件子句用現在簡單式代替未來式。主詞 Mary 為單數，動詞加 -s。"
                     }
                 ]
             },

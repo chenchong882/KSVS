@@ -234,348 +234,465 @@
                         ]
                     }
                 ],
-                "quiz": [
+                "quiz": "quiz": [
                     {
                         "id": "h1-4-u4-q001",
-                        "question": "Patrick is ____ buying a new car because his old one breaks down often.",
+                        "question": "The weather changed ____ rapidly that we had to cancel our picnic.",
                         "options": [
-                            "considering",
-                            "isolating",
-                            "including",
-                            "tending"
+                            "such",
+                            "too",
+                            "very",
+                            "so"
                         ],
-                        "answer": "considering",
-                        "answer_index": 0,
-                        "hint": "空格後接 V-ing (buying)，且句意為「考慮買新車」。"
+                        "answer": "so",
+                        "answer_index": 3,
+                        "hint": "空格後接副詞 rapidly，且後面有 that 引導結果子句，必須使用 so...that (如此...以至於...) 句型。"
                     },
                     {
                         "id": "h1-4-u4-q002",
-                        "question": "You should take the weather into ____ before you plan a beach trip.",
+                        "question": "The rain was so heavy ____ we all got completely wet.",
                         "options": [
-                            "pressure",
-                            "consideration",
-                            "gesture",
-                            "crowd"
+                            "which",
+                            "that",
+                            "than",
+                            "what"
                         ],
-                        "answer": "consideration",
+                        "answer": "that",
                         "answer_index": 1,
-                        "hint": "take... into consideration 為固定用法，意為「將...納入考慮」。"
+                        "hint": "so + adj. + that... 句型中，用 that 引導表示結果的子句。"
                     },
                     {
                         "id": "h1-4-u4-q003",
-                        "question": "In an emergency ____, you should stay calm and call 119.",
+                        "question": "The dog appeared so suddenly ____ I was scared to death.",
                         "options": [
-                            "drama",
-                            "consideration",
-                            "situation",
-                            "gesture"
+                            "that",
+                            "this",
+                            "then",
+                            "than"
                         ],
-                        "answer": "situation",
-                        "answer_index": 2,
-                        "hint": "emergency situation 意為「緊急情況」。"
+                        "answer": "that",
+                        "answer_index": 0,
+                        "hint": "so suddenly (如此突然) 後方須接 that 引導結果子句「以至於我嚇個半死」。"
                     },
                     {
                         "id": "h1-4-u4-q004",
-                        "question": "My brother ____ to sleep late on weekends because he doesn't have to go to school.",
+                        "question": "Technology is developing ____ rapidly that we must keep learning new things every day.",
                         "options": [
-                            "includes",
-                            "isolates",
-                            "tends",
-                            "considers"
+                            "too",
+                            "such",
+                            "so",
+                            "very"
                         ],
-                        "answer": "tends",
+                        "answer": "so",
                         "answer_index": 2,
-                        "hint": "tend to + V 意為「傾向於...、往往會...」。"
+                        "hint": "修飾副詞 rapidly 並與後方 that 連用，表示程度極高導致的結果，需用 so。"
                     },
                     {
                         "id": "h1-4-u4-q005",
-                        "question": "A huge ____ gathered in front of the department store to buy the limited edition shoes.",
+                        "question": "The new TV drama was so popular ____ almost everyone in my class watched it.",
                         "options": [
-                            "crowd",
-                            "drama",
-                            "harm",
-                            "pressure"
+                            "which",
+                            "if",
+                            "because",
+                            "that"
                         ],
-                        "answer": "crowd",
-                        "answer_index": 0,
-                        "hint": "a huge crowd 意為「一大群人/群眾」。"
+                        "answer": "that",
+                        "answer_index": 3,
+                        "hint": "so popular 後需接 that 帶出結果「以至於幾乎班上每個人都看過」。"
                     },
                     {
                         "id": "h1-4-u4-q006",
-                        "question": "Brushing teeth and washing face are part of my ____ routine.",
-                        "options": [
-                            "harmful",
-                            "rapid",
-                            "fortunate",
-                            "daily"
-                        ],
-                        "answer": "daily",
-                        "answer_index": 3,
-                        "hint": "daily routine 意為「日常作息」。"
-                    },
-                    {
-                        "id": "h1-4-u4-q007",
-                        "question": "The peaceful afternoon was ____ broken by a loud scream from the street.",
-                        "options": [
-                            "suddenly",
-                            "rapidly",
-                            "unfortunately",
-                            "besides"
-                        ],
-                        "answer": "suddenly",
-                        "answer_index": 0,
-                        "hint": "符合「平靜的下午突然被打破」的語境。"
-                    },
-                    {
-                        "id": "h1-4-u4-q008",
-                        "question": "The price of the hotel room ____ free breakfast for two people.",
-                        "options": [
-                            "tends",
-                            "considers",
-                            "includes",
-                            "isolates"
-                        ],
-                        "answer": "includes",
-                        "answer_index": 2,
-                        "hint": "意為「包含」，房價「包含」免費早餐。"
-                    },
-                    {
-                        "id": "h1-4-u4-q009",
-                        "question": "Everyone in the class passed the math test, ____ John.",
-                        "options": [
-                            "including",
-                            "considered",
-                            "tended",
-                            "isolated"
-                        ],
-                        "answer": "including",
-                        "answer_index": 0,
-                        "hint": "為介系詞，意為「包含」，後接名詞 John。"
-                    },
-                    {
-                        "id": "h1-4-u4-q010",
-                        "question": "The police officer made a ____ to tell the driver to stop the car.",
-                        "options": [
-                            "crowd",
-                            "gesture",
-                            "situation",
-                            "drama"
-                        ],
-                        "answer": "gesture",
-                        "answer_index": 1,
-                        "hint": "make a gesture 意為「做手勢」。"
-                    },
-                    {
-                        "id": "h1-4-u4-q011",
-                        "question": "Technology is developing so ____ that we must keep learning new things.",
-                        "options": [
-                            "rapidly",
-                            "suddenly",
-                            "fortunately",
-                            "besides"
-                        ],
-                        "answer": "rapidly",
-                        "answer_index": 0,
-                        "hint": "意為「迅速地」，科技發展得很「迅速」。"
-                    },
-                    {
-                        "id": "h1-4-u4-q012",
-                        "question": "There has been a ____ change in his attitude since he joined the team.",
-                        "options": [
-                            "daily",
-                            "harmful",
-                            "rapid",
-                            "fortunate"
-                        ],
-                        "answer": "rapid",
-                        "answer_index": 2,
-                        "hint": "rapid change 意為「迅速的改變」。"
-                    },
-                    {
-                        "id": "h1-4-u4-q013",
-                        "question": "I don't want to go to the movies. ____, I have to finish my homework.",
-                        "options": [
-                            "Besides",
-                            "Suddenly",
-                            "Rapidly",
-                            "Unfortunately"
-                        ],
-                        "answer": "Besides",
-                        "answer_index": 0,
-                        "hint": "意為「此外」，用來補充說明不想去電影院的另一個原因。"
-                    },
-                    {
-                        "id": "h1-4-u4-q014",
-                        "question": "My sister loves watching Korean ____ on weekends.",
-                        "options": [
-                            "crowds",
-                            "gestures",
-                            "situations",
-                            "dramas"
-                        ],
-                        "answer": "dramas",
-                        "answer_index": 3,
-                        "hint": "Korean dramas 意為「韓劇」。"
-                    },
-                    {
-                        "id": "h1-4-u4-q015",
-                        "question": "We wanted to have a picnic in the park. ____, it rained all day.",
-                        "options": [
-                            "Suddenly",
-                            "Unfortunately",
-                            "Rapidly",
-                            "Besides"
-                        ],
-                        "answer": "Unfortunately",
-                        "answer_index": 1,
-                        "hint": "意為「不幸地」，帶出與期望相反的結果。"
-                    },
-                    {
-                        "id": "h1-4-u4-q016",
-                        "question": "I am very ____ to have such supportive friends and family.",
-                        "options": [
-                            "fortunate",
-                            "rapid",
-                            "daily",
-                            "harmful"
-                        ],
-                        "answer": "fortunate",
-                        "answer_index": 0,
-                        "hint": "意為「幸運的」。"
-                    },
-                    {
-                        "id": "h1-4-u4-q017",
-                        "question": "Smoking is highly ____ to your health and can cause serious diseases.",
-                        "options": [
-                            "fortunate",
-                            "daily",
-                            "rapid",
-                            "harmful"
-                        ],
-                        "answer": "harmful",
-                        "answer_index": 3,
-                        "hint": "be harmful to 意為「對...有害」。"
-                    },
-                    {
-                        "id": "h1-4-u4-q018",
-                        "question": "You shouldn't say mean words online because it can do ____ to others.",
-                        "options": [
-                            "harm",
-                            "drama",
-                            "gesture",
-                            "pressure"
-                        ],
-                        "answer": "harm",
-                        "answer_index": 0,
-                        "hint": "do harm to 意為「對...造成傷害」。"
-                    },
-                    {
-                        "id": "h1-4-u4-q019",
-                        "question": "Students often feel a lot of ____ before major exams.",
-                        "options": [
-                            "crowd",
-                            "gesture",
-                            "pressure",
-                            "drama"
-                        ],
-                        "answer": "pressure",
-                        "answer_index": 2,
-                        "hint": "feel pressure 意為「感到壓力」。"
-                    },
-                    {
-                        "id": "h1-4-u4-q020",
-                        "question": "The sick patient was ____ in a special room to prevent the virus from spreading.",
-                        "options": [
-                            "isolated",
-                            "included",
-                            "considered",
-                            "tended"
-                        ],
-                        "answer": "isolated",
-                        "answer_index": 0,
-                        "hint": "be isolated 意為「被孤立、被隔離」。"
-                    },
-                    {
-                        "id": "h1-4-u4-q021",
-                        "question": "My brother enjoys playing basketball. ____, I prefer staying indoors and reading.",
-                        "options": [
-                            "Besides",
-                            "Suddenly",
-                            "Unfortunately",
-                            "In contrast"
-                        ],
-                        "answer": "In contrast",
-                        "answer_index": 3,
-                        "hint": "意為「相比之下」，用來對比哥哥和「我」的不同喜好。"
-                    },
-                    {
-                        "id": "h1-4-u4-q022",
-                        "question": "I would like to have tea ____ coffee, please.",
-                        "options": [
-                            "in contrast",
-                            "rather than",
-                            "known as",
-                            "stuck to"
-                        ],
-                        "answer": "rather than",
-                        "answer_index": 1,
-                        "hint": "意為「而不是」，表示選擇茶「而不是」咖啡。"
-                    },
-                    {
-                        "id": "h1-4-u4-q023",
-                        "question": "She is a very independent girl who likes to do things ____.",
-                        "options": [
-                            "in contrast",
-                            "rather than",
-                            "on her own",
-                            "known as"
-                        ],
-                        "answer": "on her own",
-                        "answer_index": 2,
-                        "hint": "on one's own 意為「獨自、獨立」。"
-                    },
-                    {
-                        "id": "h1-4-u4-q024",
-                        "question": "The singer is widely ____ the King of Pop.",
-                        "options": [
-                            "isolated by",
-                            "included in",
-                            "considered to",
-                            "known as"
-                        ],
-                        "answer": "known as",
-                        "answer_index": 3,
-                        "hint": "be known as 意為「被稱為...」。"
-                    },
-                    {
-                        "id": "h1-4-u4-q025",
-                        "question": "If you want to lose weight, you must ____ your diet plan.",
-                        "options": [
-                            "stick to",
-                            "in contrast",
-                            "rather than",
-                            "know as"
-                        ],
-                        "answer": "stick to",
-                        "answer_index": 0,
-                        "hint": "stick to 意為「堅持」，堅持減肥計畫。"
-                    },
-                    {
-                        "id": "h1-4-u4-q026",
-                        "question": "The coffee was ____ hot that I burned my tongue.",
+                        "question": "The Christmas event was ____ fun that it attracted large crowds of people.",
                         "options": [
                             "so",
                             "very",
                             "too",
+                            "much"
+                        ],
+                        "answer": "so",
+                        "answer_index": 0,
+                        "hint": "fun 在此作為形容詞，搭配後方的 that 子句，需使用 so 來修飾。"
+                    },
+                    {
+                        "id": "h1-4-u4-q007",
+                        "question": "The island is so isolated by oceans ____ we need to go there by boat.",
+                        "options": [
+                            "that",
+                            "where",
+                            "when",
+                            "which"
+                        ],
+                        "answer": "that",
+                        "answer_index": 0,
+                        "hint": "so isolated (如此孤立) 後接 that 引導出必須搭船的結果。"
+                    },
+                    {
+                        "id": "h1-4-u4-q008",
+                        "question": "The hurtful comments were ____ harmful that they did harm to her feelings.",
+                        "options": [
+                            "so",
+                            "too",
+                            "such",
+                            "very"
+                        ],
+                        "answer": "so",
+                        "answer_index": 0,
+                        "hint": "搭配後方的 that 子句，必須選 so 來修飾形容詞 harmful。"
+                    },
+                    {
+                        "id": "h1-4-u4-q009",
+                        "question": "Daniel was so fortunate to earn free stickers ____ he jumped with joy.",
+                        "options": [
+                            "than",
+                            "what",
+                            "that",
+                            "which"
+                        ],
+                        "answer": "that",
+                        "answer_index": 2,
+                        "hint": "so fortunate (如此幸運) 後接 that 引導結果子句。"
+                    },
+                    {
+                        "id": "h1-4-u4-q010",
+                        "question": "The young singer felt ____ pressured that she started to cry backstage.",
+                        "options": [
+                            "such",
+                            "too",
+                            "so",
+                            "very"
+                        ],
+                        "answer": "so",
+                        "answer_index": 2,
+                        "hint": "修飾形容詞 pressured 並與後方 that 連用，需選 so。"
+                    },
+                    {
+                        "id": "h1-4-u4-q011",
+                        "question": "The coffee was so hot ____ I burned my tongue.",
+                        "options": [
+                            "than",
+                            "that",
+                            "which",
+                            "this"
+                        ],
+                        "answer": "that",
+                        "answer_index": 1,
+                        "hint": "固定句型 so + adj. + that + 子句，用 that 帶出結果。"
+                    },
+                    {
+                        "id": "h1-4-u4-q012",
+                        "question": "He ran ____ fast that nobody could catch him.",
+                        "options": [
+                            "too",
+                            "very",
+                            "such",
+                            "so"
+                        ],
+                        "answer": "so",
+                        "answer_index": 3,
+                        "hint": "fast 為副詞，後面有 that 引導結果，需搭配 so。"
+                    },
+                    {
+                        "id": "h1-4-u4-q013",
+                        "question": "The math test was so easy ____ everyone got a high score.",
+                        "options": [
+                            "that",
+                            "what",
+                            "which",
+                            "when"
+                        ],
+                        "answer": "that",
+                        "answer_index": 0,
+                        "hint": "so easy 後方需用 that 引導結果子句。"
+                    },
+                    {
+                        "id": "h1-4-u4-q014",
+                        "question": "The noise was ____ loud that I couldn't hear what the teacher said.",
+                        "options": [
+                            "such",
+                            "so",
+                            "too",
+                            "very"
+                        ],
+                        "answer": "so",
+                        "answer_index": 1,
+                        "hint": "搭配後方 that 子句，修飾形容詞 loud 需用 so。"
+                    },
+                    {
+                        "id": "h1-4-u4-q015",
+                        "question": "The boy was so tired ____ he went to bed early.",
+                        "options": [
+                            "which",
+                            "what",
+                            "than",
+                            "that"
+                        ],
+                        "answer": "that",
+                        "answer_index": 3,
+                        "hint": "so tired (如此疲累) 後方以 that 引導結果子句。"
+                    },
+                    {
+                        "id": "h1-4-u4-q016",
+                        "question": "The food was ____ delicious that I ate three bowls of rice.",
+                        "options": [
+                            "too",
+                            "such",
+                            "very",
+                            "so"
+                        ],
+                        "answer": "so",
+                        "answer_index": 3,
+                        "hint": "delicious 為形容詞，有 that 結果子句跟隨，需用 so。"
+                    },
+                    {
+                        "id": "h1-4-u4-q017",
+                        "question": "He was so angry ____ he left without saying a word.",
+                        "options": [
+                            "that",
+                            "which",
+                            "because",
+                            "if"
+                        ],
+                        "answer": "that",
+                        "answer_index": 0,
+                        "hint": "so angry 後方需接 that 引導「氣到不發一語離開」的結果。"
+                    },
+                    {
+                        "id": "h1-4-u4-q018",
+                        "question": "The room was ____ dark that I couldn't see anything at all.",
+                        "options": [
+                            "such",
+                            "too",
+                            "so",
+                            "very"
+                        ],
+                        "answer": "so",
+                        "answer_index": 2,
+                        "hint": "修飾形容詞 dark 且後方有 that 子句，需填入 so。"
+                    },
+                    {
+                        "id": "h1-4-u4-q019",
+                        "question": "The story was so sad ____ it made everyone in the theater cry.",
+                        "options": [
+                            "than",
+                            "that",
+                            "what",
+                            "which"
+                        ],
+                        "answer": "that",
+                        "answer_index": 1,
+                        "hint": "so sad 後面接 that 子句表達導致的結果。"
+                    },
+                    {
+                        "id": "h1-4-u4-q020",
+                        "question": "The music is ____ loud that it hurts my ears.",
+                        "options": [
+                            "so",
+                            "too",
+                            "very",
                             "such"
                         ],
                         "answer": "so",
                         "answer_index": 0,
-                        "hint": "後面接 that 引導結果子句，搭配形容詞 hot，需使用 so...that 句型。"
+                        "hint": "搭配 that 子句，修飾 loud 須用 so。"
+                    },
+                    {
+                        "id": "h1-4-u4-q021",
+                        "question": "The earthquake occurred so suddenly ____ my parents were scared.",
+                        "options": [
+                            "when",
+                            "which",
+                            "that",
+                            "what"
+                        ],
+                        "answer": "that",
+                        "answer_index": 2,
+                        "hint": "so suddenly 搭配 that 引導結果子句。"
+                    },
+                    {
+                        "id": "h1-4-u4-q022",
+                        "question": "The box was ____ heavy that she couldn't lift it on her own.",
+                        "options": [
+                            "so",
+                            "too",
+                            "such",
+                            "very"
+                        ],
+                        "answer": "so",
+                        "answer_index": 0,
+                        "hint": "heavy 為形容詞，搭配 that 結果子句，前方需用 so 修飾。"
+                    },
+                    {
+                        "id": "h1-4-u4-q023",
+                        "question": "The weather is so cold ____ we have to stay indoors and keep warm.",
+                        "options": [
+                            "than",
+                            "this",
+                            "which",
+                            "that"
+                        ],
+                        "answer": "that",
+                        "answer_index": 3,
+                        "hint": "so cold 後方以 that 引導必須待在室內的結果。"
+                    },
+                    {
+                        "id": "h1-4-u4-q024",
+                        "question": "She sings ____ well that people think she is a professional star.",
+                        "options": [
+                            "such",
+                            "too",
+                            "so",
+                            "very"
+                        ],
+                        "answer": "so",
+                        "answer_index": 2,
+                        "hint": "well 在此為副詞，修飾動詞 sings，搭配 that 子句需用 so。"
+                    },
+                    {
+                        "id": "h1-4-u4-q025",
+                        "question": "The soup is so hot ____ I have to wait for it to cool down.",
+                        "options": [
+                            "that",
+                            "what",
+                            "which",
+                            "than"
+                        ],
+                        "answer": "that",
+                        "answer_index": 0,
+                        "hint": "so hot 後面需搭配 that 引導結果。"
+                    },
+                    {
+                        "id": "h1-4-u4-q026",
+                        "question": "I prefer to watch dramas ____ have happy endings.",
+                        "options": [
+                            "who",
+                            "whom",
+                            "which",
+                            "what"
+                        ],
+                        "answer": "which",
+                        "answer_index": 2,
+                        "hint": "先行詞 dramas 為事物，在關係子句中作主詞，關係代名詞需用 which 或 that。"
                     },
                     {
                         "id": "h1-4-u4-q027",
+                        "question": "A crowd of people ____ gathered in the square were there for the Christmas event.",
+                        "options": [
+                            "who",
+                            "which",
+                            "whom",
+                            "what"
+                        ],
+                        "answer": "who",
+                        "answer_index": 0,
+                        "hint": "先行詞 A crowd of people 為「人」，在關係子句中作主詞，關係代名詞需用 who。"
+                    },
+                    {
+                        "id": "h1-4-u4-q028",
+                        "question": "Andrew lost the hat ____ was given by Sharon yesterday.",
+                        "options": [
+                            "what",
+                            "who",
+                            "whom",
+                            "that"
+                        ],
+                        "answer": "that",
+                        "answer_index": 3,
+                        "hint": "先行詞 the hat 為事物，關係代名詞可用 which 或 that，選項中僅 that 正確。"
+                    },
+                    {
+                        "id": "h1-4-u4-q029",
                         "question": "The teacher ____ teaches us English is very nice and patient.",
+                        "options": [
+                            "which",
+                            "whom",
+                            "who",
+                            "what"
+                        ],
+                        "answer": "who",
+                        "answer_index": 2,
+                        "hint": "先行詞 The teacher 為「人」，在關係子句作主詞，需填 who。"
+                    },
+                    {
+                        "id": "h1-4-u4-q030",
+                        "question": "I bought a new phone ____ has a great camera.",
+                        "options": [
+                            "which",
+                            "who",
+                            "whom",
+                            "whose"
+                        ],
+                        "answer": "which",
+                        "answer_index": 0,
+                        "hint": "先行詞 a new phone 為事物，關係代名詞需用 which。"
+                    },
+                    {
+                        "id": "h1-4-u4-q031",
+                        "question": "The girl ____ is making a gesture in the center is my sister.",
+                        "options": [
+                            "what",
+                            "whom",
+                            "which",
+                            "who"
+                        ],
+                        "answer": "who",
+                        "answer_index": 3,
+                        "hint": "先行詞 The girl 為「人」，在關係子句作主詞，需填 who。"
+                    },
+                    {
+                        "id": "h1-4-u4-q032",
+                        "question": "The book ____ is on the desk belongs to Mary.",
+                        "options": [
+                            "which",
+                            "who",
+                            "whom",
+                            "what"
+                        ],
+                        "answer": "which",
+                        "answer_index": 0,
+                        "hint": "先行詞 The book 為事物，需用 which 引導關係子句。"
+                    },
+                    {
+                        "id": "h1-4-u4-q033",
+                        "question": "The man ____ called you to explain the situation yesterday is my uncle.",
+                        "options": [
+                            "which",
+                            "whom",
+                            "who",
+                            "whose"
+                        ],
+                        "answer": "who",
+                        "answer_index": 2,
+                        "hint": "先行詞 The man 為「人」，且在子句中擔任動詞 called 的主詞，需用 who。"
+                    },
+                    {
+                        "id": "h1-4-u4-q034",
+                        "question": "The dog ____ bit me last week is very dangerous.",
+                        "options": [
+                            "who",
+                            "whom",
+                            "what",
+                            "that"
+                        ],
+                        "answer": "that",
+                        "answer_index": 3,
+                        "hint": "先行詞 The dog 為動物，關係代名詞可用 which 或 that，選項中僅 that 合適。"
+                    },
+                    {
+                        "id": "h1-4-u4-q035",
+                        "question": "The car ____ hit the tree in the rapid accident was completely destroyed.",
+                        "options": [
+                            "which",
+                            "who",
+                            "whom",
+                            "what"
+                        ],
+                        "answer": "which",
+                        "answer_index": 0,
+                        "hint": "先行詞 The car 為事物，需用 which。"
+                    },
+                    {
+                        "id": "h1-4-u4-q036",
+                        "question": "The students ____ study hard will eventually pass the difficult exam.",
                         "options": [
                             "which",
                             "who",
@@ -584,306 +701,189 @@
                         ],
                         "answer": "who",
                         "answer_index": 1,
-                        "hint": "先行詞 The teacher 為「人」，在關係子句中作主詞，故選 who。"
-                    },
-                    {
-                        "id": "h1-4-u4-q028",
-                        "question": "I bought a new phone ____ has a great camera.",
-                        "options": [
-                            "who",
-                            "whose",
-                            "which",
-                            "whom"
-                        ],
-                        "answer": "which",
-                        "answer_index": 2,
-                        "hint": "先行詞 a new phone 為「物」，在關係子句中作主詞，故選 which。"
-                    },
-                    {
-                        "id": "h1-4-u4-q029",
-                        "question": "Please ____ my offer before you make a final decision.",
-                        "options": [
-                            "isolate",
-                            "consider",
-                            "gesture",
-                            "tend"
-                        ],
-                        "answer": "consider",
-                        "answer_index": 1,
-                        "hint": "consider my offer 意為「考慮我的提議」。"
-                    },
-                    {
-                        "id": "h1-4-u4-q030",
-                        "question": "The safety of the students is our primary ____.",
-                        "options": [
-                            "situation",
-                            "crowd",
-                            "consideration",
-                            "drama"
-                        ],
-                        "answer": "consideration",
-                        "answer_index": 2,
-                        "hint": "primary consideration 意為「首要考量」。"
-                    },
-                    {
-                        "id": "h1-4-u4-q031",
-                        "question": "It is difficult to know what to do in this awkward ____.",
-                        "options": [
-                            "situation",
-                            "gesture",
-                            "pressure",
-                            "drama"
-                        ],
-                        "answer": "situation",
-                        "answer_index": 0,
-                        "hint": "awkward situation 意為「尷尬的情況」。"
-                    },
-                    {
-                        "id": "h1-4-u4-q032",
-                        "question": "Prices ____ to rise during the holiday season because of high demand.",
-                        "options": [
-                            "include",
-                            "tend",
-                            "isolate",
-                            "stick"
-                        ],
-                        "answer": "tend",
-                        "answer_index": 1,
-                        "hint": "tend to + V 意為「往往會...」，指價格往往會上漲。"
-                    },
-                    {
-                        "id": "h1-4-u4-q033",
-                        "question": "He lost his child in the ____ at the crowded night market.",
-                        "options": [
-                            "crowd",
-                            "harm",
-                            "gesture",
-                            "pressure"
-                        ],
-                        "answer": "crowd",
-                        "answer_index": 0,
-                        "hint": "in the crowd 意為「在人群/群眾中」。"
-                    },
-                    {
-                        "id": "h1-4-u4-q034",
-                        "question": "Drinking enough water every day is a good ____ habit.",
-                        "options": [
-                            "harmful",
-                            "rapid",
-                            "daily",
-                            "sudden"
-                        ],
-                        "answer": "daily",
-                        "answer_index": 2,
-                        "hint": "daily habit 意為「日常習慣」。"
-                    },
-                    {
-                        "id": "h1-4-u4-q035",
-                        "question": "The dog barked ____ and scared the little girl.",
-                        "options": [
-                            "fortunately",
-                            "suddenly",
-                            "rapidly",
-                            "daily"
-                        ],
-                        "answer": "suddenly",
-                        "answer_index": 1,
-                        "hint": "suddenly 意為「突然地」，符合情境。"
-                    },
-                    {
-                        "id": "h1-4-u4-q036",
-                        "question": "The package tour ____ flight tickets and a hotel room.",
-                        "options": [
-                            "includes",
-                            "isolates",
-                            "tends",
-                            "considers"
-                        ],
-                        "answer": "includes",
-                        "answer_index": 0,
-                        "hint": "include 意為「包含」，指套裝行程包含機票與住宿。"
+                        "hint": "先行詞 The students 為「人」，在關係子句中作主詞，需用 who。"
                     },
                     {
                         "id": "h1-4-u4-q037",
-                        "question": "Everyone enjoyed the party, ____ the children.",
+                        "question": "The train ____ goes to Taipei leaves at eight o'clock daily.",
                         "options": [
-                            "considering",
-                            "including",
-                            "isolating",
-                            "tending"
+                            "who",
+                            "whom",
+                            "which",
+                            "whose"
                         ],
-                        "answer": "including",
-                        "answer_index": 1,
-                        "hint": "including 為介系詞，意為「包含」，後接名詞。"
+                        "answer": "which",
+                        "answer_index": 2,
+                        "hint": "先行詞 The train 為事物，在子句中作主詞，需用 which。"
                     },
                     {
                         "id": "h1-4-u4-q038",
-                        "question": "He nodded his head as a ____ of agreement.",
+                        "question": "The woman ____ wears a red dress is a famous writer.",
                         "options": [
-                            "crowd",
-                            "drama",
-                            "gesture",
-                            "situation"
+                            "whom",
+                            "which",
+                            "who",
+                            "what"
                         ],
-                        "answer": "gesture",
+                        "answer": "who",
                         "answer_index": 2,
-                        "hint": "gesture of agreement 意為「同意的手勢/表示」。"
+                        "hint": "先行詞 The woman 為「人」，需用 who。"
                     },
                     {
                         "id": "h1-4-u4-q039",
-                        "question": "The population of the city has grown ____ in the last decade.",
+                        "question": "The watch ____ was stolen yesterday was a very expensive gift.",
                         "options": [
-                            "fortunately",
-                            "suddenly",
-                            "rapidly",
-                            "harmfully"
+                            "which",
+                            "who",
+                            "whom",
+                            "what"
                         ],
-                        "answer": "rapidly",
-                        "answer_index": 2,
-                        "hint": "grown rapidly 意為「迅速成長」。"
+                        "answer": "which",
+                        "answer_index": 0,
+                        "hint": "先行詞 The watch 為事物，需用 which 引導。"
                     },
                     {
                         "id": "h1-4-u4-q040",
-                        "question": "I have no other friends in this city ____ you.",
+                        "question": "The boy ____ broke the window ran away rapidly.",
                         "options": [
-                            "besides",
-                            "suddenly",
-                            "rapidly",
-                            "unfortunately"
+                            "which",
+                            "who",
+                            "whom",
+                            "whose"
                         ],
-                        "answer": "besides",
-                        "answer_index": 0,
-                        "hint": "besides 在此意指「除了...之外（還有）」。"
+                        "answer": "who",
+                        "answer_index": 1,
+                        "hint": "先行詞 The boy 為「人」，需用 who。"
                     },
                     {
                         "id": "h1-4-u4-q041",
-                        "question": "Have you watched the new TV ____ starring your favorite actor?",
+                        "question": "The bus ____ goes to the train station is coming.",
                         "options": [
-                            "gesture",
-                            "drama",
-                            "crowd",
-                            "pressure"
+                            "who",
+                            "whom",
+                            "what",
+                            "that"
                         ],
-                        "answer": "drama",
-                        "answer_index": 1,
-                        "hint": "TV drama 意為「電視劇」。"
+                        "answer": "that",
+                        "answer_index": 3,
+                        "hint": "先行詞 The bus 為事物，關係代名詞可用 which 或 that，選項僅 that 合適。"
                     },
                     {
                         "id": "h1-4-u4-q042",
-                        "question": "We wanted to go to the beach. ____, it started to rain heavily.",
+                        "question": "The people ____ live in this small town are known to be very friendly.",
                         "options": [
-                            "Fortunately",
-                            "Rapidly",
-                            "Unfortunately",
-                            "Suddenly"
+                            "which",
+                            "who",
+                            "whom",
+                            "what"
                         ],
-                        "answer": "Unfortunately",
-                        "answer_index": 2,
-                        "hint": "unfortunately 意為「不幸地」，轉折語氣。"
+                        "answer": "who",
+                        "answer_index": 1,
+                        "hint": "先行詞 The people 為「人」，需用 who。"
                     },
                     {
                         "id": "h1-4-u4-q043",
-                        "question": "She is ____ enough to have a job she truly loves.",
+                        "question": "The birds ____ sing in the morning wake me up every day.",
                         "options": [
-                            "harmful",
-                            "rapid",
-                            "fortunate",
-                            "daily"
+                            "which",
+                            "who",
+                            "whom",
+                            "what"
                         ],
-                        "answer": "fortunate",
-                        "answer_index": 2,
-                        "hint": "fortunate 意為「幸運的」。"
+                        "answer": "which",
+                        "answer_index": 0,
+                        "hint": "先行詞 The birds 為動物，需用 which。"
                     },
                     {
                         "id": "h1-4-u4-q044",
-                        "question": "Eating too much sugar is ____ to your teeth.",
+                        "question": "I like the doctor ____ treated my illness last year.",
                         "options": [
-                            "fortunate",
-                            "rapid",
-                            "harmful",
-                            "daily"
+                            "which",
+                            "whom",
+                            "what",
+                            "who"
                         ],
-                        "answer": "harmful",
-                        "answer_index": 2,
-                        "hint": "be harmful to 意為「對...有害」。"
+                        "answer": "who",
+                        "answer_index": 3,
+                        "hint": "先行詞 the doctor 為「人」，在子句中作動詞 treated 的主詞，需用 who。"
                     },
                     {
                         "id": "h1-4-u4-q045",
-                        "question": "The doctor advised him to reduce his work ____.",
+                        "question": "The social workers ____ check on poor families do a great job daily.",
                         "options": [
-                            "pressure",
-                            "gesture",
-                            "crowd",
-                            "drama"
+                            "whom",
+                            "who",
+                            "which",
+                            "what"
                         ],
-                        "answer": "pressure",
-                        "answer_index": 0,
-                        "hint": "work pressure 意為「工作壓力」。"
+                        "answer": "who",
+                        "answer_index": 1,
+                        "hint": "先行詞 The social workers 為「人」，需用 who 引導關係子句。"
                     },
                     {
                         "id": "h1-4-u4-q046",
-                        "question": "The patient with a highly infectious disease was ____ immediately.",
+                        "question": "The gesture ____ means 'stop' is very clear to everyone.",
                         "options": [
-                            "included",
-                            "isolated",
-                            "considered",
-                            "tended"
+                            "who",
+                            "whom",
+                            "which",
+                            "what"
                         ],
-                        "answer": "isolated",
-                        "answer_index": 1,
-                        "hint": "be isolated 意為「被隔離/孤立」。"
+                        "answer": "which",
+                        "answer_index": 2,
+                        "hint": "先行詞 The gesture (手勢) 為事物，需用 which。"
                     },
                     {
                         "id": "h1-4-u4-q047",
-                        "question": "She is very outgoing. ____, her sister is very shy.",
+                        "question": "The situation ____ makes him nervous is speaking in public.",
                         "options": [
-                            "In contrast",
-                            "Rather than",
-                            "On her own",
-                            "Stick to"
+                            "who",
+                            "whom",
+                            "what",
+                            "that"
                         ],
-                        "answer": "In contrast",
-                        "answer_index": 0,
-                        "hint": "in contrast 意為「相比之下」，用於對比兩人個性。"
+                        "answer": "that",
+                        "answer_index": 3,
+                        "hint": "先行詞 The situation (情況) 為事物，可用 which 或 that，選項僅 that 符合。"
                     },
                     {
                         "id": "h1-4-u4-q048",
-                        "question": "I prefer to walk to work ____ take the bus.",
+                        "question": "The YouTuber ____ promotes our product is very popular online.",
                         "options": [
-                            "in contrast",
-                            "known as",
-                            "rather than",
-                            "stick to"
+                            "who",
+                            "which",
+                            "whom",
+                            "what"
                         ],
-                        "answer": "rather than",
-                        "answer_index": 2,
-                        "hint": "rather than 意為「而不是」。"
+                        "answer": "who",
+                        "answer_index": 0,
+                        "hint": "先行詞 The YouTuber 為「人」，在子句中作主詞，需用 who。"
                     },
                     {
                         "id": "h1-4-u4-q049",
-                        "question": "Since his parents passed away, he has been living ____.",
+                        "question": "The clown ____ performed in the TV drama was very funny.",
                         "options": [
-                            "in contrast",
-                            "on his own",
-                            "rather than",
-                            "known as"
+                            "which",
+                            "who",
+                            "whom",
+                            "what"
                         ],
-                        "answer": "on his own",
+                        "answer": "who",
                         "answer_index": 1,
-                        "hint": "living on his own 意為「獨自生活」。"
+                        "hint": "先行詞 The clown (小丑) 為「人」，需用 who。"
                     },
                     {
                         "id": "h1-4-u4-q050",
-                        "question": "Taiwan is widely ____ a beautiful island with delicious food.",
+                        "question": "The disease ____ spreads rapidly is very harmful to the public.",
                         "options": [
-                            "stuck to",
-                            "in contrast",
-                            "rather than",
-                            "known as"
+                            "which",
+                            "who",
+                            "whom",
+                            "whose"
                         ],
-                        "answer": "known as",
-                        "answer_index": 3,
-                        "hint": "be known as 意為「被稱為...」。"
+                        "answer": "which",
+                        "answer_index": 0,
+                        "hint": "先行詞 The disease (疾病) 為事物，需用 which。"
                     }
                 ]
             },
