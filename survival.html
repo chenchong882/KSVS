@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>單字挑戰 ⚡ 英文單字遊戲</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.6/babel.min.js"></script>
+    <script type="importmap">
+    {
+        "imports": {
+            "react": "https://esm.sh/react@18.2.0",
+            "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+            "lucide-react": "https://esm.sh/lucide-react@0.292.0"
+        }
+    }
+    </script>
+    <style>
+        body { opacity: 0; transition: opacity 0.4s; background: #0f172a; }
+        body.loaded { opacity: 1; }
+        * { -webkit-tap-highlight-color: transparent; }
+
+        @keyframes popIn {
+            0% { transform: scale(0.6) translateY(10px); opacity: 0; }
+            100% { transform: scale(1) translateY(0); opacity: 1; }
+        }
+        .pop-in { animation: popIn 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            20% { transform: translateX(-10px); }
+            40% { transform: translateX(10px); }
+            60% { transform: translateX(-6px); }
+            80% { transform: translateX(6px); }
+        }
+        .shake { animation: shake 0.35s ease; }
+
+        @keyframes scoreFloat {
+            0%   { transform: translateY(0) scale(1); opacity: 1; }
+            100% { transform: translateY(-70px) scale(1.4); opacity: 0; }
+        }
+        .score-float { animation: scoreFloat 0.9s ease-out forwards; pointer-events: none; }
+
+        @keyframes timePulse {
+            0%, 100% { transform: scale(1); }
+            50%       { transform: scale(1.08); }
+        }
+        .time-danger { animation: timePulse 0.45s ease-in-out infinite; color: #f87171; }
+
+        @keyframes comboGrow {
+            0%   { transform: scale(0.8); }
+            60%  { transform: scale(1.15); }
+            100% { transform: scale(1); }
+        }
+        .combo-grow { animation: comboGrow 0.3s ease-out forwards; }
+
+        @keyframes bossShake {
+            0%, 100% { transform: translateX(0) rotate(0deg); }
+            20%       { transform: translateX(-6px) rotate(-3deg); }
+            40%       { transform: translateX(6px) rotate(3deg); }
+            60%       { transform: translateX(-4px) rotate(-2deg); }
+            80%       { transform: translateX(4px) rotate(2deg); }
+        }
+        .boss-shake { animation: bossShake 0.4s ease; }
+
+        @keyframes bossRagePulse {
+            0%, 100% { filter: drop-shadow(0 0 0px rgba(239,68,68,0)); }
+            50%       { filter: drop-shadow(0 0 16px rgba(239,68,68,0.8)); }
+        }
+        .boss-rage { animation: bossRagePulse 0.9s ease-in-out infinite; }
+
+        @keyframes heartLose {
+            0%   { transform: scale(1); opacity: 1; }
+            50%  { transform: scale(1.5); opacity: 0.5; }
+            100% { transform: scale(0); opacity: 0; }
+        }
+        .heart-lose { animation: heartLose 0.4s ease forwards; }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel" data-type="module" data-presets="react">
+        import React, { useState, useEffect, useRef, useCallback } from 'react';
+        import ReactDOM from 'react-dom/client';
+        import { RefreshCw, ChevronLeft, CheckCircle, XCircle, Zap, Swords } from 'lucide-react';
+
+        // ── 語音 ─────────────────────────────────────────────────────────────
+        let availableVoices = [];
+        const loadVoices = () => { const v = window.speechSynthesis?.getVoices(); if (v?.length > 0) availableVoices = v; };
+        loadVoices();
+        if (window.speechSynthesis?.onvoiceschanged !== undefined) window.speechSynthesis.onvoiceschanged = loadVoices;
+
+        const speakText = (text) => {
+            if (!window.speechSynthesis) return;
+            window.speechSynthesis.cancel();
+            const u = new SpeechSynthesisUtterance(text);
+            let v = availableVoices.find(v => v.lang.startsWith('en') && !v.name.includes('Network'));
+            if (!v) v = availableVoices.find(v => v.lang.includes('en'));
+            if (v) u.voice = v;
+            u.lang = 'en-US'; u.rate = 0.9;
+            window.speechSynthesis.speak(u);
+        };
+
+        // ── 音效 ─────────────────────────────────────────────────────────────
+        const playSound = (type) => {
+            try {
+                const Ctx = window.AudioContext || window.webkitAudioContext;
+                if (!Ctx) return;
+                const ctx = new Ctx();
+                const tone = (freq, endFreq, dur, wave = 'sine', vol = 0.08, delay = 0) => {
+                    const osc = ctx.createOscillator(); const gain = ctx.createGain();
+                    osc.connect(gain); gain.connect(ctx.destination);
+                    osc.type = wave;
+                    osc.frequency.setValueAtTime(freq, ctx.currentTime + delay);
+                    osc.frequency.exponentialRampToValueAtTime(endFreq, ctx.currentTime + delay + dur);
+                    gain.gain.setValueAtTime(vol, ctx.currentTime + delay);
+                    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + delay + dur);
+                    osc.start(ctx.currentTime + delay); osc.stop(ctx.currentTime + delay + dur);
+                };
+                if (type === 'correct') tone(440, 880, 0.3);
+                if (type === 'wrong')   tone(200, 80, 0.3, 'sawtooth');
+                if (type === 'fever')   [0, 0.12, 0.24].forEach((d, i) => tone([500,700,1000][i], [700,1000,1400][i], 0.2, 'sine', 0.08, d));
+                if (type === 'hit')     [0, 0.08].forEach((d, i) => tone([600,900][i], [900,1200][i], 0.15, 'sine', 0.1, d));
+                if (type === 'win')     [0, 0.15, 0.3, 0.5].forEach((d, i) => tone([400,600,800,1200][i], [600,800,1200,1600][i], 0.25, 'sine', 0.1, d));
+            } catch(e) {}
+        };
+
+        // ── 工具 ─────────────────────────────────────────────────────────────
+        const shuffle = (arr) => {
+            const a = [...arr];
+            for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
+            return a;
+        };
+
+        // ── Combo 層級（兩種模式共用） ────────────────────────────────────────
+        const COMBO_TIERS = [
+            { min: 8, label: 'FEVER!!!',  mult: 5, color: 'text-red-400',    bg: 'bg-red-950/80 border-red-500',       icon: '🔥🔥🔥' },
+            { min: 5, label: 'ON FIRE!',  mult: 3, color: 'text-orange-400', bg: 'bg-orange-950/80 border-orange-500', icon: '🔥🔥' },
+            { min: 3, label: 'HOT!',      mult: 2, color: 'text-yellow-400', bg: 'bg-yellow-950/80 border-yellow-600', icon: '🔥' },
+            { min: 0, label: '',          mult: 1, color: 'text-slate-500',  bg: 'bg-slate-800/40 border-slate-700',   icon: '' },
+        ];
+        const getTier = (combo) => COMBO_TIERS.find(t => combo >= t.min);
+
+        // ── Boss 資料 ─────────────────────────────────────────────────────────
+        const BOSSES = [
+            { emoji: '🐉', name: '單字龍',   enrageEmoji: '😡🐉' },
+            { emoji: '👹', name: '暗黑魔王', enrageEmoji: '👿' },
+            { emoji: '🤖', name: 'AI 出題機', enrageEmoji: '💀🤖' },
+            { emoji: '👾', name: '拼字怪',   enrageEmoji: '🔴👾' },
+            { emoji: '🦑', name: '片語章魚', enrageEmoji: '🦑💢' },
+        ];
+        const BOSS_MAX_HP   = 150;
+        const BOSS_HEARTS   = 3;
+        const SPEED_WINDOW  = 4; // 秒，超過此時間無速度加成
+
+        // Boss 基礎傷害（連勝加成）
+        const getBossDamage = (combo) => {
+            if (combo >= 8) return 25;
+            if (combo >= 5) return 20;
+            if (combo >= 3) return 15;
+            return 10;
+        };
+
+        // 速度加成倍率
+        const getSpeedMult = (elapsedSec) => {
+            if (elapsedSec < 1)   return 2.0;
+            if (elapsedSec < 2)   return 1.5;
+            if (elapsedSec < 3)   return 1.2;
+            return 1.0;
+        };
+        const getSpeedLabel = (elapsedSec) => {
+            if (elapsedSec < 1)   return { text: '⚡ 閃電！×2.0', color: 'text-yellow-300' };
+            if (elapsedSec < 2)   return { text: '🔥 超快！×1.5', color: 'text-orange-300' };
+            if (elapsedSec < 3)   return { text: '💨 快速 ×1.2',  color: 'text-sky-300' };
+            return { text: '', color: '' };
+        };
+
+        // ── 被打倒的 Boss ────────────────────────────────────────────────────
+        const DefeatedBoss = ({ emoji }) => (
+            <div className="select-none" style={{ fontSize: '7rem', lineHeight: 1, filter: 'grayscale(0.9) opacity(0.6)' }}>
+                {emoji}
+            </div>
+        );
+
+        // ── 題目產生器 ────────────────────────────────────────────────────────
+        const buildQuestion = (target, pool) => {
+            const showEn = Math.random() > 0.5;
+            const distractors = shuffle(pool.filter(w => w.id !== target.id)).slice(0, 3);
+            return {
+                prompt:     showEn ? target.chinese : target.word,
+                promptType: showEn ? '選出英文單字' : '選出中文意思',
+                audio:      target.word,
+                options: shuffle([target, ...distractors]).map(o => ({
+                    id: o.id, text: showEn ? o.word : o.chinese, isCorrect: o.id === target.id,
+                })),
+            };
+        };
+
+        // ── localStorage 鍵 ───────────────────────────────────────────────────
+        const LS = {
+            survivalScore: 'survival_best_score',
+            survivalWords: 'survival_best_words',
+            bossWins:      'boss_win_count',
+            bossBestCombo: 'boss_best_combo',
+        };
+
+        // ═════════════════════════════════════════════════════════════════════
+        // 共用 ComboBar
+        // ═════════════════════════════════════════════════════════════════════
+        const ComboBar = ({ combo }) => {
+            const tier = getTier(combo);
+            return (
+                <div className={`h-14 flex items-center justify-center rounded-2xl border-2 transition-all duration-300 ${tier.bg}`}>
+                    {combo >= 3 ? (
+                        <div className={`font-black text-lg ${tier.color} flex items-center gap-2 combo-grow`} key={combo}>
+                            {tier.icon} {combo} 連勝！ ×{tier.mult} {tier.label}
+                        </div>
+                    ) : combo > 0 ? (
+                        <div className="text-slate-400 font-bold text-sm">{combo} 連勝 — 再 {3 - combo} 題達到 ×2！</div>
+                    ) : (
+                        <div className="text-slate-700 font-bold text-xs">連勝可獲得倍率加分 🔥</div>
+                    )}
+                </div>
+            );
+        };
+
+        // ── 共用選項按鈕 ──────────────────────────────────────────────────────
+        const OptionButton = ({ option, selectedId, onClick }) => {
+            let cls = 'bg-slate-700 border-slate-600 text-white hover:bg-slate-600';
+            if (selectedId) {
+                if (option.isCorrect)             cls = 'bg-emerald-500 border-emerald-700 text-white';
+                else if (selectedId === option.id) cls = 'bg-rose-500 border-rose-700 text-white';
+                else                               cls = 'bg-slate-800 border-slate-800 text-slate-600 opacity-40';
+            }
+            return (
+                <button
+                    onClick={() => onClick(option)}
+                    disabled={!!selectedId}
+                    className={`${cls} border-b-4 active:border-b-0 active:translate-y-1 rounded-2xl px-5 py-4 font-black text-lg transition-all shadow-md disabled:cursor-not-allowed text-left`}
+                >
+                    {option.text}
+                </button>
+            );
+        };
+
+        // ═════════════════════════════════════════════════════════════════════
+        // 生存模式
+        // ═════════════════════════════════════════════════════════════════════
+        function SurvivalGame({ allWords, onBack }) {
+            const INIT_TIME  = 30;
+            const BONUS_TIME = 4;
+            const PENALTY    = 3;
+            const MAX_TIME   = 60;
+
+            const [status, setStatus]         = useState('idle');
+            const [timeLeft, setTimeLeft]     = useState(INIT_TIME);
+            const [score, setScore]           = useState(0);
+            const [combo, setCombo]           = useState(0);
+            const [maxCombo, setMaxCombo]     = useState(0);
+            const [wordsOk, setWordsOk]       = useState(0);
+            const [question, setQuestion]     = useState(null);
+            const [selectedId, setSelectedId] = useState(null);
+            const [feedback, setFeedback]     = useState(null);
+            const [floatScore, setFloatScore] = useState(null);
+            const [shaking, setShaking]       = useState(false);
+            const [bestScore, setBestScore]   = useState(() => parseInt(localStorage.getItem(LS.survivalScore) || '0'));
+            const [bestWords, setBestWords]   = useState(() => parseInt(localStorage.getItem(LS.survivalWords) || '0'));
+            const [newBest, setNewBest]       = useState(false);
+
+            const timeRef     = useRef(INIT_TIME);
+            const scoreRef    = useRef(0);
+            const comboRef    = useRef(0);
+            const maxComboRef = useRef(0);
+            const wordsRef    = useRef(0);
+            const frozenRef   = useRef(false);
+
+            const nextQ = useCallback(() => {
+                const t = allWords[Math.floor(Math.random() * allWords.length)];
+                setQuestion(buildQuestion(t, allWords));
+                setSelectedId(null); setFeedback(null);
+                frozenRef.current = false;
+            }, [allWords]);
+
+            const startGame = () => {
+                timeRef.current = INIT_TIME; scoreRef.current = 0;
+                comboRef.current = 0; maxComboRef.current = 0; wordsRef.current = 0;
+                setTimeLeft(INIT_TIME); setScore(0); setCombo(0);
+                setMaxCombo(0); setWordsOk(0); setFeedback(null);
+                setSelectedId(null); setNewBest(false); setShaking(false);
+                frozenRef.current = false;
+                setStatus('playing');
+            };
+
+            useEffect(() => { if (status === 'playing') nextQ(); }, [status]);
+
+            useEffect(() => {
+                if (status !== 'playing') return;
+                const id = setInterval(() => {
+                    timeRef.current -= 1;
+                    setTimeLeft(timeRef.current);
+                    if (timeRef.current <= 0) {
+                        clearInterval(id);
+                        const fs = scoreRef.current, fw = wordsRef.current;
+                        const prev = parseInt(localStorage.getItem(LS.survivalScore) || '0');
+                        if (fs > prev) {
+                            localStorage.setItem(LS.survivalScore, String(fs));
+                            localStorage.setItem(LS.survivalWords, String(fw));
+                            setBestScore(fs); setBestWords(fw); setNewBest(true);
+                        }
+                        setStatus('over');
+                    }
+                }, 1000);
+                return () => clearInterval(id);
+            }, [status]);
+
+            const handleAnswer = (option) => {
+                if (frozenRef.current || status !== 'playing') return;
+                frozenRef.current = true;
+                setSelectedId(option.id);
+
+                if (option.isCorrect) {
+                    speakText(question.audio); playSound('correct');
+                    const newCombo = comboRef.current + 1;
+                    comboRef.current = newCombo;
+                    if (newCombo > maxComboRef.current) maxComboRef.current = newCombo;
+                    const tier = getTier(newCombo);
+                    if (tier.mult > getTier(newCombo - 1).mult) setTimeout(() => playSound('fever'), 200);
+                    const pts = 10 * tier.mult;
+                    scoreRef.current += pts; wordsRef.current += 1;
+                    timeRef.current = Math.min(timeRef.current + BONUS_TIME, MAX_TIME);
+                    setCombo(newCombo); setMaxCombo(maxComboRef.current);
+                    setScore(scoreRef.current); setWordsOk(wordsRef.current);
+                    setTimeLeft(timeRef.current); setFeedback('correct');
+                    setFloatScore({ pts, key: Date.now() });
+                    setTimeout(() => nextQ(), 550);
+                } else {
+                    playSound('wrong'); comboRef.current = 0;
+                    timeRef.current = Math.max(timeRef.current - PENALTY, 1);
+                    setCombo(0); setTimeLeft(timeRef.current); setFeedback('wrong');
+                    setShaking(true); setTimeout(() => setShaking(false), 400);
+                    setTimeout(() => nextQ(), 750);
+                }
+            };
+
+            // ── Idle ──
+            if (status === 'idle') return (
+                <div className="flex flex-col items-center justify-center min-h-screen px-6 py-10 text-center">
+                    <div className="text-6xl mb-3 select-none" style={{filter:'drop-shadow(0 0 20px rgba(250,204,21,0.6))'}}>⚡</div>
+                    <h1 className="text-3xl font-black text-white mb-1">生存模式</h1>
+                    <p className="text-slate-400 font-bold mb-6 text-sm">撐越久、連勝越多，分數越高！</p>
+                    <div className="bg-slate-800 border-2 border-slate-700 rounded-3xl p-5 w-full max-w-xs mb-5 text-left space-y-3">
+                        {[['⏱','開局 30 秒，答對 +4 秒','text-emerald-400'],['❌','答錯 -3 秒，連勝歸零','text-rose-400'],['🔥','3 連勝 ×2、5 連勝 ×3、8 連勝 ×5','text-orange-400']].map(([icon,text,color]) => (
+                            <div key={text} className="flex items-start gap-3">
+                                <span className="text-xl shrink-0">{icon}</span>
+                                <span className={`font-bold text-sm ${color}`}>{text}</span>
+                            </div>
+                        ))}
+                    </div>
+                    {bestScore > 0 && (
+                        <div className="bg-yellow-950/60 border-2 border-yellow-600 rounded-2xl px-8 py-3 mb-5 text-center">
+                            <div className="text-yellow-500 text-xs font-black uppercase tracking-widest mb-1">個人最高</div>
+                            <div className="text-yellow-300 font-black text-3xl">{bestScore} <span className="text-yellow-600 text-base font-bold">分</span></div>
+                            <div className="text-yellow-600 text-xs font-bold mt-0.5">答對 {bestWords} 個單字</div>
+                        </div>
+                    )}
+                    <button onClick={startGame} className="bg-yellow-400 border-b-8 border-yellow-600 text-yellow-900 font-black text-xl px-10 py-4 rounded-3xl active:border-b-0 active:translate-y-2 transition-all shadow-2xl hover:bg-yellow-300 w-full max-w-xs mb-4">
+                        開始挑戰！
+                    </button>
+                    <button onClick={onBack} className="text-slate-600 font-bold text-sm hover:text-slate-400 transition-colors flex items-center gap-1">
+                        <ChevronLeft className="w-4 h-4" /> 返回選單
+                    </button>
+                </div>
+            );
+
+            // ── Game Over ──
+            if (status === 'over') return (
+                <div className="flex flex-col items-center justify-center min-h-screen px-6 py-10 text-center">
+                    <div className="text-6xl mb-3">{newBest ? '🏆' : '💀'}</div>
+                    <h2 className="text-3xl font-black text-white mb-2">時間到！</h2>
+                    {newBest && <div className="bg-yellow-400 text-yellow-900 font-black px-5 py-1.5 rounded-full text-sm mb-3 pop-in">🎉 新紀錄！</div>}
+                    <div className="text-5xl font-black text-yellow-400 mb-1">{score}</div>
+                    <div className="text-slate-400 font-bold mb-6">答對 {wordsOk} 個單字</div>
+                    <div className="bg-slate-800 border-2 border-slate-700 rounded-3xl p-5 w-full max-w-xs mb-6 grid grid-cols-2 gap-4">
+                        {[['答對單字',wordsOk,'text-emerald-400'],['最高連勝',maxCombo,'text-orange-400'],['個人最高',bestScore,'text-yellow-400'],['最佳單字',bestWords,'text-sky-400']].map(([label,val,color]) => (
+                            <div key={label} className="text-center">
+                                <div className="text-slate-500 text-xs font-black uppercase mb-1">{label}</div>
+                                <div className={`font-black text-2xl ${color}`}>{val}</div>
+                            </div>
+                        ))}
+                    </div>
+                    <button onClick={startGame} className="bg-yellow-400 border-b-8 border-yellow-600 text-yellow-900 font-black text-xl px-10 py-4 rounded-3xl active:border-b-0 active:translate-y-2 transition-all shadow-xl hover:bg-yellow-300 w-full max-w-xs flex items-center justify-center gap-2 mb-3">
+                        <RefreshCw className="w-5 h-5" /> 再挑戰一次
+                    </button>
+                    <button onClick={onBack} className="text-slate-500 font-bold text-sm hover:text-slate-300 transition-colors flex items-center gap-1">
+                        <ChevronLeft className="w-4 h-4" /> 返回選單
+                    </button>
+                </div>
+            );
+
+            // ── Playing ──
+            if (!question) return null;
+            const tier     = getTier(combo);
+            const timePct  = Math.min((timeLeft / INIT_TIME) * 100, 100);
+            const isDanger = timeLeft <= 7;
+            const timerColor = isDanger ? 'bg-rose-500' : timeLeft <= 12 ? 'bg-orange-400' : 'bg-emerald-400';
+
+            return (
+                <div className={`flex flex-col min-h-screen max-w-md mx-auto px-4 pb-6 pt-4 relative ${shaking ? 'shake' : ''}`}>
+                    {floatScore && (
+                        <div key={floatScore.key} className="score-float absolute top-20 left-1/2 -translate-x-1/2 z-50 font-black text-2xl text-yellow-400">
+                            +{floatScore.pts}{tier.mult > 1 ? ` ×${tier.mult}` : ''}
+                        </div>
+                    )}
+                    <div className="flex items-center justify-between mb-3">
+                        <div className={`font-black text-4xl tabular-nums ${isDanger ? 'time-danger' : 'text-white'}`}>{timeLeft}s</div>
+                        <div className="text-right">
+                            <div className="text-yellow-400 font-black text-3xl tabular-nums">{score}</div>
+                            <div className="text-slate-600 text-xs font-bold">{wordsOk} 字</div>
+                        </div>
+                    </div>
+                    <div className="h-3 bg-slate-800 rounded-full overflow-hidden mb-4 border border-slate-700">
+                        <div className={`h-full ${timerColor} transition-all duration-1000 ease-linear rounded-full`} style={{ width: `${timePct}%` }} />
+                    </div>
+                    <ComboBar combo={combo} />
+                    <div className="bg-slate-800 border-4 border-slate-600 rounded-3xl p-6 my-5 text-center">
+                        <div className="text-slate-500 text-xs font-black uppercase tracking-widest mb-3">{question.promptType}</div>
+                        <div className="text-white font-black text-2xl sm:text-3xl leading-snug break-words">{question.prompt}</div>
+                    </div>
+                    <div className="grid grid-cols-1 gap-3">
+                        {question.options.map(opt => <OptionButton key={opt.id} option={opt} selectedId={selectedId} onClick={handleAnswer} />)}
+                    </div>
+                    {feedback === 'correct' && (
+                        <div className="fixed top-5 left-1/2 -translate-x-1/2 bg-emerald-500 text-white font-black px-5 py-2 rounded-full shadow-2xl pop-in text-base z-50 flex items-center gap-2">
+                            <CheckCircle className="w-4 h-4" /> 答對！ +{BONUS_TIME}秒
+                        </div>
+                    )}
+                    {feedback === 'wrong' && (
+                        <div className="fixed top-5 left-1/2 -translate-x-1/2 bg-rose-500 text-white font-black px-5 py-2 rounded-full shadow-2xl pop-in text-base z-50 flex items-center gap-2">
+                            <XCircle className="w-4 h-4" /> 答錯！ -{PENALTY}秒
+                        </div>
+                    )}
+                </div>
+            );
+        }
+
+        // ═════════════════════════════════════════════════════════════════════
+        // Boss 關卡
+        // ═════════════════════════════════════════════════════════════════════
+        function BossGame({ allWords, onBack }) {
+            const [status, setStatus]           = useState('idle');
+            const [boss, setBoss]               = useState(BOSSES[0]);
+            const [bossHp, setBossHp]           = useState(BOSS_MAX_HP);
+            const [playerHearts, setHearts]     = useState(BOSS_HEARTS);
+            const [combo, setCombo]             = useState(0);
+            const [maxCombo, setMaxCombo]       = useState(0);
+            const [question, setQuestion]       = useState(null);
+            const [selectedId, setSelectedId]   = useState(null);
+            const [feedback, setFeedback]       = useState(null);
+            const [enraged, setEnraged]         = useState(false);
+            const [bossShaking, setBossShaking] = useState(false);
+            const [screenShake, setScreenShake] = useState(false);
+            const [dmgFloat, setDmgFloat]       = useState(null);
+            const [hitsLanded, setHitsLanded]   = useState(0);
+            const [winCount, setWinCount]       = useState(() => parseInt(localStorage.getItem(LS.bossWins) || '0'));
+            const [bestCombo, setBestCombo]     = useState(() => parseInt(localStorage.getItem(LS.bossBestCombo) || '0'));
+            const [speedPct, setSpeedPct]       = useState(100);
+
+            const bossHpRef        = useRef(BOSS_MAX_HP);
+            const heartsRef        = useRef(BOSS_HEARTS);
+            const comboRef         = useRef(0);
+            const maxComboRef      = useRef(0);
+            const hitsRef          = useRef(0);
+            const enragedRef       = useRef(false);
+            const frozenRef        = useRef(false);
+            const questionStartRef = useRef(null);
+
+            const nextQ = useCallback(() => {
+                const t = allWords[Math.floor(Math.random() * allWords.length)];
+                setQuestion(buildQuestion(t, allWords));
+                setSelectedId(null); setFeedback(null);
+                frozenRef.current = false;
+                questionStartRef.current = Date.now();
+                setSpeedPct(100);
+            }, [allWords]);
+
+            // 速度條：每 80ms 更新
+            useEffect(() => {
+                if (status !== 'playing' || selectedId) return;
+                const id = setInterval(() => {
+                    if (!questionStartRef.current) return;
+                    const elapsed = (Date.now() - questionStartRef.current) / 1000;
+                    setSpeedPct(Math.max(0, (1 - elapsed / SPEED_WINDOW) * 100));
+                }, 80);
+                return () => clearInterval(id);
+            }, [question, selectedId, status]);
+
+            const startGame = () => {
+                const picked = BOSSES[Math.floor(Math.random() * BOSSES.length)];
+                bossHpRef.current = BOSS_MAX_HP; heartsRef.current = BOSS_HEARTS;
+                comboRef.current = 0; maxComboRef.current = 0; hitsRef.current = 0;
+                enragedRef.current = false; frozenRef.current = false;
+                setBoss(picked); setBossHp(BOSS_MAX_HP); setHearts(BOSS_HEARTS);
+                setCombo(0); setMaxCombo(0); setHitsLanded(0);
+                setFeedback(null); setSelectedId(null); setEnraged(false);
+                setBossShaking(false); setScreenShake(false);
+                setStatus('playing');
+            };
+
+            useEffect(() => { if (status === 'playing') nextQ(); }, [status]);
+
+            const handleAnswer = (option) => {
+                if (frozenRef.current || status !== 'playing') return;
+                frozenRef.current = true;
+                setSelectedId(option.id);
+
+                if (option.isCorrect) {
+                    speakText(question.audio); playSound('hit');
+                    const newCombo = comboRef.current + 1;
+                    comboRef.current = newCombo;
+                    if (newCombo > maxComboRef.current) maxComboRef.current = newCombo;
+                    if (getTier(newCombo).mult > getTier(newCombo - 1).mult) setTimeout(() => playSound('fever'), 150);
+
+                    // 速度加成傷害
+                    const elapsed = questionStartRef.current ? (Date.now() - questionStartRef.current) / 1000 : SPEED_WINDOW;
+                    const speedMult = getSpeedMult(elapsed);
+                    const speedInfo = getSpeedLabel(elapsed);
+                    const dmg = Math.round(getBossDamage(newCombo) * speedMult);
+                    bossHpRef.current = Math.max(bossHpRef.current - dmg, 0);
+                    hitsRef.current += 1;
+
+                    setCombo(newCombo); setMaxCombo(maxComboRef.current);
+                    setBossHp(bossHpRef.current); setHitsLanded(hitsRef.current);
+                    setFeedback('correct');
+                    setDmgFloat({ dmg, speedLabel: speedInfo.text, speedColor: speedInfo.color, key: Date.now() });
+                    setBossShaking(true); setTimeout(() => setBossShaking(false), 450);
+
+                    // 激怒判定（血量首次低於一半）
+                    if (!enragedRef.current && bossHpRef.current <= BOSS_MAX_HP / 2) {
+                        enragedRef.current = true;
+                        setEnraged(true);
+                        setTimeout(() => playSound('fever'), 200);
+                    }
+
+                    if (bossHpRef.current <= 0) {
+                        playSound('win');
+                        const mc = maxComboRef.current;
+                        const newWins = winCount + 1;
+                        localStorage.setItem(LS.bossWins, String(newWins));
+                        if (mc > bestCombo) { localStorage.setItem(LS.bossBestCombo, String(mc)); setBestCombo(mc); }
+                        setWinCount(newWins);
+                        setTimeout(() => setStatus('win'), 600);
+                    } else {
+                        setTimeout(() => nextQ(), 600);
+                    }
+                } else {
+                    playSound('wrong');
+                    comboRef.current = 0;
+                    heartsRef.current = Math.max(heartsRef.current - 1, 0);
+                    setCombo(0); setHearts(heartsRef.current); setFeedback('wrong');
+                    setScreenShake(true); setTimeout(() => setScreenShake(false), 400);
+
+                    if (heartsRef.current <= 0) {
+                        setTimeout(() => setStatus('lose'), 800);
+                    } else {
+                        setTimeout(() => nextQ(), 750);
+                    }
+                }
+            };
+
+            // ── Idle ──
+            if (status === 'idle') return (
+                <div className="flex flex-col items-center justify-center min-h-screen px-6 py-10 text-center">
+                    <div className="text-7xl mb-2 select-none">👾</div>
+                    <h1 className="text-3xl font-black text-white mb-1">Boss 關卡</h1>
+                    <p className="text-slate-400 font-bold mb-6 text-sm">消耗 Boss 血量，連勝傷害加成！</p>
+                    <div className="bg-slate-800 border-2 border-slate-700 rounded-3xl p-5 w-full max-w-xs mb-5 text-left space-y-3">
+                        {[['❤️',`玩家有 ${BOSS_HEARTS} 條命，答錯扣一條`,'text-rose-400'],['⚔️',`Boss 有 ${BOSS_MAX_HP} HP，答對造成傷害`,'text-sky-400'],['⚡','越快回答傷害越高（1 秒內 ×2.0）','text-yellow-400'],['🔥','連勝越高，基礎傷害越大','text-orange-400'],['💢',`Boss HP 剩一半時進入激怒模式`,'text-red-400']].map(([icon,text,color]) => (
+                            <div key={text} className="flex items-start gap-3">
+                                <span className="text-xl shrink-0">{icon}</span>
+                                <span className={`font-bold text-sm ${color}`}>{text}</span>
+                            </div>
+                        ))}
+                    </div>
+                    {winCount > 0 && (
+                        <div className="bg-violet-950/60 border-2 border-violet-600 rounded-2xl px-8 py-3 mb-5 text-center">
+                            <div className="text-violet-400 text-xs font-black uppercase tracking-widest mb-1">討伐次數</div>
+                            <div className="text-violet-300 font-black text-3xl">{winCount} <span className="text-violet-600 text-base font-bold">次</span></div>
+                            <div className="text-violet-600 text-xs font-bold mt-0.5">最高連勝 {bestCombo} 連</div>
+                        </div>
+                    )}
+                    <button onClick={startGame} className="bg-rose-500 border-b-8 border-rose-700 text-white font-black text-xl px-10 py-4 rounded-3xl active:border-b-0 active:translate-y-2 transition-all shadow-2xl hover:bg-rose-400 w-full max-w-xs mb-4 flex items-center justify-center gap-2">
+                        <Swords className="w-6 h-6" /> 挑戰開始！
+                    </button>
+                    <button onClick={onBack} className="text-slate-600 font-bold text-sm hover:text-slate-400 transition-colors flex items-center gap-1">
+                        <ChevronLeft className="w-4 h-4" /> 返回選單
+                    </button>
+                </div>
+            );
+
+            // ── Win ──
+            if (status === 'win') return (
+                <div className="flex flex-col items-center justify-center min-h-screen px-6 py-10 text-center">
+                    <DefeatedBoss emoji={boss.emoji} />
+                    <h2 className="text-4xl font-black text-yellow-400 mt-2 mb-1">勝利！</h2>
+                    <p className="text-slate-400 font-bold mb-6">成功擊敗 {boss.name}！</p>
+                    <div className="bg-slate-800 border-2 border-slate-700 rounded-3xl p-5 w-full max-w-xs mb-6 grid grid-cols-2 gap-4">
+                        {[['命中次數',hitsLanded,'text-sky-400'],['最高連勝',maxCombo,'text-orange-400'],['累計討伐',winCount,'text-yellow-400'],['歷史最高連',bestCombo,'text-violet-400']].map(([label,val,color]) => (
+                            <div key={label} className="text-center">
+                                <div className="text-slate-500 text-xs font-black uppercase mb-1">{label}</div>
+                                <div className={`font-black text-2xl ${color}`}>{val}</div>
+                            </div>
+                        ))}
+                    </div>
+                    <button onClick={startGame} className="bg-rose-500 border-b-8 border-rose-700 text-white font-black text-xl px-10 py-4 rounded-3xl active:border-b-0 active:translate-y-2 transition-all shadow-xl hover:bg-rose-400 w-full max-w-xs flex items-center justify-center gap-2 mb-3">
+                        <RefreshCw className="w-5 h-5" /> 再戰一場
+                    </button>
+                    <button onClick={onBack} className="text-slate-500 font-bold text-sm hover:text-slate-300 transition-colors flex items-center gap-1">
+                        <ChevronLeft className="w-4 h-4" /> 返回選單
+                    </button>
+                </div>
+            );
+
+            // ── Lose ──
+            if (status === 'lose') return (
+                <div className="flex flex-col items-center justify-center min-h-screen px-6 py-10 text-center">
+                    <div className="text-6xl mb-3">💀</div>
+                    <h2 className="text-4xl font-black text-slate-400 mb-1">敗北...</h2>
+                    <p className="text-slate-500 font-bold mb-2">{boss.name} 剩餘 <span className="text-rose-400 font-black">{bossHp} HP</span></p>
+                    <p className="text-slate-600 font-bold text-sm mb-6">命中 {hitsLanded} 次，最高 {maxCombo} 連勝</p>
+                    <button onClick={startGame} className="bg-rose-500 border-b-8 border-rose-700 text-white font-black text-xl px-10 py-4 rounded-3xl active:border-b-0 active:translate-y-2 transition-all shadow-xl hover:bg-rose-400 w-full max-w-xs flex items-center justify-center gap-2 mb-3">
+                        <RefreshCw className="w-5 h-5" /> 再挑戰一次
+                    </button>
+                    <button onClick={onBack} className="text-slate-500 font-bold text-sm hover:text-slate-300 transition-colors flex items-center gap-1">
+                        <ChevronLeft className="w-4 h-4" /> 返回選單
+                    </button>
+                </div>
+            );
+
+            // ── Playing ──
+            if (!question) return null;
+            const hpPct      = (bossHp / BOSS_MAX_HP) * 100;
+            const hpBarColor = hpPct > 50 ? 'bg-rose-500' : hpPct > 25 ? 'bg-orange-500' : 'bg-red-700';
+
+            return (
+                <div className={`flex flex-col min-h-screen max-w-md mx-auto px-4 pb-6 pt-4 relative ${screenShake ? 'shake' : ''}`}>
+
+                    {/* 浮動傷害數字 */}
+                    {dmgFloat && (
+                        <div key={dmgFloat.key} className="score-float absolute top-32 left-1/2 -translate-x-1/2 z-50 text-center pointer-events-none">
+                            <div className="font-black text-3xl text-rose-400">-{dmgFloat.dmg} HP</div>
+                            {dmgFloat.speedLabel && (
+                                <div className={`font-black text-sm mt-0.5 ${dmgFloat.speedColor}`}>{dmgFloat.speedLabel}</div>
+                            )}
+                        </div>
+                    )}
+
+                    {/* ── Boss 區 ── */}
+                    <div className={`rounded-3xl border-2 p-4 mb-4 text-center transition-all duration-500 ${enraged ? 'bg-red-950/60 border-red-700' : 'bg-slate-800 border-slate-700'}`}>
+                        {enraged && <div className="text-red-400 text-xs font-black uppercase tracking-widest mb-1 animate-pulse">⚠ 激怒模式！ENRAGED!</div>}
+                        <div className={`text-6xl mb-2 select-none leading-none ${bossShaking ? 'boss-shake' : ''}`}>
+                            {enraged ? boss.enrageEmoji : boss.emoji}
+                        </div>
+                        <div className="text-white font-black text-lg mb-2">{boss.name}</div>
+                        {/* Boss HP 條 */}
+                        <div className="flex items-center gap-2">
+                            <span className="text-slate-500 text-xs font-black w-6">HP</span>
+                            <div className="flex-1 h-4 bg-slate-900 rounded-full overflow-hidden border border-slate-700">
+                                <div className={`h-full ${hpBarColor} transition-all duration-300 rounded-full`} style={{ width: `${hpPct}%` }} />
+                            </div>
+                            <span className="text-slate-400 text-xs font-black w-14 text-right tabular-nums">{bossHp}/{BOSS_MAX_HP}</span>
+                        </div>
+                    </div>
+
+                    {/* ── 玩家血量 ── */}
+                    <div className="flex items-center justify-between mb-3 px-1">
+                        <div className="flex gap-2">
+                            {Array.from({ length: BOSS_HEARTS }).map((_, i) => (
+                                <span key={i} className={`text-2xl transition-all duration-300 ${i < playerHearts ? 'opacity-100' : 'opacity-20 grayscale'}`}>
+                                    {i < playerHearts ? '❤️' : '🖤'}
+                                </span>
+                            ))}
+                        </div>
+                        <div className="text-slate-500 text-xs font-bold">{hitsLanded} 擊</div>
+                    </div>
+
+                    {/* ── Combo ── */}
+                    <div className="mb-4"><ComboBar combo={combo} /></div>
+
+                    {/* ── 題目卡片 ── */}
+                    <div className="bg-slate-800 border-4 border-slate-600 rounded-3xl p-5 mb-4 text-center">
+                        <div className="text-slate-500 text-xs font-black uppercase tracking-widest mb-2">{question.promptType}</div>
+                        <div className="text-white font-black text-2xl sm:text-3xl leading-snug break-words mb-3">{question.prompt}</div>
+                        {/* 速度條 */}
+                        <div className="flex items-center gap-2">
+                            <span className="text-xs font-black text-slate-600">⚡</span>
+                            <div className="flex-1 h-2 bg-slate-900 rounded-full overflow-hidden">
+                                <div
+                                    className={`h-full rounded-full transition-none ${speedPct > 50 ? 'bg-yellow-400' : speedPct > 25 ? 'bg-orange-400' : 'bg-rose-500'}`}
+                                    style={{ width: `${speedPct}%` }}
+                                />
+                            </div>
+                            <span className="text-xs font-black text-slate-600 w-12 text-right">
+                                {speedPct > 75 ? '×2.0' : speedPct > 50 ? '×1.5' : speedPct > 25 ? '×1.2' : '×1.0'}
+                            </span>
+                        </div>
+                    </div>
+
+                    {/* ── 選項 ── */}
+                    <div className="grid grid-cols-1 gap-3">
+                        {question.options.map(opt => <OptionButton key={opt.id} option={opt} selectedId={selectedId} onClick={handleAnswer} />)}
+                    </div>
+
+                    {feedback === 'correct' && (
+                        <div className="fixed top-5 left-1/2 -translate-x-1/2 bg-emerald-500 text-white font-black px-5 py-2 rounded-full shadow-2xl pop-in text-base z-50 flex items-center gap-2">
+                            <CheckCircle className="w-4 h-4" /> 命中！ -{getBossDamage(combo)} HP
+                        </div>
+                    )}
+                    {feedback === 'wrong' && (
+                        <div className="fixed top-5 left-1/2 -translate-x-1/2 bg-rose-500 text-white font-black px-5 py-2 rounded-full shadow-2xl pop-in text-base z-50 flex items-center gap-2">
+                            <XCircle className="w-4 h-4" /> 被攻擊了！-1 命
+                        </div>
+                    )}
+                </div>
+            );
+        }
+
+        // ═════════════════════════════════════════════════════════════════════
+        // 首頁選單
+        // ═════════════════════════════════════════════════════════════════════
+        function HomeScreen({ allWords, onSelect }) {
+            return (
+                <div className="flex flex-col items-center justify-center min-h-screen px-6 py-10 text-center">
+                    <div className="text-5xl mb-2 select-none">🎮</div>
+                    <h1 className="text-3xl font-black text-white mb-1">單字挑戰</h1>
+                    <p className="text-slate-500 font-bold text-sm mb-8">共 {allWords.length} 個單字 — 選擇模式</p>
+
+                    <div className="w-full max-w-xs space-y-4 mb-8">
+                        {/* 生存模式 */}
+                        <button
+                            onClick={() => onSelect('survival')}
+                            className="w-full bg-slate-800 border-2 border-slate-700 hover:border-yellow-500 p-5 rounded-3xl text-left transition-all group relative overflow-hidden"
+                        >
+                            <div className="absolute inset-0 bg-yellow-400/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl" />
+                            <div className="relative flex items-center gap-4">
+                                <div className="text-4xl select-none" style={{filter:'drop-shadow(0 0 10px rgba(250,204,21,0.5))'}}>⚡</div>
+                                <div className="text-left">
+                                    <div className="text-white font-black text-xl">生存模式</div>
+                                    <div className="text-slate-400 text-sm font-bold mt-0.5">計時答題，連勝倍率加分</div>
+                                </div>
+                                <ChevronLeft className="w-5 h-5 text-slate-600 group-hover:text-yellow-500 rotate-180 ml-auto transition-colors" />
+                            </div>
+                        </button>
+
+                        {/* Boss 關卡 */}
+                        <button
+                            onClick={() => onSelect('boss')}
+                            className="w-full bg-slate-800 border-2 border-slate-700 hover:border-rose-500 p-5 rounded-3xl text-left transition-all group relative overflow-hidden"
+                        >
+                            <div className="absolute inset-0 bg-rose-400/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl" />
+                            <div className="relative flex items-center gap-4">
+                                <div className="text-4xl select-none">👾</div>
+                                <div className="text-left">
+                                    <div className="text-white font-black text-xl">Boss 關卡</div>
+                                    <div className="text-slate-400 text-sm font-bold mt-0.5">打倒 Boss，3 條命、連勝傷害</div>
+                                </div>
+                                <ChevronLeft className="w-5 h-5 text-slate-600 group-hover:text-rose-500 rotate-180 ml-auto transition-colors" />
+                            </div>
+                        </button>
+                    </div>
+
+                    <a href="./index.html" className="text-slate-600 font-bold text-sm hover:text-slate-400 transition-colors flex items-center gap-1">
+                        <ChevronLeft className="w-4 h-4" /> 回到主學習頁
+                    </a>
+                </div>
+            );
+        }
+
+        // ═════════════════════════════════════════════════════════════════════
+        // App — 資料載入 + 路由
+        // ═════════════════════════════════════════════════════════════════════
+        function App() {
+            const [allWords, setAllWords] = useState(null);
+            const [loading, setLoading]  = useState(true);
+            const [error, setError]      = useState(null);
+            const [screen, setScreen]    = useState('home'); // home | survival | boss
+
+            useEffect(() => {
+                const files = ['./h1-4-u3.json', './h1-4-u4.json'];
+                Promise.all(files.map(f => fetch(f).then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })))
+                    .then(results => {
+                        const words = [];
+                        results.forEach(data => {
+                            if (!data?.units) return;
+                            Object.values(data.units).forEach(unit => {
+                                (unit.vocab || []).forEach(w => words.push(w));
+                                (unit.phrases || []).forEach(p => words.push({ ...p, word: p.phrase, part_of_speech: 'phr.' }));
+                            });
+                        });
+                        const seen = new Set();
+                        setAllWords(words.filter(w => { if (seen.has(w.id)) return false; seen.add(w.id); return true; }));
+                        setLoading(false);
+                    })
+                    .catch(err => { setError(err.message); setLoading(false); });
+                document.body.classList.add('loaded');
+            }, []);
+
+            if (loading) return (
+                <div className="min-h-screen flex items-center justify-center text-white font-black text-2xl animate-pulse">載入中...</div>
+            );
+            if (error) return (
+                <div className="min-h-screen flex flex-col items-center justify-center p-8 text-center">
+                    <div className="text-5xl mb-4">😵</div>
+                    <p className="text-rose-400 font-black text-lg mb-2">載入失敗</p>
+                    <p className="text-slate-500 font-bold text-sm">{error}</p>
+                </div>
+            );
+
+            if (screen === 'survival') return <SurvivalGame allWords={allWords} onBack={() => setScreen('home')} />;
+            if (screen === 'boss')     return <BossGame     allWords={allWords} onBack={() => setScreen('home')} />;
+            return <HomeScreen allWords={allWords} onSelect={setScreen} />;
+        }
+
+        ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+    </script>
+</body>
+</html>
