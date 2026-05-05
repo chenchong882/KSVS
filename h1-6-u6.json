@@ -1,0 +1,1184 @@
+{
+    "units": {
+        "h1-6-u6": {
+            "title": "Vocabulary & Grammar Focus - Unit 6",
+            "vocab": [
+                {
+                    "id": "h1-6-u6-v001",
+                    "word": "bargain",
+                    "part_of_speech": "n. [C]",
+                    "chinese": "特價商品",
+                    "sentence": "I spent only NT$100 getting ten giant packs of toilet paper. It was a real bargain!",
+                    "sentence_chinese": ""
+                },
+                {
+                    "id": "h1-6-u6-v002",
+                    "word": "bargain",
+                    "part_of_speech": "vi.",
+                    "chinese": "討價還價",
+                    "sentence": "The foreign tourist is bargaining with the street vendor over the price of the vase.",
+                    "sentence_chinese": ""
+                },
+                {
+                    "id": "h1-6-u6-v003",
+                    "word": "quality",
+                    "part_of_speech": "n. [U][C]",
+                    "chinese": "品質",
+                    "sentence": "The driver is mad about the poor quality of the road. There are too many holes in it.",
+                    "sentence_chinese": ""
+                },
+                {
+                    "id": "h1-6-u6-v004",
+                    "word": "company",
+                    "part_of_speech": "n. [C]",
+                    "chinese": "公司",
+                    "sentence": "This company produces the best bicycles in the world.",
+                    "sentence_chinese": ""
+                },
+                {
+                    "id": "h1-6-u6-v005",
+                    "word": "career",
+                    "part_of_speech": "n. [C]",
+                    "chinese": "職業；事業",
+                    "sentence": "Rafael Nadal started his tennis career at the age of 16.",
+                    "sentence_chinese": ""
+                },
+                {
+                    "id": "h1-6-u6-v006",
+                    "word": "explosion",
+                    "part_of_speech": "n. [C][U]",
+                    "chinese": "爆炸",
+                    "sentence": "We heard a loud explosion and saw that someone was making puffed rice cakes.",
+                    "sentence_chinese": ""
+                },
+                {
+                    "id": "h1-6-u6-v007",
+                    "word": "explode",
+                    "part_of_speech": "vi./vt.",
+                    "chinese": "爆炸",
+                    "sentence": "Because Megan shook the soda, it exploded when she opened the can.",
+                    "sentence_chinese": ""
+                },
+                {
+                    "id": "h1-6-u6-v008",
+                    "word": "injure",
+                    "part_of_speech": "vt.",
+                    "chinese": "使受傷",
+                    "sentence": "Marcus was seriously injured after he fell down the stairs.",
+                    "sentence_chinese": ""
+                },
+                {
+                    "id": "h1-6-u6-v009",
+                    "word": "injury",
+                    "part_of_speech": "n. [C][U]",
+                    "chinese": "傷害",
+                    "sentence": "Because of her serious leg injury, Gill cannot walk now.",
+                    "sentence_chinese": ""
+                },
+                {
+                    "id": "h1-6-u6-v010",
+                    "word": "instead",
+                    "part_of_speech": "adv.",
+                    "chinese": "相反地；卻",
+                    "sentence": "Andy's fingers were hurt, so I cooked instead.",
+                    "sentence_chinese": ""
+                },
+                {
+                    "id": "h1-6-u6-v011",
+                    "word": "improve",
+                    "part_of_speech": "vt./vi.",
+                    "chinese": "改進；改善",
+                    "sentence": "To improve her English, Helen listens to English radio programs every day.",
+                    "sentence_chinese": ""
+                },
+                {
+                    "id": "h1-6-u6-v012",
+                    "word": "improvement",
+                    "part_of_speech": "n. [U][C]",
+                    "chinese": "改進；改善",
+                    "sentence": "Although there is still room for improvement, Jules has done a good job running the business.",
+                    "sentence_chinese": ""
+                },
+                {
+                    "id": "h1-6-u6-v013",
+                    "word": "skill",
+                    "part_of_speech": "n. [C][U]",
+                    "chinese": "技巧；技能",
+                    "sentence": "Mr. Hu is famous for his skill in decorating traditional temples.",
+                    "sentence_chinese": ""
+                },
+                {
+                    "id": "h1-6-u6-v014",
+                    "word": "demand",
+                    "part_of_speech": "vt./n.",
+                    "chinese": "要求；需求",
+                    "sentence": "The customer is demanding a refund for the broken hair dryer he bought yesterday.",
+                    "sentence_chinese": ""
+                },
+                {
+                    "id": "h1-6-u6-v015",
+                    "word": "product",
+                    "part_of_speech": "n. [C][U]",
+                    "chinese": "產品",
+                    "sentence": "The colorful masking tapes are the most popular products in this shop.",
+                    "sentence_chinese": ""
+                },
+                {
+                    "id": "h1-6-u6-v016",
+                    "word": "productive",
+                    "part_of_speech": "adj.",
+                    "chinese": "多產的",
+                    "sentence": "Stephen King is a productive writer. He has written more than fifty novels.",
+                    "sentence_chinese": ""
+                },
+                {
+                    "id": "h1-6-u6-v017",
+                    "word": "supply",
+                    "part_of_speech": "vt./n.",
+                    "chinese": "提供；供應",
+                    "sentence": "The hotel supplies its guests with umbrellas for free when it rains.",
+                    "sentence_chinese": ""
+                },
+                {
+                    "id": "h1-6-u6-v018",
+                    "word": "succeed",
+                    "part_of_speech": "vi.",
+                    "chinese": "成功",
+                    "sentence": "With the food in his hand, Nick succeeded in attracting the ducks to come near him.",
+                    "sentence_chinese": ""
+                },
+                {
+                    "id": "h1-6-u6-v019",
+                    "word": "gentle",
+                    "part_of_speech": "adj.",
+                    "chinese": "溫柔的",
+                    "sentence": "The father read a bedtime story to his daughter in a gentle voice.",
+                    "sentence_chinese": ""
+                }
+            ],
+            "phrases": [
+                {
+                    "id": "h1-6-u6-p001",
+                    "phrase": "scare...away",
+                    "chinese": "把...嚇跑",
+                    "sentence": "The dirty tables and walls in the restaurant scared many customers away.",
+                    "sentence_chinese": ""
+                },
+                {
+                    "id": "h1-6-u6-p002",
+                    "phrase": "figure out",
+                    "chinese": "明白；理解",
+                    "sentence": "Jack finally figured out why his friends were laughing at him—his T-shirt was inside out.",
+                    "sentence_chinese": ""
+                },
+                {
+                    "id": "h1-6-u6-p003",
+                    "phrase": "take...seriously",
+                    "chinese": "認真看待",
+                    "sentence": "As a flower shop owner, Linda takes her job very seriously.",
+                    "sentence_chinese": ""
+                },
+                {
+                    "id": "h1-6-u6-p004",
+                    "phrase": "rain or shine",
+                    "chinese": "無論如何；風雨無阻",
+                    "sentence": "My grandpa takes a walk in the park every evening, rain or shine.",
+                    "sentence_chinese": ""
+                },
+                {
+                    "id": "h1-6-u6-p005",
+                    "phrase": "pass by",
+                    "chinese": "經過",
+                    "sentence": "Cindy kept looking at Ray when he passed by the classroom.",
+                    "sentence_chinese": ""
+                }
+            ],
+            "grammar": {
+                "tips": [
+                    {
+                        "label": "形容詞最高級 (Superlatives)",
+                        "text": "the + Adj-est / most Adj (+ N)"
+                    },
+                    {
+                        "label": "現在完成式 (Present Perfect)",
+                        "text": "S + have/has + Vpp"
+                    }
+                ],
+                "notes": [
+                    {
+                        "title": "形容詞最高級 (Superlatives)",
+                        "rule": "the + Adj-est / most Adj (+ N)",
+                        "description": "",
+                        "examples": [
+                            "Nancy is the tallest in her family.",
+                            "Mike is the best basketball player in Taiwan."
+                        ]
+                    },
+                    {
+                        "title": "現在完成式 (Present Perfect)",
+                        "rule": "S + have/has + Vpp",
+                        "description": "",
+                        "examples": [
+                            "Charlie has collected all the trash.",
+                            "Tina has finished her meal."
+                        ]
+                    }
+                ],
+                "quiz": [
+                    {
+                        "id": "h1-6-u6-q001",
+                        "question": "This is the _______ bargain I have ever found in my career.",
+                        "options": [
+                            "good",
+                            "better",
+                            "best",
+                            "most good"
+                        ],
+                        "answer": "best",
+                        "answer_index": 2,
+                        "hint": "句中有 'ever'，表示經驗中的最高級。"
+                    },
+                    {
+                        "id": "h1-6-u6-q002",
+                        "question": "Our company _______ its products to several countries for ten years.",
+                        "options": [
+                            "has supplied",
+                            "have supplied",
+                            "supplies",
+                            "supplied"
+                        ],
+                        "answer": "has supplied",
+                        "answer_index": 0,
+                        "hint": "配合 'for ten years' 使用現在完成式，主詞為單數。"
+                    },
+                    {
+                        "id": "h1-6-u6-q003",
+                        "question": "Marcus _______ how to fix the machine since this morning.",
+                        "options": [
+                            "has figured out",
+                            "have figured out",
+                            "figured out",
+                            "figure out"
+                        ],
+                        "answer": "has figured out",
+                        "answer_index": 0,
+                        "hint": "since 引導時間點，需用現在完成式。"
+                    },
+                    {
+                        "id": "h1-6-u6-q004",
+                        "question": "Of all the workers, Stephen is the _______ writer in the office.",
+                        "options": [
+                            "productive",
+                            "more productive",
+                            "most productive",
+                            "productivest"
+                        ],
+                        "answer": "most productive",
+                        "answer_index": 2,
+                        "hint": "'Of all' 是最高級的關鍵字。"
+                    },
+                    {
+                        "id": "h1-6-u6-q005",
+                        "question": "The heavy rain _______ all the customers away so far.",
+                        "options": [
+                            "has scared",
+                            "have scared",
+                            "scares",
+                            "scared"
+                        ],
+                        "answer": "has scared",
+                        "answer_index": 0,
+                        "hint": "'so far' 是現在完成式的關鍵字。"
+                    },
+                    {
+                        "id": "h1-6-u6-q006",
+                        "question": "This laptop is the _______ product in our shop this year.",
+                        "options": [
+                            "high-quality",
+                            "highest-quality",
+                            "higher-quality",
+                            "most high-quality"
+                        ],
+                        "answer": "highest-quality",
+                        "answer_index": 1,
+                        "hint": "表示年度「最高」品質。"
+                    },
+                    {
+                        "id": "h1-6-u6-q007",
+                        "question": "My brother _______ in his new job as a doctor recently.",
+                        "options": [
+                            "has succeeded",
+                            "have succeeded",
+                            "succeeded",
+                            "succeed"
+                        ],
+                        "answer": "has succeeded",
+                        "answer_index": 0,
+                        "hint": "'recently' 常搭配現在完成式。"
+                    },
+                    {
+                        "id": "h1-6-u6-q008",
+                        "question": "I heard that was the _______ explosion in the city’s history.",
+                        "options": [
+                            "bad",
+                            "worse",
+                            "baddest",
+                            "worst"
+                        ],
+                        "answer": "worst",
+                        "answer_index": 3,
+                        "hint": "bad 的最高級為 worst。"
+                    },
+                    {
+                        "id": "h1-6-u6-q009",
+                        "question": "The boss _______ a higher quality of work from us since the project started.",
+                        "options": [
+                            "has demanded",
+                            "have demanded",
+                            "demands",
+                            "demanded"
+                        ],
+                        "answer": "has demanded",
+                        "answer_index": 0,
+                        "hint": "since 子句搭配現在完成式。"
+                    },
+                    {
+                        "id": "h1-6-u6-q010",
+                        "question": "Rafael Nadal _______ many tennis games since he was 16.",
+                        "options": [
+                            "has won",
+                            "have won",
+                            "wins",
+                            "won"
+                        ],
+                        "answer": "has won",
+                        "answer_index": 0,
+                        "hint": "主詞單數搭配 since 使用完成式。"
+                    },
+                    {
+                        "id": "h1-6-u6-q011",
+                        "question": "She is the _______ person I have ever met; she always speaks in a low voice.",
+                        "options": [
+                            "gentle",
+                            "gentler",
+                            "gentlest",
+                            "most gentle"
+                        ],
+                        "answer": "gentlest",
+                        "answer_index": 2,
+                        "hint": "形容詞最高級加 -est。"
+                    },
+                    {
+                        "id": "h1-6-u6-q012",
+                        "question": "The road quality _______ a lot after the government fixed it.",
+                        "options": [
+                            "has improved",
+                            "have improved",
+                            "is improving",
+                            "improves"
+                        ],
+                        "answer": "has improved",
+                        "answer_index": 0,
+                        "hint": "表示目前已經改善完成的狀態。"
+                    },
+                    {
+                        "id": "h1-6-u6-q013",
+                        "question": "This is the _______ improvement we have seen in our skill training.",
+                        "options": [
+                            "big",
+                            "bigger",
+                            "biggest",
+                            "most big"
+                        ],
+                        "answer": "biggest",
+                        "answer_index": 2,
+                        "hint": "程度「最大」的進步使用最高級。"
+                    },
+                    {
+                        "id": "h1-6-u6-q014",
+                        "question": "Have you _______ why the machine exploded?",
+                        "options": [
+                            "figure out",
+                            "figured out",
+                            "figuring out",
+                            "figures out"
+                        ],
+                        "answer": "figured out",
+                        "answer_index": 1,
+                        "hint": "Have + S + Vpp 構成完成式問句。"
+                    },
+                    {
+                        "id": "h1-6-u6-q015",
+                        "question": "Cindy _______ her boss seriously since she joined the company.",
+                        "options": [
+                            "has taken",
+                            "have taken",
+                            "takes",
+                            "took"
+                        ],
+                        "answer": "has taken",
+                        "answer_index": 0,
+                        "hint": "take...seriously 結合現在完成式。"
+                    },
+                    {
+                        "id": "h1-6-u6-q016",
+                        "question": "My grandpa _______ a walk every evening, rain or shine, for 20 years.",
+                        "options": [
+                            "has taken",
+                            "have taken",
+                            "takes",
+                            "took"
+                        ],
+                        "answer": "has taken",
+                        "answer_index": 0,
+                        "hint": "配合時間長度 'for 20 years'。"
+                    },
+                    {
+                        "id": "h1-6-u6-q017",
+                        "question": "Among the three runners, Ken is the _______ one.",
+                        "options": [
+                            "fast",
+                            "faster",
+                            "fastest",
+                            "most fast"
+                        ],
+                        "answer": "fastest",
+                        "answer_index": 2,
+                        "hint": "三者比較需用最高級。"
+                    },
+                    {
+                        "id": "h1-6-u6-q018",
+                        "question": "Marcus _______ many injuries in his career so far.",
+                        "options": [
+                            "has had",
+                            "have had",
+                            "has",
+                            "had"
+                        ],
+                        "answer": "has had",
+                        "answer_index": 0,
+                        "hint": "so far 搭配現在完成式 has + Vpp。"
+                    },
+                    {
+                        "id": "h1-6-u6-q019",
+                        "question": "That was the _______ sound I have ever heard in my life.",
+                        "options": [
+                            "scary",
+                            "scarier",
+                            "scariest",
+                            "most scary"
+                        ],
+                        "answer": "scariest",
+                        "answer_index": 2,
+                        "hint": "y 結尾形容詞最高級去 y 加 -iest。"
+                    },
+                    {
+                        "id": "h1-6-u6-q020",
+                        "question": "The supply of clean water _______ since the explosion.",
+                        "options": [
+                            "has stopped",
+                            "have stopped",
+                            "stops",
+                            "stopped"
+                        ],
+                        "answer": "has stopped",
+                        "answer_index": 0,
+                        "hint": "since 搭配現在完成式。"
+                    },
+                    {
+                        "id": "h1-6-u6-q021",
+                        "question": "I _______ by the store many times, but I never went inside.",
+                        "options": [
+                            "has passed",
+                            "have passed",
+                            "passed",
+                            "pass"
+                        ],
+                        "answer": "have passed",
+                        "answer_index": 1,
+                        "hint": "主詞 I 搭配 have + Vpp。"
+                    },
+                    {
+                        "id": "h1-6-u6-q022",
+                        "question": "Is this the _______ price you can give me for this vase?",
+                        "options": [
+                            "cheap",
+                            "cheaper",
+                            "cheapest",
+                            "most cheap"
+                        ],
+                        "answer": "cheapest",
+                        "answer_index": 2,
+                        "hint": "詢問「最便宜」的價格。"
+                    },
+                    {
+                        "id": "h1-6-u6-q023",
+                        "question": "He _______ his English skills instead of playing games all day.",
+                        "options": [
+                            "has improved",
+                            "have improved",
+                            "improves",
+                            "improved"
+                        ],
+                        "answer": "has improved",
+                        "answer_index": 0,
+                        "hint": "表示已經完成的改進。"
+                    },
+                    {
+                        "id": "h1-6-u6-q024",
+                        "question": "This company is the _______ one in the bicycle industry.",
+                        "options": [
+                            "successful",
+                            "more successful",
+                            "most successful",
+                            "successfullest"
+                        ],
+                        "answer": "most successful",
+                        "answer_index": 2,
+                        "hint": "多音節最高級。"
+                    },
+                    {
+                        "id": "h1-6-u6-q025",
+                        "question": "The manager _______ a refund for the broken product already.",
+                        "options": [
+                            "has demanded",
+                            "have demanded",
+                            "demands",
+                            "demanded"
+                        ],
+                        "answer": "has demanded",
+                        "answer_index": 0,
+                        "hint": "already 搭配現在完成式。"
+                    },
+                    {
+                        "id": "h1-6-u6-q026",
+                        "question": "This is the _______ quality of paper I have ever used in the office.",
+                        "options": [
+                            "high",
+                            "higher",
+                            "highest",
+                            "most high"
+                        ],
+                        "answer": "highest",
+                        "answer_index": 2,
+                        "hint": "最高品質 highest。"
+                    },
+                    {
+                        "id": "h1-6-u6-q027",
+                        "question": "The athlete _______ many injuries since his career began.",
+                        "options": [
+                            "has had",
+                            "have had",
+                            "had",
+                            "has"
+                        ],
+                        "answer": "has had",
+                        "answer_index": 0,
+                        "hint": "since + 過去時間點。"
+                    },
+                    {
+                        "id": "h1-6-u6-q028",
+                        "question": "Rafael Nadal is the _______ tennis player I have ever seen.",
+                        "options": [
+                            "successful",
+                            "more successful",
+                            "most successful",
+                            "successfullest"
+                        ],
+                        "answer": "most successful",
+                        "answer_index": 2,
+                        "hint": "經驗中的最高級。"
+                    },
+                    {
+                        "id": "h1-6-u6-q029",
+                        "question": "The customer _______ a full refund for the product several times so far.",
+                        "options": [
+                            "has demanded",
+                            "have demanded",
+                            "demands",
+                            "demanded"
+                        ],
+                        "answer": "has demanded",
+                        "answer_index": 0,
+                        "hint": "so far 搭配完成式。"
+                    },
+                    {
+                        "id": "h1-6-u6-q030",
+                        "question": "Buying ten giant packs of toilet paper for NT$100 was the _______ bargain of the week.",
+                        "options": [
+                            "good",
+                            "better",
+                            "best",
+                            "most good"
+                        ],
+                        "answer": "best",
+                        "answer_index": 2,
+                        "hint": "整週「最」划算用 best。"
+                    },
+                    {
+                        "id": "h1-6-u6-q031",
+                        "question": "Many tourists _______ by this street vendor since the morning.",
+                        "options": [
+                            "has passed",
+                            "have passed",
+                            "passed",
+                            "passes"
+                        ],
+                        "answer": "have passed",
+                        "answer_index": 1,
+                        "hint": "複數主詞用 have + Vpp。"
+                    },
+                    {
+                        "id": "h1-6-u6-q032",
+                        "question": "This was the _______ injury Marcus has ever had in his career.",
+                        "options": [
+                            "serious",
+                            "more serious",
+                            "most serious",
+                            "seriousest"
+                        ],
+                        "answer": "most serious",
+                        "answer_index": 2,
+                        "hint": "多音節最高級。"
+                    },
+                    {
+                        "id": "h1-6-u6-q033",
+                        "question": "To _______ her skills, Helen _______ very hard lately.",
+                        "options": [
+                            "improve; has practiced",
+                            "improved; have practiced",
+                            "improving; practices",
+                            "improve; practiced"
+                        ],
+                        "answer": "improve; has practiced",
+                        "answer_index": 0,
+                        "hint": "To+原形 V；lately 用完成式。"
+                    },
+                    {
+                        "id": "h1-6-u6-q034",
+                        "question": "Stephen King is known as the _______ writer in the company.",
+                        "options": [
+                            "productive",
+                            "more productive",
+                            "most productive",
+                            "productivest"
+                        ],
+                        "answer": "most productive",
+                        "answer_index": 2,
+                        "hint": "特定群體最高級。"
+                    },
+                    {
+                        "id": "h1-6-u6-q035",
+                        "question": "The soda _______ in the car because it was too hot.",
+                        "options": [
+                            "has exploded",
+                            "have exploded",
+                            "exploded",
+                            "explode"
+                        ],
+                        "answer": "has exploded",
+                        "answer_index": 0,
+                        "hint": "表示已經發生的結果。"
+                    },
+                    {
+                        "id": "h1-6-u6-q036",
+                        "question": "My mother has the _______ voice in my family.",
+                        "options": [
+                            "gentle",
+                            "gentler",
+                            "gentlest",
+                            "most gentle"
+                        ],
+                        "answer": "gentlest",
+                        "answer_index": 2,
+                        "hint": "形容詞最高級加 -est。"
+                    },
+                    {
+                        "id": "h1-6-u6-q037",
+                        "question": "The hotel _______ us with free umbrellas since it started raining.",
+                        "options": [
+                            "has supplied",
+                            "have supplied",
+                            "supplied",
+                            "supply"
+                        ],
+                        "answer": "has supplied",
+                        "answer_index": 0,
+                        "hint": "since 搭配完成式。"
+                    },
+                    {
+                        "id": "h1-6-u6-q038",
+                        "question": "Mr. Hu’s skill in decorating temples is the _______ in Taiwan.",
+                        "options": [
+                            "great",
+                            "greater",
+                            "greatest",
+                            "most great"
+                        ],
+                        "answer": "greatest",
+                        "answer_index": 2,
+                        "hint": "最高級 greatest。"
+                    },
+                    {
+                        "id": "h1-6-u6-q039",
+                        "question": "As a shop owner, Linda _______ her job _______ for years.",
+                        "options": [
+                            "has taken; seriously",
+                            "have taken; seriously",
+                            "takes; seriously",
+                            "took; seriously"
+                        ],
+                        "answer": "has taken; seriously",
+                        "answer_index": 0,
+                        "hint": "take seriously 搭配 for years 完成式。"
+                    },
+                    {
+                        "id": "h1-6-u6-q040",
+                        "question": "He has had the _______ career among all the tennis players.",
+                        "options": [
+                            "long",
+                            "longer",
+                            "longest",
+                            "most long"
+                        ],
+                        "answer": "longest",
+                        "answer_index": 2,
+                        "hint": "among all 指最高級。"
+                    },
+                    {
+                        "id": "h1-6-u6-q041",
+                        "question": "The loud noise _______ the birds _______ already.",
+                        "options": [
+                            "has scared; away",
+                            "have scared; away",
+                            "scares; away",
+                            "scared; away"
+                        ],
+                        "answer": "has scared; away",
+                        "answer_index": 0,
+                        "hint": "already 搭配完成式。"
+                    },
+                    {
+                        "id": "h1-6-u6-q042",
+                        "question": "This bicycle has the _______ quality of all the products here.",
+                        "options": [
+                            "poor",
+                            "poorer",
+                            "poorest",
+                            "most poor"
+                        ],
+                        "answer": "poorest",
+                        "answer_index": 2,
+                        "hint": "of all 用最高級。"
+                    },
+                    {
+                        "id": "h1-6-u6-q043",
+                        "question": "Jack _______ the problem _______ yet.",
+                        "options": [
+                            "hasn't figured; out",
+                            "haven't figured; out",
+                            "has figured; out",
+                            "figured; out"
+                        ],
+                        "answer": "hasn't figured; out",
+                        "answer_index": 0,
+                        "hint": "yet 用於完成式否定句。"
+                    },
+                    {
+                        "id": "h1-6-u6-q044",
+                        "question": "That was the _______ explosion I have ever heard.",
+                        "options": [
+                            "loud",
+                            "louder",
+                            "loudest",
+                            "most loud"
+                        ],
+                        "answer": "loudest",
+                        "answer_index": 2,
+                        "hint": "單音節最高級。"
+                    },
+                    {
+                        "id": "h1-6-u6-q045",
+                        "question": "Marcus _______ his leg after he fell down the stairs.",
+                        "options": [
+                            "has injured",
+                            "have injured",
+                            "is injured",
+                            "injuring"
+                        ],
+                        "answer": "has injured",
+                        "answer_index": 0,
+                        "hint": "已經受傷。"
+                    },
+                    {
+                        "id": "h1-6-u6-q046",
+                        "question": "That was the _______ movie I have ever seen in my life.",
+                        "options": [
+                            "bad",
+                            "worse",
+                            "worst",
+                            "most bad"
+                        ],
+                        "answer": "worst",
+                        "answer_index": 2,
+                        "hint": "bad 不規則最高級。"
+                    },
+                    {
+                        "id": "h1-6-u6-q047",
+                        "question": "Nick _______ in attracting the ducks to come near him with food.",
+                        "options": [
+                            "has succeeded",
+                            "have succeeded",
+                            "succeeded",
+                            "succeed"
+                        ],
+                        "answer": "has succeeded",
+                        "answer_index": 0,
+                        "hint": "has + Vpp 完成式。"
+                    },
+                    {
+                        "id": "h1-6-u6-q048",
+                        "question": "Charlie is the _______ student in our English class.",
+                        "options": [
+                            "good",
+                            "better",
+                            "best",
+                            "most good"
+                        ],
+                        "answer": "best",
+                        "answer_index": 2,
+                        "hint": "good 不規則最高級。"
+                    },
+                    {
+                        "id": "h1-6-u6-q049",
+                        "question": "Jules _______ a lot of improvement in his business skills.",
+                        "options": [
+                            "has shown",
+                            "have shown",
+                            "shows",
+                            "show"
+                        ],
+                        "answer": "has shown",
+                        "answer_index": 0,
+                        "hint": "has + Vpp。"
+                    },
+                    {
+                        "id": "h1-6-u6-q050",
+                        "question": "This masking tape is the _______ product in this shop.",
+                        "options": [
+                            "popular",
+                            "more popular",
+                            "most popular",
+                            "popularest"
+                        ],
+                        "answer": "most popular",
+                        "answer_index": 2,
+                        "hint": "多音節最高級。"
+                    }
+                ]
+            },
+            "scrambles": {
+                "vocab": [
+                    {
+                        "id": "h1-6-u6-sv001",
+                        "vocab_id": "h1-6-u6-v001",
+                        "sentence": "I spent only NT$100 getting ten giant packs of toilet paper. It was a real bargain!",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sv002",
+                        "vocab_id": "h1-6-u6-v002",
+                        "sentence": "The foreign tourist is bargaining with the street vendor over the price of the vase.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sv003",
+                        "vocab_id": "h1-6-u6-v003",
+                        "sentence": "The driver is mad about the poor quality of the road. There are too many holes in it.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sv004",
+                        "vocab_id": "h1-6-u6-v004",
+                        "sentence": "This company produces the best bicycles in the world.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sv005",
+                        "vocab_id": "h1-6-u6-v005",
+                        "sentence": "Rafael Nadal started his tennis career at the age of 16.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sv006",
+                        "vocab_id": "h1-6-u6-v006",
+                        "sentence": "We heard a loud explosion and saw that someone was making puffed rice cakes.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sv007",
+                        "vocab_id": "h1-6-u6-v007",
+                        "sentence": "Because Megan shook the soda, it exploded when she opened the can.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sv008",
+                        "vocab_id": "h1-6-u6-v008",
+                        "sentence": "Marcus was seriously injured after he fell down the stairs.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sv009",
+                        "vocab_id": "h1-6-u6-v009",
+                        "sentence": "Because of her serious leg injury, Gill cannot walk now.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sv010",
+                        "vocab_id": "h1-6-u6-v010",
+                        "sentence": "Andy's fingers were hurt, so I cooked instead.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sv011",
+                        "vocab_id": "h1-6-u6-v011",
+                        "sentence": "To improve her English, Helen listens to English radio programs every day.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sv012",
+                        "vocab_id": "h1-6-u6-v012",
+                        "sentence": "Although there is still room for improvement, Jules has done a good job running the business.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sv013",
+                        "vocab_id": "h1-6-u6-v013",
+                        "sentence": "Mr. Hu is famous for his skill in decorating traditional temples.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sv014",
+                        "vocab_id": "h1-6-u6-v014",
+                        "sentence": "The customer is demanding a refund for the broken hair dryer he bought yesterday.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sv015",
+                        "vocab_id": "h1-6-u6-v015",
+                        "sentence": "The colorful masking tapes are the most popular products in this shop.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sv016",
+                        "vocab_id": "h1-6-u6-v016",
+                        "sentence": "Stephen King is a productive writer. He has written more than fifty novels.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sv017",
+                        "vocab_id": "h1-6-u6-v017",
+                        "sentence": "The hotel supplies its guests with umbrellas for free when it rains.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sv018",
+                        "vocab_id": "h1-6-u6-v018",
+                        "sentence": "With the food in his hand, Nick succeeded in attracting the ducks to come near him.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sv019",
+                        "vocab_id": "h1-6-u6-v019",
+                        "sentence": "The father read a bedtime story to his daughter in a gentle voice.",
+                        "sentence_chinese": ""
+                    }
+                ],
+                "phrases": [
+                    {
+                        "id": "h1-6-u6-sp001",
+                        "phrase_id": "h1-6-u6-p001",
+                        "sentence": "The dirty tables and walls in the restaurant scared many customers away.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sp002",
+                        "phrase_id": "h1-6-u6-p002",
+                        "sentence": "Jack finally figured out why his friends were laughing at him—his T-shirt was inside out.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sp003",
+                        "phrase_id": "h1-6-u6-p003",
+                        "sentence": "As a flower shop owner, Linda takes her job very seriously.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sp004",
+                        "phrase_id": "h1-6-u6-p004",
+                        "sentence": "My grandpa takes a walk in the park every evening, rain or shine.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sp005",
+                        "phrase_id": "h1-6-u6-p005",
+                        "sentence": "Cindy kept looking at Ray when he passed by the classroom.",
+                        "sentence_chinese": ""
+                    }
+                ],
+                "grammar": [
+                    {
+                        "id": "h1-6-u6-sg001",
+                        "sentence": "I have already found a real bargain in this shop.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sg002",
+                        "sentence": "This is the highest quality of product we have.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sg003",
+                        "sentence": "The company has supplied free water to the people.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sg004",
+                        "sentence": "Rafael Nadal has had a very successful tennis career.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sg005",
+                        "sentence": "We heard the loudest explosion in the city's history.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sg006",
+                        "sentence": "The driver has improved the quality of the road.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sg007",
+                        "sentence": "Marcus has injured his leg during the tennis game.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sg008",
+                        "sentence": "Jack has figured out why the soda exploded.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sg009",
+                        "sentence": "This is the most productive writer in our company.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sg010",
+                        "sentence": "The hotel has supplied umbrellas for the guests already.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sg011",
+                        "sentence": "My father has taken his new career very seriously.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sg012",
+                        "sentence": "She has been the gentlest person in her family.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sg013",
+                        "sentence": "The foreign tourist has bargained with the street vendor.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sg014",
+                        "sentence": "There has been a lot of improvement in her English.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sg015",
+                        "sentence": "This is the most popular product in the world.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sg016",
+                        "sentence": "The cat has scared all the birds away already.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sg017",
+                        "sentence": "My grandpa has taken a walk, rain or shine.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sg018",
+                        "sentence": "I have passed by the classroom many times today.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sg019",
+                        "sentence": "Nick has succeeded in attracting the ducks with food.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sg020",
+                        "sentence": "The customer has demanded a refund for the broken dryer.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sg021",
+                        "sentence": "Marcus has recovered from his serious leg injury.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sg022",
+                        "sentence": "That was the worst sound I have ever heard.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sg023",
+                        "sentence": "The hotel has supplied its guests with free coffee.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sg024",
+                        "sentence": "She is the best basketball player in our school.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sg025",
+                        "sentence": "Jules has done a good job running the business.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sg026",
+                        "sentence": "They have improved their skills in decorating temples.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sg027",
+                        "sentence": "The soda exploded because Megan has shaken the can.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sg028",
+                        "sentence": "This is the best bargain that I have ever seen.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sg029",
+                        "sentence": "He has worked for this company for twenty years.",
+                        "sentence_chinese": ""
+                    },
+                    {
+                        "id": "h1-6-u6-sg030",
+                        "sentence": "The manager has taken the customer's demand seriously.",
+                        "sentence_chinese": ""
+                    }
+                ]
+            }
+        }
+    }
+}
