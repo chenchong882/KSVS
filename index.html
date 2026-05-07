@@ -575,15 +575,17 @@
             const [feedback, setFeedback] = useState(null);
             const [showGiveUpConfirm, setShowGiveUpConfirm] = useState(false);
             const [showHelperHint, setShowHelperHint] = useState(false);
+            const [magicCount, setMagicCount] = useState(0);
+            const [gaveUp, setGaveUp] = useState(false);
             useEffect(() => { resetGame(); }, [data]);
             const resetGame = () => { if (!data || data.length === 0) return; const count = 5; const shuffledQuestions = shuffleArray([...data]).slice(0, count); setQuestions(shuffledQuestions); setCurrentIndex(0); setScore(0); setShowResult(false); if (shuffledQuestions.length > 0) loadQuestion(shuffledQuestions[0]); };
-            const loadQuestion = (question) => { if (!question) return; const rawSentence = question.sentence; const spacedSentence = rawSentence.replace(/([.!?])$/, ' $1'); const words = spacedSentence.split(' '); const wordsWithIds = words.map((word, index) => ({ id: `${index}-${word}`, text: word })); setAvailableWords(shuffleArray(wordsWithIds)); setUserSentence([]); setFeedback(null); setShowGiveUpConfirm(false); setShowHelperHint(false); };
+            const loadQuestion = (question) => { if (!question) return; const rawSentence = question.sentence; const spacedSentence = rawSentence.replace(/([.!?])$/, ' $1'); const words = spacedSentence.split(' '); const wordsWithIds = words.map((word, index) => ({ id: `${index}-${word}`, text: word })); setAvailableWords(shuffleArray(wordsWithIds)); setUserSentence([]); setFeedback(null); setShowGiveUpConfirm(false); setShowHelperHint(false); setMagicCount(0); setGaveUp(false); };
             const handleSkipQuestion = () => { if (questions.length <= 1) return; const currentQuestionIds = questions.map(q => q.id); const candidates = data.filter(item => !currentQuestionIds.includes(item.id)); let newQuestion; if (candidates.length > 0) { newQuestion = candidates[Math.floor(Math.random() * candidates.length)]; } else { const otherQuestions = data.filter(item => item.id !== questions[currentIndex].id); newQuestion = otherQuestions[Math.floor(Math.random() * otherQuestions.length)]; } const newQuestions = [...questions]; newQuestions[currentIndex] = newQuestion; setQuestions(newQuestions); loadQuestion(newQuestion); };
             const handleWordClick = (wordObj) => { if (feedback === 'correct') return; if (feedback === 'wrong') setFeedback(null); setAvailableWords(prev => prev.filter(w => w.id !== wordObj.id)); setUserSentence(prev => [...prev, wordObj]); };
             const handleAnswerClick = (wordObj) => { if (feedback === 'correct') return; if (feedback === 'wrong') setFeedback(null); setUserSentence(prev => prev.filter(w => w.id !== wordObj.id)); setAvailableWords(prev => [...prev, wordObj]); };
             const handleTryAgain = () => { setFeedback(null); setShowHelperHint(true); setTimeout(() => setShowHelperHint(false), 5000); };
             const handleMagicHint = () => {
-                if (feedback === 'correct') return; setFeedback(null);
+                if (feedback === 'correct') return; setFeedback(null); setMagicCount(prev => prev + 1);
                 let firstWrongIndex = -1; for (let i = 0; i < userSentence.length; i++) { if (!userSentence[i].id.startsWith(`${i}-`)) { firstWrongIndex = i; break; } }
                 if (firstWrongIndex === -1) firstWrongIndex = userSentence.length;
                 const totalWords = userSentence.length + availableWords.length; if (firstWrongIndex >= totalWords) return;
@@ -591,8 +593,8 @@
                 if (nextWordObj) { const newCorrectUserSentence = [...userSentence.slice(0, firstWrongIndex), nextWordObj]; const newAvailableWords = allWords.filter(w => !newCorrectUserSentence.some(cw => cw.id === w.id)); setUserSentence(newCorrectUserSentence); setAvailableWords(newAvailableWords); speakText(nextWordObj.text); }
             };
             const handleGiveUpClick = () => { setFeedback(null); setShowGiveUpConfirm(true); };
-            const confirmGiveUp = () => { const allWords = [...userSentence, ...availableWords]; allWords.sort((a, b) => { const indexA = parseInt(a.id.split('-')[0]); const indexB = parseInt(b.id.split('-')[0]); return indexA - indexB; }); setUserSentence(allWords); setAvailableWords([]); setFeedback('correct'); setShowGiveUpConfirm(false); };
-            const checkAnswer = () => { const currentQuestion = questions[currentIndex]; const targetSentence = currentQuestion.sentence.replace(/\s+([.!?])/g, '$1'); const userRawString = userSentence.map(w => w.text).join(' '); const userCleanString = userRawString.replace(/\s+([.!?])/g, '$1'); if (userCleanString === targetSentence) { if (feedback === 'correct') return; setFeedback('correct'); setScore(prev => prev + 20); speakText(currentQuestion.sentence); } else { setFeedback('wrong'); speakText("Oops"); } };
+            const confirmGiveUp = () => { const allWords = [...userSentence, ...availableWords]; allWords.sort((a, b) => { const indexA = parseInt(a.id.split('-')[0]); const indexB = parseInt(b.id.split('-')[0]); return indexA - indexB; }); setUserSentence(allWords); setAvailableWords([]); setGaveUp(true); setFeedback('correct'); setShowGiveUpConfirm(false); };
+            const checkAnswer = () => { const currentQuestion = questions[currentIndex]; const targetSentence = currentQuestion.sentence.replace(/\s+([.!?])/g, '$1'); const userRawString = userSentence.map(w => w.text).join(' '); const userCleanString = userRawString.replace(/\s+([.!?])/g, '$1'); if (userCleanString === targetSentence) { if (feedback === 'correct') return; setFeedback('correct'); if (magicCount <= 2) setScore(prev => prev + 20); speakText(currentQuestion.sentence); } else { setFeedback('wrong'); speakText("Oops"); } };
             const nextQuestion = () => { if (currentIndex < questions.length - 1) { setCurrentIndex(prev => prev + 1); loadQuestion(questions[currentIndex + 1]); } else { setShowResult(true); } };
             if (!questions || questions.length === 0) return <div className="p-10 text-center font-bold text-slate-400">Loading or No Data...</div>;
             if (showResult) return (<div className="flex flex-col items-center justify-center h-full animate-in zoom-in py-10 relative overflow-hidden"><Star className="w-32 h-32 text-yellow-400 mb-6 fill-yellow-400 drop-shadow-[0_4px_0_rgba(234,179,8,1)] animate-bounce" /><h2 className="text-4xl font-black text-slate-800 mb-2 tracking-tight">挑戰成功！</h2><div className="text-7xl font-black text-indigo-600 mb-8 drop-shadow-sm">{score}</div><GameButton onClick={resetGame} color="purple" className="w-64 py-4 text-xl"><RefreshCw className="w-6 h-6" /> 再玩一次</GameButton></div>);
@@ -600,6 +602,19 @@
             return (
                 <div className="flex flex-col h-full max-w-2xl mx-auto pb-24 relative">
                     <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0 opacity-30"><div className="absolute top-10 left-10 text-yellow-300"><Star size={40} /></div><div className="absolute top-40 right-10 text-rose-300"><Puzzle size={50} /></div><div className="absolute bottom-20 left-20 text-sky-300"><Gamepad2 size={60} /></div></div>
+                    {/* 魔法提示/查看答案警示條 */}
+                    <div className="w-full flex gap-2 mb-4 z-10 relative">
+                        <div className={`flex-1 flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-black border-2 transition-all ${magicCount === 0 ? 'bg-slate-50 border-slate-200 text-slate-400' : magicCount === 1 ? 'bg-yellow-50 border-yellow-300 text-yellow-700' : magicCount === 2 ? 'bg-orange-100 border-orange-400 text-orange-700' : 'bg-red-100 border-red-400 text-red-700'}`}>
+                            <Wand2 className="w-3.5 h-3.5" />
+                            魔法提示：{magicCount}/2
+                            {magicCount > 2 && <span className="ml-1 text-red-600">⚠ 不計分！</span>}
+                        </div>
+                        <div className={`flex-1 flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-black border-2 transition-all ${gaveUp ? 'bg-red-100 border-red-400 text-red-700' : 'bg-slate-50 border-slate-200 text-slate-400'}`}>
+                            <Flag className="w-3.5 h-3.5" />
+                            查看答案
+                            {gaveUp && <span className="ml-1 text-red-600">⚠ 不計分！</span>}
+                        </div>
+                    </div>
                     <div className="bg-white border-4 border-b-8 border-orange-200 rounded-3xl p-6 mb-6 text-center relative z-10 shadow-sm">
                         <div className="flex justify-between items-center mb-2"><div className="inline-block bg-orange-100 text-orange-600 font-black px-3 py-1 rounded-lg text-xs border-2 border-orange-200">{titleOverride ? titleOverride : `LEVEL ${currentIndex + 1}`}</div>{currentQ?.word && <div className="text-xs font-bold text-slate-400 bg-slate-100 px-2 py-1 rounded">Target: {currentQ.word}</div>}</div>
                         <h2 className="font-black text-2xl text-slate-800 mb-4 leading-relaxed drop-shadow-sm">{currentQ?.sentence_chinese}</h2>
@@ -639,7 +654,7 @@
                     const distractors1 = shuffleArray(data.filter(w => w.id !== target.id)).slice(0, 3);
                     allVocabQuestions.push({ questionText: target.word, correctId: target.id, correctAnswer: target.chinese, options: shuffleArray([target, ...distractors1]).map(o => ({ id: o.id, text: o.chinese, isCorrect: o.id === target.id })), hint: "請選出中文意思", audio: target.word });
                     const distractors2 = shuffleArray(data.filter(w => w.id !== target.id)).slice(0, 3);
-                    allVocabQuestions.push({ questionText: target.chinese, correctId: target.id, correctAnswer: target.word, options: shuffleArray([target, ...distractors2]).map(o => ({ id: o.id, text: o.word, isCorrect: o.id === target.id })), hint: "請選出英文單字", audio: null });
+                    allVocabQuestions.push({ questionText: target.chinese, correctId: target.id, correctAnswer: target.word, options: shuffleArray([target, ...distractors2]).map(o => ({ id: o.id, text: o.word, isCorrect: o.id === target.id })), hint: "請選出英文單字", audio: target.word });
                 });
                 const selectedQuestions = shuffleArray(allVocabQuestions).slice(0, 10);
                 setQuizData(selectedQuestions); setCurrentQIndex(0); setScore(0); setHistory([]); setSelectedOption(null); setQuizType('choice'); setStatus('playing'); setTimeLeft(7);
@@ -767,6 +782,8 @@
             );
         };
 
+        const renderBr = (text) => text.split('<br>').map((t, i) => i === 0 ? t : <React.Fragment key={i}><br />{t}</React.Fragment>);
+
         // --- 元件 4: 文法模式 ---
         const GrammarMode = ({ grammarData }) => {
             const [mode, setMode] = useState('notes');
@@ -805,13 +822,13 @@
                         status === 'result' ? (
                             <div className="flex flex-col h-full animate-in zoom-in pb-20 overflow-y-auto">
                                 <div className="flex flex-col items-center justify-center mb-6 pt-4"><Trophy className="w-20 h-20 text-yellow-400 drop-shadow-lg mb-2" /><h2 className="text-3xl font-black text-slate-800 mb-1">測驗完成！</h2><div className="text-5xl font-black text-indigo-600 mb-4">{score} <span className="text-xl text-slate-400">分</span></div><GameButton onClick={restartQuiz} color="green" className="w-48 text-lg">再測驗一次</GameButton></div>
-                                <div className="space-y-4 px-2">{history.map((item, idx) => (<div key={idx} className={`bg-white border-l-8 rounded-xl p-4 shadow-sm ${item.isCorrect ? 'border-emerald-400' : 'border-rose-400'}`}><div className="flex items-start gap-3 mb-2"><div className={`w-8 h-8 rounded-full flex items-center justify-center text-white font-bold shrink-0 ${item.isCorrect ? 'bg-emerald-500' : 'bg-rose-500'}`}>{item.isCorrect ? <CheckCircle size={18} /> : <XCircle size={18} />}</div><div className="flex-1"><h4 className="font-bold text-slate-800 text-lg leading-relaxed">{item.question.split(/_{6,}/).map((part, i, arr) => (<React.Fragment key={i}>{part}{i < arr.length - 1 && (<span className={`inline-block border-b-4 mx-1 font-black px-2 rounded ${item.isCorrect ? 'text-emerald-600 border-emerald-400 bg-emerald-50' : 'text-rose-600 border-rose-400 bg-rose-50'}`}>{item.correctAns}</span>)}</React.Fragment>))}</h4><div className="flex flex-wrap gap-2 mt-2 text-sm"><span className={`px-2 py-1 rounded font-bold ${item.isCorrect ? 'bg-emerald-100 text-emerald-700' : 'bg-rose-100 text-rose-700'}`}>你的答案: {item.userAns}</span>{!item.isCorrect && (<span className="px-2 py-1 rounded font-bold bg-emerald-100 text-emerald-700">正解: {item.correctAns}</span>)}</div></div></div><div className="mt-3 bg-indigo-50 border-2 border-indigo-100 rounded-lg p-3 flex items-start gap-2"><Info className="w-5 h-5 text-indigo-500 shrink-0 mt-0.5" /><p className="text-indigo-700 text-sm font-bold">{item.hint}</p></div></div>))}</div>
+                                <div className="space-y-4 px-2">{history.map((item, idx) => (<div key={idx} className={`bg-white border-l-8 rounded-xl p-4 shadow-sm ${item.isCorrect ? 'border-emerald-400' : 'border-rose-400'}`}><div className="flex items-start gap-3 mb-2"><div className={`w-8 h-8 rounded-full flex items-center justify-center text-white font-bold shrink-0 ${item.isCorrect ? 'bg-emerald-500' : 'bg-rose-500'}`}>{item.isCorrect ? <CheckCircle size={18} /> : <XCircle size={18} />}</div><div className="flex-1"><h4 className="font-bold text-slate-800 text-lg leading-relaxed">{item.question.split(/_{6,}/).map((part, i, arr) => (<React.Fragment key={i}>{renderBr(part)}{i < arr.length - 1 && (<span className={`inline-block border-b-4 mx-1 font-black px-2 rounded ${item.isCorrect ? 'text-emerald-600 border-emerald-400 bg-emerald-50' : 'text-rose-600 border-rose-400 bg-rose-50'}`}>{item.correctAns}</span>)}</React.Fragment>))}</h4><div className="flex flex-wrap gap-2 mt-2 text-sm"><span className={`px-2 py-1 rounded font-bold ${item.isCorrect ? 'bg-emerald-100 text-emerald-700' : 'bg-rose-100 text-rose-700'}`}>你的答案: {item.userAns}</span>{!item.isCorrect && (<span className="px-2 py-1 rounded font-bold bg-emerald-100 text-emerald-700">正解: {item.correctAns}</span>)}</div></div></div><div className="mt-3 bg-indigo-50 border-2 border-indigo-100 rounded-lg p-3 flex items-start gap-2"><Info className="w-5 h-5 text-indigo-500 shrink-0 mt-0.5" /><p className="text-indigo-700 text-sm font-bold">{item.hint}</p></div></div>))}</div>
                             </div>
                         ) : (
                             <div className="flex flex-col h-full max-w-md mx-auto relative pt-4">
                                 {quizList.length > 0 && (<>
                                     <div className="mb-4 flex justify-between items-center px-1"><span className="text-xs font-black text-slate-400 uppercase tracking-wider">Question {currentQuizIndex + 1} / {quizList.length}</span><span className="text-xs font-black text-yellow-600 bg-yellow-100 px-2 py-1 rounded-lg">SCORE: {score}</span></div>
-                                    <div className="bg-white border-4 border-b-8 border-indigo-200 rounded-3xl p-6 mb-6 min-h-[140px] flex items-center justify-center text-center shadow-sm relative"><h3 className="text-xl font-black text-slate-700 leading-relaxed">{quizList[currentQuizIndex].question.split(/_{6,}/).map((part, i, arr) => (<React.Fragment key={i}>{part}{i < arr.length - 1 && (selectedOption ? (<span className={`inline-block min-w-[60px] border-b-4 mx-1 font-black ${selectedOption === quizList[currentQuizIndex].answer ? 'text-emerald-500 border-emerald-400' : 'text-rose-500 border-rose-400'}`}>{quizList[currentQuizIndex].answer}</span>) : (<span className="inline-block min-w-[60px] border-b-4 mx-1 font-bold text-indigo-600 border-indigo-400">?</span>))}</React.Fragment>))}</h3></div>
+                                    <div className="bg-white border-4 border-b-8 border-indigo-200 rounded-3xl p-6 mb-6 min-h-[140px] flex items-center justify-center text-center shadow-sm relative"><h3 className="text-xl font-black text-slate-700 leading-relaxed">{quizList[currentQuizIndex].question.split(/_{6,}/).map((part, i, arr) => (<React.Fragment key={i}>{renderBr(part)}{i < arr.length - 1 && (selectedOption ? (<span className={`inline-block min-w-[60px] border-b-4 mx-1 font-black ${selectedOption === quizList[currentQuizIndex].answer ? 'text-emerald-500 border-emerald-400' : 'text-rose-500 border-rose-400'}`}>{quizList[currentQuizIndex].answer}</span>) : (<span className="inline-block min-w-[60px] border-b-4 mx-1 font-bold text-indigo-600 border-indigo-400">?</span>))}</React.Fragment>))}</h3></div>
                                     <div className="grid grid-cols-1 gap-3">{quizList[currentQuizIndex].options.map((opt, idx) => { const isCorrect = opt === quizList[currentQuizIndex].answer; let btnColor = "white"; if (selectedOption) { if (isCorrect) btnColor = "green"; else if (selectedOption === opt) btnColor = "red"; } return (<GameButton key={idx} onClick={() => handleOptionClick(opt, quizList[currentQuizIndex].answer, quizList[currentQuizIndex])} disabled={!!selectedOption} color={btnColor} className="py-3 text-lg justify-between">{opt}{selectedOption && isCorrect && <CheckCircle className="w-5 h-5" />}{selectedOption === opt && !isCorrect && <XCircle className="w-5 h-5" />}</GameButton>) })}</div>
                                     {selectedOption && (<div className="mt-4 animate-in fade-in slide-in-from-bottom-2"><div className={`p-4 rounded-xl border-l-4 mb-4 shadow-sm ${selectedOption === quizList[currentQuizIndex].answer ? 'bg-emerald-50 border-emerald-500 text-emerald-900' : 'bg-rose-50 border-rose-500 text-rose-900'}`}><div className="flex items-center gap-2 mb-2 font-black text-lg">{selectedOption === quizList[currentQuizIndex].answer ? <><CheckCircle className="w-6 h-6" /> 答對了！</> : <><XCircle className="w-6 h-6" /> 答錯了！</>}</div><div className="bg-white/80 p-3 rounded-lg border border-black/10 shadow-inner"><p className="text-sm text-slate-500 font-bold mb-1">解釋：</p><p className="text-base font-bold text-slate-800">{quizList[currentQuizIndex].hint}</p></div></div><div className="flex justify-center"><GameButton onClick={nextQuestion} color="blue" className="w-full text-lg py-3 shadow-lg border-b-4 border-blue-600 active:border-b-0">{currentQuizIndex < quizList.length - 1 ? "下一題" : "看成績"} <ChevronRight className="w-5 h-5" /></GameButton></div></div>)}
                                 </>)}
@@ -912,7 +929,7 @@
 
         // ── 生存模式 ──────────────────────────────────────────────────────────
         const SurvivalMode = ({ allWords, onBack }) => {
-            const INIT_TIME = 30, BONUS = 4, PENALTY = 3, MAX_TIME = 60;
+            const INIT_TIME = 30, BONUS = 4, PENALTY = 3, MAX_TIME = 60, SCORE_LIMIT = 1000;
             const [phase, setPhase] = useState('idle');
             const [timeLeft, setTimeLeft] = useState(INIT_TIME);
             const [score, setScore] = useState(0);
@@ -926,6 +943,8 @@
             const [floatPts, setFloatPts] = useState(0);
             const [shaking, setShaking] = useState(false);
             const [newBest, setNewBest] = useState(false);
+            const [cleared, setCleared] = useState(false);
+            const [timeBonus, setTimeBonus] = useState(0);
             const [bestScore, setBestScore] = useState(() => parseInt(localStorage.getItem(LS_GAME.survivalScore) || '0'));
             const [bestWords, setBestWords] = useState(() => parseInt(localStorage.getItem(LS_GAME.survivalWords) || '0'));
 
@@ -942,6 +961,7 @@
                 tRef.current = INIT_TIME; sRef.current = 0; cRef.current = 0; mcRef.current = 0; wRef.current = 0;
                 setTimeLeft(INIT_TIME); setScore(0); setCombo(0); setMaxCombo(0); setWordsOk(0);
                 setFeedback(null); setSelId(null); setNewBest(false); setShaking(false);
+                setCleared(false); setTimeBonus(0);
                 frozenRef.current = false; setPhase('playing');
             };
             useEffect(() => { if (phase === 'playing') nextQ(); }, [phase]);
@@ -978,7 +998,21 @@
                     setCombo(nc); setMaxCombo(mcRef.current); setScore(sRef.current);
                     setWordsOk(wRef.current); setTimeLeft(tRef.current); setFeedback('correct');
                     setFloatPts(pts); setFloatKey(Date.now());
-                    setTimeout(() => nextQ(), 550);
+                    if (sRef.current >= SCORE_LIMIT) {
+                        const tb = tRef.current * 10;
+                        sRef.current += tb;
+                        setTimeBonus(tb); setScore(sRef.current);
+                        const prev = parseInt(localStorage.getItem(LS_GAME.survivalScore) || '0');
+                        if (sRef.current > prev) {
+                            localStorage.setItem(LS_GAME.survivalScore, String(sRef.current));
+                            localStorage.setItem(LS_GAME.survivalWords, String(wRef.current));
+                            setBestScore(sRef.current); setBestWords(wRef.current); setNewBest(true);
+                        }
+                        setCleared(true);
+                        setTimeout(() => setPhase('over'), 600);
+                    } else {
+                        setTimeout(() => nextQ(), 550);
+                    }
                 } else {
                     playSound('wrong'); cRef.current = 0;
                     tRef.current = Math.max(tRef.current - PENALTY, 1);
@@ -997,10 +1031,10 @@
                     <div className="text-center pt-2">
                         <div className="text-5xl mb-2" style={{ filter: 'drop-shadow(0 0 16px rgba(250,204,21,0.5))' }}>⚡</div>
                         <h2 className="text-2xl font-black text-white">生存模式</h2>
-                        <p className="text-slate-400 font-bold text-sm mt-1">撐越久、連勝越多，分數越高！</p>
+                        <p className="text-slate-400 font-bold text-sm mt-1">分數衝到 1000 分通關，剩餘秒數換算加分！</p>
                     </div>
                     <div className="bg-slate-800 border-2 border-slate-700 rounded-2xl p-4 space-y-2.5">
-                        {[['⏱', '開局 30 秒，答對 +4 秒', 'text-emerald-400'], ['❌', '答錯 -3 秒，連勝歸零', 'text-rose-400'], ['🔥', '3 連勝 ×2、5 連勝 ×3、8 連勝 ×5', 'text-orange-400']].map(([icon, text, color]) => (
+                        {[['⏱', '開局 30 秒，答對 +4 秒', 'text-emerald-400'], ['❌', '答錯 -3 秒，連勝歸零', 'text-rose-400'], ['🏆', '達到 1000 分強制結束，剩餘秒數 ×10 加入總分', 'text-yellow-400'], ['🔥', '3 連勝 ×2、5 連勝 ×3、8 連勝 ×5', 'text-orange-400']].map(([icon, text, color]) => (
                             <div key={text} className="flex items-start gap-3"><span className="text-lg shrink-0">{icon}</span><span className={`font-bold text-sm ${color}`}>{text}</span></div>
                         ))}
                     </div>
@@ -1020,10 +1054,13 @@
 
             if (phase === 'over') return (
                 <div className="space-y-4 pb-6 pt-2 text-center">
-                    <div className="text-5xl">{newBest ? '🏆' : '💀'}</div>
-                    <h2 className="text-2xl font-black text-white">時間到！</h2>
+                    <div className="text-5xl">{cleared ? '🏆' : newBest ? '🏆' : '💀'}</div>
+                    <h2 className="text-2xl font-black text-white">{cleared ? '通關！' : '時間到！'}</h2>
                     {newBest && <div className="bg-yellow-400 text-yellow-900 font-black px-4 py-1 rounded-full text-sm inline-block pop-in">🎉 新紀錄！</div>}
                     <div className="text-5xl font-black text-yellow-400">{score}</div>
+                    {cleared && timeBonus > 0 && (
+                        <div className="text-sm font-bold text-slate-400">遊戲分 {score - timeBonus} ＋ 剩餘時間加分 {timeBonus}（{timeBonus / 10} 秒 × 10）</div>
+                    )}
                     <div className="text-slate-400 font-bold text-sm">答對 {wordsOk} 個單字</div>
                     <div className="bg-slate-800 border-2 border-slate-700 rounded-2xl p-4 grid grid-cols-2 gap-3">
                         {[['答對單字', wordsOk, 'text-emerald-400'], ['最高連勝', maxCombo, 'text-orange-400'], ['個人最高', bestScore, 'text-yellow-400'], ['最佳單字', bestWords, 'text-sky-400']].map(([label, val, color]) => (
