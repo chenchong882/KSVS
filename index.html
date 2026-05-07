@@ -64,33 +64,87 @@
         }
 
         @keyframes gameShake {
-            0%, 100% { transform: translateX(0); }
-            20% { transform: translateX(-8px); }
-            40% { transform: translateX(8px); }
-            60% { transform: translateX(-5px); }
-            80% { transform: translateX(5px); }
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            20% {
+                transform: translateX(-8px);
+            }
+
+            40% {
+                transform: translateX(8px);
+            }
+
+            60% {
+                transform: translateX(-5px);
+            }
+
+            80% {
+                transform: translateX(5px);
+            }
         }
-        .game-shake { animation: gameShake 0.35s ease; }
+
+        .game-shake {
+            animation: gameShake 0.35s ease;
+        }
 
         @keyframes dmgFloat {
-            0%   { transform: translateY(0) scale(1); opacity: 1; }
-            100% { transform: translateY(-60px) scale(1.3); opacity: 0; }
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-60px) scale(1.3);
+                opacity: 0;
+            }
         }
-        .dmg-float { animation: dmgFloat 0.9s ease-out forwards; pointer-events: none; }
+
+        .dmg-float {
+            animation: dmgFloat 0.9s ease-out forwards;
+            pointer-events: none;
+        }
 
         @keyframes comboGrow {
-            0%   { transform: scale(0.8); }
-            60%  { transform: scale(1.15); }
-            100% { transform: scale(1); }
+            0% {
+                transform: scale(0.8);
+            }
+
+            60% {
+                transform: scale(1.15);
+            }
+
+            100% {
+                transform: scale(1);
+            }
         }
-        .combo-grow { animation: comboGrow 0.3s ease-out forwards; }
+
+        .combo-grow {
+            animation: comboGrow 0.3s ease-out forwards;
+        }
 
         @keyframes bossShake {
-            0%, 100% { transform: translateX(0) rotate(0deg); }
-            25%       { transform: translateX(-5px) rotate(-3deg); }
-            75%       { transform: translateX(5px) rotate(3deg); }
+
+            0%,
+            100% {
+                transform: translateX(0) rotate(0deg);
+            }
+
+            25% {
+                transform: translateX(-5px) rotate(-3deg);
+            }
+
+            75% {
+                transform: translateX(5px) rotate(3deg);
+            }
         }
-        .boss-shake { animation: bossShake 0.35s ease; }
+
+        .boss-shake {
+            animation: bossShake 0.35s ease;
+        }
     </style>
 </head>
 
@@ -483,9 +537,9 @@
                             disabled={!frozen && currentLetters.length === 0}
                         >
                             {feedback === 'correct' ? <><CheckCircle className="w-6 h-6" /> 答對了！繼續</> :
-                             feedback === 'wrong' ? <><XCircle className="w-6 h-6" /> 答錯了，重試</> :
-                             frozen ? <>下一題 <ChevronRight className="w-6 h-6" /></> :
-                             "Check Answer"}
+                                feedback === 'wrong' ? <><XCircle className="w-6 h-6" /> 答錯了，重試</> :
+                                    frozen ? <>下一題 <ChevronRight className="w-6 h-6" /></> :
+                                        "Check Answer"}
                         </GameButton>
                     </div>
                 </div>
@@ -782,30 +836,30 @@
         // ── 元件 5: 遊戲模式 ──────────────────────────────────────────────────
 
         const GAME_COMBO_TIERS = [
-            { min: 8, label: 'FEVER!!!',  mult: 5, color: 'text-red-400',    bg: 'bg-red-950 border-red-600',       icon: '🔥🔥🔥' },
-            { min: 5, label: 'ON FIRE!',  mult: 3, color: 'text-orange-400', bg: 'bg-orange-950 border-orange-600', icon: '🔥🔥' },
-            { min: 3, label: 'HOT!',      mult: 2, color: 'text-yellow-400', bg: 'bg-yellow-950 border-yellow-700', icon: '🔥' },
-            { min: 0, label: '',          mult: 1, color: 'text-slate-500',  bg: 'bg-slate-800 border-slate-700',   icon: '' },
+            { min: 8, label: 'FEVER!!!', mult: 5, color: 'text-red-400', bg: 'bg-red-950 border-red-600', icon: '🔥🔥🔥' },
+            { min: 5, label: 'ON FIRE!', mult: 3, color: 'text-orange-400', bg: 'bg-orange-950 border-orange-600', icon: '🔥🔥' },
+            { min: 3, label: 'HOT!', mult: 2, color: 'text-yellow-400', bg: 'bg-yellow-950 border-yellow-700', icon: '🔥' },
+            { min: 0, label: '', mult: 1, color: 'text-slate-500', bg: 'bg-slate-800 border-slate-700', icon: '' },
         ];
         const getGameTier = (combo) => GAME_COMBO_TIERS.find(t => combo >= t.min);
 
         const GAME_BOSSES = [
-            { emoji: '🐉', name: '單字龍',    enrageEmoji: '😡🐉' },
-            { emoji: '👹', name: '暗黑魔王',  enrageEmoji: '👿' },
+            { emoji: '🐉', name: '單字龍', enrageEmoji: '😡🐉' },
+            { emoji: '👹', name: '暗黑魔王', enrageEmoji: '👿' },
             { emoji: '🤖', name: 'AI 出題機', enrageEmoji: '💀🤖' },
-            { emoji: '👾', name: '拼字怪',    enrageEmoji: '🔴👾' },
-            { emoji: '🦑', name: '片語章魚',  enrageEmoji: '🦑💢' },
+            { emoji: '👾', name: '拼字怪', enrageEmoji: '🔴👾' },
+            { emoji: '🦑', name: '片語章魚', enrageEmoji: '🦑💢' },
         ];
-        const BOSS_MAX_HP  = 150;
-        const BOSS_HEARTS  = 3;
+        const BOSS_MAX_HP = 150;
+        const BOSS_HEARTS = 3;
         const SPEED_WINDOW = 4;
 
         const getBaseDmg = (combo) => { if (combo >= 8) return 25; if (combo >= 5) return 20; if (combo >= 3) return 15; return 10; };
-        const getSpeedMult  = (sec) => { if (sec < 1) return 2.0; if (sec < 2) return 1.5; if (sec < 3) return 1.2; return 1.0; };
+        const getSpeedMult = (sec) => { if (sec < 1) return 2.0; if (sec < 2) return 1.5; if (sec < 3) return 1.2; return 1.0; };
         const getSpeedLabel = (sec) => {
             if (sec < 1) return { text: '⚡ 閃電！×2.0', color: 'text-yellow-300' };
             if (sec < 2) return { text: '🔥 超快！×1.5', color: 'text-orange-300' };
-            if (sec < 3) return { text: '💨 快速 ×1.2',  color: 'text-sky-300' };
+            if (sec < 3) return { text: '💨 快速 ×1.2', color: 'text-sky-300' };
             return { text: '', color: '' };
         };
 
@@ -813,9 +867,9 @@
             const showEn = Math.random() > 0.5;
             const dist = shuffleArray(pool.filter(w => w.id !== target.id)).slice(0, 3);
             return {
-                prompt:     showEn ? target.chinese : target.word,
+                prompt: showEn ? target.chinese : target.word,
                 promptType: showEn ? '選出英文單字' : '選出中文意思',
-                audio:      target.word,
+                audio: target.word,
                 options: shuffleArray([target, ...dist]).map(o => ({ id: o.id, text: showEn ? o.word : o.chinese, isCorrect: o.id === target.id })),
             };
         };
@@ -823,7 +877,7 @@
         const LS_GAME = {
             survivalScore: 'survival_best_score',
             survivalWords: 'survival_best_words',
-            bossWins:      'boss_win_count',
+            bossWins: 'boss_win_count',
             bossBestCombo: 'boss_best_combo',
         };
 
@@ -844,9 +898,9 @@
         const GameOptBtn = ({ option, selectedId, onClick }) => {
             let cls = 'bg-slate-700 border-slate-600 text-white hover:bg-slate-600';
             if (selectedId) {
-                if (option.isCorrect)              cls = 'bg-emerald-500 border-emerald-700 text-white';
+                if (option.isCorrect) cls = 'bg-emerald-500 border-emerald-700 text-white';
                 else if (selectedId === option.id) cls = 'bg-rose-500 border-rose-700 text-white';
-                else                               cls = 'bg-slate-800 border-slate-800 text-slate-600 opacity-40';
+                else cls = 'bg-slate-800 border-slate-800 text-slate-600 opacity-40';
             }
             return (
                 <button onClick={() => onClick(option)} disabled={!!selectedId}
@@ -859,19 +913,19 @@
         // ── 生存模式 ──────────────────────────────────────────────────────────
         const SurvivalMode = ({ allWords, onBack }) => {
             const INIT_TIME = 30, BONUS = 4, PENALTY = 3, MAX_TIME = 60;
-            const [phase, setPhase]         = useState('idle');
-            const [timeLeft, setTimeLeft]   = useState(INIT_TIME);
-            const [score, setScore]         = useState(0);
-            const [combo, setCombo]         = useState(0);
-            const [maxCombo, setMaxCombo]   = useState(0);
-            const [wordsOk, setWordsOk]     = useState(0);
-            const [question, setQuestion]   = useState(null);
-            const [selId, setSelId]         = useState(null);
-            const [feedback, setFeedback]   = useState(null);
-            const [floatKey, setFloatKey]   = useState(null);
-            const [floatPts, setFloatPts]   = useState(0);
-            const [shaking, setShaking]     = useState(false);
-            const [newBest, setNewBest]     = useState(false);
+            const [phase, setPhase] = useState('idle');
+            const [timeLeft, setTimeLeft] = useState(INIT_TIME);
+            const [score, setScore] = useState(0);
+            const [combo, setCombo] = useState(0);
+            const [maxCombo, setMaxCombo] = useState(0);
+            const [wordsOk, setWordsOk] = useState(0);
+            const [question, setQuestion] = useState(null);
+            const [selId, setSelId] = useState(null);
+            const [feedback, setFeedback] = useState(null);
+            const [floatKey, setFloatKey] = useState(null);
+            const [floatPts, setFloatPts] = useState(0);
+            const [shaking, setShaking] = useState(false);
+            const [newBest, setNewBest] = useState(false);
             const [bestScore, setBestScore] = useState(() => parseInt(localStorage.getItem(LS_GAME.survivalScore) || '0'));
             const [bestWords, setBestWords] = useState(() => parseInt(localStorage.getItem(LS_GAME.survivalWords) || '0'));
 
@@ -941,12 +995,12 @@
             if (phase === 'idle') return (
                 <div className="space-y-4 pb-6">
                     <div className="text-center pt-2">
-                        <div className="text-5xl mb-2" style={{filter:'drop-shadow(0 0 16px rgba(250,204,21,0.5))'}}>⚡</div>
+                        <div className="text-5xl mb-2" style={{ filter: 'drop-shadow(0 0 16px rgba(250,204,21,0.5))' }}>⚡</div>
                         <h2 className="text-2xl font-black text-white">生存模式</h2>
                         <p className="text-slate-400 font-bold text-sm mt-1">撐越久、連勝越多，分數越高！</p>
                     </div>
                     <div className="bg-slate-800 border-2 border-slate-700 rounded-2xl p-4 space-y-2.5">
-                        {[['⏱','開局 30 秒，答對 +4 秒','text-emerald-400'],['❌','答錯 -3 秒，連勝歸零','text-rose-400'],['🔥','3 連勝 ×2、5 連勝 ×3、8 連勝 ×5','text-orange-400']].map(([icon,text,color]) => (
+                        {[['⏱', '開局 30 秒，答對 +4 秒', 'text-emerald-400'], ['❌', '答錯 -3 秒，連勝歸零', 'text-rose-400'], ['🔥', '3 連勝 ×2、5 連勝 ×3、8 連勝 ×5', 'text-orange-400']].map(([icon, text, color]) => (
                             <div key={text} className="flex items-start gap-3"><span className="text-lg shrink-0">{icon}</span><span className={`font-bold text-sm ${color}`}>{text}</span></div>
                         ))}
                     </div>
@@ -972,7 +1026,7 @@
                     <div className="text-5xl font-black text-yellow-400">{score}</div>
                     <div className="text-slate-400 font-bold text-sm">答對 {wordsOk} 個單字</div>
                     <div className="bg-slate-800 border-2 border-slate-700 rounded-2xl p-4 grid grid-cols-2 gap-3">
-                        {[['答對單字',wordsOk,'text-emerald-400'],['最高連勝',maxCombo,'text-orange-400'],['個人最高',bestScore,'text-yellow-400'],['最佳單字',bestWords,'text-sky-400']].map(([label,val,color]) => (
+                        {[['答對單字', wordsOk, 'text-emerald-400'], ['最高連勝', maxCombo, 'text-orange-400'], ['個人最高', bestScore, 'text-yellow-400'], ['最佳單字', bestWords, 'text-sky-400']].map(([label, val, color]) => (
                             <div key={label} className="text-center">
                                 <div className="text-slate-500 text-xs font-black uppercase mb-0.5">{label}</div>
                                 <div className={`font-black text-xl ${color}`}>{val}</div>
@@ -1028,23 +1082,23 @@
 
         // ── Boss 關卡 ──────────────────────────────────────────────────────────
         const BossMode = ({ allWords, onBack }) => {
-            const [phase, setPhase]             = useState('idle');
-            const [boss, setBoss]               = useState(GAME_BOSSES[0]);
-            const [bossHp, setBossHp]           = useState(BOSS_MAX_HP);
-            const [hearts, setHearts]           = useState(BOSS_HEARTS);
-            const [combo, setCombo]             = useState(0);
-            const [maxCombo, setMaxCombo]       = useState(0);
-            const [question, setQuestion]       = useState(null);
-            const [selId, setSelId]             = useState(null);
-            const [feedback, setFeedback]       = useState(null);
-            const [enraged, setEnraged]         = useState(false);
+            const [phase, setPhase] = useState('idle');
+            const [boss, setBoss] = useState(GAME_BOSSES[0]);
+            const [bossHp, setBossHp] = useState(BOSS_MAX_HP);
+            const [hearts, setHearts] = useState(BOSS_HEARTS);
+            const [combo, setCombo] = useState(0);
+            const [maxCombo, setMaxCombo] = useState(0);
+            const [question, setQuestion] = useState(null);
+            const [selId, setSelId] = useState(null);
+            const [feedback, setFeedback] = useState(null);
+            const [enraged, setEnraged] = useState(false);
             const [bossShaking, setBossShaking] = useState(false);
             const [screenShake, setScreenShake] = useState(false);
-            const [dmgFloat, setDmgFloat]       = useState(null);
-            const [speedPct, setSpeedPct]       = useState(100);
-            const [hits, setHits]               = useState(0);
-            const [winCount, setWinCount]       = useState(() => parseInt(localStorage.getItem(LS_GAME.bossWins) || '0'));
-            const [bestCombo, setBestCombo]     = useState(() => parseInt(localStorage.getItem(LS_GAME.bossBestCombo) || '0'));
+            const [dmgFloat, setDmgFloat] = useState(null);
+            const [speedPct, setSpeedPct] = useState(100);
+            const [hits, setHits] = useState(0);
+            const [winCount, setWinCount] = useState(() => parseInt(localStorage.getItem(LS_GAME.bossWins) || '0'));
+            const [bestCombo, setBestCombo] = useState(() => parseInt(localStorage.getItem(LS_GAME.bossBestCombo) || '0'));
 
             const bossHpRef = useRef(BOSS_MAX_HP), heartsRef = useRef(BOSS_HEARTS);
             const cRef = useRef(0), mcRef = useRef(0), hitsRef = useRef(0);
@@ -1124,7 +1178,7 @@
                         <p className="text-slate-400 font-bold text-sm mt-1">打倒 Boss，3 條命不能用完！</p>
                     </div>
                     <div className="bg-slate-800 border-2 border-slate-700 rounded-2xl p-4 space-y-2.5">
-                        {[['❤️',`玩家有 ${BOSS_HEARTS} 條命，答錯扣一條`,'text-rose-400'],['⚔️',`Boss 有 ${BOSS_MAX_HP} HP，答對造成傷害`,'text-sky-400'],['⚡','越快回答傷害越高（1 秒內 ×2.0）','text-yellow-400'],['🔥','連勝越高，基礎傷害越大','text-orange-400'],['💢','Boss HP 剩一半時進入激怒模式','text-red-400']].map(([icon,text,color]) => (
+                        {[['❤️', `玩家有 ${BOSS_HEARTS} 條命，答錯扣一條`, 'text-rose-400'], ['⚔️', `Boss 有 ${BOSS_MAX_HP} HP，答對造成傷害`, 'text-sky-400'], ['⚡', '越快回答傷害越高（1 秒內 ×2.0）', 'text-yellow-400'], ['🔥', '連勝越高，基礎傷害越大', 'text-orange-400'], ['💢', 'Boss HP 剩一半時進入激怒模式', 'text-red-400']].map(([icon, text, color]) => (
                             <div key={text} className="flex items-start gap-3"><span className="text-lg shrink-0">{icon}</span><span className={`font-bold text-sm ${color}`}>{text}</span></div>
                         ))}
                     </div>
@@ -1148,7 +1202,7 @@
                     <h2 className="text-3xl font-black text-yellow-400">勝利！</h2>
                     <p className="text-slate-400 font-bold text-sm">成功擊敗 {boss.name}！</p>
                     <div className="bg-slate-800 border-2 border-slate-700 rounded-2xl p-4 grid grid-cols-2 gap-3">
-                        {[['命中次數',hits,'text-sky-400'],['最高連勝',maxCombo,'text-orange-400'],['累計討伐',winCount,'text-yellow-400'],['歷史最高連',bestCombo,'text-violet-400']].map(([label,val,color]) => (
+                        {[['命中次數', hits, 'text-sky-400'], ['最高連勝', maxCombo, 'text-orange-400'], ['累計討伐', winCount, 'text-yellow-400'], ['歷史最高連', bestCombo, 'text-violet-400']].map(([label, val, color]) => (
                             <div key={label} className="text-center">
                                 <div className="text-slate-500 text-xs font-black uppercase mb-0.5">{label}</div>
                                 <div className={`font-black text-xl ${color}`}>{val}</div>
@@ -1240,7 +1294,7 @@
         const GameMode = ({ allWords }) => {
             const [screen, setScreen] = useState('home');
             if (screen === 'survival') return <SurvivalMode allWords={allWords} onBack={() => setScreen('home')} />;
-            if (screen === 'boss')     return <BossMode     allWords={allWords} onBack={() => setScreen('home')} />;
+            if (screen === 'boss') return <BossMode allWords={allWords} onBack={() => setScreen('home')} />;
             return (
                 <div className="space-y-4 pb-6">
                     <div className="text-center pt-2">
@@ -1252,7 +1306,7 @@
                         className="w-full bg-slate-800 border-2 border-slate-700 hover:border-yellow-500 p-5 rounded-2xl text-left transition-all group relative overflow-hidden">
                         <div className="absolute inset-0 bg-yellow-400/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl" />
                         <div className="relative flex items-center gap-4">
-                            <div className="text-4xl select-none" style={{filter:'drop-shadow(0 0 10px rgba(250,204,21,0.4))'}}>⚡</div>
+                            <div className="text-4xl select-none" style={{ filter: 'drop-shadow(0 0 10px rgba(250,204,21,0.4))' }}>⚡</div>
                             <div>
                                 <div className="text-white font-black text-lg">生存模式</div>
                                 <div className="text-slate-400 text-sm font-bold mt-0.5">計時答題，連勝倍率加分</div>
@@ -1295,7 +1349,7 @@
 
             useEffect(() => {
                 // 嘗試載入多個單元檔案
-                const filesToLoad = ['./h1-4-u3.json', './h1-4-u4.json'];
+                const filesToLoad = ['./h1-6-u5.json', './h1-6-u6.json'];
                 Promise.all(filesToLoad.map(file =>
                     fetch(file).then(res => { if (!res.ok) throw new Error(`HTTP ${res.status}`); return res.json(); })
                 ))
