@@ -60,14 +60,6 @@
                     "sentence_chinese": ""
                 },
                 {
-                    "id": "h1-6-u5-v007-1",
-                    "word": "depress",
-                    "part_of_speech": "vt.",
-                    "chinese": "使沮喪",
-                    "sentence": "Diane always stays positive. Almost nothing can depress her.",
-                    "sentence_chinese": ""
-                },
-                {
                     "id": "h1-6-u5-v008",
                     "word": "crime",
                     "part_of_speech": "n. [U][C]",
@@ -116,14 +108,6 @@
                     "sentence_chinese": ""
                 },
                 {
-                    "id": "h1-6-u5-v012-1",
-                    "word": "female",
-                    "part_of_speech": "n. [C]",
-                    "chinese": "女性；女子",
-                    "sentence": "This toilet is only for females. Men are not allowed to use it.",
-                    "sentence_chinese": ""
-                },
-                {
                     "id": "h1-6-u5-v013",
                     "word": "respect",
                     "part_of_speech": "vt.",
@@ -132,27 +116,11 @@
                     "sentence_chinese": ""
                 },
                 {
-                    "id": "h1-6-u5-v013-1",
-                    "word": "respect",
-                    "part_of_speech": "n. [U]",
-                    "chinese": "尊敬",
-                    "sentence": "The team leader worked hard and earned the respect of the whole team.",
-                    "sentence_chinese": ""
-                },
-                {
                     "id": "h1-6-u5-v014",
                     "word": "emotion",
                     "part_of_speech": "n. [C][U]",
                     "chinese": "情緒；情感",
                     "sentence": "Mike is not good at hiding his emotions.",
-                    "sentence_chinese": ""
-                },
-                {
-                    "id": "h1-6-u5-v014-1",
-                    "word": "emotional",
-                    "part_of_speech": "adj.",
-                    "chinese": "情緒的；情感的",
-                    "sentence": "If we can meet our emotional needs, we can lead a happier life.",
                     "sentence_chinese": ""
                 },
                 {
