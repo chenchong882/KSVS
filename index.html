@@ -864,7 +864,7 @@
             { emoji: '🐉', name: '單字龍', enrageEmoji: '😡🐉' },
             { emoji: '👹', name: '暗黑魔王', enrageEmoji: '👿' },
             { emoji: '🤖', name: 'AI 出題機', enrageEmoji: '💀🤖' },
-            { emoji: '👾', name: '拼字怪', enrageEmoji: '🔴👾' },
+            { emoji: '👾', name: '拼字怪', enrageEmoji: '👾' },
             { emoji: '🦑', name: '片語章魚', enrageEmoji: '🦑💢' },
         ];
         const BOSS_MAX_HP = 150;
@@ -1199,7 +1199,8 @@
                     }
                 } else {
                     playSound('wrong'); cRef.current = 0;
-                    heartsRef.current = Math.max(heartsRef.current - 1, 0);
+                    const damage = enragedRef.current ? 2 : 1;
+                    heartsRef.current = Math.max(heartsRef.current - damage, 0);
                     setCombo(0); setHearts(heartsRef.current); setFeedback('wrong');
                     setScreenShake(true); setTimeout(() => setScreenShake(false), 380);
                     if (heartsRef.current <= 0) setTimeout(() => setPhase('lose'), 750);
@@ -1320,7 +1321,7 @@
                     )}
                     {feedback === 'wrong' && (
                         <div className="fixed top-5 left-1/2 -translate-x-1/2 bg-rose-500 text-white font-black px-4 py-2 rounded-full shadow-xl pop-in text-sm z-50 flex items-center gap-1.5">
-                            <XCircle className="w-4 h-4" /> 被攻擊！-1 命
+                            <XCircle className="w-4 h-4" /> {enraged ? '暴怒狂擊！-2 命' : '被攻擊！-1 命'}
                         </div>
                     )}
                 </div>
