@@ -321,14 +321,28 @@
             };
             const handleHint = () => {
                 if (feedback === 'correct' || feedback === 'no_score_hints' || feedback === 'no_score_solved' || feedback === 'no_score_errors') return;
-                const nextCharIndex = currentLetters.length;
-                if (nextCharIndex >= targetClean.length) return;
-                const neededChar = targetClean[nextCharIndex];
-                const candidate = poolLetters.find(l => l.char === neededChar);
-                if (candidate) {
+                let firstWrongIndex = -1;
+                for (let i = 0; i < currentLetters.length; i++) {
+                    if (currentLetters[i].char !== targetClean[i]) {
+                        firstWrongIndex = i;
+                        break;
+                    }
+                }
+                if (firstWrongIndex === -1) firstWrongIndex = currentLetters.length;
+                if (firstWrongIndex >= targetClean.length) return;
+                
+                const neededChar = targetClean[firstWrongIndex];
+                const correctPrefix = currentLetters.slice(0, firstWrongIndex);
+                const wronglyPlaced = currentLetters.slice(firstWrongIndex);
+                const allAvailable = [...poolLetters, ...wronglyPlaced];
+                
+                const candidateIndex = allAvailable.findIndex(l => l.char === neededChar);
+                if (candidateIndex !== -1) {
                     setHintCount(prev => prev + 1);
-                    setPoolLetters(prev => prev.filter(p => p.key !== candidate.key));
-                    setCurrentLetters(prev => [...prev, candidate]);
+                    const candidate = allAvailable[candidateIndex];
+                    allAvailable.splice(candidateIndex, 1);
+                    setCurrentLetters([...correctPrefix, candidate]);
+                    setPoolLetters(allAvailable);
                 }
             };
             const handleSolve = () => {
@@ -376,9 +390,10 @@
                         setFeedback('no_score_errors');
                         setTimeout(handleNext, 2000);
                     } else {
-                        scoreRef.current = scoreRef.current + 10;
                         const newHist = [...scoreHistoryRef.current, { word: currentItem.word, scored: true, reason: 'ok' }];
                         scoreHistoryRef.current = newHist;
+                        const currentCorrect = newHist.filter(h => h.scored).length;
+                        scoreRef.current = Math.round((currentCorrect / quizItems.length) * 100);
                         setScore(scoreRef.current);
                         setScoreHistory(newHist);
                         setFeedback('correct');
@@ -506,7 +521,7 @@
                         <div className="w-full mb-3 bg-emerald-100 border-4 border-emerald-400 rounded-2xl p-4 animate-in slide-in-from-bottom-2 flex items-center gap-3">
                             <CheckCircle className="w-8 h-8 text-emerald-500 shrink-0" />
                             <div>
-                                <p className="font-black text-emerald-700 text-base">答對了！✨ +10 分</p>
+                                <p className="font-black text-emerald-700 text-base">答對了！✨</p>
                                 <p className="text-emerald-600 text-sm font-bold mt-0.5">太棒了，自己拼出來的！繼續保持！</p>
                             </div>
                         </div>
@@ -586,18 +601,18 @@
             const handleTryAgain = () => { setFeedback(null); setShowHelperHint(true); setTimeout(() => setShowHelperHint(false), 5000); };
             const handleMagicHint = () => {
                 if (feedback === 'correct') return; setFeedback(null); setMagicCount(prev => prev + 1);
-                let firstWrongIndex = -1; for (let i = 0; i < userSentence.length; i++) { if (!userSentence[i].id.startsWith(`${i}-`)) { firstWrongIndex = i; break; } }
+                let firstWrongIndex = -1; for (let i = 0; i < userSentence.length; i++) { if (userSentence[i].id.split('-')[0] !== String(i)) { firstWrongIndex = i; break; } }
                 if (firstWrongIndex === -1) firstWrongIndex = userSentence.length;
                 const totalWords = userSentence.length + availableWords.length; if (firstWrongIndex >= totalWords) return;
-                const targetIdPrefix = `${firstWrongIndex}-`; const allWords = [...userSentence, ...availableWords]; const nextWordObj = allWords.find(w => w.id.startsWith(targetIdPrefix));
+                const allWords = [...userSentence, ...availableWords]; const nextWordObj = allWords.find(w => w.id.split('-')[0] === String(firstWrongIndex));
                 if (nextWordObj) { const newCorrectUserSentence = [...userSentence.slice(0, firstWrongIndex), nextWordObj]; const newAvailableWords = allWords.filter(w => !newCorrectUserSentence.some(cw => cw.id === w.id)); setUserSentence(newCorrectUserSentence); setAvailableWords(newAvailableWords); speakText(nextWordObj.text); }
             };
             const handleGiveUpClick = () => { setFeedback(null); setShowGiveUpConfirm(true); };
             const confirmGiveUp = () => { const allWords = [...userSentence, ...availableWords]; allWords.sort((a, b) => { const indexA = parseInt(a.id.split('-')[0]); const indexB = parseInt(b.id.split('-')[0]); return indexA - indexB; }); setUserSentence(allWords); setAvailableWords([]); setGaveUp(true); setFeedback('correct'); setShowGiveUpConfirm(false); };
-            const checkAnswer = () => { const currentQuestion = questions[currentIndex]; const targetSentence = currentQuestion.sentence.replace(/\s+([.!?])/g, '$1'); const userRawString = userSentence.map(w => w.text).join(' '); const userCleanString = userRawString.replace(/\s+([.!?])/g, '$1'); if (userCleanString === targetSentence) { if (feedback === 'correct') return; setFeedback('correct'); if (magicCount <= 2) setScore(prev => prev + 20); speakText(currentQuestion.sentence); } else { setFeedback('wrong'); speakText("Oops"); } };
+            const checkAnswer = () => { const currentQuestion = questions[currentIndex]; const targetSentence = currentQuestion.sentence.replace(/\s+([.!?])/g, '$1'); const userRawString = userSentence.map(w => w.text).join(' '); const userCleanString = userRawString.replace(/\s+([.!?])/g, '$1'); if (userCleanString === targetSentence) { if (feedback === 'correct') return; setFeedback('correct'); if (magicCount <= 2) { setScore(prev => { const currentTotal = questions.length; const ptsPerQ = 100 / currentTotal; const prevCorrect = Math.round(prev / ptsPerQ); return Math.round(((prevCorrect + 1) / currentTotal) * 100); }); } speakText(currentQuestion.sentence); } else { setFeedback('wrong'); speakText("Oops"); } };
             const nextQuestion = () => { if (currentIndex < questions.length - 1) { setCurrentIndex(prev => prev + 1); loadQuestion(questions[currentIndex + 1]); } else { setShowResult(true); } };
             if (!questions || questions.length === 0) return <div className="p-10 text-center font-bold text-slate-400">Loading or No Data...</div>;
-            if (showResult) return (<div className="flex flex-col items-center justify-center h-full animate-in zoom-in py-10 relative overflow-hidden"><Star className="w-32 h-32 text-yellow-400 mb-6 fill-yellow-400 drop-shadow-[0_4px_0_rgba(234,179,8,1)] animate-bounce" /><h2 className="text-4xl font-black text-slate-800 mb-2 tracking-tight">挑戰成功！</h2><div className="text-7xl font-black text-indigo-600 mb-8 drop-shadow-sm">{score}</div><GameButton onClick={resetGame} color="purple" className="w-64 py-4 text-xl"><RefreshCw className="w-6 h-6" /> 再玩一次</GameButton></div>);
+            if (showResult) return (<div className="flex flex-col items-center justify-center h-full animate-in zoom-in py-10 relative overflow-hidden"><Star className="w-32 h-32 text-yellow-400 mb-6 fill-yellow-400 drop-shadow-[0_4px_0_rgba(234,179,8,1)] animate-bounce" /><h2 className="text-4xl font-black text-slate-800 mb-2 tracking-tight">挑戰成功！</h2><div className="text-7xl font-black text-indigo-600 mb-8 drop-shadow-sm">{score} <span className="text-3xl text-slate-400">/ 100 分</span></div><GameButton onClick={resetGame} color="purple" className="w-64 py-4 text-xl"><RefreshCw className="w-6 h-6" /> 再玩一次</GameButton></div>);
             const currentQ = questions[currentIndex];
             return (
                 <div className="flex flex-col h-full max-w-2xl mx-auto pb-24 relative">
@@ -755,8 +770,8 @@
                                             </div>
                                             <div className="font-black text-lg">
                                                 {record.scored
-                                                    ? <span className="text-emerald-500 flex items-center gap-1"><CheckCircle className="w-5 h-5" /> +10</span>
-                                                    : <span className="text-rose-400 flex items-center gap-1"><XCircle className="w-5 h-5" /> 0</span>
+                                                    ? <span className="text-emerald-500 flex items-center gap-1"><CheckCircle className="w-5 h-5" /> 正確</span>
+                                                    : <span className="text-rose-400 flex items-center gap-1"><XCircle className="w-5 h-5" /> 錯誤</span>
                                                 }
                                             </div>
                                         </div>
@@ -800,7 +815,7 @@
             const handleShowMasterList = () => { const pwd = prompt("請輸入管理員密碼："); if (pwd === "1999") { setShowAllQuestions(true); } else if (pwd !== null) { alert("密碼錯誤！"); } };
             useEffect(() => { setMode('notes'); setStatus('menu'); }, [grammarData]);
             const startQuiz = () => { if (grammarData?.quiz) { setQuizList(prepareQuizData(grammarData.quiz)); setCurrentQuizIndex(0); setScore(0); setHistory([]); setSelectedOption(null); setStatus('playing'); } };
-            const handleOptionClick = (option, correctAns, qItem) => { if (selectedOption) return; setSelectedOption(option); const isCorrect = option === correctAns; if (isCorrect) { setScore(prev => prev + 10); playSound('correct'); } else { playSound('wrong'); } setHistory(prev => [...prev, { question: qItem.question, userAns: option, correctAns: correctAns, isCorrect: isCorrect, hint: qItem.hint }]); };
+            const handleOptionClick = (option, correctAns, qItem) => { if (selectedOption) return; setSelectedOption(option); const isCorrect = option === correctAns; if (isCorrect) { setScore(prev => { const currentCorrect = history.filter(h => h.isCorrect).length + 1; return Math.round((currentCorrect / quizList.length) * 100); }); playSound('correct'); } else { playSound('wrong'); } setHistory(prev => [...prev, { question: qItem.question, userAns: option, correctAns: correctAns, isCorrect: isCorrect, hint: qItem.hint }]); };
             const nextQuestion = () => { if (currentQuizIndex < quizList.length - 1) { setCurrentQuizIndex(prev => prev + 1); setSelectedOption(null); } else { setStatus('result'); } };
             const restartQuiz = () => { startQuiz(); };
             if (!grammarData || !grammarData.notes) return <div>Grammar content coming soon!</div>;
@@ -821,7 +836,7 @@
                     {mode === 'quiz' && (
                         status === 'result' ? (
                             <div className="flex flex-col h-full animate-in zoom-in pb-20 overflow-y-auto">
-                                <div className="flex flex-col items-center justify-center mb-6 pt-4"><Trophy className="w-20 h-20 text-yellow-400 drop-shadow-lg mb-2" /><h2 className="text-3xl font-black text-slate-800 mb-1">測驗完成！</h2><div className="text-5xl font-black text-indigo-600 mb-4">{score} <span className="text-xl text-slate-400">分</span></div><GameButton onClick={restartQuiz} color="green" className="w-48 text-lg">再測驗一次</GameButton></div>
+                                <div className="flex flex-col items-center justify-center mb-6 pt-4"><Trophy className="w-20 h-20 text-yellow-400 drop-shadow-lg mb-2" /><h2 className="text-3xl font-black text-slate-800 mb-1">測驗完成！</h2><div className="text-5xl font-black text-indigo-600 mb-4">{score} <span className="text-xl text-slate-400">/ 100 分</span></div><GameButton onClick={restartQuiz} color="green" className="w-48 text-lg">再測驗一次</GameButton></div>
                                 <div className="space-y-4 px-2">{history.map((item, idx) => (<div key={idx} className={`bg-white border-l-8 rounded-xl p-4 shadow-sm ${item.isCorrect ? 'border-emerald-400' : 'border-rose-400'}`}><div className="flex items-start gap-3 mb-2"><div className={`w-8 h-8 rounded-full flex items-center justify-center text-white font-bold shrink-0 ${item.isCorrect ? 'bg-emerald-500' : 'bg-rose-500'}`}>{item.isCorrect ? <CheckCircle size={18} /> : <XCircle size={18} />}</div><div className="flex-1"><h4 className="font-bold text-slate-800 text-lg leading-relaxed">{item.question.split(/_{6,}/).map((part, i, arr) => (<React.Fragment key={i}>{renderBr(part)}{i < arr.length - 1 && (<span className={`inline-block border-b-4 mx-1 font-black px-2 rounded ${item.isCorrect ? 'text-emerald-600 border-emerald-400 bg-emerald-50' : 'text-rose-600 border-rose-400 bg-rose-50'}`}>{item.correctAns}</span>)}</React.Fragment>))}</h4><div className="flex flex-wrap gap-2 mt-2 text-sm"><span className={`px-2 py-1 rounded font-bold ${item.isCorrect ? 'bg-emerald-100 text-emerald-700' : 'bg-rose-100 text-rose-700'}`}>你的答案: {item.userAns}</span>{!item.isCorrect && (<span className="px-2 py-1 rounded font-bold bg-emerald-100 text-emerald-700">正解: {item.correctAns}</span>)}</div></div></div><div className="mt-3 bg-indigo-50 border-2 border-indigo-100 rounded-lg p-3 flex items-start gap-2"><Info className="w-5 h-5 text-indigo-500 shrink-0 mt-0.5" /><p className="text-indigo-700 text-sm font-bold">{item.hint}</p></div></div>))}</div>
                             </div>
                         ) : (
