@@ -562,8 +562,41 @@
         };
 
         // --- 新增: Scramble Container (負責切換單字與文法重組) ---
-        const ScrambleContainer = ({ scrambles }) => {
+        const ScrambleContainer = ({ scrambles, fullUnitData }) => {
             const [mode, setMode] = useState('vocab');
+
+            const enrichVocabScrambles = () => {
+                const list = [...(scrambles?.vocab || []), ...(scrambles?.phrases || [])];
+                return list.map(item => {
+                    let sourceItem = null;
+                    if (item.vocab_id && fullUnitData?.vocab) {
+                        sourceItem = fullUnitData.vocab.find(v => v.id === item.vocab_id);
+                    } else if (item.phrase_id && fullUnitData?.phrases) {
+                        sourceItem = fullUnitData.phrases.find(p => p.id === item.phrase_id);
+                    }
+                    const word = item.word || sourceItem?.word || sourceItem?.phrase || '';
+                    const chinese = item.chinese || sourceItem?.chinese || '';
+                    const sentence_chinese = item.sentence_chinese || sourceItem?.sentence_chinese || '';
+                    
+                    // 如果沒有句子翻譯，但有單字中文，就當作提示
+                    const display_chinese = sentence_chinese ? sentence_chinese : (chinese ? `(提示: ${chinese})` : '');
+                    
+                    return {
+                        ...item,
+                        sentence_chinese: display_chinese,
+                        word: word
+                    };
+                });
+            };
+
+            const enrichGrammarScrambles = () => {
+                const list = scrambles?.grammar || [];
+                return list.map(item => ({
+                    ...item,
+                    sentence_chinese: item.sentence_chinese || '(此題無中文翻譯)'
+                }));
+            };
+
             return (
                 <div className="flex flex-col h-full">
                     <div className="flex justify-center mb-6 gap-3">
@@ -571,9 +604,9 @@
                         <GameButton onClick={() => setMode('grammar')} active={mode === 'grammar'} color="white" className="text-sm px-6 py-3">文法重組</GameButton>
                     </div>
                     {mode === 'vocab' ? (
-                        <ScrambleMode data={[...(scrambles?.vocab || []), ...(scrambles?.phrases || [])]} titleOverride="VOCAB SCRAMBLE" key="vocab" />
+                        <ScrambleMode data={enrichVocabScrambles()} titleOverride="VOCAB SCRAMBLE" key="vocab" />
                     ) : (
-                        <ScrambleMode data={scrambles?.grammar || []} titleOverride="GRAMMAR SCRAMBLE" key="grammar" />
+                        <ScrambleMode data={enrichGrammarScrambles()} titleOverride="GRAMMAR SCRAMBLE" key="grammar" />
                     )}
                 </div>
             );
@@ -1586,7 +1619,7 @@
                         <div className="mb-6 text-center"><span className="inline-flex items-center gap-2 bg-slate-800 text-white text-xs font-black px-4 py-1.5 rounded-full border-2 border-slate-600 shadow-md"><Map className="w-3 h-3 text-yellow-400" />目前關卡：{unitTitle}</span></div>
                         {activeTab === 'study' && <StudyMode data={allStudyData} />}
                         {activeTab === 'quiz' && <QuizMode data={allStudyData} grammarData={unitGrammar} />}
-                        {activeTab === 'sentences' && <ScrambleContainer scrambles={unitScrambles} />}
+                        {activeTab === 'sentences' && <ScrambleContainer scrambles={unitScrambles} fullUnitData={unitsData[currentUnit]} />}
                         {activeTab === 'grammar' && <GrammarMode grammarData={unitGrammar} />}
                         {activeTab === 'game' && (
                             <div className="bg-slate-900 rounded-3xl p-4 -mx-1 border-2 border-slate-700">
