@@ -165,7 +165,7 @@
             "grammar": {
                 "tips": [
                     {
-                        "label": "關係子句 (Relative Clauses) — 受格用法",
+                        "label": "關係子句 — 受格用法",
                         "text": "N (先行詞) + [whom/which/that + S + V]"
                     },
                     {
@@ -175,7 +175,7 @@
                 ],
                 "notes": [
                     {
-                        "title": "關係子句 (Relative Clauses) — 受格用法",
+                        "title": "關係子句 — 受格用法",
                         "rule": "N (先行詞) + [whom/which/that + S + V]",
                         "description": "當關係代名詞在子句中擔任受格時，常可省略。人用 whom；物/動物用 which；人/物/動物皆可用 that。",
                         "examples": [
@@ -207,7 +207,7 @@
                     },
                     {
                         "id": "h1-6-u5-q002",
-                        "question": "It is ________ a normal day ________ I just want to stay at home.",
+                        "question": "It is ________ a normal day that I just want to stay at home.",
                         "options": [
                             "such...that",
                             "so...that",
@@ -233,7 +233,7 @@
                     },
                     {
                         "id": "h1-6-u5-q004",
-                        "question": "He has ________ a negative emotion ________ he cannot sleep at night.",
+                        "question": "He has ________ a negative emotion that he cannot sleep at night.",
                         "options": [
                             "so",
                             "very",
@@ -272,7 +272,7 @@
                     },
                     {
                         "id": "h1-6-u5-q007",
-                        "question": "It was ________ a terrible murder ________ no one dared to talk about it.",
+                        "question": "It was ________ a terrible murder that no one dared to talk about it.",
                         "options": [
                             "so",
                             "such",
@@ -298,7 +298,7 @@
                     },
                     {
                         "id": "h1-6-u5-q009",
-                        "question": "Gina felt ________ depressed ________ she didn't want to eat anything.",
+                        "question": "Gina felt ________ depressed that she didn't want to eat anything.",
                         "options": [
                             "such",
                             "so",
@@ -324,7 +324,7 @@
                     },
                     {
                         "id": "h1-6-u5-q011",
-                        "question": "This is ________ a weakness ________ he needs to get over it quickly.",
+                        "question": "This is ________ a weakness that he needs to get over it quickly.",
                         "options": [
                             "so",
                             "very",
@@ -363,7 +363,7 @@
                     },
                     {
                         "id": "h1-6-u5-q014",
-                        "question": "It was ________ anger ________ Ben couldn't say a word.",
+                        "question": "It was ________ anger that Ben couldn't say a word.",
                         "options": [
                             "such",
                             "so",
@@ -402,7 +402,7 @@
                     },
                     {
                         "id": "h1-6-u5-q017",
-                        "question": "Ann is ________ an emotional person ________ she cries easily.",
+                        "question": "Ann is ________ an emotional person that she cries easily.",
                         "options": [
                             "so",
                             "very",
@@ -428,7 +428,7 @@
                     },
                     {
                         "id": "h1-6-u5-q019",
-                        "question": "It is ________ a simple ability ________ anyone can learn it.",
+                        "question": "It is ________ a simple ability that anyone can learn it.",
                         "options": [
                             "so",
                             "such",
@@ -454,7 +454,7 @@
                     },
                     {
                         "id": "h1-6-u5-q021",
-                        "question": "Ted was in ________ anger ________ he broke the chair.",
+                        "question": "Ted was in ________ anger that he broke the chair.",
                         "options": [
                             "so",
                             "very",
@@ -480,7 +480,7 @@
                     },
                     {
                         "id": "h1-6-u5-q023",
-                        "question": "It is ________ a normal reaction ________ you don't need to worry.",
+                        "question": "It is ________ a normal reaction that you don't need to worry.",
                         "options": [
                             "so",
                             "such",
@@ -532,7 +532,7 @@
                     },
                     {
                         "id": "h1-6-u5-q027",
-                        "question": "It is ________ a normal day ________ I just want to stay at home.",
+                        "question": "It is ________ a normal day that I just want to stay at home.",
                         "options": [
                             "so",
                             "such",
@@ -558,7 +558,7 @@
                     },
                     {
                         "id": "h1-6-u5-q029",
-                        "question": "He is ________ an emotional person ________ he cried during the movie.",
+                        "question": "He is ________ an emotional person that he cried during the movie.",
                         "options": [
                             "such",
                             "so",
@@ -584,7 +584,7 @@
                     },
                     {
                         "id": "h1-6-u5-q031",
-                        "question": "Believe it or not, it is ________ a hard problem ________ I can't deal with it.",
+                        "question": "Believe it or not, it is ________ a hard problem that I can't deal with it.",
                         "options": [
                             "so",
                             "very",
@@ -623,7 +623,7 @@
                     },
                     {
                         "id": "h1-6-u5-q034",
-                        "question": "It was ________ a personal matter ________ I didn't want to tell anyone.",
+                        "question": "It was ________ a personal matter that I didn't want to tell anyone.",
                         "options": [
                             "so",
                             "very",
@@ -649,7 +649,7 @@
                     },
                     {
                         "id": "h1-6-u5-q036",
-                        "question": "Gina is dealing with ________ a depressed mood ________ she needs a break.",
+                        "question": "Gina is dealing with ________ a depressed mood that she needs a break.",
                         "options": [
                             "so",
                             "such",
@@ -688,7 +688,7 @@
                     },
                     {
                         "id": "h1-6-u5-q039",
-                        "question": "It is ________ a normal feeling ________ you shouldn't be ashamed.",
+                        "question": "It is ________ a normal feeling that you shouldn't be ashamed.",
                         "options": [
                             "so",
                             "such",
@@ -727,7 +727,7 @@
                     },
                     {
                         "id": "h1-6-u5-q042",
-                        "question": "It was ________ a loud noise ________ everyone looked at the door.",
+                        "question": "It was ________ a loud noise that everyone looked at the door.",
                         "options": [
                             "so",
                             "such",
@@ -753,7 +753,7 @@
                     },
                     {
                         "id": "h1-6-u5-q044",
-                        "question": "He has ________ a great ability ________ he can speak five languages.",
+                        "question": "He has ________ a great ability that he can speak five languages.",
                         "options": [
                             "so",
                             "such",
@@ -779,7 +779,7 @@
                     },
                     {
                         "id": "h1-6-u5-q046",
-                        "question": "She is ________ a famous female singer ________ everyone knows her.",
+                        "question": "She is ________ a famous female singer that everyone knows her.",
                         "options": [
                             "so",
                             "such",
@@ -805,7 +805,7 @@
                     },
                     {
                         "id": "h1-6-u5-q048",
-                        "question": "It is ________ a negative thing ________ we should not talk about it.",
+                        "question": "It is ________ a negative thing that we should not talk about it.",
                         "options": [
                             "so",
                             "very",
@@ -831,7 +831,7 @@
                     },
                     {
                         "id": "h1-6-u5-q050",
-                        "question": "Believe it or not, he has ________ a good heart ________ he helps everyone.",
+                        "question": "Believe it or not, he has ________ a good heart that he helps everyone.",
                         "options": [
                             "so",
                             "such",
