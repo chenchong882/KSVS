@@ -1463,12 +1463,60 @@
             );
         };
 
+        const RunnerMode = ({ allWords, unitTitle, onBack }) => {
+            const frameRef = useRef(null);
+            const sendRunnerData = useCallback(() => {
+                const frame = frameRef.current;
+                if (!frame || !frame.contentWindow) return;
+                frame.contentWindow.postMessage({
+                    type: 'RUNNER_DATA',
+                    payload: {
+                        unitTitle,
+                        words: allWords,
+                    },
+                }, window.location.origin);
+            }, [allWords, unitTitle]);
+
+            useEffect(() => {
+                window.scrollTo({ top: 0 });
+            }, []);
+
+            useEffect(() => {
+                const timers = [120, 420, 900].map(delay => setTimeout(sendRunnerData, delay));
+                return () => timers.forEach(clearTimeout);
+            }, [sendRunnerData]);
+
+            return (
+                <div className="space-y-3">
+                    <div className="flex items-center justify-between gap-3">
+                        <button onClick={onBack} className="text-slate-400 font-bold text-sm hover:text-slate-200 transition-colors flex items-center gap-1 py-1">
+                            <ChevronLeft className="w-4 h-4" /> 回遊戲選單
+                        </button>
+                        <span className="bg-cyan-400 text-cyan-950 text-xs font-black px-3 py-1 rounded-full border-b-2 border-cyan-700">
+                            第 5 個遊戲
+                        </span>
+                    </div>
+                    <div className="rounded-3xl overflow-hidden border-2 border-cyan-700 bg-[#080816] shadow-2xl -mx-3 sm:mx-0">
+                        <iframe
+                            ref={frameRef}
+                            title="8-bit 單字跑者"
+                            src={`./runner.html?unit=${encodeURIComponent(unitTitle)}&v=20260525-runner`}
+                            className="w-full h-[calc(100svh-220px)] min-h-[560px] max-h-[820px] sm:h-[82svh] sm:min-h-[680px] border-0 block"
+                            allow="autoplay"
+                            onLoad={sendRunnerData}
+                        />
+                    </div>
+                </div>
+            );
+        };
+
         const GameMode = ({ allWords, grammarData, unitTitle }) => {
             const [screen, setScreen] = useState('home');
             if (screen === 'survival') return <SurvivalMode allWords={allWords} onBack={() => setScreen('home')} />;
             if (screen === 'boss') return <BossMode allWords={allWords} onBack={() => setScreen('home')} />;
             if (screen === 'miner') return <MinerMode allWords={allWords} unitTitle={unitTitle} onBack={() => setScreen('home')} />;
             if (screen === 'battle') return <BattleMode allWords={allWords} grammarData={grammarData} unitTitle={unitTitle} onBack={() => setScreen('home')} />;
+            if (screen === 'runner') return <RunnerMode allWords={allWords} unitTitle={unitTitle} onBack={() => setScreen('home')} />;
             return (
                 <div className="space-y-4 pb-6">
                     <div className="text-center pt-2">
@@ -1522,6 +1570,18 @@
                                 <div className="text-slate-400 text-sm font-bold mt-0.5">答題賺金幣、派兵推倒敵方基地</div>
                             </div>
                             <ChevronRight className="w-5 h-5 text-slate-600 group-hover:text-orange-500 ml-auto transition-colors" />
+                        </div>
+                    </button>
+                    <button onClick={() => setScreen('runner')}
+                        className="w-full bg-slate-800 border-2 border-slate-700 hover:border-cyan-400 p-5 rounded-2xl text-left transition-all group relative overflow-hidden">
+                        <div className="absolute inset-0 bg-cyan-400/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl" />
+                        <div className="relative flex items-center gap-4">
+                            <div className="text-4xl select-none" style={{ filter: 'drop-shadow(0 0 10px rgba(34,211,238,0.45))' }}>▣</div>
+                            <div>
+                                <div className="text-white font-black text-lg">8-bit 單字跑者</div>
+                                <div className="text-slate-400 text-sm font-bold mt-0.5">點擊跑道切換位置，在三條路撞對單字</div>
+                            </div>
+                            <ChevronRight className="w-5 h-5 text-slate-600 group-hover:text-cyan-400 ml-auto transition-colors" />
                         </div>
                     </button>
                 </div>

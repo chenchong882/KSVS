@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>8-bit 單字跑者</title>
+<style>
+:root {
+  color-scheme: dark;
+  --bg: #080816;
+  --panel: #151530;
+  --cyan: #25f4ff;
+  --lime: #8cff3f;
+  --pink: #ff4fd8;
+  --yellow: #ffe64d;
+  --red: #ff4b4b;
+  --white: #f6f7ff;
+}
+
+* { box-sizing: border-box; }
+html, body { overscroll-behavior: none; }
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 12px;
+  display: grid;
+  place-items: start center;
+  color: var(--white);
+  background:
+    linear-gradient(90deg, rgba(37, 244, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(rgba(255, 79, 216, 0.07) 1px, transparent 1px),
+    radial-gradient(circle at 50% 0%, rgba(255, 230, 77, 0.15), transparent 34rem),
+    #080816;
+  background-size: 32px 32px, 32px 32px, auto, auto;
+  font-family: "Courier New", monospace;
+  user-select: none;
+  touch-action: none;
+}
+
+.cabinet {
+  width: min(100%, 1040px);
+  display: grid;
+  gap: 10px;
+}
+
+.topbar {
+  display: grid;
+  grid-template-columns: 1.2fr repeat(4, minmax(92px, auto));
+  gap: 8px;
+}
+
+.panel {
+  min-height: 58px;
+  padding: 8px 10px;
+  border: 3px solid #33336b;
+  background: linear-gradient(180deg, #1a1a42, #10102a);
+  box-shadow: inset -3px -3px 0 rgba(0, 0, 0, 0.45), inset 3px 3px 0 rgba(255, 255, 255, 0.09);
+}
+
+.label {
+  display: block;
+  color: #9da4ff;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.value {
+  display: block;
+  margin-top: 5px;
+  color: var(--white);
+  font-size: 21px;
+  font-weight: 900;
+  line-height: 1.05;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.score { color: var(--yellow); }
+.combo { color: var(--lime); }
+.hp { color: var(--pink); }
+
+.controls {
+  display: flex;
+  gap: 8px;
+}
+
+.difficulty {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+button {
+  min-height: 58px;
+  border: 0;
+  border-bottom: 5px solid #8f4e00;
+  padding: 0 16px;
+  color: #1b1300;
+  background: var(--yellow);
+  font: 900 16px/1 "Courier New", monospace;
+  cursor: pointer;
+  box-shadow: inset -3px -3px 0 rgba(0, 0, 0, 0.22), inset 3px 3px 0 rgba(255, 255, 255, 0.38);
+}
+
+button:active {
+  transform: translateY(4px);
+  border-bottom-width: 1px;
+}
+
+button.difficulty-btn {
+  min-height: 46px;
+  border-bottom-color: #27275d;
+  color: #f6f7ff;
+  background: #1a1a42;
+  font-size: 14px;
+}
+
+button.difficulty-btn.active {
+  color: #0b1020;
+  background: var(--cyan);
+  border-bottom-color: #0b8490;
+}
+
+button.difficulty-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.56;
+  transform: none;
+}
+
+.stage-wrap {
+  position: relative;
+  padding: 8px;
+  border: 4px solid #3d3d80;
+  background: #0d0d25;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.42), inset 0 0 0 3px rgba(255, 255, 255, 0.05);
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  image-rendering: pixelated;
+  background: #060615;
+  touch-action: none;
+}
+
+.touch-split {
+  position: absolute;
+  inset: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  pointer-events: none;
+}
+
+.touch-split span {
+  opacity: 0;
+}
+
+@media (max-width: 720px) {
+  body {
+    min-height: 100svh;
+    padding: 8px;
+    align-items: start;
+  }
+
+  .topbar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .panel {
+    min-height: 52px;
+    padding: 7px 8px;
+  }
+
+  .panel.unit {
+    grid-column: 1 / -1;
+  }
+
+  .controls {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .difficulty {
+    grid-column: 1 / -1;
+  }
+
+  button {
+    min-height: 52px;
+  }
+
+  .value {
+    font-size: 18px;
+  }
+
+  .stage-wrap {
+    padding: 5px;
+  }
+
+  canvas {
+    aspect-ratio: 1 / 1;
+  }
+
+  .touch-split {
+    inset: 5px;
+  }
+}
+</style>
+</head>
+<body>
+<main class="cabinet">
+  <section class="topbar">
+    <div class="panel unit">
+      <span class="label">UNIT</span>
+      <span class="value" id="unit-title">示範題庫</span>
+    </div>
+    <div class="panel">
+      <span class="label">TIME</span>
+      <span class="value" id="time-left">60</span>
+    </div>
+    <div class="panel">
+      <span class="label">SCORE</span>
+      <span class="value score" id="score">0</span>
+    </div>
+    <div class="panel">
+      <span class="label">COMBO</span>
+      <span class="value combo" id="combo">0</span>
+    </div>
+    <div class="panel">
+      <span class="label">HP</span>
+      <span class="value hp" id="lives">3</span>
+    </div>
+    <div class="controls">
+      <button id="start-btn" type="button">START</button>
+    </div>
+    <div class="difficulty" aria-label="難度選擇">
+      <button class="difficulty-btn" id="difficulty-easy" type="button" data-difficulty="easy">簡單</button>
+      <button class="difficulty-btn active" id="difficulty-normal" type="button" data-difficulty="normal">普通</button>
+    </div>
+  </section>
+
+  <section class="stage-wrap">
+    <canvas id="game" width="960" height="640" aria-label="8-bit 單字跑者遊戲畫面"></canvas>
+    <div class="touch-split" aria-hidden="true"><span></span><span></span></div>
+  </section>
+</main>
+
+<script>
+const canvas = document.getElementById("game");
+const ctx = canvas.getContext("2d");
+const unitTitleEl = document.getElementById("unit-title");
+const timeLeftEl = document.getElementById("time-left");
+const scoreEl = document.getElementById("score");
+const comboEl = document.getElementById("combo");
+const livesEl = document.getElementById("lives");
+const startBtn = document.getElementById("start-btn");
+const difficultyButtons = Array.from(document.querySelectorAll(".difficulty-btn"));
+
+const GAME_SECONDS = 60;
+const START_LIVES = 3;
+const LANES = [canvas.width * 0.22, canvas.width * 0.5, canvas.width * 0.78];
+const PLAYER_Y = 548;
+const HIT_Y = 500;
+const WALL_START_Y = 120;
+const WALL_END_Y = 535;
+const DIFFICULTIES = {
+  easy: { label: "簡單", baseSpeed: 135, correctAccel: 3.5, correctMax: 70, timeAccel: 0.55 },
+  normal: { label: "普通", baseSpeed: 165, correctAccel: 5, correctMax: 95, timeAccel: 0.85 }
+};
+const LS = {
+  score: "runner_best_score",
+  combo: "runner_best_combo",
+  correct: "runner_best_correct"
+};
+
+const FALLBACK_WORDS = [
+  { word: "reality", chinese: "現實" },
+  { word: "image", chinese: "影像，圖像" },
+  { word: "curious", chinese: "好奇的" },
+  { word: "explore", chinese: "探索" },
+  { word: "develop", chinese: "發展，成長" },
+  { word: "extra", chinese: "額外的，另外的" }
+];
+
+let vocabulary = normalizeWords(FALLBACK_WORDS);
+let unitTitle = "示範題庫";
+let voices = [];
+let particles = [];
+let floats = [];
+let lastFrame = performance.now();
+let selectedDifficulty = "normal";
+let game = createReadyState();
+
+function createReadyState() {
+  return {
+    phase: "ready",
+    timeLeft: GAME_SECONDS,
+    score: 0,
+    combo: 0,
+    bestCombo: 0,
+    correct: 0,
+    lives: START_LIVES,
+    playerLane: 1,
+    playerX: LANES[1],
+    wall: null,
+    message: "PRESS START",
+    messageTone: "info",
+    invincibleMs: 0,
+    shakeMs: 0,
+    waveNo: 0,
+    nextWaveDelay: 0,
+    roundMode: "en"
+  };
+}
+
+function normalizeWords(words) {
+  const seen = new Set();
+  return (words || [])
+    .map(item => {
+      const word = String(item?.word || item?.phrase || "").trim();
+      const chinese = String(item?.chinese || "").trim();
+      return { word, chinese };
+    })
+    .filter(item => item.word && item.chinese)
+    .filter(item => {
+      const key = item.word.toLowerCase();
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
+}
+
+function rand(min, max) {
+  return min + Math.random() * (max - min);
+}
+
+function shuffle(items) {
+  const out = [...items];
+  for (let i = out.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [out[i], out[j]] = [out[j], out[i]];
+  }
+  return out;
+}
+
+function clamp(value, min, max) {
+  return Math.max(min, Math.min(max, value));
+}
+
+function loadVoices() {
+  if (!window.speechSynthesis) return;
+  const list = window.speechSynthesis.getVoices();
+  if (list.length) voices = list;
+}
+
+loadVoices();
+if (window.speechSynthesis?.onvoiceschanged !== undefined) {
+  window.speechSynthesis.onvoiceschanged = loadVoices;
+}
+
+function pickVoice(lang) {
+  if (!voices.length) loadVoices();
+  return voices.find(v => v.lang === lang && !v.name.includes("Network"))
+    || voices.find(v => v.lang.startsWith(lang.split("-")[0]) && !v.name.includes("Network"))
+    || voices.find(v => v.lang.includes(lang.split("-")[0]));
+}
+
+function speak(text, lang = "en-US") {
+  if (!window.speechSynthesis || !text) return;
+  window.speechSynthesis.cancel();
+  const utterance = new SpeechSynthesisUtterance(text);
+  const voice = pickVoice(lang);
+  if (voice) utterance.voice = voice;
+  utterance.lang = lang;
+  utterance.rate = lang.startsWith("zh") ? 1 : 0.92;
+  window.speechSynthesis.speak(utterance);
+}
+
+function speakQuestion(question) {
+  const lang = question.mode === "en" ? "zh-TW" : "en-US";
+  speak(question.prompt, lang);
+}
+
+function playSound(type) {
+  try {
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    if (!AudioContext) return;
+    const audio = new AudioContext();
+    const tone = (freq, end, dur, wave = "square", delay = 0) => {
+      const osc = audio.createOscillator();
+      const gain = audio.createGain();
+      osc.connect(gain);
+      gain.connect(audio.destination);
+      osc.type = wave;
+      osc.frequency.setValueAtTime(freq, audio.currentTime + delay);
+      osc.frequency.exponentialRampToValueAtTime(end, audio.currentTime + delay + dur);
+      gain.gain.setValueAtTime(0.06, audio.currentTime + delay);
+      gain.gain.exponentialRampToValueAtTime(0.001, audio.currentTime + delay + dur);
+      osc.start(audio.currentTime + delay);
+      osc.stop(audio.currentTime + delay + dur);
+    };
+    if (type === "correct") [0, 0.08, 0.16].forEach((d, i) => tone([420, 640, 920][i], [640, 920, 1280][i], 0.12, "square", d));
+    if (type === "wrong") tone(180, 70, 0.34, "sawtooth");
+    if (type === "start") [0, 0.1].forEach((d, i) => tone([300, 520][i], [520, 760][i], 0.14, "square", d));
+  } catch (error) {}
+}
+
+function labelFor(word, mode) {
+  return mode === "zh" ? word.chinese : word.word;
+}
+
+function makeQuestion() {
+  const pool = vocabulary.length >= 3 ? vocabulary : normalizeWords([...vocabulary, ...FALLBACK_WORDS]);
+  const target = pool[Math.floor(Math.random() * pool.length)];
+  const mode = game.waveNo % 2 === 0 ? "en" : "zh";
+  const distractors = shuffle(pool.filter(item => item.word.toLowerCase() !== target.word.toLowerCase())).slice(0, 2);
+  const options = shuffle([target, ...distractors]).map(item => ({
+    word: item.word,
+    chinese: item.chinese,
+    label: labelFor(item, mode),
+    isCorrect: item.word === target.word
+  }));
+
+  return {
+    target,
+    mode,
+    promptType: mode === "en" ? "中文提示，選英文" : "英文提示，選中文",
+    prompt: mode === "en" ? target.chinese : target.word,
+    options
+  };
+}
+
+function spawnWave() {
+  const question = makeQuestion();
+  const difficulty = DIFFICULTIES[selectedDifficulty];
+  game.waveNo += 1;
+  game.roundMode = question.mode;
+  game.wall = {
+    y: WALL_START_Y,
+    speed: difficulty.baseSpeed
+      + Math.min(difficulty.correctMax, game.correct * difficulty.correctAccel)
+      + Math.max(0, 60 - game.timeLeft) * difficulty.timeAccel,
+    question,
+    options: question.options.map((option, index) => ({ ...option, lane: index }))
+  };
+  game.message = "";
+  speakQuestion(question);
+}
+
+function startGame() {
+  particles.length = 0;
+  floats.length = 0;
+  game = createReadyState();
+  game.phase = "playing";
+  game.message = "";
+  startBtn.textContent = "RESTART";
+  updateDifficultyUI();
+  playSound("start");
+  spawnWave();
+  updateHud();
+}
+
+function finishGame(reason) {
+  game.phase = "ended";
+  game.wall = null;
+  game.message = reason;
+  game.shakeMs = 0;
+  startBtn.textContent = "AGAIN";
+  updateDifficultyUI();
+
+  const bestScore = Number(localStorage.getItem(LS.score) || "0");
+  const bestCombo = Number(localStorage.getItem(LS.combo) || "0");
+  const bestCorrect = Number(localStorage.getItem(LS.correct) || "0");
+  if (game.score > bestScore) localStorage.setItem(LS.score, String(game.score));
+  if (game.bestCombo > bestCombo) localStorage.setItem(LS.combo, String(game.bestCombo));
+  if (game.correct > bestCorrect) localStorage.setItem(LS.correct, String(game.correct));
+}
+
+function updateDifficultyUI() {
+  difficultyButtons.forEach(button => {
+    const active = button.dataset.difficulty === selectedDifficulty;
+    button.classList.toggle("active", active);
+    button.disabled = game.phase === "playing";
+  });
+}
+
+function setDifficulty(difficulty) {
+  if (game.phase === "playing" || !DIFFICULTIES[difficulty]) return;
+  selectedDifficulty = difficulty;
+  updateDifficultyUI();
+}
+
+function moveLane(dir) {
+  if (game.phase !== "playing") return;
+  const next = clamp(game.playerLane + dir, 0, 2);
+  setLane(next);
+}
+
+function setLane(lane) {
+  if (game.phase !== "playing") return;
+  const next = clamp(lane, 0, 2);
+  if (next !== game.playerLane) {
+    game.playerLane = next;
+    addDust(LANES[next], PLAYER_Y + 18, "#25f4ff", 8);
+  }
+}
+
+function resolveWall() {
+  if (!game.wall || game.invincibleMs > 0) return;
+  const selected = game.wall.options.find(option => option.lane === game.playerLane);
+  if (!selected) return;
+
+  if (selected.isCorrect) {
+    game.combo += 1;
+    game.bestCombo = Math.max(game.bestCombo, game.combo);
+    game.correct += 1;
+    const points = 100 + game.combo * 15;
+    game.score += points;
+    floats.push({ x: game.playerX, y: PLAYER_Y - 70, text: `+${points}`, color: "#ffe64d", life: 680, max: 680 });
+    addDust(game.playerX, PLAYER_Y - 30, "#8cff3f", 18);
+    speak(game.wall.question.target.word, "en-US");
+    playSound("correct");
+  } else {
+    game.lives -= 1;
+    game.combo = 0;
+    game.invincibleMs = 900;
+    game.shakeMs = 180;
+    floats.push({ x: game.playerX, y: PLAYER_Y - 70, text: "-HP", color: "#ff4b4b", life: 680, max: 680 });
+    addDust(game.playerX, PLAYER_Y - 30, "#ff4b4b", 24);
+    playSound("wrong");
+  }
+
+  game.wall = null;
+  game.nextWaveDelay = selected.isCorrect ? 360 : 560;
+  if (game.lives <= 0) {
+    setTimeout(() => finishGame("NO HP"), 180);
+  }
+  updateHud();
+}
+
+function addDust(x, y, color, count) {
+  for (let i = 0; i < count; i++) {
+    particles.push({
+      x,
+      y,
+      vx: rand(-150, 150),
+      vy: rand(-180, 80),
+      size: rand(3, 8),
+      color,
+      life: rand(280, 620),
+      max: 620
+    });
+  }
+}
+
+function update(dt) {
+  if (game.phase === "playing") {
+    game.timeLeft -= dt / 1000;
+    if (game.timeLeft <= 0) {
+      game.timeLeft = 0;
+      finishGame("TIME UP");
+    }
+
+    game.playerX += (LANES[game.playerLane] - game.playerX) * Math.min(1, dt / 80);
+    game.invincibleMs = Math.max(0, game.invincibleMs - dt);
+    game.shakeMs = Math.max(0, game.shakeMs - dt);
+
+    if (game.wall) {
+      game.wall.y += game.wall.speed * dt / 1000;
+      if (game.wall.y >= HIT_Y) resolveWall();
+    } else if (game.phase === "playing") {
+      game.nextWaveDelay -= dt;
+      if (game.nextWaveDelay <= 0) spawnWave();
+    }
+  }
+
+  particles.forEach(p => {
+    p.x += p.vx * dt / 1000;
+    p.y += p.vy * dt / 1000;
+    p.vy += 460 * dt / 1000;
+    p.life -= dt;
+  });
+  particles = particles.filter(p => p.life > 0);
+
+  floats.forEach(f => {
+    f.y -= 55 * dt / 1000;
+    f.life -= dt;
+  });
+  floats = floats.filter(f => f.life > 0);
+}
+
+function updateHud() {
+  unitTitleEl.textContent = unitTitle;
+  timeLeftEl.textContent = Math.ceil(game.timeLeft);
+  scoreEl.textContent = game.score;
+  comboEl.textContent = game.combo;
+  livesEl.textContent = "█".repeat(Math.max(0, game.lives)) || "0";
+}
+
+function draw() {
+  const shake = game.shakeMs > 0 ? Math.round(rand(-8, 8)) : 0;
+  ctx.save();
+  ctx.translate(shake, 0);
+  drawScene();
+  ctx.restore();
+}
+
+function drawScene() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  drawSky();
+  drawRoad();
+  drawPrompt();
+  drawWall();
+  drawPlayer();
+  drawParticles();
+  drawFloats();
+  drawOverlay();
+}
+
+function drawSky() {
+  ctx.fillStyle = "#060615";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  ctx.fillStyle = "rgba(37, 244, 255, 0.32)";
+  for (let x = 0; x < canvas.width; x += 48) ctx.fillRect(x, 0, 4, canvas.height);
+  ctx.fillStyle = "rgba(255, 79, 216, 0.22)";
+  for (let y = 40; y < canvas.height; y += 52) ctx.fillRect(0, y, canvas.width, 3);
+
+  ctx.fillStyle = "#171745";
+  for (let i = 0; i < 18; i++) {
+    const x = (i * 73) % canvas.width;
+    const h = 42 + (i * 31) % 96;
+    ctx.fillRect(x, 146 - h, 38, h);
+    ctx.fillStyle = i % 2 ? "#25255e" : "#171745";
+  }
+}
+
+function drawRoad() {
+  const topW = 220;
+  const botW = 760;
+  const cx = canvas.width / 2;
+  const topY = 132;
+  const botY = canvas.height;
+
+  ctx.fillStyle = "#11112f";
+  ctx.beginPath();
+  ctx.moveTo(cx - topW / 2, topY);
+  ctx.lineTo(cx + topW / 2, topY);
+  ctx.lineTo(cx + botW / 2, botY);
+  ctx.lineTo(cx - botW / 2, botY);
+  ctx.closePath();
+  ctx.fill();
+
+  ctx.strokeStyle = "#25f4ff";
+  ctx.lineWidth = 4;
+  ctx.stroke();
+
+  for (let i = 1; i <= 2; i++) {
+    const topX = cx - topW / 2 + topW * i / 3;
+    const botX = cx - botW / 2 + botW * i / 3;
+    ctx.strokeStyle = i === 1 ? "#ff4fd8" : "#8cff3f";
+    ctx.lineWidth = 3;
+    ctx.setLineDash([18, 18]);
+    ctx.beginPath();
+    ctx.moveTo(topX, topY);
+    ctx.lineTo(botX, botY);
+    ctx.stroke();
+    ctx.setLineDash([]);
+  }
+
+  ctx.fillStyle = "rgba(255, 230, 77, 0.18)";
+  for (let y = 190; y < canvas.height; y += 78) {
+    const pct = (y - topY) / (botY - topY);
+    const w = topW + (botW - topW) * pct;
+    ctx.fillRect(cx - w / 2, y, w, 4);
+  }
+}
+
+function drawPrompt() {
+  const wall = game.wall;
+  ctx.fillStyle = "#10102a";
+  pixelRect(126, 22, 708, 92, "#10102a", "#25f4ff");
+  ctx.fillStyle = "#9da4ff";
+  ctx.font = "900 19px 'Courier New', monospace";
+  ctx.textAlign = "center";
+  ctx.fillText(wall ? wall.question.promptType : "8-BIT WORD RUNNER", canvas.width / 2, 48);
+
+  ctx.fillStyle = "#ffffff";
+  ctx.font = fitFont(wall ? wall.question.prompt : game.message, 660, 38);
+  ctx.fillText(wall ? wall.question.prompt : game.message, canvas.width / 2, 86);
+}
+
+function drawWall() {
+  if (!game.wall) return;
+  const y = game.wall.y;
+  const scale = 0.65 + (y - WALL_START_Y) / (HIT_Y - WALL_START_Y) * 0.55;
+  const boxW = 205 * scale;
+  const boxH = 74 * scale;
+
+  game.wall.options.forEach(option => {
+    const x = LANES[option.lane];
+    const tone = "#25f4ff";
+    pixelRect(x - boxW / 2, y - boxH / 2, boxW, boxH, "#f6f7ff", tone);
+    ctx.fillStyle = "#11112f";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.font = fitFont(option.label, boxW - 24, 25 * scale);
+    wrapText(option.label, x, y + 1, boxW - 24, 24 * scale, 2);
+  });
+}
+
+function drawPlayer() {
+  const blink = game.invincibleMs > 0 && Math.floor(game.invincibleMs / 90) % 2 === 0;
+  if (blink) return;
+
+  const x = game.playerX;
+  const y = PLAYER_Y;
+  ctx.fillStyle = "#ffe64d";
+  ctx.fillRect(x - 18, y - 48, 36, 28);
+  ctx.fillStyle = "#25f4ff";
+  ctx.fillRect(x - 24, y - 20, 48, 42);
+  ctx.fillStyle = "#ff4fd8";
+  ctx.fillRect(x - 36, y + 16, 24, 28);
+  ctx.fillRect(x + 12, y + 16, 24, 28);
+  ctx.fillStyle = "#11112f";
+  ctx.fillRect(x - 9, y - 39, 7, 7);
+  ctx.fillRect(x + 4, y - 39, 7, 7);
+  ctx.fillStyle = "#8cff3f";
+  ctx.fillRect(x - 14, y - 60, 28, 10);
+  ctx.fillRect(x - 8, y - 70, 16, 10);
+}
+
+function drawParticles() {
+  particles.forEach(p => {
+    ctx.globalAlpha = Math.max(0, p.life / p.max);
+    ctx.fillStyle = p.color;
+    ctx.fillRect(p.x, p.y, p.size, p.size);
+    ctx.globalAlpha = 1;
+  });
+}
+
+function drawFloats() {
+  floats.forEach(f => {
+    ctx.globalAlpha = Math.max(0, f.life / f.max);
+    ctx.fillStyle = f.color;
+    ctx.font = "900 28px 'Courier New', monospace";
+    ctx.textAlign = "center";
+    ctx.fillText(f.text, f.x, f.y);
+    ctx.globalAlpha = 1;
+  });
+}
+
+function drawOverlay() {
+  if (game.phase === "playing") return;
+  ctx.fillStyle = "rgba(3, 3, 14, 0.78)";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  pixelRect(214, 170, 532, game.phase === "ended" ? 318 : 236, "#121232", "#ffe64d");
+  ctx.textAlign = "center";
+  ctx.fillStyle = "#ffe64d";
+  ctx.font = "900 42px 'Courier New', monospace";
+  ctx.fillText(game.phase === "ended" ? game.message : "8-BIT RUNNER", canvas.width / 2, 232);
+
+  ctx.fillStyle = "#ffffff";
+  ctx.font = "900 24px 'Courier New', monospace";
+  if (game.phase === "ready") {
+    ctx.fillText("三條跑道，撞對單字", canvas.width / 2, 290);
+    ctx.fillStyle = "#25f4ff";
+    ctx.fillText("按 START 開始", canvas.width / 2, 342);
+    return;
+  }
+
+  const bestScore = Math.max(game.score, Number(localStorage.getItem(LS.score) || "0"));
+  const bestCombo = Math.max(game.bestCombo, Number(localStorage.getItem(LS.combo) || "0"));
+  const bestCorrect = Math.max(game.correct, Number(localStorage.getItem(LS.correct) || "0"));
+  drawResult("SCORE", game.score, 292, 286);
+  drawResult("CORRECT", game.correct, 508, 286);
+  drawResult("BEST", bestScore, 292, 358);
+  drawResult("MAX COMBO", bestCombo, 508, 358);
+  ctx.fillStyle = "#8cff3f";
+  ctx.font = "900 21px 'Courier New', monospace";
+  ctx.fillText(`BEST CORRECT ${bestCorrect}`, canvas.width / 2, 438);
+}
+
+function drawResult(label, value, x, y) {
+  pixelRect(x, y, 160, 52, "#1c1c48", "#3d3d80");
+  ctx.fillStyle = "#9da4ff";
+  ctx.font = "900 14px 'Courier New', monospace";
+  ctx.textAlign = "center";
+  ctx.fillText(label, x + 80, y + 19);
+  ctx.fillStyle = "#ffe64d";
+  ctx.font = "900 22px 'Courier New', monospace";
+  ctx.fillText(value, x + 80, y + 42);
+}
+
+function pixelRect(x, y, w, h, fill, stroke) {
+  x = Math.round(x);
+  y = Math.round(y);
+  w = Math.round(w);
+  h = Math.round(h);
+  ctx.fillStyle = fill;
+  ctx.fillRect(x, y, w, h);
+  ctx.strokeStyle = stroke;
+  ctx.lineWidth = 4;
+  ctx.strokeRect(x, y, w, h);
+  ctx.fillStyle = "rgba(255, 255, 255, 0.16)";
+  ctx.fillRect(x + 6, y + 6, w - 12, 4);
+  ctx.fillStyle = "rgba(0, 0, 0, 0.22)";
+  ctx.fillRect(x + 6, y + h - 10, w - 12, 4);
+}
+
+function fitFont(text, maxWidth, maxSize) {
+  let size = maxSize;
+  do {
+    ctx.font = `900 ${size}px 'Courier New', monospace`;
+    if (ctx.measureText(String(text)).width <= maxWidth || size <= 14) break;
+    size -= 2;
+  } while (size > 12);
+  return `900 ${size}px 'Courier New', monospace`;
+}
+
+function wrapText(text, x, y, maxWidth, lineHeight, maxLines) {
+  const raw = String(text);
+  const hasWordSpaces = /[A-Za-z]\s+[A-Za-z]/.test(raw);
+  const chars = hasWordSpaces ? raw.split(/(\s+)/) : [...raw];
+  const lines = [];
+  let line = "";
+  chars.forEach(char => {
+    const test = line + char;
+    if (ctx.measureText(test).width > maxWidth && line) {
+      lines.push(line.trim());
+      line = char.trimStart();
+    } else {
+      line = test;
+    }
+  });
+  if (line) lines.push(line.trim());
+  const visible = lines.slice(0, maxLines);
+  const startY = y - (visible.length - 1) * lineHeight / 2;
+  visible.forEach((lineText, index) => ctx.fillText(lineText, x, startY + index * lineHeight));
+}
+
+function loop(now) {
+  const dt = Math.min(40, now - lastFrame);
+  lastFrame = now;
+  update(dt);
+  updateHud();
+  draw();
+  requestAnimationFrame(loop);
+}
+
+function laneFromPointer(event) {
+  const rect = canvas.getBoundingClientRect();
+  const x = clamp(event.clientX - rect.left, 0, rect.width - 1);
+  return clamp(Math.floor(x / rect.width * 3), 0, 2);
+}
+
+function setLaneFromPointer(event) {
+  event.preventDefault();
+  setLane(laneFromPointer(event));
+}
+
+canvas.addEventListener("pointerdown", event => {
+  if (game.phase !== "playing") {
+    event.preventDefault();
+    startGame();
+    return;
+  }
+  canvas.setPointerCapture?.(event.pointerId);
+  setLaneFromPointer(event);
+});
+canvas.addEventListener("pointermove", event => {
+  if (event.buttons && game.phase === "playing") setLaneFromPointer(event);
+});
+
+window.addEventListener("keydown", event => {
+  if (event.code === "ArrowLeft") {
+    event.preventDefault();
+    setLane(0);
+  }
+  if (event.code === "ArrowUp" || event.code === "ArrowDown") {
+    event.preventDefault();
+    setLane(1);
+  }
+  if (event.code === "ArrowRight") {
+    event.preventDefault();
+    setLane(2);
+  }
+  if (event.code === "KeyA") {
+    event.preventDefault();
+    moveLane(-1);
+  }
+  if (event.code === "KeyD") {
+    event.preventDefault();
+    moveLane(1);
+  }
+  if (event.code === "Space") {
+    event.preventDefault();
+    if (game.phase !== "playing") startGame();
+  }
+});
+
+startBtn.addEventListener("click", startGame);
+difficultyButtons.forEach(button => {
+  button.addEventListener("click", () => setDifficulty(button.dataset.difficulty));
+});
+
+window.addEventListener("message", event => {
+  if (event.origin !== window.location.origin) return;
+  if (!event.data || event.data.type !== "RUNNER_DATA") return;
+  const nextWords = normalizeWords(event.data.payload?.words);
+  vocabulary = nextWords.length >= 3 ? nextWords : normalizeWords([...nextWords, ...FALLBACK_WORDS]);
+  unitTitle = event.data.payload?.unitTitle || "目前 Level";
+  if (game.phase !== "playing") {
+    game = createReadyState();
+    game.message = `LOADED ${vocabulary.length}`;
+    startBtn.textContent = "START";
+  }
+  updateHud();
+  updateDifficultyUI();
+});
+
+updateHud();
+updateDifficultyUI();
+requestAnimationFrame(loop);
+</script>
+</body>
+</html>
