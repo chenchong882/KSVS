@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>8-bit 單字跑者</title>
+<title>8-bit 星際巡航</title>
 <style>
 :root {
   color-scheme: dark;
@@ -79,7 +79,26 @@ body {
 
 .score { color: var(--yellow); }
 .combo { color: var(--lime); }
-.hp { color: var(--pink); }
+.hp {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  color: var(--pink);
+}
+
+.hp-segment {
+  width: 22px;
+  height: 16px;
+  border: 2px solid #ff8fea;
+  background: var(--pink);
+  box-shadow: inset -2px -2px 0 rgba(0, 0, 0, 0.24), 0 0 10px rgba(255, 79, 216, 0.45);
+}
+
+.hp-segment.is-empty {
+  border-color: #5c315b;
+  background: #24172e;
+  box-shadow: inset -2px -2px 0 rgba(0, 0, 0, 0.34);
+}
 
 .controls {
   display: flex;
@@ -244,7 +263,7 @@ canvas {
   </section>
 
   <section class="stage-wrap">
-    <canvas id="game" width="960" height="640" aria-label="8-bit 單字跑者遊戲畫面"></canvas>
+    <canvas id="game" width="960" height="640" aria-label="8-bit 星際巡航遊戲畫面"></canvas>
     <div class="touch-split" aria-hidden="true"><span></span><span></span></div>
   </section>
 </main>
@@ -598,7 +617,15 @@ function updateHud() {
   timeLeftEl.textContent = Math.ceil(game.timeLeft);
   scoreEl.textContent = game.score;
   comboEl.textContent = game.combo;
-  livesEl.textContent = "█".repeat(Math.max(0, game.lives)) || "0";
+  livesEl.setAttribute("aria-label", `${Math.max(0, game.lives)} HP`);
+  livesEl.replaceChildren(
+    ...Array.from({ length: START_LIVES }, (_, index) => {
+      const segment = document.createElement("span");
+      segment.className = `hp-segment${index >= game.lives ? " is-empty" : ""}`;
+      segment.setAttribute("aria-hidden", "true");
+      return segment;
+    })
+  );
 }
 
 function draw() {
@@ -687,7 +714,7 @@ function drawPrompt() {
   ctx.fillStyle = "#9da4ff";
   ctx.font = "900 19px 'Courier New', monospace";
   ctx.textAlign = "center";
-  ctx.fillText(wall ? wall.question.promptType : "8-BIT WORD RUNNER", canvas.width / 2, 48);
+  ctx.fillText(wall ? wall.question.promptType : "8-BIT 星際巡航", canvas.width / 2, 48);
 
   ctx.fillStyle = "#ffffff";
   ctx.font = fitFont(wall ? wall.question.prompt : game.message, 660, 38);
@@ -762,12 +789,12 @@ function drawOverlay() {
   ctx.textAlign = "center";
   ctx.fillStyle = "#ffe64d";
   ctx.font = "900 42px 'Courier New', monospace";
-  ctx.fillText(game.phase === "ended" ? game.message : "8-BIT RUNNER", canvas.width / 2, 232);
+  ctx.fillText(game.phase === "ended" ? game.message : "8-BIT 星際巡航", canvas.width / 2, 232);
 
   ctx.fillStyle = "#ffffff";
   ctx.font = "900 24px 'Courier New', monospace";
   if (game.phase === "ready") {
-    ctx.fillText("三條跑道，撞對單字", canvas.width / 2, 290);
+    ctx.fillText("三條航道，撞對單字", canvas.width / 2, 290);
     ctx.fillStyle = "#25f4ff";
     ctx.fillText("按 START 開始", canvas.width / 2, 342);
     return;
