@@ -483,12 +483,21 @@ function startGame() {
   updateHud();
 }
 
+function resetToReady() {
+  particles.length = 0;
+  floats.length = 0;
+  game = createReadyState();
+  startBtn.textContent = "START";
+  updateDifficultyUI();
+  updateHud();
+}
+
 function finishGame(reason) {
   game.phase = "ended";
   game.wall = null;
   game.message = reason;
   game.shakeMs = 0;
-  startBtn.textContent = "AGAIN";
+  startBtn.textContent = "RESTART";
   updateDifficultyUI();
 
   const bestScore = Number(localStorage.getItem(LS.score) || "0");
@@ -893,7 +902,11 @@ function setLaneFromPointer(event) {
 canvas.addEventListener("pointerdown", event => {
   if (game.phase !== "playing") {
     event.preventDefault();
-    startGame();
+    if (game.phase === "ended") {
+      resetToReady();
+    } else {
+      startGame();
+    }
     return;
   }
   canvas.setPointerCapture?.(event.pointerId);
@@ -926,11 +939,21 @@ window.addEventListener("keydown", event => {
   }
   if (event.code === "Space") {
     event.preventDefault();
-    if (game.phase !== "playing") startGame();
+    if (game.phase === "ended") {
+      resetToReady();
+    } else if (game.phase !== "playing") {
+      startGame();
+    }
   }
 });
 
-startBtn.addEventListener("click", startGame);
+startBtn.addEventListener("click", () => {
+  if (game.phase === "ready") {
+    startGame();
+  } else {
+    resetToReady();
+  }
+});
 difficultyButtons.forEach(button => {
   button.addEventListener("click", () => setDifficulty(button.dataset.difficulty));
 });
