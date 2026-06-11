@@ -45,7 +45,7 @@ body {
 
 .topbar {
   display: grid;
-  grid-template-columns: 1.2fr repeat(4, minmax(92px, auto));
+  grid-template-columns: repeat(4, minmax(92px, 1fr));
   gap: 8px;
 }
 
@@ -100,13 +100,9 @@ body {
   box-shadow: inset -2px -2px 0 rgba(0, 0, 0, 0.34);
 }
 
-.controls {
-  display: flex;
-  gap: 8px;
-}
-
 .difficulty {
   display: grid;
+  grid-column: 1 / -1;
   grid-template-columns: repeat(2, 1fr);
   gap: 8px;
 }
@@ -166,6 +162,19 @@ canvas {
   touch-action: none;
 }
 
+.overlay-start {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 3;
+  min-width: 190px;
+  transform: translate(-50%, -50%);
+}
+
+.overlay-start.is-hidden {
+  display: none;
+}
+
 .touch-split {
   position: absolute;
   inset: 8px;
@@ -194,20 +203,6 @@ canvas {
     padding: 7px 8px;
   }
 
-  .panel.unit {
-    grid-column: 1 / -1;
-  }
-
-  .controls {
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
-  .difficulty {
-    grid-column: 1 / -1;
-  }
-
   button {
     min-height: 52px;
   }
@@ -233,10 +228,6 @@ canvas {
 <body>
 <main class="cabinet">
   <section class="topbar">
-    <div class="panel unit">
-      <span class="label">UNIT</span>
-      <span class="value" id="unit-title">示範題庫</span>
-    </div>
     <div class="panel">
       <span class="label">TIME</span>
       <span class="value" id="time-left">60</span>
@@ -253,9 +244,6 @@ canvas {
       <span class="label">HP</span>
       <span class="value hp" id="lives">3</span>
     </div>
-    <div class="controls">
-      <button id="start-btn" type="button">START</button>
-    </div>
     <div class="difficulty" aria-label="難度選擇">
       <button class="difficulty-btn" id="difficulty-easy" type="button" data-difficulty="easy">簡單</button>
       <button class="difficulty-btn active" id="difficulty-normal" type="button" data-difficulty="normal">普通</button>
@@ -264,6 +252,7 @@ canvas {
 
   <section class="stage-wrap">
     <canvas id="game" width="960" height="640" aria-label="8-bit 星際巡航遊戲畫面"></canvas>
+    <button class="overlay-start" id="start-btn" type="button">START</button>
     <div class="touch-split" aria-hidden="true"><span></span><span></span></div>
   </section>
 </main>
@@ -271,7 +260,6 @@ canvas {
 <script>
 const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
-const unitTitleEl = document.getElementById("unit-title");
 const timeLeftEl = document.getElementById("time-left");
 const scoreEl = document.getElementById("score");
 const comboEl = document.getElementById("combo");
@@ -476,7 +464,7 @@ function startGame() {
   game = createReadyState();
   game.phase = "playing";
   game.message = "";
-  startBtn.textContent = "RESTART";
+  startBtn.classList.add("is-hidden");
   updateDifficultyUI();
   playSound("start");
   spawnWave();
@@ -488,6 +476,7 @@ function resetToReady() {
   floats.length = 0;
   game = createReadyState();
   startBtn.textContent = "START";
+  startBtn.classList.remove("is-hidden");
   updateDifficultyUI();
   updateHud();
 }
@@ -498,6 +487,7 @@ function finishGame(reason) {
   game.message = reason;
   game.shakeMs = 0;
   startBtn.textContent = "RESTART";
+  startBtn.classList.remove("is-hidden");
   updateDifficultyUI();
 
   const bestScore = Number(localStorage.getItem(LS.score) || "0");
@@ -622,7 +612,6 @@ function update(dt) {
 }
 
 function updateHud() {
-  unitTitleEl.textContent = unitTitle;
   timeLeftEl.textContent = Math.ceil(game.timeLeft);
   scoreEl.textContent = game.score;
   comboEl.textContent = game.combo;
@@ -968,6 +957,7 @@ window.addEventListener("message", event => {
     game = createReadyState();
     game.message = `LOADED ${vocabulary.length}`;
     startBtn.textContent = "START";
+    startBtn.classList.remove("is-hidden");
   }
   updateHud();
   updateDifficultyUI();

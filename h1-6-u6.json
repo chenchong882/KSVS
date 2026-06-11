@@ -1,855 +1,1010 @@
 {
     "units": {
         "h1-6-u6": {
-            "title": "Vocabulary & Grammar Focus - Unit 6",
+            "title": "Vocabulary & Language Spotlight - Unit 6",
             "vocab": [
                 {
                     "id": "h1-6-u6-v001",
-                    "word": "bargain",
+                    "word": "preserve",
+                    "part_of_speech": "vt.",
+                    "chinese": "保存；保護；維護",
+                    "sentence": "Museums preserve important artifacts for future students.",
+                    "sentence_chinese": "博物館保存重要文物，讓未來的學生能學習。"
+                },
+                {
+                    "id": "h1-6-u6-v002",
+                    "word": "institution",
                     "part_of_speech": "n. [C]",
-                    "chinese": "特價商品",
-                    "sentence": "I spent only NT$100 getting ten giant packs of toilet paper. It was a real bargain!",
-                    "sentence_chinese": ""
+                    "chinese": "機構；制度",
+                    "sentence": "This institution trains young artists to repair old paintings.",
+                    "sentence_chinese": "這個機構訓練年輕藝術家修復古畫。"
                 },
                 {
                     "id": "h1-6-u6-v003",
-                    "word": "quality",
-                    "part_of_speech": "n. [U][C]",
-                    "chinese": "品質",
-                    "sentence": "The driver is mad about the poor quality of the road. There are too many holes in it.",
-                    "sentence_chinese": ""
+                    "word": "artifact",
+                    "part_of_speech": "n. [C]",
+                    "chinese": "文物；古器物",
+                    "sentence": "The bronze artifact was found inside an ancient tomb.",
+                    "sentence_chinese": "這件青銅文物是在一座古墓裡被發現的。"
                 },
                 {
                     "id": "h1-6-u6-v004",
-                    "word": "company",
-                    "part_of_speech": "n. [C]",
-                    "chinese": "公司",
-                    "sentence": "This company produces the best bicycles in the world.",
-                    "sentence_chinese": ""
+                    "word": "convert",
+                    "part_of_speech": "vt./vi.",
+                    "chinese": "改造；轉換",
+                    "sentence": "The city plans to convert the old station into a museum.",
+                    "sentence_chinese": "市政府計畫把舊車站改造成博物館。"
                 },
                 {
                     "id": "h1-6-u6-v005",
-                    "word": "career",
-                    "part_of_speech": "n. [C]",
-                    "chinese": "職業；事業",
-                    "sentence": "Rafael Nadal started his tennis career at the age of 16.",
-                    "sentence_chinese": ""
+                    "word": "extraordinary",
+                    "part_of_speech": "adj.",
+                    "chinese": "非凡的；傑出的",
+                    "sentence": "The guide told us an extraordinary story about the temple.",
+                    "sentence_chinese": "導遊告訴我們一個關於這座寺廟的非凡故事。"
                 },
                 {
                     "id": "h1-6-u6-v006",
-                    "word": "explosion",
-                    "part_of_speech": "n. [C][U]",
-                    "chinese": "爆炸",
-                    "sentence": "We heard a loud explosion and saw that someone was making puffed rice cakes.",
-                    "sentence_chinese": ""
+                    "word": "approximately",
+                    "part_of_speech": "adv.",
+                    "chinese": "大約",
+                    "sentence": "Approximately two thousand people visit the site every day.",
+                    "sentence_chinese": "每天大約有兩千人參觀這個地點。"
+                },
+                {
+                    "id": "h1-6-u6-v007",
+                    "word": "infrastructure",
+                    "part_of_speech": "n. [U]",
+                    "chinese": "基礎建設",
+                    "sentence": "Better infrastructure can make travel to the island easier.",
+                    "sentence_chinese": "更好的基礎建設能讓前往這座島的旅程更方便。"
                 },
                 {
                     "id": "h1-6-u6-v008",
-                    "word": "injure",
-                    "part_of_speech": "vt.",
-                    "chinese": "使受傷",
-                    "sentence": "Marcus was seriously injured after he fell down the stairs.",
-                    "sentence_chinese": ""
+                    "word": "deteriorate",
+                    "part_of_speech": "vi.",
+                    "chinese": "惡化",
+                    "sentence": "The wall will deteriorate quickly if no one repairs it.",
+                    "sentence_chinese": "如果沒有人修理，這面牆會很快惡化。"
                 },
                 {
                     "id": "h1-6-u6-v009",
-                    "word": "injury",
-                    "part_of_speech": "n. [C][U]",
-                    "chinese": "傷害",
-                    "sentence": "Because of her serious leg injury, Gill cannot walk now.",
-                    "sentence_chinese": ""
+                    "word": "destination",
+                    "part_of_speech": "n. [C]",
+                    "chinese": "目的地",
+                    "sentence": "The old castle has become a popular destination for families.",
+                    "sentence_chinese": "這座古堡已成為家庭旅遊的熱門目的地。"
                 },
                 {
                     "id": "h1-6-u6-v010",
-                    "word": "instead",
-                    "part_of_speech": "adv.",
-                    "chinese": "相反地；卻",
-                    "sentence": "Andy's fingers were hurt, so I cooked instead.",
-                    "sentence_chinese": ""
+                    "word": "specialized",
+                    "part_of_speech": "adj.",
+                    "chinese": "專業的；專門的",
+                    "sentence": "The museum uses specialized tools to clean fragile objects.",
+                    "sentence_chinese": "博物館使用專門工具清潔脆弱物件。"
                 },
                 {
                     "id": "h1-6-u6-v011",
-                    "word": "improve",
-                    "part_of_speech": "vt./vi.",
-                    "chinese": "改進；改善",
-                    "sentence": "To improve her English, Helen listens to English radio programs every day.",
-                    "sentence_chinese": ""
+                    "word": "intensely",
+                    "part_of_speech": "adv.",
+                    "chinese": "強烈地；專注地",
+                    "sentence": "The researcher studied the ancient map intensely for hours.",
+                    "sentence_chinese": "研究員專注地研究那張古地圖好幾個小時。"
+                },
+                {
+                    "id": "h1-6-u6-v012",
+                    "word": "notable",
+                    "part_of_speech": "adj.",
+                    "chinese": "顯著的；著名的",
+                    "sentence": "There are several notable temples in this historic district.",
+                    "sentence_chinese": "這個歷史街區有幾座著名寺廟。"
                 },
                 {
                     "id": "h1-6-u6-v013",
-                    "word": "skill",
-                    "part_of_speech": "n. [C][U]",
-                    "chinese": "技巧；技能",
-                    "sentence": "Mr. Hu is famous for his skill in decorating traditional temples.",
-                    "sentence_chinese": ""
+                    "word": "donate",
+                    "part_of_speech": "vt./vi.",
+                    "chinese": "捐贈",
+                    "sentence": "Many people donate money to help preserve local heritage.",
+                    "sentence_chinese": "許多人捐錢幫助保存地方文化遺產。"
                 },
                 {
                     "id": "h1-6-u6-v014",
-                    "word": "demand",
-                    "part_of_speech": "vt./n.",
-                    "chinese": "要求；需求",
-                    "sentence": "The customer is demanding a refund for the broken hair dryer he bought yesterday.",
-                    "sentence_chinese": ""
+                    "word": "bronze",
+                    "part_of_speech": "adj./n. [U]",
+                    "chinese": "青銅的；銅牌的",
+                    "sentence": "The bronze statue stands near the entrance of the museum.",
+                    "sentence_chinese": "那座青銅雕像立在博物館入口附近。"
                 },
                 {
                     "id": "h1-6-u6-v015",
-                    "word": "product",
-                    "part_of_speech": "n. [C][U]",
-                    "chinese": "產品",
-                    "sentence": "The colorful masking tapes are the most popular products in this shop.",
-                    "sentence_chinese": ""
+                    "word": "contemporary",
+                    "part_of_speech": "adj.",
+                    "chinese": "當代的；現代的",
+                    "sentence": "The gallery shows both ancient artifacts and contemporary art.",
+                    "sentence_chinese": "這間畫廊展示古文物與當代藝術。"
                 },
                 {
                     "id": "h1-6-u6-v016",
-                    "word": "productive",
+                    "word": "ample",
                     "part_of_speech": "adj.",
-                    "chinese": "多產的",
-                    "sentence": "Stephen King is a productive writer. He has written more than fifty novels.",
-                    "sentence_chinese": ""
+                    "chinese": "充足的",
+                    "sentence": "The new hall gives visitors ample space to walk around.",
+                    "sentence_chinese": "新大廳給參觀者充足的走動空間。"
                 },
                 {
                     "id": "h1-6-u6-v017",
-                    "word": "supply",
-                    "part_of_speech": "vt./n.",
-                    "chinese": "提供；供應",
-                    "sentence": "The hotel supplies its guests with umbrellas for free when it rains.",
-                    "sentence_chinese": ""
+                    "word": "evidence",
+                    "part_of_speech": "n. [U]",
+                    "chinese": "證據",
+                    "sentence": "The broken vase is evidence of life in the ancient village.",
+                    "sentence_chinese": "這個破碎花瓶是古村落生活的證據。"
                 },
                 {
                     "id": "h1-6-u6-v018",
-                    "word": "succeed",
-                    "part_of_speech": "vi.",
-                    "chinese": "成功",
-                    "sentence": "With the food in his hand, Nick succeeded in attracting the ducks to come near him.",
-                    "sentence_chinese": ""
+                    "word": "tomb",
+                    "part_of_speech": "n. [C]",
+                    "chinese": "墳墓",
+                    "sentence": "The king was buried in a tomb under the hill.",
+                    "sentence_chinese": "那位國王被埋葬在山丘下的墳墓裡。"
                 },
                 {
                     "id": "h1-6-u6-v019",
-                    "word": "gentle",
+                    "word": "heritage",
+                    "part_of_speech": "n. [U]",
+                    "chinese": "遺產；文化遺產",
+                    "sentence": "Young people should learn to cherish their cultural heritage.",
+                    "sentence_chinese": "年輕人應該學會珍惜自己的文化遺產。"
+                },
+                {
+                    "id": "h1-6-u6-v020",
+                    "word": "merely",
+                    "part_of_speech": "adv.",
+                    "chinese": "僅僅；只是",
+                    "sentence": "The building is not merely old; it is part of our history.",
+                    "sentence_chinese": "這棟建築不僅僅是老舊，它也是我們歷史的一部分。"
+                },
+                {
+                    "id": "h1-6-u6-v021",
+                    "word": "cherish",
+                    "part_of_speech": "vt.",
+                    "chinese": "珍惜；珍愛",
+                    "sentence": "Grandma taught us to cherish every family photo.",
+                    "sentence_chinese": "奶奶教我們珍惜每一張家庭照片。"
+                },
+                {
+                    "id": "h1-6-u6-v022",
+                    "word": "physical",
                     "part_of_speech": "adj.",
-                    "chinese": "溫柔的",
-                    "sentence": "The father read a bedtime story to his daughter in a gentle voice.",
-                    "sentence_chinese": ""
+                    "chinese": "身體的；實體的",
+                    "sentence": "Visitors can see physical evidence of the city's past.",
+                    "sentence_chinese": "參觀者可以看見這座城市過去的實體證據。"
+                },
+                {
+                    "id": "h1-6-u6-v023",
+                    "word": "professional",
+                    "part_of_speech": "adj./n. [C]",
+                    "chinese": "專業的；職業的",
+                    "sentence": "A professional repaired the damaged bronze bowl.",
+                    "sentence_chinese": "一位專業人士修復了受損的青銅碗。"
+                },
+                {
+                    "id": "h1-6-u6-v024",
+                    "word": "restriction",
+                    "part_of_speech": "n. [C]",
+                    "chinese": "限制",
+                    "sentence": "There is a restriction on touching the artifacts.",
+                    "sentence_chinese": "館內有禁止觸摸文物的限制。"
+                },
+                {
+                    "id": "h1-6-u6-v025",
+                    "word": "verbal",
+                    "part_of_speech": "adj.",
+                    "chinese": "口頭的；言語的",
+                    "sentence": "The guide gave us verbal instructions before we entered the tomb.",
+                    "sentence_chinese": "導遊在我們進入古墓前給了口頭指示。"
+                },
+                {
+                    "id": "h1-6-u6-v026",
+                    "word": "violate",
+                    "part_of_speech": "vt.",
+                    "chinese": "違反；侵犯",
+                    "sentence": "Taking photos may violate the rules in this museum.",
+                    "sentence_chinese": "拍照可能違反這間博物館的規定。"
+                },
+                {
+                    "id": "h1-6-u6-v027",
+                    "word": "content",
+                    "part_of_speech": "n. [U]",
+                    "chinese": "內容",
+                    "sentence": "The online content explains why the old wall must be protected.",
+                    "sentence_chinese": "線上內容說明為什麼這面古牆必須被保護。"
+                },
+                {
+                    "id": "h1-6-u6-v028",
+                    "word": "neglect",
+                    "part_of_speech": "vt./n. [U]",
+                    "chinese": "忽視",
+                    "sentence": "If people neglect the temple, it will soon deteriorate.",
+                    "sentence_chinese": "如果人們忽視這座寺廟，它很快就會惡化。"
+                },
+                {
+                    "id": "h1-6-u6-v029",
+                    "word": "beneficial",
+                    "part_of_speech": "adj.",
+                    "chinese": "有益的",
+                    "sentence": "A guided tour can be beneficial to first-time visitors.",
+                    "sentence_chinese": "導覽對第一次來的參觀者很有益。"
                 }
             ],
             "phrases": [
                 {
                     "id": "h1-6-u6-p001",
-                    "phrase": "scare...away",
-                    "chinese": "把...嚇跑",
-                    "sentence": "The dirty tables and walls in the restaurant scared many customers away.",
-                    "sentence_chinese": ""
+                    "phrase": "hold the crown for",
+                    "chinese": "在……方面居首位",
+                    "sentence": "This museum holds the crown for attracting the most students in the city.",
+                    "sentence_chinese": "這間博物館在吸引最多本市學生方面居首位。"
                 },
                 {
                     "id": "h1-6-u6-p002",
-                    "phrase": "figure out",
-                    "chinese": "明白；理解",
-                    "sentence": "Jack finally figured out why his friends were laughing at him—his T-shirt was inside out.",
-                    "sentence_chinese": ""
+                    "phrase": "draw in",
+                    "chinese": "吸引；引起興趣",
+                    "sentence": "The extraordinary bronze mask drew in a large crowd.",
+                    "sentence_chinese": "那個非凡的青銅面具吸引了一大群人。"
                 },
                 {
                     "id": "h1-6-u6-p003",
-                    "phrase": "take...seriously",
-                    "chinese": "認真看待",
-                    "sentence": "As a flower shop owner, Linda takes her job very seriously.",
-                    "sentence_chinese": ""
+                    "phrase": "put/place a strain on",
+                    "chinese": "對……造成壓力",
+                    "sentence": "Too many visitors can put a strain on local infrastructure.",
+                    "sentence_chinese": "太多遊客可能對地方基礎建設造成壓力。"
                 },
                 {
                     "id": "h1-6-u6-p004",
-                    "phrase": "rain or shine",
-                    "chinese": "無論如何；風雨無阻",
-                    "sentence": "My grandpa takes a walk in the park every evening, rain or shine.",
-                    "sentence_chinese": ""
+                    "phrase": "stand out",
+                    "chinese": "脫穎而出；格外引人注目",
+                    "sentence": "The contemporary design helps the new museum stand out.",
+                    "sentence_chinese": "當代設計讓這座新博物館格外引人注目。"
                 },
                 {
                     "id": "h1-6-u6-p005",
-                    "phrase": "pass by",
-                    "chinese": "經過",
-                    "sentence": "Cindy kept looking at Ray when he passed by the classroom.",
-                    "sentence_chinese": ""
+                    "phrase": "claim the title of",
+                    "chinese": "獲得……頭銜",
+                    "sentence": "The old town claimed the title of the most popular heritage destination.",
+                    "sentence_chinese": "這座老城獲得最受歡迎文化遺產目的地的頭銜。"
+                },
+                {
+                    "id": "h1-6-u6-p006",
+                    "phrase": "pass sth on to sb",
+                    "chinese": "把……傳給某人",
+                    "sentence": "Parents pass local stories on to their children.",
+                    "sentence_chinese": "父母把地方故事傳給孩子。"
+                },
+                {
+                    "id": "h1-6-u6-p007",
+                    "phrase": "wear down",
+                    "chinese": "削弱；磨損",
+                    "sentence": "Wind and rain slowly wear down the stone steps.",
+                    "sentence_chinese": "風雨慢慢磨損石階。"
+                },
+                {
+                    "id": "h1-6-u6-p008",
+                    "phrase": "put off",
+                    "chinese": "延後；推遲",
+                    "sentence": "The team put off the repair work because of heavy rain.",
+                    "sentence_chinese": "團隊因大雨延後修復工作。"
+                },
+                {
+                    "id": "h1-6-u6-p009",
+                    "phrase": "filter out",
+                    "chinese": "過濾；篩選",
+                    "sentence": "The website helps visitors filter out tours that are too expensive.",
+                    "sentence_chinese": "這個網站幫助參觀者篩掉太貴的行程。"
                 }
             ],
             "grammar": {
                 "tips": [
                     {
-                        "label": "形容詞最高級 (Superlatives)",
-                        "text": "the + Adj-est / most Adj (+ N)"
+                        "label": "Language Spotlight",
+                        "text": "用 hold the crown for、claim the title of 表示「在某方面居首位／獲得頭銜」。"
                     },
                     {
-                        "label": "現在完成式 (Present Perfect)",
-                        "text": "S + have/has + Vpp"
+                        "label": "吸引與篩選",
+                        "text": "draw in 表示「吸引」，filter out 表示「過濾；篩選」。"
+                    },
+                    {
+                        "label": "壓力、磨損與延後",
+                        "text": "put/place a strain on、wear down、put off 常用來描述文化遺產維護遇到的問題。"
                     }
                 ],
                 "notes": [
                     {
-                        "title": "形容詞最高級 (Superlatives)",
-                        "rule": "the + Adj-est / most Adj (+ N)",
-                        "description": "",
+                        "title": "Language Spotlight: ranking and titles",
+                        "rule": "hold the crown for + N/V-ing; claim the title of + N",
+                        "description": "這兩個片語都跟「第一名、頭銜、最有代表性」有關。for 後面可接名詞或 V-ing；of 後面接名詞片語。",
                         "examples": [
-                            "Nancy is the tallest in her family.",
-                            "Mike is the best basketball player in Taiwan."
+                            "This museum holds the crown for preserving bronze artifacts.",
+                            "The city claimed the title of the best heritage destination."
                         ]
                     },
                     {
-                        "title": "現在完成式 (Present Perfect)",
-                        "rule": "S + have/has + Vpp",
-                        "description": "",
+                        "title": "Language Spotlight: attraction and selection",
+                        "rule": "draw in + N; filter out + N",
+                        "description": "draw in 強調吸引人、注意力或興趣；filter out 強調把不需要或不合適的東西篩掉。",
                         "examples": [
-                            "Charlie has collected all the trash.",
-                            "Tina has finished her meal."
+                            "The exhibition drew in many students.",
+                            "The website filters out tours that violate safety rules."
+                        ]
+                    },
+                    {
+                        "title": "Language Spotlight: pressure and delay",
+                        "rule": "put/place a strain on + N; put off + N/V-ing; wear down + N",
+                        "description": "這組片語常用來說明保存文物或文化遺產時的困難，例如壓力、磨損與延期。",
+                        "examples": [
+                            "Tourism can put a strain on local infrastructure.",
+                            "Rain slowly wears down the stone steps.",
+                            "The team put off repairing the tomb."
+                        ]
+                    },
+                    {
+                        "title": "Language Spotlight: transfer and visibility",
+                        "rule": "pass sth on to sb; stand out",
+                        "description": "pass sth on to sb 表示把知識、故事或物品傳給某人；stand out 表示特別明顯或突出。",
+                        "examples": [
+                            "Parents pass cultural heritage on to their children.",
+                            "The bronze mask stands out in the exhibit."
                         ]
                     }
                 ],
                 "quiz": [
                     {
                         "id": "h1-6-u6-q001",
-                        "question": "This is the _______ bargain I have ever found in my career.",
+                        "question": "The museum works hard to _______ old photographs and letters.",
                         "options": [
-                            "good",
-                            "better",
-                            "best",
-                            "most good"
+                            "preserve",
+                            "violate",
+                            "neglect",
+                            "convert"
                         ],
-                        "answer": "best",
-                        "answer_index": 2,
-                        "hint": "句中有 'ever'，表示經驗中的最高級。"
+                        "answer": "preserve",
+                        "answer_index": 0,
+                        "hint": "preserve 表示「保存；保護」。"
                     },
                     {
                         "id": "h1-6-u6-q002",
-                        "question": "Our company _______ its products to several countries for ten years.",
+                        "question": "A university is an important educational _______.",
                         "options": [
-                            "has supplied",
-                            "have supplied",
-                            "supplies",
-                            "supplied"
+                            "destination",
+                            "institution",
+                            "artifact",
+                            "restriction"
                         ],
-                        "answer": "has supplied",
-                        "answer_index": 0,
-                        "hint": "配合 'for ten years' 使用現在完成式，主詞為單數。"
+                        "answer": "institution",
+                        "answer_index": 1,
+                        "hint": "institution 可指「機構」。"
                     },
                     {
                         "id": "h1-6-u6-q003",
-                        "question": "Marcus _______ how to fix the machine since this morning.",
+                        "question": "The ancient bowl is a valuable _______ from the old kingdom.",
                         "options": [
-                            "has figured out",
-                            "have figured out",
-                            "figured out",
-                            "figure out"
+                            "heritage",
+                            "content",
+                            "artifact",
+                            "infrastructure"
                         ],
-                        "answer": "has figured out",
-                        "answer_index": 0,
-                        "hint": "since 引導時間點，需用現在完成式。"
+                        "answer": "artifact",
+                        "answer_index": 2,
+                        "hint": "artifact 是「文物；古器物」。"
                     },
                     {
                         "id": "h1-6-u6-q004",
-                        "question": "Of all the workers, Stephen is the _______ writer in the office.",
+                        "question": "Workers will _______ the empty factory into a cultural center.",
                         "options": [
-                            "productive",
-                            "more productive",
-                            "most productive",
-                            "productivest"
+                            "donate",
+                            "cherish",
+                            "deteriorate",
+                            "convert"
                         ],
-                        "answer": "most productive",
-                        "answer_index": 2,
-                        "hint": "'Of all' 是最高級的關鍵字。"
+                        "answer": "convert",
+                        "answer_index": 3,
+                        "hint": "convert A into B 表示「把 A 轉變成 B」。"
                     },
                     {
                         "id": "h1-6-u6-q005",
-                        "question": "The heavy rain _______ all the customers away so far.",
+                        "question": "The dancer gave an _______ performance that everyone remembered.",
                         "options": [
-                            "has scared",
-                            "have scared",
-                            "scares",
-                            "scared"
+                            "extraordinary",
+                            "ample",
+                            "physical",
+                            "verbal"
                         ],
-                        "answer": "has scared",
+                        "answer": "extraordinary",
                         "answer_index": 0,
-                        "hint": "'so far' 是現在完成式的關鍵字。"
+                        "hint": "extraordinary 表示「非凡的；傑出的」。"
                     },
                     {
                         "id": "h1-6-u6-q006",
-                        "question": "This laptop is the _______ product in our shop this year.",
+                        "question": "The trip takes _______ three hours by bus.",
                         "options": [
-                            "high-quality",
-                            "highest-quality",
-                            "higher-quality",
-                            "most high-quality"
+                            "merely",
+                            "approximately",
+                            "intensely",
+                            "professionally"
                         ],
-                        "answer": "highest-quality",
+                        "answer": "approximately",
                         "answer_index": 1,
-                        "hint": "表示年度「最高」品質。"
+                        "hint": "approximately 表示「大約」。"
                     },
                     {
                         "id": "h1-6-u6-q007",
-                        "question": "My brother _______ in his new job as a doctor recently.",
+                        "question": "Good roads and bridges are part of a city's _______.",
                         "options": [
-                            "has succeeded",
-                            "have succeeded",
-                            "succeeded",
-                            "succeed"
+                            "evidence",
+                            "content",
+                            "infrastructure",
+                            "tomb"
                         ],
-                        "answer": "has succeeded",
-                        "answer_index": 0,
-                        "hint": "'recently' 常搭配現在完成式。"
+                        "answer": "infrastructure",
+                        "answer_index": 2,
+                        "hint": "infrastructure 是「基礎建設」。"
                     },
                     {
                         "id": "h1-6-u6-q008",
-                        "question": "I heard that was the _______ explosion in the city’s history.",
+                        "question": "Without care, the wooden house began to _______.",
                         "options": [
-                            "bad",
-                            "worse",
-                            "baddest",
-                            "worst"
+                            "stand out",
+                            "donate",
+                            "filter out",
+                            "deteriorate"
                         ],
-                        "answer": "worst",
+                        "answer": "deteriorate",
                         "answer_index": 3,
-                        "hint": "bad 的最高級為 worst。"
+                        "hint": "deteriorate 表示「惡化」。"
                     },
                     {
                         "id": "h1-6-u6-q009",
-                        "question": "The boss _______ a higher quality of work from us since the project started.",
+                        "question": "Kyoto is a famous travel _______ in Japan.",
                         "options": [
-                            "has demanded",
-                            "have demanded",
-                            "demands",
-                            "demanded"
+                            "destination",
+                            "restriction",
+                            "institution",
+                            "evidence"
                         ],
-                        "answer": "has demanded",
+                        "answer": "destination",
                         "answer_index": 0,
-                        "hint": "since 子句搭配現在完成式。"
+                        "hint": "destination 是「目的地」。"
                     },
                     {
                         "id": "h1-6-u6-q010",
-                        "question": "Rafael Nadal _______ many tennis games since he was 16.",
+                        "question": "The repair team needs _______ knowledge to handle old paintings.",
                         "options": [
-                            "has won",
-                            "have won",
-                            "wins",
-                            "won"
+                            "merely",
+                            "specialized",
+                            "verbal",
+                            "beneficial"
                         ],
-                        "answer": "has won",
-                        "answer_index": 0,
-                        "hint": "主詞單數搭配 since 使用完成式。"
+                        "answer": "specialized",
+                        "answer_index": 1,
+                        "hint": "specialized 表示「專門的」。"
                     },
                     {
                         "id": "h1-6-u6-q011",
-                        "question": "She is the _______ person I have ever met; she always speaks in a low voice.",
+                        "question": "She listened _______ to every word of the lecture.",
                         "options": [
-                            "gentle",
-                            "gentler",
-                            "gentlest",
-                            "most gentle"
+                            "approximately",
+                            "merely",
+                            "intensely",
+                            "physically"
                         ],
-                        "answer": "gentlest",
+                        "answer": "intensely",
                         "answer_index": 2,
-                        "hint": "形容詞最高級加 -est。"
+                        "hint": "intensely 可表示「專注地」。"
                     },
                     {
                         "id": "h1-6-u6-q012",
-                        "question": "The road quality _______ a lot after the government fixed it.",
+                        "question": "The city is known for its _______ night market and temples.",
                         "options": [
-                            "has improved",
-                            "have improved",
-                            "is improving",
-                            "improves"
+                            "bronze",
+                            "ample",
+                            "verbal",
+                            "notable"
                         ],
-                        "answer": "has improved",
-                        "answer_index": 0,
-                        "hint": "表示目前已經改善完成的狀態。"
+                        "answer": "notable",
+                        "answer_index": 3,
+                        "hint": "notable 表示「著名的；顯著的」。"
                     },
                     {
                         "id": "h1-6-u6-q013",
-                        "question": "This is the _______ improvement we have seen in our skill training.",
+                        "question": "Local businesses will _______ money to restore the old theater.",
                         "options": [
-                            "big",
-                            "bigger",
-                            "biggest",
-                            "most big"
+                            "donate",
+                            "violate",
+                            "neglect",
+                            "wear down"
                         ],
-                        "answer": "biggest",
-                        "answer_index": 2,
-                        "hint": "程度「最大」的進步使用最高級。"
+                        "answer": "donate",
+                        "answer_index": 0,
+                        "hint": "donate 表示「捐贈」。"
                     },
                     {
                         "id": "h1-6-u6-q014",
-                        "question": "Have you _______ why the machine exploded?",
+                        "question": "The museum displays a _______ sword from ancient times.",
                         "options": [
-                            "figure out",
-                            "figured out",
-                            "figuring out",
-                            "figures out"
+                            "contemporary",
+                            "bronze",
+                            "verbal",
+                            "beneficial"
                         ],
-                        "answer": "figured out",
+                        "answer": "bronze",
                         "answer_index": 1,
-                        "hint": "Have + S + Vpp 構成完成式問句。"
+                        "hint": "bronze 表示「青銅的」。"
                     },
                     {
                         "id": "h1-6-u6-q015",
-                        "question": "Cindy _______ her boss seriously since she joined the company.",
+                        "question": "The artist mixes traditional ideas with _______ design.",
                         "options": [
-                            "has taken",
-                            "have taken",
-                            "takes",
-                            "took"
+                            "physical",
+                            "notable",
+                            "contemporary",
+                            "ample"
                         ],
-                        "answer": "has taken",
-                        "answer_index": 0,
-                        "hint": "take...seriously 結合現在完成式。"
+                        "answer": "contemporary",
+                        "answer_index": 2,
+                        "hint": "contemporary 表示「當代的；現代的」。"
                     },
                     {
                         "id": "h1-6-u6-q016",
-                        "question": "My grandpa _______ a walk every evening, rain or shine, for 20 years.",
+                        "question": "There is _______ time for us to visit every room.",
                         "options": [
-                            "has taken",
-                            "have taken",
-                            "takes",
-                            "took"
+                            "intense",
+                            "mere",
+                            "verbal",
+                            "ample"
                         ],
-                        "answer": "has taken",
-                        "answer_index": 0,
-                        "hint": "配合時間長度 'for 20 years'。"
+                        "answer": "ample",
+                        "answer_index": 3,
+                        "hint": "ample 表示「充足的」。"
                     },
                     {
                         "id": "h1-6-u6-q017",
-                        "question": "Among the three runners, Ken is the _______ one.",
+                        "question": "Scientists found strong _______ that people lived there long ago.",
                         "options": [
-                            "fast",
-                            "faster",
-                            "fastest",
-                            "most fast"
+                            "evidence",
+                            "destination",
+                            "restriction",
+                            "content"
                         ],
-                        "answer": "fastest",
-                        "answer_index": 2,
-                        "hint": "三者比較需用最高級。"
+                        "answer": "evidence",
+                        "answer_index": 0,
+                        "hint": "evidence 表示「證據」。"
                     },
                     {
                         "id": "h1-6-u6-q018",
-                        "question": "Marcus _______ many injuries in his career so far.",
+                        "question": "The queen's _______ was discovered under the desert sand.",
                         "options": [
-                            "has had",
-                            "have had",
-                            "has",
-                            "had"
+                            "institution",
+                            "tomb",
+                            "infrastructure",
+                            "content"
                         ],
-                        "answer": "has had",
-                        "answer_index": 0,
-                        "hint": "so far 搭配現在完成式 has + Vpp。"
+                        "answer": "tomb",
+                        "answer_index": 1,
+                        "hint": "tomb 是「墳墓」。"
                     },
                     {
                         "id": "h1-6-u6-q019",
-                        "question": "That was the _______ sound I have ever heard in my life.",
+                        "question": "The festival is part of our cultural _______.",
                         "options": [
-                            "scary",
-                            "scarier",
-                            "scariest",
-                            "most scary"
+                            "artifact",
+                            "restriction",
+                            "heritage",
+                            "destination"
                         ],
-                        "answer": "scariest",
+                        "answer": "heritage",
                         "answer_index": 2,
-                        "hint": "y 結尾形容詞最高級去 y 加 -iest。"
+                        "hint": "heritage 是「文化遺產」。"
                     },
                     {
                         "id": "h1-6-u6-q020",
-                        "question": "The supply of clean water _______ since the explosion.",
+                        "question": "The statue is not _______ a decoration; it tells a story.",
                         "options": [
-                            "has stopped",
-                            "have stopped",
-                            "stops",
-                            "stopped"
+                            "approximately",
+                            "intensely",
+                            "physically",
+                            "merely"
                         ],
-                        "answer": "has stopped",
-                        "answer_index": 0,
-                        "hint": "since 搭配現在完成式。"
+                        "answer": "merely",
+                        "answer_index": 3,
+                        "hint": "merely 表示「僅僅；只是」。"
                     },
                     {
                         "id": "h1-6-u6-q021",
-                        "question": "I _______ by the store many times, but I never went inside.",
+                        "question": "We should _______ the memories of our grandparents.",
                         "options": [
-                            "has passed",
-                            "have passed",
-                            "passed",
-                            "pass"
+                            "cherish",
+                            "violate",
+                            "convert",
+                            "filter"
                         ],
-                        "answer": "have passed",
-                        "answer_index": 1,
-                        "hint": "主詞 I 搭配 have + Vpp。"
+                        "answer": "cherish",
+                        "answer_index": 0,
+                        "hint": "cherish 表示「珍惜」。"
                     },
                     {
                         "id": "h1-6-u6-q022",
-                        "question": "Is this the _______ price you can give me for this vase?",
+                        "question": "The museum keeps both digital records and _______ objects.",
                         "options": [
-                            "cheap",
-                            "cheaper",
-                            "cheapest",
-                            "most cheap"
+                            "verbal",
+                            "physical",
+                            "beneficial",
+                            "contemporary"
                         ],
-                        "answer": "cheapest",
-                        "answer_index": 2,
-                        "hint": "詢問「最便宜」的價格。"
+                        "answer": "physical",
+                        "answer_index": 1,
+                        "hint": "physical 可表示「實體的」。"
                     },
                     {
                         "id": "h1-6-u6-q023",
-                        "question": "He _______ his English skills instead of playing games all day.",
+                        "question": "You should ask a _______ before cleaning old coins.",
                         "options": [
-                            "has improved",
-                            "have improved",
-                            "improves",
-                            "improved"
+                            "content",
+                            "restriction",
+                            "professional",
+                            "destination"
                         ],
-                        "answer": "has improved",
-                        "answer_index": 0,
-                        "hint": "表示已經完成的改進。"
+                        "answer": "professional",
+                        "answer_index": 2,
+                        "hint": "professional 可當名詞「專業人士」。"
                     },
                     {
                         "id": "h1-6-u6-q024",
-                        "question": "This company is the _______ one in the bicycle industry.",
+                        "question": "There is a strict _______ on food and drinks in the gallery.",
                         "options": [
-                            "successful",
-                            "more successful",
-                            "most successful",
-                            "successfullest"
+                            "heritage",
+                            "artifact",
+                            "evidence",
+                            "restriction"
                         ],
-                        "answer": "most successful",
-                        "answer_index": 2,
-                        "hint": "多音節最高級。"
+                        "answer": "restriction",
+                        "answer_index": 3,
+                        "hint": "restriction 是「限制」。"
                     },
                     {
                         "id": "h1-6-u6-q025",
-                        "question": "The manager _______ a refund for the broken product already.",
+                        "question": "A _______ warning is not enough; please write it down.",
                         "options": [
-                            "has demanded",
-                            "have demanded",
-                            "demands",
-                            "demanded"
+                            "verbal",
+                            "bronze",
+                            "ample",
+                            "notable"
                         ],
-                        "answer": "has demanded",
+                        "answer": "verbal",
                         "answer_index": 0,
-                        "hint": "already 搭配現在完成式。"
+                        "hint": "verbal 表示「口頭的」。"
                     },
                     {
                         "id": "h1-6-u6-q026",
-                        "question": "This is the _______ quality of paper I have ever used in the office.",
+                        "question": "Do not _______ the rules by touching the paintings.",
                         "options": [
-                            "high",
-                            "higher",
-                            "highest",
-                            "most high"
+                            "donate",
+                            "violate",
+                            "preserve",
+                            "cherish"
                         ],
-                        "answer": "highest",
-                        "answer_index": 2,
-                        "hint": "最高品質 highest。"
+                        "answer": "violate",
+                        "answer_index": 1,
+                        "hint": "violate 表示「違反」。"
                     },
                     {
                         "id": "h1-6-u6-q027",
-                        "question": "The athlete _______ many injuries since his career began.",
+                        "question": "The video _______ explains the history of the ancient road.",
                         "options": [
-                            "has had",
-                            "have had",
-                            "had",
-                            "has"
+                            "institution",
+                            "tomb",
+                            "content",
+                            "restriction"
                         ],
-                        "answer": "has had",
-                        "answer_index": 0,
-                        "hint": "since + 過去時間點。"
+                        "answer": "content",
+                        "answer_index": 2,
+                        "hint": "content 是「內容」。"
                     },
                     {
                         "id": "h1-6-u6-q028",
-                        "question": "Rafael Nadal is the _______ tennis player I have ever seen.",
+                        "question": "Years of _______ caused the old house to fall apart.",
                         "options": [
-                            "successful",
-                            "more successful",
-                            "most successful",
-                            "successfullest"
+                            "evidence",
+                            "heritage",
+                            "infrastructure",
+                            "neglect"
                         ],
-                        "answer": "most successful",
-                        "answer_index": 2,
-                        "hint": "經驗中的最高級。"
+                        "answer": "neglect",
+                        "answer_index": 3,
+                        "hint": "neglect 作名詞可指「忽視」。"
                     },
                     {
                         "id": "h1-6-u6-q029",
-                        "question": "The customer _______ a full refund for the product several times so far.",
+                        "question": "Daily practice is _______ to language learning.",
                         "options": [
-                            "has demanded",
-                            "have demanded",
-                            "demands",
-                            "demanded"
+                            "beneficial",
+                            "bronze",
+                            "verbal",
+                            "mere"
                         ],
-                        "answer": "has demanded",
+                        "answer": "beneficial",
                         "answer_index": 0,
-                        "hint": "so far 搭配完成式。"
+                        "hint": "beneficial 表示「有益的」。"
                     },
                     {
                         "id": "h1-6-u6-q030",
-                        "question": "Buying ten giant packs of toilet paper for NT$100 was the _______ bargain of the week.",
+                        "question": "The museum _______ the crown for having the oldest bronze bell.",
                         "options": [
-                            "good",
-                            "better",
-                            "best",
-                            "most good"
+                            "draws",
+                            "holds",
+                            "puts",
+                            "passes"
                         ],
-                        "answer": "best",
-                        "answer_index": 2,
-                        "hint": "整週「最」划算用 best。"
+                        "answer": "holds",
+                        "answer_index": 1,
+                        "hint": "hold the crown for 表示「在……方面居首位」。"
                     },
                     {
                         "id": "h1-6-u6-q031",
-                        "question": "Many tourists _______ by this street vendor since the morning.",
+                        "question": "Bright posters helped _______ more students to the exhibition.",
                         "options": [
-                            "has passed",
-                            "have passed",
-                            "passed",
-                            "passes"
+                            "put off",
+                            "wear down",
+                            "draw in",
+                            "filter out"
                         ],
-                        "answer": "have passed",
-                        "answer_index": 1,
-                        "hint": "複數主詞用 have + Vpp。"
+                        "answer": "draw in",
+                        "answer_index": 2,
+                        "hint": "draw in 表示「吸引」。"
                     },
                     {
                         "id": "h1-6-u6-q032",
-                        "question": "This was the _______ injury Marcus has ever had in his career.",
+                        "question": "Heavy tourism can put a _______ on small communities.",
                         "options": [
-                            "serious",
-                            "more serious",
-                            "most serious",
-                            "seriousest"
+                            "crown",
+                            "title",
+                            "filter",
+                            "strain"
                         ],
-                        "answer": "most serious",
-                        "answer_index": 2,
-                        "hint": "多音節最高級。"
+                        "answer": "strain",
+                        "answer_index": 3,
+                        "hint": "put a strain on 表示「對……造成壓力」。"
                     },
                     {
                         "id": "h1-6-u6-q033",
-                        "question": "To _______ her skills, Helen _______ very hard lately.",
+                        "question": "Among all the artifacts, the bronze mask really _______.",
                         "options": [
-                            "improve; has practiced",
-                            "improved; have practiced",
-                            "improving; practices",
-                            "improve; practiced"
+                            "stands out",
+                            "puts off",
+                            "wears down",
+                            "passes on"
                         ],
-                        "answer": "improve; has practiced",
+                        "answer": "stands out",
                         "answer_index": 0,
-                        "hint": "To+原形 V；lately 用完成式。"
+                        "hint": "stand out 表示「格外引人注目」。"
                     },
                     {
                         "id": "h1-6-u6-q034",
-                        "question": "Stephen King is known as the _______ writer in the company.",
+                        "question": "The city hopes to claim the _______ of Asia's top heritage site.",
                         "options": [
-                            "productive",
-                            "more productive",
-                            "most productive",
-                            "productivest"
+                            "content",
+                            "title",
+                            "restriction",
+                            "destination"
                         ],
-                        "answer": "most productive",
-                        "answer_index": 2,
-                        "hint": "特定群體最高級。"
+                        "answer": "title",
+                        "answer_index": 1,
+                        "hint": "claim the title of 表示「獲得……頭銜」。"
                     },
                     {
                         "id": "h1-6-u6-q035",
-                        "question": "The soda _______ in the car because it was too hot.",
+                        "question": "Teachers can pass useful study habits _______ to their students.",
                         "options": [
-                            "has exploded",
-                            "have exploded",
-                            "exploded",
-                            "explode"
+                            "off",
+                            "out",
+                            "on",
+                            "down"
                         ],
-                        "answer": "has exploded",
-                        "answer_index": 0,
-                        "hint": "表示已經發生的結果。"
+                        "answer": "on",
+                        "answer_index": 2,
+                        "hint": "pass sth on to sb 表示「把某物傳給某人」。"
                     },
                     {
                         "id": "h1-6-u6-q036",
-                        "question": "My mother has the _______ voice in my family.",
+                        "question": "Tourists' footsteps slowly _______ the old wooden floor.",
                         "options": [
-                            "gentle",
-                            "gentler",
-                            "gentlest",
-                            "most gentle"
+                            "draw in",
+                            "put off",
+                            "filter out",
+                            "wear down"
                         ],
-                        "answer": "gentlest",
-                        "answer_index": 2,
-                        "hint": "形容詞最高級加 -est。"
+                        "answer": "wear down",
+                        "answer_index": 3,
+                        "hint": "wear down 表示「磨損」。"
                     },
                     {
                         "id": "h1-6-u6-q037",
-                        "question": "The hotel _______ us with free umbrellas since it started raining.",
+                        "question": "The concert was _______ until next Friday because of the storm.",
                         "options": [
-                            "has supplied",
-                            "have supplied",
-                            "supplied",
-                            "supply"
+                            "put off",
+                            "stood out",
+                            "drawn in",
+                            "passed on"
                         ],
-                        "answer": "has supplied",
+                        "answer": "put off",
                         "answer_index": 0,
-                        "hint": "since 搭配完成式。"
+                        "hint": "put off 表示「延後」。"
                     },
                     {
                         "id": "h1-6-u6-q038",
-                        "question": "Mr. Hu’s skill in decorating temples is the _______ in Taiwan.",
+                        "question": "Use this tool to _______ unsafe online content.",
                         "options": [
-                            "great",
-                            "greater",
-                            "greatest",
-                            "most great"
+                            "hold the crown",
+                            "filter out",
+                            "claim the title",
+                            "draw in"
                         ],
-                        "answer": "greatest",
-                        "answer_index": 2,
-                        "hint": "最高級 greatest。"
+                        "answer": "filter out",
+                        "answer_index": 1,
+                        "hint": "filter out 表示「過濾；篩選」。"
                     },
                     {
                         "id": "h1-6-u6-q039",
-                        "question": "As a shop owner, Linda _______ her job _______ for years.",
+                        "question": "The ancient wall has _______ since people stopped repairing it.",
                         "options": [
-                            "has taken; seriously",
-                            "have taken; seriously",
-                            "takes; seriously",
-                            "took; seriously"
+                            "donated",
+                            "converted",
+                            "deteriorated",
+                            "cherished"
                         ],
-                        "answer": "has taken; seriously",
-                        "answer_index": 0,
-                        "hint": "take seriously 搭配 for years 完成式。"
+                        "answer": "deteriorated",
+                        "answer_index": 2,
+                        "hint": "現在完成式可表示從過去到現在的變化。"
                     },
                     {
                         "id": "h1-6-u6-q040",
-                        "question": "He has had the _______ career among all the tennis players.",
+                        "question": "The institution has _______ old maps for over fifty years.",
                         "options": [
-                            "long",
-                            "longer",
-                            "longest",
-                            "most long"
+                            "violated",
+                            "neglected",
+                            "filtered",
+                            "preserved"
                         ],
-                        "answer": "longest",
-                        "answer_index": 2,
-                        "hint": "among all 指最高級。"
+                        "answer": "preserved",
+                        "answer_index": 3,
+                        "hint": "has preserved 是現在完成式。"
                     },
                     {
                         "id": "h1-6-u6-q041",
-                        "question": "The loud noise _______ the birds _______ already.",
+                        "question": "This is the most _______ artifact in the entire museum.",
                         "options": [
-                            "has scared; away",
-                            "have scared; away",
-                            "scares; away",
-                            "scared; away"
+                            "notable",
+                            "verbally",
+                            "approximately",
+                            "benefit"
                         ],
-                        "answer": "has scared; away",
+                        "answer": "notable",
                         "answer_index": 0,
-                        "hint": "already 搭配完成式。"
+                        "hint": "most + 形容詞可形成最高級。"
                     },
                     {
                         "id": "h1-6-u6-q042",
-                        "question": "This bicycle has the _______ quality of all the products here.",
+                        "question": "That gallery is _______ larger than the room we visited yesterday.",
                         "options": [
-                            "poor",
-                            "poorer",
-                            "poorest",
-                            "most poor"
+                            "merely",
+                            "much",
+                            "approximately",
+                            "beneficial"
                         ],
-                        "answer": "poorest",
-                        "answer_index": 2,
-                        "hint": "of all 用最高級。"
+                        "answer": "much",
+                        "answer_index": 1,
+                        "hint": "比較級前可用 much 加強語氣。"
                     },
                     {
                         "id": "h1-6-u6-q043",
-                        "question": "Jack _______ the problem _______ yet.",
+                        "question": "The more people donate, the _______ we can preserve the site.",
                         "options": [
-                            "hasn't figured; out",
-                            "haven't figured; out",
-                            "has figured; out",
-                            "figured; out"
+                            "good",
+                            "best",
+                            "better",
+                            "well"
                         ],
-                        "answer": "hasn't figured; out",
-                        "answer_index": 0,
-                        "hint": "yet 用於完成式否定句。"
+                        "answer": "better",
+                        "answer_index": 2,
+                        "hint": "the more..., the better... 表示「越……越好」。"
                     },
                     {
                         "id": "h1-6-u6-q044",
-                        "question": "That was the _______ explosion I have ever heard.",
+                        "question": "Visitors are asked _______ touching the bronze statues.",
                         "options": [
-                            "loud",
-                            "louder",
-                            "loudest",
-                            "most loud"
+                            "avoid",
+                            "avoiding",
+                            "avoided",
+                            "to avoid"
                         ],
-                        "answer": "loudest",
-                        "answer_index": 2,
-                        "hint": "單音節最高級。"
+                        "answer": "to avoid",
+                        "answer_index": 3,
+                        "hint": "ask sb to V 的被動形式是 be asked to V。"
                     },
                     {
                         "id": "h1-6-u6-q045",
-                        "question": "Marcus _______ his leg after he fell down the stairs.",
+                        "question": "The tomb, _______ was discovered in 1920, is now protected.",
                         "options": [
-                            "has injured",
-                            "have injured",
-                            "is injured",
-                            "injuring"
+                            "which",
+                            "who",
+                            "where",
+                            "what"
                         ],
-                        "answer": "has injured",
+                        "answer": "which",
                         "answer_index": 0,
-                        "hint": "已經受傷。"
+                        "hint": "which 可引導非限定關係子句補充物。"
                     },
                     {
                         "id": "h1-6-u6-q046",
-                        "question": "That was the _______ movie I have ever seen in my life.",
+                        "question": "The guide explained why the artifact _______ be moved.",
                         "options": [
-                            "bad",
-                            "worse",
-                            "worst",
-                            "most bad"
+                            "has not",
+                            "must not",
+                            "is not",
+                            "did not"
                         ],
-                        "answer": "worst",
-                        "answer_index": 2,
-                        "hint": "bad 不規則最高級。"
+                        "answer": "must not",
+                        "answer_index": 1,
+                        "hint": "must not 表示「禁止」。"
                     },
                     {
                         "id": "h1-6-u6-q047",
-                        "question": "Nick _______ in attracting the ducks to come near him with food.",
+                        "question": "_______ the restriction may damage the heritage site.",
                         "options": [
-                            "has succeeded",
-                            "have succeeded",
-                            "succeeded",
-                            "succeed"
+                            "Violate",
+                            "Violated",
+                            "Violating",
+                            "To violating"
                         ],
-                        "answer": "has succeeded",
-                        "answer_index": 0,
-                        "hint": "has + Vpp 完成式。"
+                        "answer": "Violating",
+                        "answer_index": 2,
+                        "hint": "動名詞可當主詞。"
                     },
                     {
                         "id": "h1-6-u6-q048",
-                        "question": "Charlie is the _______ student in our English class.",
+                        "question": "We put off _______ the old bridge until a professional arrived.",
                         "options": [
-                            "good",
-                            "better",
-                            "best",
-                            "most good"
+                            "repair",
+                            "to repair",
+                            "repaired",
+                            "repairing"
                         ],
-                        "answer": "best",
-                        "answer_index": 2,
-                        "hint": "good 不規則最高級。"
+                        "answer": "repairing",
+                        "answer_index": 3,
+                        "hint": "put off 後面接 V-ing。"
                     },
                     {
                         "id": "h1-6-u6-q049",
-                        "question": "Jules _______ a lot of improvement in his business skills.",
+                        "question": "The content was designed _______ first-time visitors understand the exhibit.",
                         "options": [
-                            "has shown",
-                            "have shown",
-                            "shows",
-                            "show"
+                            "to help",
+                            "help",
+                            "helped",
+                            "helping"
                         ],
-                        "answer": "has shown",
+                        "answer": "to help",
                         "answer_index": 0,
-                        "hint": "has + Vpp。"
+                        "hint": "to V 可表示目的。"
                     },
                     {
                         "id": "h1-6-u6-q050",
-                        "question": "This masking tape is the _______ product in this shop.",
+                        "question": "The destination is famous _______ its contemporary art museum.",
                         "options": [
-                            "popular",
-                            "more popular",
-                            "most popular",
-                            "popularest"
+                            "to",
+                            "for",
+                            "with",
+                            "about"
                         ],
-                        "answer": "most popular",
-                        "answer_index": 2,
-                        "hint": "多音節最高級。"
+                        "answer": "for",
+                        "answer_index": 1,
+                        "hint": "be famous for 表示「以……聞名」。"
                     }
                 ]
             },
@@ -858,300 +1013,384 @@
                     {
                         "id": "h1-6-u6-sv001",
                         "vocab_id": "h1-6-u6-v001",
-                        "sentence": "I spent only NT$100 getting ten giant packs of toilet paper. It was a real bargain!",
-                        "sentence_chinese": ""
+                        "sentence": "Museums preserve important artifacts for future students.",
+                        "sentence_chinese": "博物館保存重要文物，讓未來的學生能學習。"
                     },
                     {
                         "id": "h1-6-u6-sv002",
                         "vocab_id": "h1-6-u6-v002",
-                        "sentence": "The foreign tourist is bargaining with the street vendor over the price of the vase.",
-                        "sentence_chinese": ""
+                        "sentence": "This institution trains young artists to repair old paintings.",
+                        "sentence_chinese": "這個機構訓練年輕藝術家修復古畫。"
                     },
                     {
                         "id": "h1-6-u6-sv003",
                         "vocab_id": "h1-6-u6-v003",
-                        "sentence": "The driver is mad about the poor quality of the road. There are too many holes in it.",
-                        "sentence_chinese": ""
+                        "sentence": "The bronze artifact was found inside an ancient tomb.",
+                        "sentence_chinese": "這件青銅文物是在一座古墓裡被發現的。"
                     },
                     {
                         "id": "h1-6-u6-sv004",
                         "vocab_id": "h1-6-u6-v004",
-                        "sentence": "This company produces the best bicycles in the world.",
-                        "sentence_chinese": ""
+                        "sentence": "The city plans to convert the old station into a museum.",
+                        "sentence_chinese": "市政府計畫把舊車站改造成博物館。"
                     },
                     {
                         "id": "h1-6-u6-sv005",
                         "vocab_id": "h1-6-u6-v005",
-                        "sentence": "Rafael Nadal started his tennis career at the age of 16.",
-                        "sentence_chinese": ""
+                        "sentence": "The guide told us an extraordinary story about the temple.",
+                        "sentence_chinese": "導遊告訴我們一個關於這座寺廟的非凡故事。"
                     },
                     {
                         "id": "h1-6-u6-sv006",
                         "vocab_id": "h1-6-u6-v006",
-                        "sentence": "We heard a loud explosion and saw that someone was making puffed rice cakes.",
-                        "sentence_chinese": ""
+                        "sentence": "Approximately two thousand people visit the site every day.",
+                        "sentence_chinese": "每天大約有兩千人參觀這個地點。"
                     },
                     {
                         "id": "h1-6-u6-sv007",
                         "vocab_id": "h1-6-u6-v007",
-                        "sentence": "Because Megan shook the soda, it exploded when she opened the can.",
-                        "sentence_chinese": ""
+                        "sentence": "Better infrastructure can make travel to the island easier.",
+                        "sentence_chinese": "更好的基礎建設能讓前往這座島的旅程更方便。"
                     },
                     {
                         "id": "h1-6-u6-sv008",
                         "vocab_id": "h1-6-u6-v008",
-                        "sentence": "Marcus was seriously injured after he fell down the stairs.",
-                        "sentence_chinese": ""
+                        "sentence": "The wall will deteriorate quickly if no one repairs it.",
+                        "sentence_chinese": "如果沒有人修理，這面牆會很快惡化。"
                     },
                     {
                         "id": "h1-6-u6-sv009",
                         "vocab_id": "h1-6-u6-v009",
-                        "sentence": "Because of her serious leg injury, Gill cannot walk now.",
-                        "sentence_chinese": ""
+                        "sentence": "The old castle has become a popular destination for families.",
+                        "sentence_chinese": "這座古堡已成為家庭旅遊的熱門目的地。"
                     },
                     {
                         "id": "h1-6-u6-sv010",
                         "vocab_id": "h1-6-u6-v010",
-                        "sentence": "Andy's fingers were hurt, so I cooked instead.",
-                        "sentence_chinese": ""
+                        "sentence": "The museum uses specialized tools to clean fragile objects.",
+                        "sentence_chinese": "博物館使用專門工具清潔脆弱物件。"
                     },
                     {
                         "id": "h1-6-u6-sv011",
                         "vocab_id": "h1-6-u6-v011",
-                        "sentence": "To improve her English, Helen listens to English radio programs every day.",
-                        "sentence_chinese": ""
+                        "sentence": "The researcher studied the ancient map intensely for hours.",
+                        "sentence_chinese": "研究員專注地研究那張古地圖好幾個小時。"
                     },
                     {
                         "id": "h1-6-u6-sv012",
                         "vocab_id": "h1-6-u6-v012",
-                        "sentence": "Although there is still room for improvement, Jules has done a good job running the business.",
-                        "sentence_chinese": ""
+                        "sentence": "There are several notable temples in this historic district.",
+                        "sentence_chinese": "這個歷史街區有幾座著名寺廟。"
                     },
                     {
                         "id": "h1-6-u6-sv013",
                         "vocab_id": "h1-6-u6-v013",
-                        "sentence": "Mr. Hu is famous for his skill in decorating traditional temples.",
-                        "sentence_chinese": ""
+                        "sentence": "Many people donate money to help preserve local heritage.",
+                        "sentence_chinese": "許多人捐錢幫助保存地方文化遺產。"
                     },
                     {
                         "id": "h1-6-u6-sv014",
                         "vocab_id": "h1-6-u6-v014",
-                        "sentence": "The customer is demanding a refund for the broken hair dryer he bought yesterday.",
-                        "sentence_chinese": ""
+                        "sentence": "The bronze statue stands near the entrance of the museum.",
+                        "sentence_chinese": "那座青銅雕像立在博物館入口附近。"
                     },
                     {
                         "id": "h1-6-u6-sv015",
                         "vocab_id": "h1-6-u6-v015",
-                        "sentence": "The colorful masking tapes are the most popular products in this shop.",
-                        "sentence_chinese": ""
+                        "sentence": "The gallery shows both ancient artifacts and contemporary art.",
+                        "sentence_chinese": "這間畫廊展示古文物與當代藝術。"
                     },
                     {
                         "id": "h1-6-u6-sv016",
                         "vocab_id": "h1-6-u6-v016",
-                        "sentence": "Stephen King is a productive writer. He has written more than fifty novels.",
-                        "sentence_chinese": ""
+                        "sentence": "The new hall gives visitors ample space to walk around.",
+                        "sentence_chinese": "新大廳給參觀者充足的走動空間。"
                     },
                     {
                         "id": "h1-6-u6-sv017",
                         "vocab_id": "h1-6-u6-v017",
-                        "sentence": "The hotel supplies its guests with umbrellas for free when it rains.",
-                        "sentence_chinese": ""
+                        "sentence": "The broken vase is evidence of life in the ancient village.",
+                        "sentence_chinese": "這個破碎花瓶是古村落生活的證據。"
                     },
                     {
                         "id": "h1-6-u6-sv018",
                         "vocab_id": "h1-6-u6-v018",
-                        "sentence": "With the food in his hand, Nick succeeded in attracting the ducks to come near him.",
-                        "sentence_chinese": ""
+                        "sentence": "The king was buried in a tomb under the hill.",
+                        "sentence_chinese": "那位國王被埋葬在山丘下的墳墓裡。"
                     },
                     {
                         "id": "h1-6-u6-sv019",
                         "vocab_id": "h1-6-u6-v019",
-                        "sentence": "The father read a bedtime story to his daughter in a gentle voice.",
-                        "sentence_chinese": ""
+                        "sentence": "Young people should learn to cherish their cultural heritage.",
+                        "sentence_chinese": "年輕人應該學會珍惜自己的文化遺產。"
+                    },
+                    {
+                        "id": "h1-6-u6-sv020",
+                        "vocab_id": "h1-6-u6-v020",
+                        "sentence": "The building is not merely old; it is part of our history.",
+                        "sentence_chinese": "這棟建築不僅僅是老舊，它也是我們歷史的一部分。"
+                    },
+                    {
+                        "id": "h1-6-u6-sv021",
+                        "vocab_id": "h1-6-u6-v021",
+                        "sentence": "Grandma taught us to cherish every family photo.",
+                        "sentence_chinese": "奶奶教我們珍惜每一張家庭照片。"
+                    },
+                    {
+                        "id": "h1-6-u6-sv022",
+                        "vocab_id": "h1-6-u6-v022",
+                        "sentence": "Visitors can see physical evidence of the city's past.",
+                        "sentence_chinese": "參觀者可以看見這座城市過去的實體證據。"
+                    },
+                    {
+                        "id": "h1-6-u6-sv023",
+                        "vocab_id": "h1-6-u6-v023",
+                        "sentence": "A professional repaired the damaged bronze bowl.",
+                        "sentence_chinese": "一位專業人士修復了受損的青銅碗。"
+                    },
+                    {
+                        "id": "h1-6-u6-sv024",
+                        "vocab_id": "h1-6-u6-v024",
+                        "sentence": "There is a restriction on touching the artifacts.",
+                        "sentence_chinese": "館內有禁止觸摸文物的限制。"
+                    },
+                    {
+                        "id": "h1-6-u6-sv025",
+                        "vocab_id": "h1-6-u6-v025",
+                        "sentence": "The guide gave us verbal instructions before we entered the tomb.",
+                        "sentence_chinese": "導遊在我們進入古墓前給了口頭指示。"
+                    },
+                    {
+                        "id": "h1-6-u6-sv026",
+                        "vocab_id": "h1-6-u6-v026",
+                        "sentence": "Taking photos may violate the rules in this museum.",
+                        "sentence_chinese": "拍照可能違反這間博物館的規定。"
+                    },
+                    {
+                        "id": "h1-6-u6-sv027",
+                        "vocab_id": "h1-6-u6-v027",
+                        "sentence": "The online content explains why the old wall must be protected.",
+                        "sentence_chinese": "線上內容說明為什麼這面古牆必須被保護。"
+                    },
+                    {
+                        "id": "h1-6-u6-sv028",
+                        "vocab_id": "h1-6-u6-v028",
+                        "sentence": "If people neglect the temple, it will soon deteriorate.",
+                        "sentence_chinese": "如果人們忽視這座寺廟，它很快就會惡化。"
+                    },
+                    {
+                        "id": "h1-6-u6-sv029",
+                        "vocab_id": "h1-6-u6-v029",
+                        "sentence": "A guided tour can be beneficial to first-time visitors.",
+                        "sentence_chinese": "導覽對第一次來的參觀者很有益。"
                     }
                 ],
                 "phrases": [
                     {
                         "id": "h1-6-u6-sp001",
                         "phrase_id": "h1-6-u6-p001",
-                        "sentence": "The dirty tables and walls in the restaurant scared many customers away.",
-                        "sentence_chinese": ""
+                        "sentence": "This museum holds the crown for attracting the most students in the city.",
+                        "sentence_chinese": "這間博物館在吸引最多本市學生方面居首位。"
                     },
                     {
                         "id": "h1-6-u6-sp002",
                         "phrase_id": "h1-6-u6-p002",
-                        "sentence": "Jack finally figured out why his friends were laughing at him—his T-shirt was inside out.",
-                        "sentence_chinese": ""
+                        "sentence": "The extraordinary bronze mask drew in a large crowd.",
+                        "sentence_chinese": "那個非凡的青銅面具吸引了一大群人。"
                     },
                     {
                         "id": "h1-6-u6-sp003",
                         "phrase_id": "h1-6-u6-p003",
-                        "sentence": "As a flower shop owner, Linda takes her job very seriously.",
-                        "sentence_chinese": ""
+                        "sentence": "Too many visitors can put a strain on local infrastructure.",
+                        "sentence_chinese": "太多遊客可能對地方基礎建設造成壓力。"
                     },
                     {
                         "id": "h1-6-u6-sp004",
                         "phrase_id": "h1-6-u6-p004",
-                        "sentence": "My grandpa takes a walk in the park every evening, rain or shine.",
-                        "sentence_chinese": ""
+                        "sentence": "The contemporary design helps the new museum stand out.",
+                        "sentence_chinese": "當代設計讓這座新博物館格外引人注目。"
                     },
                     {
                         "id": "h1-6-u6-sp005",
                         "phrase_id": "h1-6-u6-p005",
-                        "sentence": "Cindy kept looking at Ray when he passed by the classroom.",
-                        "sentence_chinese": ""
+                        "sentence": "The old town claimed the title of the most popular heritage destination.",
+                        "sentence_chinese": "這座老城獲得最受歡迎文化遺產目的地的頭銜。"
+                    },
+                    {
+                        "id": "h1-6-u6-sp006",
+                        "phrase_id": "h1-6-u6-p006",
+                        "sentence": "Parents pass local stories on to their children.",
+                        "sentence_chinese": "父母把地方故事傳給孩子。"
+                    },
+                    {
+                        "id": "h1-6-u6-sp007",
+                        "phrase_id": "h1-6-u6-p007",
+                        "sentence": "Wind and rain slowly wear down the stone steps.",
+                        "sentence_chinese": "風雨慢慢磨損石階。"
+                    },
+                    {
+                        "id": "h1-6-u6-sp008",
+                        "phrase_id": "h1-6-u6-p008",
+                        "sentence": "The team put off the repair work because of heavy rain.",
+                        "sentence_chinese": "團隊因大雨延後修復工作。"
+                    },
+                    {
+                        "id": "h1-6-u6-sp009",
+                        "phrase_id": "h1-6-u6-p009",
+                        "sentence": "The website helps visitors filter out tours that are too expensive.",
+                        "sentence_chinese": "這個網站幫助參觀者篩掉太貴的行程。"
                     }
                 ],
                 "grammar": [
                     {
                         "id": "h1-6-u6-sg001",
-                        "sentence": "I have already found a real bargain in this shop.",
-                        "sentence_chinese": ""
+                        "sentence": "This museum holds the crown for preserving ancient artifacts.",
+                        "sentence_chinese": "這間博物館在保存古文物方面居首位。"
                     },
                     {
                         "id": "h1-6-u6-sg002",
-                        "sentence": "This is the highest quality of product we have.",
-                        "sentence_chinese": ""
+                        "sentence": "The bronze statue drew in thousands of visitors last month.",
+                        "sentence_chinese": "那座青銅雕像上個月吸引了數千名遊客。"
                     },
                     {
                         "id": "h1-6-u6-sg003",
-                        "sentence": "The company has supplied free water to the people.",
-                        "sentence_chinese": ""
+                        "sentence": "Too many tourists can put a strain on local infrastructure.",
+                        "sentence_chinese": "太多遊客可能對地方基礎建設造成壓力。"
                     },
                     {
                         "id": "h1-6-u6-sg004",
-                        "sentence": "Rafael Nadal has had a very successful tennis career.",
-                        "sentence_chinese": ""
+                        "sentence": "The contemporary building stands out among the old houses.",
+                        "sentence_chinese": "那棟現代建築在老房子之中特別引人注目。"
                     },
                     {
                         "id": "h1-6-u6-sg005",
-                        "sentence": "We heard the loudest explosion in the city's history.",
-                        "sentence_chinese": ""
+                        "sentence": "The city claimed the title of the best heritage destination.",
+                        "sentence_chinese": "這座城市獲得最佳文化遺產目的地的頭銜。"
                     },
                     {
                         "id": "h1-6-u6-sg006",
-                        "sentence": "The driver has improved the quality of the road.",
-                        "sentence_chinese": ""
+                        "sentence": "Grandparents pass family stories on to their grandchildren.",
+                        "sentence_chinese": "祖父母把家族故事傳給孫子女。"
                     },
                     {
                         "id": "h1-6-u6-sg007",
-                        "sentence": "Marcus has injured his leg during the tennis game.",
-                        "sentence_chinese": ""
+                        "sentence": "Heavy rain can wear down the stone walls over time.",
+                        "sentence_chinese": "大雨久而久之會磨損石牆。"
                     },
                     {
                         "id": "h1-6-u6-sg008",
-                        "sentence": "Jack has figured out why the soda exploded.",
-                        "sentence_chinese": ""
+                        "sentence": "The school put off the field trip because of bad weather.",
+                        "sentence_chinese": "學校因天氣不好延後校外教學。"
                     },
                     {
                         "id": "h1-6-u6-sg009",
-                        "sentence": "This is the most productive writer in our company.",
-                        "sentence_chinese": ""
+                        "sentence": "The app can filter out content that violates the rules.",
+                        "sentence_chinese": "這個 app 可以過濾掉違反規則的內容。"
                     },
                     {
                         "id": "h1-6-u6-sg010",
-                        "sentence": "The hotel has supplied umbrellas for the guests already.",
-                        "sentence_chinese": ""
+                        "sentence": "The old temple has deteriorated because of years of neglect.",
+                        "sentence_chinese": "這座古廟因多年忽視而惡化。"
                     },
                     {
                         "id": "h1-6-u6-sg011",
-                        "sentence": "My father has taken his new career very seriously.",
-                        "sentence_chinese": ""
+                        "sentence": "A professional has converted the station into a small museum.",
+                        "sentence_chinese": "一位專業人士已把車站改造成小型博物館。"
                     },
                     {
                         "id": "h1-6-u6-sg012",
-                        "sentence": "She has been the gentlest person in her family.",
-                        "sentence_chinese": ""
+                        "sentence": "The institution has donated ample money to preserve the tomb.",
+                        "sentence_chinese": "這個機構已捐贈充足資金保存古墓。"
                     },
                     {
                         "id": "h1-6-u6-sg013",
-                        "sentence": "The foreign tourist has bargained with the street vendor.",
-                        "sentence_chinese": ""
+                        "sentence": "Visitors must follow the restrictions to protect the artifacts.",
+                        "sentence_chinese": "參觀者必須遵守限制以保護文物。"
                     },
                     {
                         "id": "h1-6-u6-sg014",
-                        "sentence": "There has been a lot of improvement in her English.",
-                        "sentence_chinese": ""
+                        "sentence": "Physical evidence shows that people lived here long ago.",
+                        "sentence_chinese": "實體證據顯示很久以前有人住在這裡。"
                     },
                     {
                         "id": "h1-6-u6-sg015",
-                        "sentence": "This is the most popular product in the world.",
-                        "sentence_chinese": ""
+                        "sentence": "The guide spoke intensely about the value of cultural heritage.",
+                        "sentence_chinese": "導遊專注地談論文化遺產的價值。"
                     },
                     {
                         "id": "h1-6-u6-sg016",
-                        "sentence": "The cat has scared all the birds away already.",
-                        "sentence_chinese": ""
+                        "sentence": "This is the most extraordinary artifact in the collection.",
+                        "sentence_chinese": "這是館藏中最非凡的文物。"
                     },
                     {
                         "id": "h1-6-u6-sg017",
-                        "sentence": "My grandpa has taken a walk, rain or shine.",
-                        "sentence_chinese": ""
+                        "sentence": "The website provides beneficial content for first-time visitors.",
+                        "sentence_chinese": "這個網站提供對初次參觀者有益的內容。"
                     },
                     {
                         "id": "h1-6-u6-sg018",
-                        "sentence": "I have passed by the classroom many times today.",
-                        "sentence_chinese": ""
+                        "sentence": "The restriction was created to prevent people from touching the paintings.",
+                        "sentence_chinese": "這項限制是為了防止人們觸摸畫作。"
                     },
                     {
                         "id": "h1-6-u6-sg019",
-                        "sentence": "Nick has succeeded in attracting the ducks with food.",
-                        "sentence_chinese": ""
+                        "sentence": "We should cherish old buildings instead of merely replacing them.",
+                        "sentence_chinese": "我們應該珍惜老建築，而不是僅僅取代它們。"
                     },
                     {
                         "id": "h1-6-u6-sg020",
-                        "sentence": "The customer has demanded a refund for the broken dryer.",
-                        "sentence_chinese": ""
+                        "sentence": "Approximately fifty volunteers helped repair the old wall.",
+                        "sentence_chinese": "大約五十位志工幫忙修復古牆。"
                     },
                     {
                         "id": "h1-6-u6-sg021",
-                        "sentence": "Marcus has recovered from his serious leg injury.",
-                        "sentence_chinese": ""
+                        "sentence": "The museum uses specialized tools when it cleans bronze objects.",
+                        "sentence_chinese": "博物館清潔青銅物件時使用專門工具。"
                     },
                     {
                         "id": "h1-6-u6-sg022",
-                        "sentence": "That was the worst sound I have ever heard.",
-                        "sentence_chinese": ""
+                        "sentence": "The online tour draws in students who cannot visit in person.",
+                        "sentence_chinese": "線上導覽吸引無法親自參觀的學生。"
                     },
                     {
                         "id": "h1-6-u6-sg023",
-                        "sentence": "The hotel has supplied its guests with free coffee.",
-                        "sentence_chinese": ""
+                        "sentence": "Repair costs put a strain on the small institution.",
+                        "sentence_chinese": "修復費用對這個小機構造成壓力。"
                     },
                     {
                         "id": "h1-6-u6-sg024",
-                        "sentence": "She is the best basketball player in our school.",
-                        "sentence_chinese": ""
+                        "sentence": "The old map stands out because of its unusual colors.",
+                        "sentence_chinese": "這張古地圖因不尋常的顏色而特別顯眼。"
                     },
                     {
                         "id": "h1-6-u6-sg025",
-                        "sentence": "Jules has done a good job running the business.",
-                        "sentence_chinese": ""
+                        "sentence": "The town hopes to claim the title of a top cultural destination.",
+                        "sentence_chinese": "這座城鎮希望獲得頂尖文化目的地的頭銜。"
                     },
                     {
                         "id": "h1-6-u6-sg026",
-                        "sentence": "They have improved their skills in decorating temples.",
-                        "sentence_chinese": ""
+                        "sentence": "Parents pass respect for heritage on to the next generation.",
+                        "sentence_chinese": "父母把對文化遺產的尊重傳給下一代。"
                     },
                     {
                         "id": "h1-6-u6-sg027",
-                        "sentence": "The soda exploded because Megan has shaken the can.",
-                        "sentence_chinese": ""
+                        "sentence": "Sunlight may wear down the colors of old paintings.",
+                        "sentence_chinese": "陽光可能會削弱古畫的色彩。"
                     },
                     {
                         "id": "h1-6-u6-sg028",
-                        "sentence": "This is the best bargain that I have ever seen.",
-                        "sentence_chinese": ""
+                        "sentence": "They put off opening the tomb until experts arrived.",
+                        "sentence_chinese": "他們延後開啟古墓，直到專家抵達。"
                     },
                     {
                         "id": "h1-6-u6-sg029",
-                        "sentence": "He has worked for this company for twenty years.",
-                        "sentence_chinese": ""
+                        "sentence": "The search engine filters out pages with harmful content.",
+                        "sentence_chinese": "搜尋引擎會過濾掉含有有害內容的頁面。"
                     },
                     {
                         "id": "h1-6-u6-sg030",
-                        "sentence": "The manager has taken the customer's demand seriously.",
-                        "sentence_chinese": ""
+                        "sentence": "Neglecting heritage sites can violate our duty to the past.",
+                        "sentence_chinese": "忽視文化遺產地可能違反我們對過去的責任。"
                     }
                 ]
             }

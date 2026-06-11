@@ -521,17 +521,25 @@
         return [...String(text || "")].reduce((sum, char) => sum + (/[\u3400-\u9fff]/.test(char) ? 1.35 : 1), 0);
     }
 
+    function isCompactLayout() {
+        return window.matchMedia("(max-width: 860px)").matches;
+    }
+
     function makeGoldItem(entry, index = 0, mode = "english") {
         const word = getEntryWord(entry);
         const chinese = getEntryChinese(entry);
         const label = mode === "chinese" && chinese ? chinese : word;
+        const compact = isCompactLayout();
+        const baseRadius = compact ? 54 : 36;
+        const maxRadius = compact ? 88 : 58;
+        const labelScale = compact ? 1.7 : 1.08;
         return {
             word,
             chinese,
             label,
             mode,
             type: "gold",
-            radius: Math.max(36, Math.min(58, 34 + labelLength(label) * 1.08 + (index % 3) * 2))
+            radius: Math.max(baseRadius, Math.min(maxRadius, 34 + labelLength(label) * labelScale + (index % 3) * 2))
         };
     }
 
@@ -593,7 +601,7 @@
         const golds = [];
 
         shuffle(candidates).forEach((entry) => {
-            if (golds.length >= 5) return;
+            if (golds.length >= (isCompactLayout() ? 4 : 5)) return;
             const item = makeGoldItem(entry, golds.length, source.length > 0 ? mode : "english");
             const labelKey = item.label.toLowerCase();
             if (!item.word || !item.label || seenLabels.has(labelKey)) return;
@@ -605,6 +613,19 @@
     }
 
     function buildItemSlots() {
+        if (isCompactLayout()) {
+            const compactSlots = [
+                { x: 178, y: 252 }, { x: 540, y: 250 }, { x: 902, y: 252 },
+                { x: 222, y: 382 }, { x: 540, y: 394 }, { x: 858, y: 382 },
+                { x: 178, y: 514 }, { x: 540, y: 520 }, { x: 902, y: 514 }
+            ];
+
+            return shuffle(compactSlots).map(slot => ({
+                x: slot.x + rand(-18, 18),
+                y: slot.y + rand(-14, 14)
+            }));
+        }
+
         const slots = [
             { x: 145, y: 245 }, { x: 335, y: 248 }, { x: 535, y: 260 }, { x: 745, y: 248 }, { x: 935, y: 272 },
             { x: 205, y: 345 }, { x: 430, y: 360 }, { x: 650, y: 345 }, { x: 850, y: 370 },
@@ -712,7 +733,7 @@
         currentQuestionMode = pickQuestionMode();
         const golds = buildRoundGolds(currentQuestionMode);
         targetWordObj = golds[Math.floor(Math.random() * golds.length)];
-        const obstacles = shuffle(OBSTACLES).slice(0, 4);
+        const obstacles = shuffle(OBSTACLES).slice(0, isCompactLayout() ? 3 : 4);
         const spawn = shuffle([...golds, ...obstacles]);
         const slots = buildItemSlots();
 
@@ -771,13 +792,13 @@
         }
     }
 
-    function updateParticles() {
+    function updateParticles(timeScale) {
         for (let i = particles.length - 1; i >= 0; i -= 1) {
             const p = particles[i];
-            p.x += p.vx;
-            p.y += p.vy;
-            p.vy += 0.14;
-            p.life -= 1;
+            p.x += p.vx * timeScale;
+            p.y += p.vy * timeScale;
+            p.vy += 0.14 * timeScale;
+            p.life -= 1 * timeScale;
             if (p.life <= 0) particles.splice(i, 1);
         }
     }
@@ -786,12 +807,13 @@
         const now = performance.now();
         const dt = Math.min(0.05, (now - lastFrameTime) / 1000);
         lastFrameTime = now;
+        const timeScale = dt * 60;
 
-        updateParticles();
-        if (message.timer > 0) message.timer -= 1;
+        updateParticles(timeScale);
+        if (message.timer > 0) message.timer -= 1 * timeScale;
 
         items.forEach(item => {
-            if (item.bump > 0) item.bump *= 0.82;
+            if (item.bump > 0) item.bump *= Math.pow(0.82, timeScale);
             if (item.bump < 0.4) item.bump = 0;
         });
 
@@ -809,7 +831,7 @@
         updateCartPosition(dt);
 
         if (state === "IDLE") {
-            angle += angleSpeed * angleDir;
+            angle += angleSpeed * angleDir * timeScale;
             if (angle > Math.PI / 2.65 || angle < -Math.PI / 2.65) {
                 angleDir *= -1;
             }
@@ -817,7 +839,7 @@
         }
 
         if (state === "SHOOTING") {
-            hookLength += hookSpeed;
+            hookLength += hookSpeed * timeScale;
             const tip = getHookTip();
 
             if (tip.x < 32 || tip.x > canvas.width - 32 || tip.y > canvas.height - 26) {
@@ -858,7 +880,7 @@
                 if (caughtItem.type === "bomb") speed = hookSpeed * 0.75;
             }
 
-            hookLength -= speed;
+            hookLength -= speed * timeScale;
 
             if (hookLength <= defaultHookLength) {
                 hookLength = defaultHookLength;
@@ -1270,21 +1292,78 @@
         ctx.restore();
     }
 
+    function fitLabelFont(text, maxWidth, maxSize, minSize) {
+        let size = maxSize;
+        while (size > minSize) {
+            ctx.font = `900 ${size}px Arial, "Noto Sans TC", sans-serif`;
+            if (ctx.measureText(String(text)).width <= maxWidth) break;
+            size -= 1;
+        }
+        return size;
+    }
+
+    function wrapLabelText(text, maxWidth, maxLines) {
+        const raw = String(text || "");
+        const pieces = /[A-Za-z]\s+[A-Za-z]/.test(raw) ? raw.split(/(\s+)/) : [...raw];
+        const lines = [];
+        let line = "";
+
+        pieces.forEach(piece => {
+            const test = line + piece;
+            if (ctx.measureText(test).width > maxWidth && line) {
+                lines.push(line.trim());
+                line = piece.trimStart();
+            } else {
+                line = test;
+            }
+        });
+        if (line) lines.push(line.trim());
+
+        if (lines.length > maxLines) {
+            const visible = lines.slice(0, maxLines);
+            let last = visible[visible.length - 1];
+            while (last.length > 1 && ctx.measureText(last + "…").width > maxWidth) {
+                last = last.slice(0, -1);
+            }
+            visible[visible.length - 1] = last + "…";
+            return visible;
+        }
+
+        return lines;
+    }
+
     function drawLabel(text, radius) {
-        const w = Math.max(radius * 1.56, text.length * 12 + 26);
-        const h = 28;
+        const compact = isCompactLayout();
+        const maxLabelWidth = compact ? 290 : 170;
+        const minLabelWidth = compact ? radius * 2.15 : radius * 1.56;
+        const maxFontSize = compact ? 48 : 20;
+        const minFontSize = compact ? 32 : 15;
+        const maxLines = compact ? 2 : 1;
+        const paddingX = compact ? 22 : 14;
+
+        const fontSize = fitLabelFont(text, maxLabelWidth - paddingX * 2, maxFontSize, minFontSize);
+        ctx.font = `900 ${fontSize}px Arial, "Noto Sans TC", sans-serif`;
+        const lines = wrapLabelText(text, maxLabelWidth - paddingX * 2, maxLines);
+        const lineHeight = fontSize * 1.05;
+        const measuredWidth = Math.max(...lines.map(line => ctx.measureText(line).width), 0);
+        const w = Math.max(minLabelWidth, Math.min(maxLabelWidth, measuredWidth + paddingX * 2));
+        const h = Math.max(compact ? 46 : 30, lines.length * lineHeight + (compact ? 16 : 10));
+
         roundRect(-w / 2, -h / 2, w, h, 7);
         ctx.fillStyle = "rgba(255, 248, 217, 0.92)";
         ctx.fill();
         ctx.strokeStyle = "rgba(100, 55, 10, 0.8)";
-        ctx.lineWidth = 3;
+        ctx.lineWidth = compact ? 4 : 3;
         ctx.stroke();
 
         ctx.fillStyle = "#2a1605";
-        ctx.font = "800 18px Arial";
+        ctx.font = `900 ${fontSize}px Arial, "Noto Sans TC", sans-serif`;
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
-        ctx.fillText(text, 0, 1);
+        const startY = -(lines.length - 1) * lineHeight / 2;
+        lines.forEach((line, index) => {
+            ctx.fillText(line, 0, startY + index * lineHeight + 1);
+        });
     }
 
     function drawParticles() {
