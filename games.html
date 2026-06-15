@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>雄工 英文單字遊戲</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; color: #f8fafc;
+      font-family: Arial, "Noto Sans TC", sans-serif;
+      background:
+        radial-gradient(circle at 15% 12%, rgba(250,204,21,.22), transparent 24rem),
+        radial-gradient(circle at 86% 18%, rgba(45,212,191,.2), transparent 26rem),
+        linear-gradient(145deg, #182034 0%, #111827 48%, #171717 100%);
+    }
+    main { width: min(880px, calc(100% - 32px)); margin: 0 auto; padding: 40px 0; }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 5vw, 48px); }
+    p.lead { margin: 0 0 26px; color: #cbd5e1; font-size: 16px; line-height: 1.6; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
+    a.card {
+      display: block; border: 1px solid rgba(255,255,255,.16); border-radius: 12px;
+      padding: 20px; color: inherit; text-decoration: none;
+      background: rgba(15,23,42,.78); box-shadow: 0 18px 40px rgba(0,0,0,.22);
+      transition: transform .15s ease, border-color .15s ease;
+    }
+    a.card:hover { transform: translateY(-3px); border-color: rgba(250,204,21,.6); }
+    a.card.exam { border-color: rgba(250,204,21,.5); background: rgba(250,204,21,.08); }
+    a.card h2 { margin: 0 0 6px; font-size: 22px; }
+    a.card span { color: #cbd5e1; font-size: 14px; }
+    .note { margin-top: 26px; color: #94a3b8; font-size: 13px; line-height: 1.7; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>🎮 雄工 英文單字遊戲</h1>
+    <p class="lead">選一個單元，裡面有六款遊戲（挖金礦、炸彈英文、單字坦克、海岸狙擊手、英文跑酷、英文攻防戰），會用該單元的單字出題。</p>
+    <section class="grid">
+      <a class="card exam" href="./段考-current.html"><h2>⭐ 本次段考總複習</h2><span>合併本次段考範圍的單字</span></a>
+      <a class="card" href="./h1-4-u3.html"><h2>Unit 3</h2><span>h1-4-u3</span></a>
+      <a class="card" href="./h1-4-u4.html"><h2>Unit 4</h2><span>h1-4-u4</span></a>
+      <a class="card" href="./h1-6-u5.html"><h2>Unit 5</h2><span>h1-6-u5</span></a>
+      <a class="card" href="./h1-6-u6.html"><h2>Unit 6</h2><span>h1-6-u6</span></a>
+    </section>
+    <p class="note">※ 遊戲由遊戲主機 studentgames.pages.dev 提供，需連網。原本的「英文單字冒險」學習站不受影響，仍在原本的首頁。</p>
+  </main>
+</body>
+</html>
