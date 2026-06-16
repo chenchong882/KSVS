@@ -158,7 +158,7 @@
             CheckCircle, XCircle, Trophy, Star, Sparkles, HelpCircle, RefreshCw, Library,
             Puzzle, Lightbulb, Music, Map, Wand2, Flag, AlertCircle, ArrowDownLeft,
             Shuffle, GraduationCap, PenTool, Coffee, Keyboard, MousePointerClick, Filter, Eye, Timer, Home, Info,
-            FileText, X, Swords, Zap
+            FileText, X, Swords, Zap, ExternalLink
         } from 'lucide-react';
 
         // --- 語音與音效合成優化 ---
@@ -1530,70 +1530,49 @@
             { key: 'battle', title: '英文攻防戰', emoji: '⚔️', desc: '答題出兵＋升級＋BOSS 波', color: 'orange' },
         ];
 
-        const CentralGameMode = ({ game, allWords, grammarData, unitTitle, onBack }) => {
-            const payload = encodeURIComponent(JSON.stringify({
-                unitTitle,
-                words: allWords,
-                grammarQuiz: grammarData?.quiz || [],
-            }));
-            const src = `${GAME_BASE}/games/${game.key}#lessonData=${payload}`;
+        const NewGamesMenu = ({ allWords, grammarData, unitTitle, onBack }) => {
+            const openGame = (g) => {
+                const payload = encodeURIComponent(JSON.stringify({
+                    unitTitle,
+                    words: allWords,
+                    grammarQuiz: grammarData?.quiz || [],
+                }));
+                window.open(`${GAME_BASE}/games/${g.key}#lessonData=${payload}`, '_blank');
+            };
             return (
-                <div className="space-y-3">
+                <div className="space-y-4 pb-6">
                     <div className="flex items-center justify-between gap-3">
                         <button onClick={onBack} className="text-slate-400 font-bold text-sm hover:text-slate-200 transition-colors flex items-center gap-1 py-1">
-                            <ChevronLeft className="w-4 h-4" /> 回新版遊戲
+                            <ChevronLeft className="w-4 h-4" /> 回遊戲選單
                         </button>
-                        <span className="bg-emerald-400 text-emerald-950 text-xs font-black px-3 py-1 rounded-full border-b-2 border-emerald-700">
-                            {game.emoji} {game.title}
-                        </span>
+                        <span className="bg-emerald-400 text-emerald-950 text-xs font-black px-3 py-1 rounded-full border-b-2 border-emerald-700">🆕 新版遊戲</span>
                     </div>
-                    <div className="rounded-3xl overflow-hidden border-2 border-emerald-700 bg-[#0a0f0d] shadow-2xl -mx-3 sm:mx-0">
-                        <iframe
-                            title={game.title}
-                            src={src}
-                            className="w-full h-[calc(100svh-220px)] min-h-[560px] max-h-[860px] sm:h-[82svh] sm:min-h-[700px] border-0 block"
-                            allow="autoplay; fullscreen"
-                        />
+                    <div className="text-center pt-1">
+                        <div className="text-4xl mb-2">🆕</div>
+                        <h2 className="text-2xl font-black text-white">新版遊戲（6 款）</h2>
+                        <p className="text-slate-500 font-bold text-sm mt-1">點下方遊戲 → 會用本單元單字、在新分頁全螢幕開啟</p>
                     </div>
+                    {CENTRAL_GAMES.map(g => (
+                        <button key={g.key} onClick={() => openGame(g)}
+                            className="w-full bg-slate-800 border-2 border-slate-700 hover:border-emerald-500 p-5 rounded-2xl text-left transition-all group relative overflow-hidden">
+                            <div className="absolute inset-0 bg-emerald-400/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl" />
+                            <div className="relative flex items-center gap-4">
+                                <div className="text-4xl select-none">{g.emoji}</div>
+                                <div>
+                                    <div className="text-white font-black text-lg">{g.title}</div>
+                                    <div className="text-slate-400 text-sm font-bold mt-0.5">{g.desc}</div>
+                                </div>
+                                <ExternalLink className="w-5 h-5 text-slate-600 group-hover:text-emerald-500 ml-auto transition-colors" />
+                            </div>
+                        </button>
+                    ))}
                 </div>
             );
         };
 
-        const NewGamesMenu = ({ allWords, onPick, onBack }) => (
-            <div className="space-y-4 pb-6">
-                <div className="flex items-center justify-between gap-3">
-                    <button onClick={onBack} className="text-slate-400 font-bold text-sm hover:text-slate-200 transition-colors flex items-center gap-1 py-1">
-                        <ChevronLeft className="w-4 h-4" /> 回遊戲選單
-                    </button>
-                    <span className="bg-emerald-400 text-emerald-950 text-xs font-black px-3 py-1 rounded-full border-b-2 border-emerald-700">🆕 新版遊戲</span>
-                </div>
-                <div className="text-center pt-1">
-                    <div className="text-4xl mb-2">🆕</div>
-                    <h2 className="text-2xl font-black text-white">新版遊戲（6 款）</h2>
-                    <p className="text-slate-500 font-bold text-sm mt-1">共 {allWords.length} 個單字 — 會用本單元單字出題</p>
-                </div>
-                {CENTRAL_GAMES.map(g => (
-                    <button key={g.key} onClick={() => onPick(g)}
-                        className="w-full bg-slate-800 border-2 border-slate-700 hover:border-emerald-500 p-5 rounded-2xl text-left transition-all group relative overflow-hidden">
-                        <div className="absolute inset-0 bg-emerald-400/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl" />
-                        <div className="relative flex items-center gap-4">
-                            <div className="text-4xl select-none">{g.emoji}</div>
-                            <div>
-                                <div className="text-white font-black text-lg">{g.title}</div>
-                                <div className="text-slate-400 text-sm font-bold mt-0.5">{g.desc}</div>
-                            </div>
-                            <ChevronRight className="w-5 h-5 text-slate-600 group-hover:text-emerald-500 ml-auto transition-colors" />
-                        </div>
-                    </button>
-                ))}
-            </div>
-        );
-
         const GameMode = ({ allWords, grammarData, unitTitle }) => {
             const [screen, setScreen] = useState('home');
-            const [centralGame, setCentralGame] = useState(null);
-            if (screen === 'central' && centralGame) return <CentralGameMode game={centralGame} allWords={allWords} grammarData={grammarData} unitTitle={unitTitle} onBack={() => setScreen('newgames')} />;
-            if (screen === 'newgames') return <NewGamesMenu allWords={allWords} onPick={(g) => { setCentralGame(g); setScreen('central'); }} onBack={() => setScreen('home')} />;
+            if (screen === 'newgames') return <NewGamesMenu allWords={allWords} grammarData={grammarData} unitTitle={unitTitle} onBack={() => setScreen('home')} />;
             if (screen === 'survival') return <SurvivalMode allWords={allWords} onBack={() => setScreen('home')} />;
             if (screen === 'boss') return <BossMode allWords={allWords} onBack={() => setScreen('home')} />;
             if (screen === 'miner') return <MinerMode allWords={allWords} unitTitle={unitTitle} onBack={() => setScreen('home')} />;
